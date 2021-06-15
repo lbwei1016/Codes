@@ -1,0 +1,7 @@
+"deque" doesn't have:
+
+1.capacity();
+2.reserve();
+3.data();
+
+=>Beacuse "deque" doesn't guarantee contiguous memory storage

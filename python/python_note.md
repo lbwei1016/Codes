@@ -1,0 +1,98 @@
+# Basics
+- ## I/O
+    ```py
+    # return a string
+    a = input("Say something: ")
+    print(a, "Hi there")
+    ```
+- ## Variables & Operations
+    ```py
+    a = 10
+    b = 3
+    c = a // b # c = 3(int)
+    d = a / b # d = 3.3333....(float)
+    e = a ** b # e = 10 ^ 3
+
+    x = 1.25
+    y = 0.5
+    z = x % y # z = 0.25
+    ```
+    - ### Walrus operator ( := )
+        ```py
+        num = int(input)
+        print(num)
+
+        # the above codes is equivalent to:
+        print(num:=int(input()))
+        ```
+- ## String
+    ```py
+    s1 = "Gaga"
+    print(s1 * 3) # "GagaGagaGaga"
+
+    s2 = """
+    I am Ken.
+    Nice to meet you!
+    See you later!
+    """
+    ```
+- ## List
+    - ### Declaration & Operation
+        ```py
+        names = ['William', 'Ruby', 'George', 'Amy']
+        person1 = names[0]
+
+        # empty
+        empty_list = []
+
+        #nested, with different types
+        name_age = [['William', 19], ['Ruby', 18], 343.0]
+
+        # to repeat
+        print(name * 3) 
+
+        # find elements in a list
+        find_name = "William" in names # return True
+        find_name = "William" in name_age # False
+        ```
+    - ### Method
+        ```py
+        names.append("Jush") # like "push_back"
+        len(names) # return 5
+        names.insert(2, "Martin")
+
+        # return the index of the first occurence of that element
+        # if it's not found, py throws an error
+        names.index("Ruby") 
+
+        string = "I am a good boy!"
+        # split the string when encountering a delimeter
+        # deli is ' '(space) by default
+        # deli will be discarded
+        sub = string.split([deli]) 
+
+        # range(i, j, interval):
+            # An object containing an array of integers
+            # in range [i, j)¡F (de)increase by "interval"
+        a = range(10) # by default: [0, 10), increase by 1
+        b = list(range(1, 10, -3)) # convert to a list
+        ```
+- ## if statement & Loops
+    ```py
+    if 1.0 == 1 and 3 == 3:
+        # do something
+    elif True != False or not 2 > 4:
+        # do something
+    else:
+        #do something
+    ```
+    ```py
+    while a > b:
+        # ...
+    
+    animals = ["dog", "cat", "turtle"]
+    for ani in animals:
+        print(ani + " cute!\n")
+    for i in range(10):
+        print(i)
+    ```

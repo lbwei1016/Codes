@@ -1,0 +1,83 @@
+(記得參考程式碼)
+DFS:
+    zj_a017: 五則運算
+    zj_a229: 括號匹配
+    poj_3009: Curling 2.0
+
+BFS:
+    poj_1979: Red and Black
+    poj_2456: Aggressive cows
+
+Binary Search:
+    poj_1064: Cable master
+    poj_2785: 4 Values whose Sum is 0(divide groups)
+
+Backtracking:
+    zj_a160: N-皇后問題
+    zj_b510: M-皇后 N-城堡
+    zj_b511: 換銅板
+
+Greedy:
+    zj_e576: Minimal Coverage
+    zj_e591: Coin Collector
+    zj_e693: Grid of Lamps
+
+DP:
+    zj_a252: Another LCS(三字串LCS)
+    zj_a364: 2. 神秘的進位問題 (factorial)
+    zj_a522: Bars(Subset)
+    zj_a532: 奇特的數列 (字串／數列)
+    zj_a591: Bees' ancestors(Fibonacci)
+    zj_a697: [NOIP 2012 普及組] 3.?花
+    zj_b123: 最大矩形
+    zj_b184: 裝貨櫃問題(01背包)
+    zj_d042: 11420 - Chest of Drawers
+    zj_d052: Trainsorting(LIS)
+    zj_d231: 基因序列密碼問題 (LCS: 印出字串)
+    zj_d253: Coin Change
+    zj_d273: 11584 - Partitioning by Palindromes (最大迴文子字串)
+    zj_d784: 連續元素的和(Maximun Subarray Problem)
+    zj_f314: 3. 勇者修煉 (apcs) 
+    zj_a365: 3. 新井字遊戲 (位元 DP)
+    code_jam: 2009_1C_C
+    poj_2686: Traveling by Stagecoach (Shortest Path)
+    poj_1769: Minimizing maximizer (Seg Tree)
+
+Shortest Path:
+    poj_3225: Roadblocks (second shortest path --Dijkstra)
+    poj_3169: Layouts (Bellman-Ford)
+    poj_2686: Traveling by Stagecoach (DP)
+    
+Data Structure:
+    zj_d371: Huffman 編碼中的編碼效能問題(heap/priority_queue)
+    zj_f292: Almost Union-Find(Disjoint Set Union--DSU / Union-Find Tree)
+    zj_c463: apcs 樹狀圖分析(樹的建構與走訪)
+    zj_d539: 區間 MAX (線段樹)
+    zj_d799: 區間求和 (區間和 + 區間修改)(線段樹 + 標記／兩棵BIT)
+    poj_2104: K-th Number (範圍樹／Bucket + Sqrt)
+    poj_3723: Conscription (MST)
+
+Math:
+    zj_a121: 質數又來囉 (range prime)
+    zj_b528: 板條編年史 (二)：長頸鹿與妮可妮可妮的逆襲 (反三角函數／M_PI)
+    zj_c204: 13194 - DPA Numbers II (prime／Prime factorization)
+    zj_d613: prime
+    zj_a451: 矩陣快速冪(費氏數列)
+    poj-3233: 冪次和 (矩陣中的矩陣)
+
+爬行法:
+    poj_3061: Subsequence
+    poj_3320: Jessica's Reading Problem
+    poj_3276: Face The Right Way
+
+前綴和:
+    zj_e339: 前綴合練習(只是簡單範例)
+
+Else:
+    poj_3279: Fliptile(位元運算 & 集合列舉)
+    poj_3684: Physics Experiment(Ants)
+    zj_a480: 導彈攔截系統 (窮舉)
+
+
+Unfinished:
+    zj_a268, zj_d882: 河內塔變形
