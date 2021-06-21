@@ -11,6 +11,9 @@ BFS:
 Binary Search:
     poj_1064: Cable master
     poj_2785: 4 Values whose Sum is 0(divide groups)
+    zj_f581: 3. 圓環出口 (apcs)
+    zj_c575: APCS 2017-0304-4基地台 (apcs)
+
 
 Backtracking:
     zj_a160: N-皇后問題
@@ -18,6 +21,7 @@ Backtracking:
     zj_b511: 換銅板
 
 Greedy:
+    zj_b966: 第 3 題 線段覆蓋長度 (Sort / apcs)
     zj_e576: Minimal Coverage
     zj_e591: Coin Collector
     zj_e693: Grid of Lamps
@@ -31,13 +35,15 @@ DP:
     zj_a697: [NOIP 2012 普及組] 3.
     zj_b123: 最大矩形
     zj_b184: 裝貨櫃問題(01背包)
+    zj_c296: APCS-2016-1029-3定時K彈 (Josephus problem)
     zj_d042: 11420 - Chest of Drawers
     zj_d052: Trainsorting(LIS)
     zj_d231: 基因序列密碼問題 (LCS: 印出字串)
     zj_d253: Coin Change
     zj_d273: 11584 - Partitioning by Palindromes (最大迴文子字串)
-    zj_d784: 連續元素的和(Maximun Subarray Problem)
+    zj_d784: 連續元素的和(Maximum Subarray Problem)
     zj_f314: 3. 勇者修煉 (apcs) 
+    zj_f582: 4. 病毒演化 (apcs)
     zj_a365: 3. 新井字遊戲 (位元 DP)
     code_jam: 2009_1C_C
     poj_2686: Traveling by Stagecoach (Shortest Path)
@@ -78,11 +84,17 @@ Matching:
     poj_3041: Asteroids (bipartite matching)
     poj_3057: Evacuation (bipartite matching / BFS / DFS)
 
+Flow:
+    poj_3281: Dining (Maximum s-t Flow)
+    poj_3469: Dual Core (Maximum s-t Flow)
+
 Else:
     poj_3279: Fliptile(位元運算 & 集合列舉)
     poj_3684: Physics Experiment(Ants)
     zj_a480: 導彈攔截系統 (窮舉)
     zj_f340: 俄羅斯方塊 (Simulation)
+    zj_c292: APCS2017-0304-3數字龍捲風 (Simulation / apcs)
+    zj_c462: 交錯字串 (String / apcs)
 
 
 Unfinished:

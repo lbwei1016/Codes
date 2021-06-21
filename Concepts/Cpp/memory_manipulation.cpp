@@ -17,7 +17,7 @@ int main()
 
     memset(s2, '&', 20);
     puts(s2);
-    memcpy(s2, s1, strlen(s1)+1); //memcpy(destination, source, size_bytes)
+    memcpy(s2, s1, strlen(s1)+1); //memcpy(destination, source, size_bytes -> sizeof())
     puts(s2);
 
     memmove(s1+21, s1, strlen(s1)+1); //memcpy(destination, source, size_bytes)

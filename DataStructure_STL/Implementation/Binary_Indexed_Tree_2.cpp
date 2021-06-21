@@ -7,6 +7,7 @@
 
 using namespace std;
 
+//[1, n]
 int arr[101];
 int bit0[101]; //原本的BIT
 int bit1[101]; //只記錄修改值的BIT
@@ -30,6 +31,7 @@ int sum (int *bit, int i)
     }
     return s;
 }
+//let values between [L, R] plus "x"
 void modify(int L, int R, int x)
 {
     add(bit0, L, -x*(L-1));
@@ -57,14 +59,14 @@ int main()
     for(int i=1; i<=n; i++)
         add(bit0, i, arr[i-1]);
 
-    cout << "Input the block to be modified: \n";
+    cout << "Input the blocks to be modified(increase): \n";
 
     int l, r, x;
     cin >> l >> r >> x;
 
     modify(l, r, x);
 
-    cout << "Input the block to query: (L, R, x)\n";
+    cout << "Input the block to query: (L, R)\n";
     cin >> l >> r;
     query(l, r);
     return 0;

@@ -8,16 +8,17 @@
 using namespace std;
 
 typedef long long ll;
-const int MAX_N = 500000;
+const int MAX_N = 50;
 
 int N, Q;
 int arr[MAX_N+1]; //儲存原數據
 
+//[0, N)
 struct Node
 {
-    ll add = 0; //該節點的區間的所有元素皆加上的值
-    ll sum = 0; //該節點的區間和，去除上述"add"的值
-}node[(1 << 20)+1];
+    ll add = 0; //該節點的區間的所有元素皆加上的值 (算在自己頭上的；已經給父，小孩在查詢時才給)
+    ll sum = 0; //該節點的區間和，去除上述"add"的值 (子節點所累加的；小孩給的)
+}node[1 << 6];
 
 //一次修改給定區間的值
 void add(int x, int y, int k, int v, int L, int R) //O(log n)
@@ -52,33 +53,26 @@ ll sum(int x, int y, int v, int L, int R)
 }
 int main()
 {
+    printf("Input the size of arr:\n");
     scanf("%d", &N);
+    printf("Input the values of arr:\n");
     for (int i=0; i<N; i++)
         scanf("%d", &arr[i]);
-    int Q;
-    scanf("%d", &Q);
 
     //樹的建構也可以用 add()
     for (int i=0; i<N; i++)
         add(i, i+1, arr[i], 0, 0, N);
 
-    while (Q--)
-    {
-        int op;
-        scanf("%d", &op);
-        if (op == 1) //[x, y]所有值皆增加k
-        {
-            int x, y, k;
-            scanf("%d%d%d", &x, &y, &k);
-            add(x-1, y, k, 0, 0, N);
-        }
-        else //query
-        {
-            int x, y;
-            scanf("%d%d", &x, &y);
-            ll res = sum(x-1, y, 0, 0, N);
-            printf("%lld\n", res);
-        }
-    }
+    printf("Add value k between x and y:\n");
+    int x, y, k;
+    scanf("%d%d%d", &x, &y, &k);
+    add(x-1, y, k, 0, 0, N);
+
+
+    printf("Query the sum between x and y:\n");
+    scanf("%d%d", &x, &y);
+    ll res = sum(x-1, y, 0, 0, N);
+    printf("%lld\n", res);
+
     return 0;
 }

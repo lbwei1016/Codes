@@ -36,6 +36,7 @@
     - `wc -w` : 字數
     - `wc -c` : 位元組數
     - `wc -m` : 字元數
+- `diff [option] [file1 file2...]` : output the difference between files
 ## Compression / Archive File
 - `gzip [-c] [file]` : To compress file to `.gz`
     - `-c` : to decompress and output on STDOUT (equivalent to `zcat [file]`)
@@ -72,7 +73,7 @@
     > Note: characters are corresponded one-by-one between `str1` and `str2`
     
     >*e.g. `tr a-zA-Z n-za-mN-ZA-M`* : Rot13 encoding
-# Netcat (nc)
+# nc (netcat)
 - `nc [-vul] [host] [port]` : using the `TCP` or `UDP` protocols to read or write data 
     - `-v` : verbose message displayed
     - `-u` : use `UDP` instead of `TCP`
@@ -80,9 +81,17 @@
     > *e.g. `echo "Hi" | nc -u localhost 8000`* : transmit a `UDP` packet
 
     > *e.g. `nc -lu localhost 8000`* : accept a packet under `UDP`
-# SSH 
-- `ssh <user>@<host> [-p [port] ]` : login `host` 
+# SSH (Secure Shell)
+- `ssh [-i [file] ]<user>@<host> [-p [port] ]` : login `host` 
+    - `-i` : use `file` (containing private key) to connect
 - `ssh-keygen -t rsa` : generate `RSA` key under `.ssh/`
+# SSL / TLS 
+> *Secure Socket Layer / Transport Layer Security*
+- `openssl s_client -quiet -connect localhost[:port]` 
+    - `s_client` : connect to a remote host using `SSL/TLS`
+        - `-quiet` : inhibit printing of session and certificate information
+        - `-connect [host:port]` : connect to host
+
 # Others
 - `sort [file]` : Sort the given file
 - `strings [file]` : Prints the printable character sequences that are at least 4 characters long

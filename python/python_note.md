@@ -96,3 +96,13 @@
     for i in range(10):
         print(i)
     ```
+- ## Library
+    - ### random
+        ```py
+        import random as r
+
+        print(r.random()) # return a float [0, 1)
+        print(r.uniform(-2, 90)) # return a float [a, b)
+        print(r.randint(1, 10)) # return a int [a, b]
+        print(r.randrange(10, 100, 3)) # return a int [a, b) with step 3
+        ```

@@ -1,6 +1,9 @@
 /*
 ***Maximum s-t Flow*** -- Ford-Fulkerson Algorithm
 
+    Description: 
+        Keep searching for (DFS) augmenting pathes until no flow.
+
     O(F * E)
         F: Max flow
         E: number of edges
