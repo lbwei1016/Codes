@@ -7,6 +7,7 @@ DFS:
 BFS:
     poj_1979: Red and Black
     poj_2456: Aggressive cows
+    zj_e287: 機器人的路徑 (apcs)
 
 Binary Search:
     poj_1064: Cable master
@@ -87,13 +88,17 @@ Matching:
 Flow:
     poj_3281: Dining (Maximum s-t Flow)
     poj_3469: Dual Core (Maximum s-t Flow)
+    poj_2135: Farm Tour (Minimum Cost s-t Flow)
+
+Simulation:
+    zj_f340: 俄羅斯方塊 
+    zj_c292: APCS2017-0304-3數字龍捲風 (apcs)
+    zj_c297: APCS-2016-1029-4棒球遊戲 (bitwise operation)
 
 Else:
-    poj_3279: Fliptile(位元運算 & 集合列舉)
+    poj_3279: Fliptile(bitwise operation / 集合窮舉)
     poj_3684: Physics Experiment(Ants)
     zj_a480: 導彈攔截系統 (窮舉)
-    zj_f340: 俄羅斯方塊 (Simulation)
-    zj_c292: APCS2017-0304-3數字龍捲風 (Simulation / apcs)
     zj_c462: 交錯字串 (String / apcs)
 
 

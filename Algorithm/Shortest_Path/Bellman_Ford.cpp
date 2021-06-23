@@ -58,6 +58,20 @@ bool bellman_ford(int s)
     }
     return true;
 }
+//a similar way to find out whether a negative loop exists
+bool find_negative_loop() {
+    for(int i=0; i<V; i++) {
+        for(int j=0; j<E; j++) {
+            edge &e = es[j];
+            if(d[e.to] > d[e.from] + e.cost) {
+                d[e.to] = d[e.from] + e.cost;
+            }
+
+            if(j == V-1) return true;
+        }
+    }
+    return false;
+}
 
 int main()
 {

@@ -63,7 +63,10 @@ int min_cost(int s, int t, int f) {
             return -1;
         }
 
-        //add up previous shortest path to current "h[v]"
+        /*
+            update: dist[v] = £Ue_cost - h[v]
+            => new_h[v] = h[v] + dist[v] = h[v] + (£Ue_cost - h[v]) = £Ue_cost = shortest distance
+        */
         for(int v=0; v<V; v++) {
             h[v] += dist[v];
         }

@@ -6,6 +6,8 @@
 
         Note: The found x and n are relatively prime, i.e., gcd(x, n) = 1
         (This can be proved easily)
+
+        Note: a.k.a "Fermat's Little Theorem"
     O(log n)
 */
 #include <iostream>

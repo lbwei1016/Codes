@@ -1,4 +1,5 @@
 # Directory and File
+## Go To
 - `cd` ~ : 回到家目錄
 - `cd ~[account]` : 到[account]的家目錄
 - `cd`  : 回到家目錄
@@ -7,23 +8,19 @@
 
 - `.` : 代表當前目錄
 - `..` : 代表上一層目錄
+
+## Manipulation
 - `pwd [-P]` : 顯示目前所在的目錄； `-P` ： 顯示出確實的路徑，而非使用連結 (link) 路徑
 
 - `mkdir [-mp]`: -m : 設定權限(e.g. 711)；`-p` : 遞迴操作(整層)
 - `rmdir [-p]` : 刪除「空」目錄；`-p` : 遞迴操作
+- `basename [/.../...]` : 顯示「檔名」 
+- `dirname [/.../...]` : 顯示「目錄名」
 
 - `cp [-a][-r][-i] [from] [to]` : 複製檔案(目錄)；`-a` : 基本上代表複製原檔案的一切(包括權限) ；`-r` : 遞迴複製(用於目錄)；`-i` : 出現警告訊息
 - `touch [file]` : 建立空檔案
 - `rm [-i][-r]` : 刪除檔案(參數意義同 `cp`)
 - `mv [-i] [from(name A)] [to (name B)]` : 移動、重新命名檔案
-- `chgrp [-R] [group] [file/dir]` : 更改群組 (root)
-- `chown [-R] [user:group] [file/dir]` : 更改擁有者 (群組也可以 : `user:group`) (root)
-- `chmod [-R] [xyz] [file/dir]` : 檔案權限更改 
-    - `r` : 4
-    - `w` : 2
-    - `x` : 1
-
-    >*e.g. `chmod -R 720 myfile`*
 - 檔名為 "`-`" 的檔案要用絕對路徑來開啟：`./-`
 - 檔名有空白鍵：`vi "a file with spaces"`
 - `file [filename]`: 顯示檔案類型 (*dat, ASCII, etc*)
@@ -37,6 +34,28 @@
     - `wc -c` : 位元組數
     - `wc -m` : 字元數
 - `diff [option] [file1 file2...]` : output the difference between files
+## Permission
+- `chgrp [-R] [group] [file/dir]` : 更改群組 (root)
+- `chown [-R] [user:group] [file/dir]` : 更改擁有者 (群組也可以 : `user:group`) (root)
+- `chmod [-R] [xyz] [file/dir]` : 檔案權限更改 
+    - `r` : 4
+    - `w` : 2
+    - `x` : 1
+    >*e.g. `chmod -R 720 myfile`*
+- ***Setuid, Setgid, Sticky BIT***
+    - ***setuid*** : `chmod "4"751`；cancel : `chmod [0]751`
+    - ***setgid*** : `chmod "2"751`；cancel : `chmod [0]751`
+    - ***sticky bit*** : `chmod "+t" [file]`
+
+## Read File Content
+- `cat` : read the whole file
+- `tac` : reversed `cat`
+- `nl` : like `cat` but with better line numbers
+- `more` : with pages to read
+- `less` : enhanced `more`
+- `head` : read a few lines from beginning (default 10 lines)
+- `tail` : read a few lines at the button (default 10 lines)
+- `od` : read binary file
 ## Compression / Archive File
 - `gzip [-c] [file]` : To compress file to `.gz`
     - `-c` : to decompress and output on STDOUT (equivalent to `zcat [file]`)
@@ -97,5 +116,3 @@
 - `strings [file]` : Prints the printable character sequences that are at least 4 characters long
 - `grep [pattern] [file1/dir1] [file2/dir2]` : Find contents/files that matches the pattern
 - `uniq [file]` :  Filter adjacent matching lines 
-
-

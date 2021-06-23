@@ -2,7 +2,7 @@
 ***Minimum_Cost_s-t_Flow*** --Bellman-Ford
 
     Why Bellman-Ford? That is because while calculating flows, "reverse"
-    edges are adopted(whose cost in a negative value), which means "negative"
+    edges are adopted(whose cost are negative values), which means "negative"
     edges occurs, we cannot use "Dijkstra".
 
     However, with the concept of "Potential", Dijkstra is fine as well!
