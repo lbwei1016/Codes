@@ -26,7 +26,7 @@ int node[2*MAX_N+1]; //dat 區間的線段樹
 int LC(int v) {return 2 * v;}
 int RC(int v) {return 2 * v + 1;}
 
-void init()
+void init() //O(n)
 {
     n = 1; //n = 2^k >= N
     while (n < N)
@@ -34,7 +34,7 @@ void init()
     for (int i=1; i<=2*n-1; i++)
         node[i] = INF; //求最小值時，初始化為INF；若求最大值則是(-INF)
 }
-void build(int v, int L, int R) //建構線段樹
+void build(int v, int L, int R) //建構線段樹 O(n)
 {
     if (L == R) //[L, R]
     {
@@ -48,7 +48,7 @@ void build(int v, int L, int R) //建構線段樹
 
     node[v] = min(node[LC(v)], node[RC(v)]);
 }
-void update(int v, int val) //更新 dat[v] 的值為 val (單點更新)
+void update(int v, int val) //更新 dat[v] 的值為 val (單點更新) O(log n)
 {
     v += n - 1; //從葉開始更新
     dat[v] = val;
@@ -59,7 +59,7 @@ void update(int v, int val) //更新 dat[v] 的值為 val (單點更新)
         dat[v] = min(dat[LC(v)], dat[RC(v)]);
     }
 }
-int query(int l, int r, int v, int L, int R) //查詢[l, r]的最小值
+int query(int l, int r, int v, int L, int R) //查詢[l, r]的最小值 O(log n)
 {
     if (l > R || r < L) return INF;
     if (L <= l && r <= R) return dat[v];

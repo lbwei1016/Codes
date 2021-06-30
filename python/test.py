@@ -1,11 +1,11 @@
-import random as r
-print(r.random())
+v = eval("9*2")
+print(v)
+s = "abcdefghi"
+s2 = ""
+for i in range(len(s)):
+    if(i+1 & 1):
+        s2 += s[i]
+    else:
+        s2 += s[i].upper()
 
-print("ta" * 2 + "ppp")
-s2 = """
-I am Ken.
-Nice to meet you!
-See you later!
-"""
-print("sda")
-
+print(s2)

@@ -35,7 +35,7 @@ void add_edge(int from, int to, int cap, int cost) {
     G[to].push_back((edge){from, 0, -cost, G[from].size()-1});
 }
 
-int min_cost(int s, int t, int f) {
+int min_cost_flow(int s, int t, int f) {
     int res = 0;
     fill(h, h+V, 0);
     //Dijkstra
@@ -97,7 +97,7 @@ int main() {
     }
     int f;
     cin >> f;
-    cout << min_cost(0, 4, f) << '\n';
+    cout << min_cost_flow(0, 4, f) << '\n';
     
     return 0;
 }

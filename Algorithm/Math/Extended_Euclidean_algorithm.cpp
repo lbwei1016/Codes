@@ -1,7 +1,7 @@
 /*
 ***Extended Euclidean algorithm***
     The algorithm can be used to find (x, y) that fulfills
-    B?zout's identity: ax + by = 1 = gcd(a, b)
+    Bezout's identity: ax + by = 1 = gcd(a, b)
 
     O(log(max(a, b)))
 */

@@ -32,5 +32,12 @@ int main()
 	// extracts all [include] delim('\n' if not specified),
 	// and [discard] it('\n')
 	cout << s1 << ' ' << s2 << '\n';
+
+	char a, b, c;
+    cin >> a;
+    b = getchar();
+	//getchar() extracts a char(including '\n')
+    cin >> c;
+    cout << a << b << c;
 	return 0;
 }

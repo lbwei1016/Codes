@@ -1,8 +1,13 @@
 (記得參考程式碼)
+Recursion:
+    zj_f640: 函數運算式求值 (apcs)
 DFS:
     zj_a017: 五則運算
     zj_a229: 括號匹配
+    zj_b967: 第 4 題 血緣關係 (tree traversal / apcs)
+    zj_f637: DF-expression (apcs)
     poj_3009: Curling 2.0
+    NCPC_2015_B: Toll problem
 
 BFS:
     poj_1979: Red and Black
@@ -49,6 +54,12 @@ DP:
     code_jam: 2009_1C_C
     poj_2686: Traveling by Stagecoach (Shortest Path)
     poj_1769: Minimizing maximizer (Seg Tree)
+    tcirc_d066: P-6-1. 小朋友上樓梯最小成本
+    tcirc_d067: P-6-2. 不連續的表演酬勞
+    tcirc_d068: P-6-3. 最小監控鄰居的成本
+    tcirc_d069: P-6-6. 方格棋盤路線
+    tcirc_d072: Q-6-4. 闖關二選一
+
 
 Shortest Path:
     poj_3225: Roadblocks (second shortest path --Dijkstra)
@@ -56,12 +67,13 @@ Shortest Path:
     poj_2686: Traveling by Stagecoach (DP)
     
 Data Structure:
-    zj_d371: Huffman 編碼中的編碼效能問題(heap/priority_queue)
-    zj_f292: Almost Union-Find(Disjoint Set Union--DSU / Union-Find Tree)
+    zj_d371: Huffman 編碼中的編碼效能問題 (heap/priority_queue)
+    zj_f292: Almost Union-Find (Disjoint Set Union--DSU / Union-Find Tree)
     zj_f315: 4. 低地距離 (apcs / BIT)
-    zj_c463: apcs 樹狀圖分析(樹的建構與走訪)
+    zj_c463: apcs 樹狀圖分析 (樹的建構與走訪)
     zj_d539: 區間 MAX (線段樹)
     zj_d799: 區間求和 (區間和 + 區間修改)(線段樹 + 標記／兩棵BIT)
+    zj_f163: 貨物分配 (apcs / 線段樹)
     poj_2104: K-th Number (範圍樹／Bucket + Sqrt)
     poj_3723: Conscription (MST)
 
@@ -78,8 +90,9 @@ Math:
     poj_3320: Jessica's Reading Problem
     poj_3276: Face The Right Way
 
-Prefix Sum:
+Prefix (suffix) Sum:
     zj_e339: 前綴合練習(只是簡單範例)
+    zj_f638: 支點切割 (apcs)
 
 Matching: 
     poj_3041: Asteroids (bipartite matching)
@@ -89,18 +102,29 @@ Flow:
     poj_3281: Dining (Maximum s-t Flow)
     poj_3469: Dual Core (Maximum s-t Flow)
     poj_2135: Farm Tour (Minimum Cost s-t Flow)
+    poj_3680: Intervals (Minimum Cost s-t Flow)
+    
+
+Geometry:
+    poj_1127: Jack Straws (Lines / intersection)
 
 Simulation:
     zj_f340: 俄羅斯方塊 
     zj_c292: APCS2017-0304-3數字龍捲風 (apcs)
     zj_c297: APCS-2016-1029-4棒球遊戲 (bitwise operation)
 
+Bitmask:
+    zj_e288: 互補CP (apcs)
+
 Else:
     poj_3279: Fliptile(bitwise operation / 集合窮舉)
     poj_3684: Physics Experiment(Ants)
     zj_a480: 導彈攔截系統 (窮舉)
     zj_c462: 交錯字串 (String / apcs)
-
+    NCPC_2015_A: Sum of Largest Indices (stringstream)
+    zj_e289: 美麗的彩帶 (apcs)
+    zj_e294: APCS 類似題 - 小崴的新發現 (apcs)
 
 Unfinished:
     zj_a268, zj_d882: 河內塔變形
+    poj_2175: Evacuation Plan (Minimum Cost s-t Flow)

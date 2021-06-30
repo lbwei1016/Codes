@@ -23,6 +23,18 @@ int main()
     ss << s2;
     ss >> n2;
     cout << "string is converted to integer:" << n2 << '\n';
+    ss.str("");
+    ss.clear();
+
+    //continue extracting strings from stringstream until EOF
+    string s3;
+    getline(cin, s3);
+    for(ss << s3; !ss.eof();) {
+        int num;
+        ss >> num;
+        cout << num << ' ';
+    }
+    cout << '\n';
 
     return 0;
 }
