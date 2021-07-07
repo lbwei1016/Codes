@@ -14,7 +14,7 @@ int main()
 	set<int>:: iterator it_s;
 	for(it_s=s.begin(); it_s!=s.end(); ++it_s)
 	{
-		cout << *it_s << '\n';
+		cout << *it_s << ' ';
 	}
 
 	s.erase(99);
@@ -25,7 +25,10 @@ int main()
 	else 
 		cout << "99 not found" << '\n';
 	for(const int i : s) //the elements in a "set" is "const"
-		cout << i << '\n';
+		cout << i << ' ';
+	cout << '\n';
+
+	cout << *s.lower_bound(20) << '\n';
 
 	return 0;
 }

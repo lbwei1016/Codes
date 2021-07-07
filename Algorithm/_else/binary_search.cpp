@@ -27,6 +27,21 @@ void binary_search(int x)
     cout << ub << '\n';
 }
 
+/* Sol II: jumping binary search */
+int arr[100]; //sorted array
+
+//search for "x"
+int jump_search(int x) {
+    //因 arr[0] 在之後不被檢查，所以先檢查
+    if(arr[0] >= x) return 0;
+    int p0 = 0;
+    for(int jump=n/2; jump>0; jump/=2) {
+        while(p0+jump<n && arr[p0+jump]<x) p0 += jump;
+    }
+    //arr[p0+1] >= x
+    return p0+1;
+}
+
 int main()
 {
     int x; //number to find

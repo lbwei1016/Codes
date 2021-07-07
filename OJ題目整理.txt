@@ -1,11 +1,15 @@
 (記得參考程式碼)
+(* 為重點標記)
 Recursion:
     zj_f640: 函數運算式求值 (apcs)
+    zj_f637: DF-expression (apcs / tcirc_d005)
+    tcirc_d003: P-1-3. 棍子中點切割 
+    tcirc_d006 ~ d009
+    tcirc_d023: Q-2-14. 水槽 (*)
 DFS:
     zj_a017: 五則運算
     zj_a229: 括號匹配
     zj_b967: 第 4 題 血緣關係 (tree traversal / apcs)
-    zj_f637: DF-expression (apcs)
     poj_3009: Curling 2.0
     NCPC_2015_B: Toll problem
 
@@ -16,10 +20,13 @@ BFS:
 
 Binary Search:
     poj_1064: Cable master
-    poj_2785: 4 Values whose Sum is 0(divide groups)
-    zj_f581: 3. 圓環出口 (apcs)
+    poj_2785: 4 Values whose Sum is 0 (折半枚舉)
+    zj_f581: 3. 圓環出口 (apcs / tcirc_d024 / Prefix Sum)
     zj_c575: APCS 2017-0304-4基地台 (apcs)
-
+    tcirc_d018: P-2-9. 子集合乘積 (折半枚舉)
+    tcirc_d019: Q-2-10. 子集合的和 (折半枚舉)
+    tcirc_d020: P-2-11. 最接近的區間和 (Prefix Sum)
+    tcirc_d021: Q-2-12. 最接近的子矩陣和 (108 高中全國賽 / tcirc_d073)
 
 Backtracking:
     zj_a160: N-皇后問題
@@ -40,7 +47,7 @@ DP:
     zj_a591: Bees' ancestors(Fibonacci)
     zj_a697: [NOIP 2012 普及組] 3.
     zj_b123: 最大矩形
-    zj_b184: 裝貨櫃問題(01背包)
+    zj_b184: 裝貨櫃問題 (01knapsack)
     zj_c296: APCS-2016-1029-3定時K彈 (Josephus problem)
     zj_d042: 11420 - Chest of Drawers
     zj_d052: Trainsorting(LIS)
@@ -58,7 +65,12 @@ DP:
     tcirc_d067: P-6-2. 不連續的表演酬勞
     tcirc_d068: P-6-3. 最小監控鄰居的成本
     tcirc_d069: P-6-6. 方格棋盤路線
+    tcirc_d071: P-6-9. 大賣場免費大搬家 (01knapsack)
     tcirc_d072: Q-6-4. 闖關二選一
+    tcirc_d073: Q-6-5. 二維最大子矩陣 (tcirc_d021)
+    tcirc_d074: Q-6-8. Local alignment
+    tcirc_d075: Q-6-10. 置物櫃出租 (apcs / 01knapsack)
+    tcirc_d084: Q-6-12. 楊鐵心做 1 休 K
 
 
 Shortest Path:
@@ -70,29 +82,39 @@ Data Structure:
     zj_d371: Huffman 編碼中的編碼效能問題 (heap/priority_queue)
     zj_f292: Almost Union-Find (Disjoint Set Union--DSU / Union-Find Tree)
     zj_f315: 4. 低地距離 (apcs / BIT)
-    zj_c463: apcs 樹狀圖分析 (樹的建構與走訪)
+    zj_c463: apcs 樹狀圖分析 (樹的建構與走訪 / tcirc_d025)
     zj_d539: 區間 MAX (線段樹)
     zj_d799: 區間求和 (區間和 + 區間修改)(線段樹 + 標記／兩棵BIT)
     zj_f163: 貨物分配 (apcs / 線段樹)
     poj_2104: K-th Number (範圍樹／Bucket + Sqrt)
     poj_3723: Conscription (MST)
+    tcirc_d026: P-3-2. 括弧配對 (stack)
+    tcirc_d027: Q-3-3. 加減乘除 (stack)
+    tcirc_d029: 帶著板凳排雞排的高人 (apcs / map / stack)
+    tcirc_d030: P-3-6. 砍樹 (apcs / stack)
+    
 
 Math:
     zj_a121: 質數又來囉 (range prime)
     zj_b528: 板條編年史 (二)：長頸鹿與妮可妮可妮的逆襲 (反三角函數／M_PI)
     zj_c204: 13194 - DPA Numbers II (prime / Prime factorization)
     zj_d613: prime
-    zj_a451: 矩陣快速冪(費氏數列)
-    poj-3233: 冪次和 (矩陣中的矩陣)
+    zj_a451: 矩陣快速冪 (費氏數列)
+    poj_3233: 冪次和 (矩陣中的矩陣)
+    tcirc_d013: 快速冪--200 位整數 (大數 / 快速冪)
+    tcirc_d017: Q-2-8. 模逆元
+    tcirc_d022: Q-2-13. 無理數的快速冪 (無理數 / 快速冪)
 
-爬行法:
-    poj_3061: Subsequence
+爬行法 (Sliding window):
+    poj_3061: Subsequence (tcirc_d031)
     poj_3320: Jessica's Reading Problem
     poj_3276: Face The Right Way
+    tcirc_d032: P-3-8. 固定長度區間的最大區段差 (deque)(*)
+    tcirc_d037: Q-3-13. X差值範圍內的最大Y差值 (deque)(*)
 
-Prefix (suffix) Sum:
+Prefix (Suffix) Sum:
     zj_e339: 前綴合練習(只是簡單範例)
-    zj_f638: 支點切割 (apcs)
+    zj_f638: 支點切割 (apcs / Recursion)
 
 Matching: 
     poj_3041: Asteroids (bipartite matching)
@@ -115,6 +137,9 @@ Simulation:
 
 Bitmask:
     zj_e288: 互補CP (apcs)
+
+Divide and Conquer:
+    tcirc_d038: Q-3-14. 線性函數 (Sliding window)(*)
 
 Else:
     poj_3279: Fliptile(bitwise operation / 集合窮舉)

@@ -13,7 +13,6 @@ struct Mat
         {1, 0}
     };
 	friend Mat operator* (const Mat &l, const Mat &r); //"friend" is necessary
-    friend Mat operator% (Mat , const int);
 };
 
 Mat operator* (const Mat &l, const Mat &r)
@@ -26,23 +25,12 @@ Mat operator* (const Mat &l, const Mat &r)
             res.mat[i][j] = 0;
             for(int k=0; k<2; k++)
             {
-                res.mat[i][j] += (l.mat[i][k] * r.mat[k][j]) % MOD;
+                res.mat[i][j] = (res.mat[i][j] + l.mat[i][k] * r.mat[k][j]) % MOD;
             }
         }
     }
     return res;
 }
-// Mat operator% (Mat m, const int mod)
-// {
-//     for(int i=0; i<2; i++)
-//     {
-//         for(int j=0; j<2; j++)
-//         {
-//             m.mat[i][j] %= mod;
-//         }
-//     }
-//     return m;
-// }
 Mat expo(Mat m, ll n)
 {
     Mat res;

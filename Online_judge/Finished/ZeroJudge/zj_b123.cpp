@@ -26,7 +26,7 @@ void solve() {
             res = max(res, p);
             for(int k=j-1; k>=0 && G[i][k]; k--) {
                 p = min(p, len[k]); //取較小值才會是完整的矩形
-                res = max(res, p * (j-k+1));
+                res = max(res, p * (j-k+1)); //(j-k+1) 是矩形的寬
             }
         }
     }
