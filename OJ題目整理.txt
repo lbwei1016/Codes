@@ -1,11 +1,45 @@
 (記得參考程式碼)
 (* 為重點標記)
-Recursion:
-    zj_f640: 函數運算式求值 (apcs)
-    zj_f637: DF-expression (apcs / tcirc_d005)
-    tcirc_d003: P-1-3. 棍子中點切割 
-    tcirc_d006 ~ d009
-    tcirc_d023: Q-2-14. 水槽 (*)
+
+Backtracking:
+    zj_a160: N-皇后問題
+    zj_b510: M-皇后 N-城堡
+    zj_b511: 換銅板
+
+Binary Search:
+    poj_1064: Cable master
+    poj_2785: 4 Values whose Sum is 0 (折半枚舉)
+    zj_f581: 3. 圓環出口 (apcs / tcirc_d024 / Prefix Sum)
+    zj_c575: APCS 2017-0304-4基地台 (apcs / tcirc_d049)
+    tcirc_d018: P-2-9. 子集合乘積 (折半枚舉)
+    tcirc_d019: Q-2-10. 子集合的和 (折半枚舉)
+    tcirc_d020: P-2-11. 最接近的區間和 (Prefix Sum)
+    tcirc_d021: Q-2-12. 最接近的子矩陣和 (108 高中全國賽 / tcirc_d073)
+    tcirc_d054: Q-4-10. 恢復能量的白雲熊膽丸
+
+Bitmask:
+    zj_e288: 互補CP (apcs)
+
+BFS:
+    poj_1979: Red and Black
+    poj_2456: Aggressive cows
+    zj_e287: 機器人的路徑 (apcs)
+
+Data Structure:
+    zj_d371: Huffman 編碼中的編碼效能問題 (heap / priority_queue)
+    zj_f292: Almost Union-Find (Disjoint Set Union--DSU / Union-Find Tree)
+    zj_f315: 4. 低地距離 (apcs / BIT)
+    zj_c463: apcs 樹狀圖分析 (樹的建構與走訪 / tcirc_d025)
+    zj_d539: 區間 MAX (線段樹)
+    zj_d799: 區間求和 (區間和 + 區間修改)(線段樹 + 標記／兩棵BIT)
+    zj_f163: 貨物分配 (apcs / 線段樹)
+    poj_2104: K-th Number (範圍樹／Bucket + Sqrt)
+    poj_3723: Conscription (MST)
+    tcirc_d026: P-3-2. 括弧配對 (stack)
+    tcirc_d027: Q-3-3. 加減乘除 (stack)
+    tcirc_d029: 帶著板凳排雞排的高人 (apcs / map / stack)
+    tcirc_d030: P-3-6. 砍樹 (apcs / stack)
+
 DFS:
     zj_a017: 五則運算
     zj_a229: 括號匹配
@@ -13,31 +47,12 @@ DFS:
     poj_3009: Curling 2.0
     NCPC_2015_B: Toll problem
 
-BFS:
-    poj_1979: Red and Black
-    poj_2456: Aggressive cows
-    zj_e287: 機器人的路徑 (apcs)
-
-Binary Search:
-    poj_1064: Cable master
-    poj_2785: 4 Values whose Sum is 0 (折半枚舉)
-    zj_f581: 3. 圓環出口 (apcs / tcirc_d024 / Prefix Sum)
-    zj_c575: APCS 2017-0304-4基地台 (apcs)
-    tcirc_d018: P-2-9. 子集合乘積 (折半枚舉)
-    tcirc_d019: Q-2-10. 子集合的和 (折半枚舉)
-    tcirc_d020: P-2-11. 最接近的區間和 (Prefix Sum)
-    tcirc_d021: Q-2-12. 最接近的子矩陣和 (108 高中全國賽 / tcirc_d073)
-
-Backtracking:
-    zj_a160: N-皇后問題
-    zj_b510: M-皇后 N-城堡
-    zj_b511: 換銅板
-
-Greedy:
-    zj_b966: 第 3 題 線段覆蓋長度 (Sort / apcs)
-    zj_e576: Minimal Coverage
-    zj_e591: Coin Collector
-    zj_e693: Grid of Lamps
+Divide and Conquer:
+    tcirc_d036: Q-3-12. 完美彩帶 (Sliding Window)
+    tcirc_d038: Q-3-14. 線性函數 (Sliding Window)(*)
+    tcirc_d056: P-4-15. 最靠近的一對(closest pair) (Sweep Line) (*)
+    tcirc_d064: P-5-4. 反序數量
+    tcirc_d065: P-5-7. 大樓外牆廣告 (Sweep Line)(*)
 
 DP:
     zj_a252: Another LCS(三字串LCS)
@@ -72,27 +87,28 @@ DP:
     tcirc_d075: Q-6-10. 置物櫃出租 (apcs / 01knapsack)
     tcirc_d084: Q-6-12. 楊鐵心做 1 休 K
 
+Flow:
+    poj_3281: Dining (Maximum s-t Flow)
+    poj_3469: Dual Core (Maximum s-t Flow)
+    poj_2135: Farm Tour (Minimum Cost s-t Flow)
+    poj_3680: Intervals (Minimum Cost s-t Flow)
 
-Shortest Path:
-    poj_3225: Roadblocks (second shortest path --Dijkstra)
-    poj_3169: Layouts (Bellman-Ford)
-    poj_2686: Traveling by Stagecoach (DP)
-    
-Data Structure:
-    zj_d371: Huffman 編碼中的編碼效能問題 (heap/priority_queue)
-    zj_f292: Almost Union-Find (Disjoint Set Union--DSU / Union-Find Tree)
-    zj_f315: 4. 低地距離 (apcs / BIT)
-    zj_c463: apcs 樹狀圖分析 (樹的建構與走訪 / tcirc_d025)
-    zj_d539: 區間 MAX (線段樹)
-    zj_d799: 區間求和 (區間和 + 區間修改)(線段樹 + 標記／兩棵BIT)
-    zj_f163: 貨物分配 (apcs / 線段樹)
-    poj_2104: K-th Number (範圍樹／Bucket + Sqrt)
-    poj_3723: Conscription (MST)
-    tcirc_d026: P-3-2. 括弧配對 (stack)
-    tcirc_d027: Q-3-3. 加減乘除 (stack)
-    tcirc_d029: 帶著板凳排雞排的高人 (apcs / map / stack)
-    tcirc_d030: P-3-6. 砍樹 (apcs / stack)
-    
+Geometry:
+    poj_1127: Jack Straws (Lines / intersection)
+
+Greedy:
+    zj_e576: Minimal Coverage
+    zj_e591: Coin Collector
+    zj_e693: Grid of Lamps
+    tcirc_d047: Q-4-6. 少林寺的自動寄物櫃 (apcs / zj_c471)
+    tcirc_d052: P-4-13. 最大連續子陣列 (DP / Dac)
+    tcirc_d053: Q-4-8. 先到先服務 (priority_queue / queue)
+    tcirc_d058: Q-4-17. 死線高手
+    tcirc_d059: Q-4-18. 少林寺的櫃姐 (Binary Search / tcirc_d053) (*)
+
+Matching: 
+    poj_3041: Asteroids (bipartite matching)
+    poj_3057: Evacuation (bipartite matching / BFS / DFS)
 
 Math:
     zj_a121: 質數又來囉 (range prime)
@@ -105,47 +121,45 @@ Math:
     tcirc_d017: Q-2-8. 模逆元
     tcirc_d022: Q-2-13. 無理數的快速冪 (無理數 / 快速冪)
 
-爬行法 (Sliding window):
-    poj_3061: Subsequence (tcirc_d031)
-    poj_3320: Jessica's Reading Problem
-    poj_3276: Face The Right Way
-    tcirc_d032: P-3-8. 固定長度區間的最大區段差 (deque)(*)
-    tcirc_d037: Q-3-13. X差值範圍內的最大Y差值 (deque)(*)
-
 Prefix (Suffix) Sum:
     zj_e339: 前綴合練習(只是簡單範例)
     zj_f638: 支點切割 (apcs / Recursion)
 
-Matching: 
-    poj_3041: Asteroids (bipartite matching)
-    poj_3057: Evacuation (bipartite matching / BFS / DFS)
+Recursion:
+    zj_f640: 函數運算式求值 (apcs)
+    zj_f637: DF-expression (apcs / tcirc_d005)
+    tcirc_d003: P-1-3. 棍子中點切割 
+    tcirc_d006 ~ d009
+    tcirc_d023: Q-2-14. 水槽 (*)
 
-Flow:
-    poj_3281: Dining (Maximum s-t Flow)
-    poj_3469: Dual Core (Maximum s-t Flow)
-    poj_2135: Farm Tour (Minimum Cost s-t Flow)
-    poj_3680: Intervals (Minimum Cost s-t Flow)
-    
-
-Geometry:
-    poj_1127: Jack Straws (Lines / intersection)
+Shortest Path:
+    poj_3225: Roadblocks (second shortest path --Dijkstra)
+    poj_3169: Layouts (Bellman-Ford)
+    poj_2686: Traveling by Stagecoach (DP)
 
 Simulation:
     zj_f340: 俄羅斯方塊 
     zj_c292: APCS2017-0304-3數字龍捲風 (apcs)
     zj_c297: APCS-2016-1029-4棒球遊戲 (bitwise operation)
 
-Bitmask:
-    zj_e288: 互補CP (apcs)
+爬行法 (Sliding Window):
+    poj_3061: Subsequence (tcirc_d031)
+    poj_3320: Jessica's Reading Problem
+    poj_3276: Face The Right Way
+    tcirc_d032: P-3-8. 固定長度區間的最大區段差 (deque)(*)
+    tcirc_d037: Q-3-13. X差值範圍內的最大Y差值 (deque)(*)
 
-Divide and Conquer:
-    tcirc_d038: Q-3-14. 線性函數 (Sliding window)(*)
+Sweeping Line:
+    zj_b966: 第 3 題 線段覆蓋長度 (Greedy / apcs / tcirc_d050)
+    tcirc_d055: P-4-14. 控制點(2D-max)
+    tcirc_d060: Q-4-19. 五嶽盟主的會議場所 (*)
+    tcirc_d061: Q-4-20. 監看華山練功場 (*)
 
 Else:
     poj_3279: Fliptile(bitwise operation / 集合窮舉)
     poj_3684: Physics Experiment(Ants)
     zj_a480: 導彈攔截系統 (窮舉)
-    zj_c462: 交錯字串 (String / apcs)
+    zj_c462: 交錯字串 (string / apcs)
     NCPC_2015_A: Sum of Largest Indices (stringstream)
     zj_e289: 美麗的彩帶 (apcs)
     zj_e294: APCS 類似題 - 小崴的新發現 (apcs)

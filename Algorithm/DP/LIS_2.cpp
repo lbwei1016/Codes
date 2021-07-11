@@ -26,9 +26,9 @@ int main()
             the length of current LIS.
 
             lower_bound(arr, arr+n, k) returns a pointer points to the element 
-            in arr that is "less" than k
+            in arr that is ">=" than k
         */
-        *(lower_bound(dp, dp+N, s[i])) = s[i];
+        *lower_bound(dp, dp+N, s[i]) = s[i];
     }
     /*
         to find out the postion in dp where its element is not INF, which means

@@ -35,3 +35,27 @@ int main() {
     cout << mx << '\n';
     return 0;
 }
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    char s1[505], s2[505];
+    int dp[2][505] = {0};
+    scanf("%s%s", s1, s2);
+    int from = 0, to = 1, l1=strlen(s1), l2=strlen(s2);
+    int mx = 0;
+    for(int i=0; i<l1; i++) {
+        for(int j=1; j<=l2; j++) {
+            if(s1[i] == s2[j-1]) dp[to][j] = dp[from][j-1] + 8;
+            else {
+                dp[to][j] = max(0, max(dp[to][j-1]-3, max(dp[from][j]-3, dp[from][j-1]-5)));
+            }
+            mx = max(mx, dp[to][j]);
+        }
+        swap(from, to);
+    }
+    printf("%d\n", mx);
+    return 0;
+}
+*/
