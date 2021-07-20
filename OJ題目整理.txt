@@ -20,11 +20,6 @@ Binary Search:
 Bitmask:
     zj_e288: 互補CP (apcs)
 
-BFS:
-    poj_1979: Red and Black
-    poj_2456: Aggressive cows
-    zj_e287: 機器人的路徑 (apcs)
-
 Data Structure:
     zj_d371: Huffman 編碼中的編碼效能問題 (heap / priority_queue)
     zj_f292: Almost Union-Find (Disjoint Set Union--DSU / Union-Find Tree)
@@ -32,20 +27,15 @@ Data Structure:
     zj_c463: apcs 樹狀圖分析 (樹的建構與走訪 / tcirc_d025)
     zj_d539: 區間 MAX (線段樹)
     zj_d799: 區間求和 (區間和 + 區間修改)(線段樹 + 標記／兩棵BIT)
-    zj_f163: 貨物分配 (apcs / 線段樹)
+    zj_f163: 貨物分配 (apcs / 線段樹) (tcirc_d105: DFS)
     poj_2104: K-th Number (範圍樹／Bucket + Sqrt)
     poj_3723: Conscription (MST)
     tcirc_d026: P-3-2. 括弧配對 (stack)
     tcirc_d027: Q-3-3. 加減乘除 (stack)
     tcirc_d029: 帶著板凳排雞排的高人 (apcs / map / stack)
     tcirc_d030: P-3-6. 砍樹 (apcs / stack)
-
-DFS:
-    zj_a017: 五則運算
-    zj_a229: 括號匹配
-    zj_b967: 第 4 題 血緣關係 (tree traversal / apcs)
-    poj_3009: Curling 2.0
-    NCPC_2015_B: Toll problem
+    tcirc-d101: Q-7-11. 紅白彩帶 (Union and Find)
+    tcirc_d102: P-8-1. 樹上的推銷員
 
 Divide and Conquer:
     tcirc_d036: Q-3-12. 完美彩帶 (Sliding Window)
@@ -71,7 +61,6 @@ DP:
     zj_d273: 11584 - Partitioning by Palindromes (最大迴文子字串)
     zj_d784: 連續元素的和(Maximum Subarray Problem)
     zj_f314: 3. 勇者修煉 (apcs) 
-    zj_f582: 4. 病毒演化 (apcs)
     zj_a365: 3. 新井字遊戲 (位元 DP)
     code_jam: 2009_1C_C
     poj_2686: Traveling by Stagecoach (Shortest Path)
@@ -85,30 +74,66 @@ DP:
     tcirc_d073: Q-6-5. 二維最大子矩陣 (tcirc_d021)
     tcirc_d074: Q-6-8. Local alignment
     tcirc_d075: Q-6-10. 置物櫃出租 (apcs / 01knapsack)
+    tcirc_d077: d077: P-6-13. 周伯通的基地台 (deque)
+    tcirc_d079: P-6-17. 切棍子 (*)
+    tcirc_d080: P-6-19. 階梯數字 (apcs)
+    tcirc_d081: P-6-20. Hyper-cube path (Bit operation)
+    tcirc_d083: P-6-22. 文無第一武無第二 (weighted LIS) (*)
     tcirc_d084: Q-6-12. 楊鐵心做 1 休 K
-
-Flow:
-    poj_3281: Dining (Maximum s-t Flow)
-    poj_3469: Dual Core (Maximum s-t Flow)
-    poj_2135: Farm Tour (Minimum Cost s-t Flow)
-    poj_3680: Intervals (Minimum Cost s-t Flow)
-
+    tcirc_d085: Q-6-14. K 次買賣 (*)
+    tcirc_d086: Q-6-18. 矩陣乘法鏈 (*)
+    tcirc_d087: Q-6-23. 直升機抓寶 (LIS) (*)
+    tcirc_d088: Q-6-24. 隔離採礦 (*)
+    tcirc_d089: Q-6-25. 貨郎問題 (TSP) (*)
+    
 Geometry:
     poj_1127: Jack Straws (Lines / intersection)
+
+Graph:
+    BFS:
+        poj_1979: Red and Black
+        poj_2456: Aggressive cows
+        zj_e287: 機器人的路徑 (apcs)
+    DFS:
+        zj_a017: 五則運算
+        zj_a229: 括號匹配
+        poj_3009: Curling 2.0
+        NCPC_2015_B: Toll problem
+        tcirc_d106: P-8-7. 寶石的顏色
+    Flow:
+        poj_3281: Dining (Maximum s-t Flow)
+        poj_3469: Dual Core (Maximum s-t Flow)
+        poj_2135: Farm Tour (Minimum Cost s-t Flow)
+        poj_3680: Intervals (Minimum Cost s-t Flow)
+    Matching: 
+        poj_3041: Asteroids (bipartite matching)
+        poj_3057: Evacuation (bipartite matching / BFS / DFS)
+    Topology:
+        tcirc_d095: P-7-6. DAG 的最長與最短路徑
+        tcirc_d099: Q-7-7. AOV 最早完工時間 (*)
+    Else:
+        tcirc_d097: P-7-10. 挖坑跳 (Union and Find) (*)
+        tcirc_d104: P-8-3. 購物中心選位置 (tree_median)(*)
+        tcirc_d107: P-8-8. 樹的最大獨立集 (Maximum Independent Set)
+        tcirc_d108: Q-8-6. 樹狀圖的距離總和 (*)
+        tcirc_d109: P-8-11. 公司派對 (Max Weight Independent Set / NCPC)
+        tcirc_d110: P-8-13. 不同成本的購物中心 (DP) (*)
+        tcirc_d111: P-8-14. 血緣關係 (tree_diameter / apcs) (zj_b967) (*)
+        tcirc_d112: Q-8-9. 服務中心選位置 (Minimal Dominating Set) (*)
+        tcirc_d113: Q-8-10. 竊聽間諜網 (Minimum Vertex Cover) (*)
+        tcirc_d114: Q-8-12. 佔領連續的城鎮 (DP)
+        tcirc_d115: Q-8-15. 樹上一位不回家的推銷員 (TSP / tree_diameter) (*)
+        tcirc_d116: Q-8-16. 病毒演化 (DP / apcs) (zj_f582) (*)
 
 Greedy:
     zj_e576: Minimal Coverage
     zj_e591: Coin Collector
     zj_e693: Grid of Lamps
-    tcirc_d047: Q-4-6. 少林寺的自動寄物櫃 (apcs / zj_c471)
+    tcirc_d047: Q-4-6. 少林寺的自動寄物櫃 (apcs) (zj_c471)
     tcirc_d052: P-4-13. 最大連續子陣列 (DP / Dac)
     tcirc_d053: Q-4-8. 先到先服務 (priority_queue / queue)
     tcirc_d058: Q-4-17. 死線高手
-    tcirc_d059: Q-4-18. 少林寺的櫃姐 (Binary Search / tcirc_d053) (*)
-
-Matching: 
-    poj_3041: Asteroids (bipartite matching)
-    poj_3057: Evacuation (bipartite matching / BFS / DFS)
+    tcirc_d059: Q-4-18. 少林寺的櫃姐 (Binary Search) (tcirc_d053) (*)
 
 Math:
     zj_a121: 質數又來囉 (range prime)

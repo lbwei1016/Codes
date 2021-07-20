@@ -1,3 +1,8 @@
+/*
+***DP***
+
+    O(n)
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -15,3 +20,15 @@ int main() {
     printf("%d\n", (int)lis.size());
     return 0;
 }
+/* multiset version -- slower for maintaining unecessary sorted order
+int n;
+scanf("%d", &n);
+multiset<int> ms;
+while(n--) {
+    int t;
+    scanf("%d", &t);
+    auto it = ms.lower_bound(t);
+    if(it != ms.end()) ms.erase(it);
+    ms.emplace(t);
+}
+*/

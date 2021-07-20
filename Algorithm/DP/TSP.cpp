@@ -5,7 +5,7 @@
         visited all the vertices of a weighed-directed graph, and then 
         go back to where we starts.
     
-    O(n^3)
+    O(n^2 * 2^n)
 */
 #include <iostream>
 #include <algorithm>
@@ -26,7 +26,7 @@ int d[MAX_N][MAX_N];
 
     Solution:
         dp[S][0] = 0
-        dp[S][v] = min(dp[S][v], dp[S ¡å {u}][u], d(v, u))
+        dp[S][v] = min(dp[S][v], dp[S ¡å {u}][u] + d(v, u))
 
     note: 
         If the size of S is bigger, dp[S][v] can be smaller, for there

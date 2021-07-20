@@ -109,3 +109,30 @@ void print(int p)
     }
     cout << temp.size() << ' ' << sum << '\n';
 }
+/* Another way to implement it:
+
+int parent[1000]; //如果是根，parent[root] = -rank，否則 parent[x] = root
+void init(int n) {
+    for(int i=0; i<n; i++) {
+        parent[i] = -1; 
+    }
+}
+int find(int x) {
+    if(parent[x] < 0) return x;
+    else return parent[x] = find(parent[x]);
+}
+void unite(int x, int y) {
+    int r1 = find(x);
+    int r2 = find(y);
+    if(r1 == r2) return;
+    int sum = parent[x] + parent[y]; //(-1)*新的 rank
+    //因為 rank 為負，因此大小關係相反
+    if(parent[r1] < parent[r2]) {
+        parent[r2] = r1; //append r2 to r1
+        parent[r1] = sum;
+    } else {
+        parent[r1] = r2;
+        parent[r2] = sum;
+    }
+}
+*/

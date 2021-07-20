@@ -42,11 +42,11 @@ void dijkstra(int s)
         pii p = pq.top(); pq.pop();
         int v = p.second;
         
-        //not sure why below if-statement is needed???
+        //d[v] has changed after v was pushed into pq
         if(d[v] < p.first) continue;
 
         //edges[v].size() represents how many edges are adjacent to v
-        for(int i=0; i<edges[v].size(); i++)
+        for(int i=0, len=edges[v].size(); i<len; i++)
         {
             edge e = edges[v][i];
             if(d[e.to] > d[v] + e.cost)
