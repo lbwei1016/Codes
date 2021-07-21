@@ -52,36 +52,41 @@ DP:
     zj_a591: Bees' ancestors(Fibonacci)
     zj_a697: [NOIP 2012 普及組] 3.
     zj_b123: 最大矩形
-    zj_b184: 裝貨櫃問題 (01knapsack)
+    zj_b184: 裝貨櫃問題 (0/1_knapsack)
     zj_c296: APCS-2016-1029-3定時K彈 (Josephus problem)
-    zj_d042: 11420 - Chest of Drawers
+    zj_d042: 11420 - Chest of Drawers (UVa)
     zj_d052: Trainsorting(LIS)
     zj_d231: 基因序列密碼問題 (LCS: 印出字串)
     zj_d253: Coin Change
-    zj_d273: 11584 - Partitioning by Palindromes (最大迴文子字串)
+    zj_d273: 11584 - Partitioning by Palindromes (最大迴文子字串) (UVa)
     zj_d784: 連續元素的和(Maximum Subarray Problem)
     zj_f314: 3. 勇者修煉 (apcs) 
     zj_a365: 3. 新井字遊戲 (位元 DP)
+    zj_b587: 10918 - Tri Tiling (UVa)
+    zj_d389: 11069 - A Graph Problem (UVa)
+    zj_d224: 11296 - Counting Solutions to an Integral Equation (UVa)
+    zj_d054: 11310 - DELIVERY DEBACLE (UVa)
+    zj_d645: 輪下亡魂 (Bounded_knapsack)
     code_jam: 2009_1C_C
-    poj_2686: Traveling by Stagecoach (Shortest Path)
+    poj_2686: Traveling by Stagecoach (位元 DP / Shortest Path)
     poj_1769: Minimizing maximizer (Seg Tree)
     tcirc_d066: P-6-1. 小朋友上樓梯最小成本
     tcirc_d067: P-6-2. 不連續的表演酬勞
     tcirc_d068: P-6-3. 最小監控鄰居的成本
     tcirc_d069: P-6-6. 方格棋盤路線
-    tcirc_d071: P-6-9. 大賣場免費大搬家 (01knapsack)
+    tcirc_d071: P-6-9. 大賣場免費大搬家 (0/1_knapsack)
     tcirc_d072: Q-6-4. 闖關二選一
     tcirc_d073: Q-6-5. 二維最大子矩陣 (tcirc_d021)
     tcirc_d074: Q-6-8. Local alignment
-    tcirc_d075: Q-6-10. 置物櫃出租 (apcs / 01knapsack)
-    tcirc_d077: d077: P-6-13. 周伯通的基地台 (deque)
+    tcirc_d075: Q-6-10. 置物櫃出租 (apcs / 0/1_knapsack)
+    tcirc_d077: P-6-13. 周伯通的基地台 (deque)
     tcirc_d079: P-6-17. 切棍子 (*)
     tcirc_d080: P-6-19. 階梯數字 (apcs)
     tcirc_d081: P-6-20. Hyper-cube path (Bit operation)
     tcirc_d083: P-6-22. 文無第一武無第二 (weighted LIS) (*)
     tcirc_d084: Q-6-12. 楊鐵心做 1 休 K
     tcirc_d085: Q-6-14. K 次買賣 (*)
-    tcirc_d086: Q-6-18. 矩陣乘法鏈 (*)
+    tcirc_d086: Q-6-18. 矩陣乘法鏈 (zj_d652) (*)
     tcirc_d087: Q-6-23. 直升機抓寶 (LIS) (*)
     tcirc_d088: Q-6-24. 隔離採礦 (*)
     tcirc_d089: Q-6-25. 貨郎問題 (TSP) (*)

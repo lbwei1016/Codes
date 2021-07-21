@@ -35,7 +35,7 @@ int main() {
 }
 /* 另一種寫法 (畫方格圖驗證)
 //結束點逐漸往後推
-for(int j=1; j<n; j++) {
+for(int j=1; j<n; j++) {  
     //開始點往前推 (長度變長)
     for(int i=j-1; i>=0; i--) {
         int mn = 1e9;
