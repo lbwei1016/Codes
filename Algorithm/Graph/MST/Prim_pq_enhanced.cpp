@@ -70,3 +70,55 @@ int main()
     int ans = prim();
     return 0;
 }
+/* Another version
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef pair<int, int> P;
+const int V = 10005;
+struct E { int to, w; };
+int n, m, d[V];
+vector<E> G[V];
+bitset<V> visit;
+
+int Prim(int n) {
+    int res = 0, cnt = 0;
+    priority_queue<P, vector<P>, greater<P> > pq;
+    pq.push({d[1] = 0, 1});
+    while(!pq.empty()) {
+        auto p = pq.top(); pq.pop();
+        int v = p.second;
+        if(visit[v]) continue;
+        visit[v] = 1;
+        res += p.first;
+        if(++cnt == n) return res;
+
+        for(auto e : G[v]) {
+            int u = e.to, w = e.w;
+            if(visit[u]) continue;
+            if(d[u] > w) {
+                d[u] = w;
+                pq.push({d[u], u});
+            }
+        }
+    }
+    return -1;
+}
+
+int main() {
+    while(scanf("%d%d", &n, &m) == 2) {
+        if(n == 0) break;
+        for(int i=1; i<=n; i++) G[i].clear();
+        fill(d+1, d+n+1, 1e9);
+        visit.reset();
+        for(int i=0; i<m; i++) {
+            int u, v, w;
+            scanf("%d%d%d", &u, &v, &w);
+            G[u].push_back({v, w});
+            G[v].push_back({u, w});
+        }
+        printf("%d\n", Prim(n));
+    }
+    return 0;
+}
+*/
