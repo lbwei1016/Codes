@@ -14,7 +14,7 @@ int main() {
     for(int i=0; i<n; i++) {
         int p;
         scanf("%d", &p);
-        //­Y«e¤è¬°­t¡A«h±Ë±ó
+        //è‹¥å‰æ–¹ç‚ºè² ï¼Œå‰‡æ¨æ£„
         p_max = p_max > 0 ? p_max+p : p;
         res = max(res, p_max);
     }

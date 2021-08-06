@@ -1,50 +1,50 @@
 # Directory and File
 ## Go To
-- `cd` ~ : ¦^¨ì®a¥Ø¿ý
-- `cd ~[account]` : ¨ì[account]ªº®a¥Ø¿ý
-- `cd`  : ¦^¨ì®a¥Ø¿ý
-- `cd` .. : «e©¹¤W¼h¥Ø¿ý
-- `cd` - : ¦^¨ì¤W¤@­Ó¥Ø¿ý
+- `cd` ~ : å›žåˆ°å®¶ç›®éŒ„
+- `cd ~[account]` : åˆ°[account]çš„å®¶ç›®éŒ„
+- `cd`  : å›žåˆ°å®¶ç›®éŒ„
+- `cd` .. : å‰å¾€ä¸Šå±¤ç›®éŒ„
+- `cd` - : å›žåˆ°ä¸Šä¸€å€‹ç›®éŒ„
 
-- `.` : ¥Nªí·í«e¥Ø¿ý
-- `..` : ¥Nªí¤W¤@¼h¥Ø¿ý
+- `.` : ä»£è¡¨ç•¶å‰ç›®éŒ„
+- `..` : ä»£è¡¨ä¸Šä¸€å±¤ç›®éŒ„
 
 ## Manipulation
-- `pwd [-P]` : Åã¥Ü¥Ø«e©Ò¦bªº¥Ø¿ý¡F `-P` ¡G Åã¥Ü¥X½T¹êªº¸ô®|¡A¦Ó«D¨Ï¥Î³sµ² (link) ¸ô®|
+- `pwd [-P]` : é¡¯ç¤ºç›®å‰æ‰€åœ¨çš„ç›®éŒ„ï¼› `-P` ï¼š é¡¯ç¤ºå‡ºç¢ºå¯¦çš„è·¯å¾‘ï¼Œè€Œéžä½¿ç”¨é€£çµ (link) è·¯å¾‘
 
-- `mkdir [-mp]`: -m : ³]©wÅv­­(e.g. 711)¡F`-p` : »¼°j¾Þ§@(¾ã¼h)
-- `rmdir [-p]` : §R°£¡uªÅ¡v¥Ø¿ý¡F`-p` : »¼°j¾Þ§@
-- `basename [/.../...]` : Åã¥Ü¡uÀÉ¦W¡v 
-- `dirname [/.../...]` : Åã¥Ü¡u¥Ø¿ý¦W¡v
+- `mkdir [-mp]`: -m : è¨­å®šæ¬Šé™(e.g. 711)ï¼›`-p` : éžè¿´æ“ä½œ(æ•´å±¤)
+- `rmdir [-p]` : åˆªé™¤ã€Œç©ºã€ç›®éŒ„ï¼›`-p` : éžè¿´æ“ä½œ
+- `basename [/.../...]` : é¡¯ç¤ºã€Œæª”åã€ 
+- `dirname [/.../...]` : é¡¯ç¤ºã€Œç›®éŒ„åã€
 
-- `cp [-a][-r][-i] [from] [to]` : ½Æ»sÀÉ®×(¥Ø¿ý)¡F`-a` : °ò¥»¤W¥Nªí½Æ»s­ìÀÉ®×ªº¤@¤Á(¥]¬AÅv­­) ¡F`-r` : »¼°j½Æ»s(¥Î©ó¥Ø¿ý)¡F`-i` : ¥X²{Äµ§i°T®§
-- `touch [file]` : «Ø¥ßªÅÀÉ®×
-- `rm [-i][-r]` : §R°£ÀÉ®×(°Ñ¼Æ·N¸q¦P `cp`)
-- `mv [-i] [from(name A)] [to (name B)]` : ²¾°Ê¡B­«·s©R¦WÀÉ®×
-- ÀÉ¦W¬° "`-`" ªºÀÉ®×­n¥Îµ´¹ï¸ô®|¨Ó¶}±Ò¡G`./-`
-- ÀÉ¦W¦³ªÅ¥ÕÁä¡G`vi "a file with spaces"`
-- `file [filename]`: Åã¥ÜÀÉ®×Ãþ«¬ (*dat, ASCII, etc*)
-- `find [-specifics]` : §ä´M·í«e©M¤l¥Ø¿ý¤¤²Å¦X±ø¥óªºÀÉ®×(¥Ø¿ý)
-    - `find -size 1033c`: ¤j¤p¬°`1033 byte`ªºÀÉ®×
-    - `find -user [owner] -group [group name]` : ÀÉ®×¾Ö¦³ªÌ¤Î¸s²Õ
-    - `find [-...] 2>/dev/null` : ±Æ°£¦]Åv­­µLªk¦s¨úªºÀÉ®×
-- `wc [file1] [file2]` : ¿é¥XÀÉ®×ªº´«¦æ¼Æ¡B¦r¼Æ»P¦ì¤¸²Õ¼Æ
-    - `wc -l` : ´«¦æ¼Æ
-    - `wc -w` : ¦r¼Æ
-    - `wc -c` : ¦ì¤¸²Õ¼Æ
-    - `wc -m` : ¦r¤¸¼Æ
+- `cp [-a][-r][-i] [from] [to]` : è¤‡è£½æª”æ¡ˆ(ç›®éŒ„)ï¼›`-a` : åŸºæœ¬ä¸Šä»£è¡¨è¤‡è£½åŽŸæª”æ¡ˆçš„ä¸€åˆ‡(åŒ…æ‹¬æ¬Šé™) ï¼›`-r` : éžè¿´è¤‡è£½(ç”¨æ–¼ç›®éŒ„)ï¼›`-i` : å‡ºç¾è­¦å‘Šè¨Šæ¯
+- `touch [file]` : å»ºç«‹ç©ºæª”æ¡ˆ
+- `rm [-i][-r]` : åˆªé™¤æª”æ¡ˆ(åƒæ•¸æ„ç¾©åŒ `cp`)
+- `mv [-i] [from(name A)] [to (name B)]` : ç§»å‹•ã€é‡æ–°å‘½åæª”æ¡ˆ
+- æª”åç‚º "`-`" çš„æª”æ¡ˆè¦ç”¨çµ•å°è·¯å¾‘ä¾†é–‹å•Ÿï¼š`./-`
+- æª”åæœ‰ç©ºç™½éµï¼š`vi "a file with spaces"`
+- `file [filename]`: é¡¯ç¤ºæª”æ¡ˆé¡žåž‹ (*dat, ASCII, etc*)
+- `find [-specifics]` : æ‰¾å°‹ç•¶å‰å’Œå­ç›®éŒ„ä¸­ç¬¦åˆæ¢ä»¶çš„æª”æ¡ˆ(ç›®éŒ„)
+    - `find -size 1033c`: å¤§å°ç‚º`1033 byte`çš„æª”æ¡ˆ
+    - `find -user [owner] -group [group name]` : æª”æ¡ˆæ“æœ‰è€…åŠç¾¤çµ„
+    - `find [-...] 2>/dev/null` : æŽ’é™¤å› æ¬Šé™ç„¡æ³•å­˜å–çš„æª”æ¡ˆ
+- `wc [file1] [file2]` : è¼¸å‡ºæª”æ¡ˆçš„æ›è¡Œæ•¸ã€å­—æ•¸èˆ‡ä½å…ƒçµ„æ•¸
+    - `wc -l` : æ›è¡Œæ•¸
+    - `wc -w` : å­—æ•¸
+    - `wc -c` : ä½å…ƒçµ„æ•¸
+    - `wc -m` : å­—å…ƒæ•¸
 - `diff [option] [file1 file2...]` : output the difference between files
 ## Permission
-- `chgrp [-R] [group] [file/dir]` : §ó§ï¸s²Õ (root)
-- `chown [-R] [user:group] [file/dir]` : §ó§ï¾Ö¦³ªÌ (¸s²Õ¤]¥i¥H : `user:group`) (root)
-- `chmod [-R] [xyz] [file/dir]` : ÀÉ®×Åv­­§ó§ï 
+- `chgrp [-R] [group] [file/dir]` : æ›´æ”¹ç¾¤çµ„ (root)
+- `chown [-R] [user:group] [file/dir]` : æ›´æ”¹æ“æœ‰è€… (ç¾¤çµ„ä¹Ÿå¯ä»¥ : `user:group`) (root)
+- `chmod [-R] [xyz] [file/dir]` : æª”æ¡ˆæ¬Šé™æ›´æ”¹ 
     - `r` : 4
     - `w` : 2
     - `x` : 1
     >*e.g. `chmod -R 720 myfile`*
 - ***Setuid, Setgid, Sticky BIT***
-    - ***setuid*** : `chmod "4"751`¡Fcancel : `chmod [0]751`
-    - ***setgid*** : `chmod "2"751`¡Fcancel : `chmod [0]751`
+    - ***setuid*** : `chmod "4"751`ï¼›cancel : `chmod [0]751`
+    - ***setgid*** : `chmod "2"751`ï¼›cancel : `chmod [0]751`
     - ***sticky bit*** : `chmod "+t" [file]`
 
 ## Read File Content
@@ -92,6 +92,10 @@
     > Note: characters are corresponded one-by-one between `str1` and `str2`
     
     >*e.g. `tr a-zA-Z n-za-mN-ZA-M`* : Rot13 encoding
+- `iconv -f [source format] -t [convert to] -o [output file] [input file]`: change file's encoding
+    > *e.g.* `iconv -f BIG-5 -t utf8 -o test.txt test.txt`
+
+    > Note: DON'T repeat converting the same file or bad thing may occur.
 # nc (netcat)
 - `nc [-vul] [host] [port]` : using the `TCP` or `UDP` protocols to read or write data 
     - `-v` : verbose message displayed
@@ -110,9 +114,22 @@
     - `s_client` : connect to a remote host using `SSL/TLS`
         - `-quiet` : inhibit printing of session and certificate information
         - `-connect [host:port]` : connect to host
-
+# Variable
+- `declare [-ia] [var name]`: declare a variable *(a string in default)*
+    - `-i`: number 
+    - `-a`: array
+- `read [var name]`: read from `STDIN` to a variable
+    - ***call value***: `${var name}`
+    - ***assign***: `var=$(command)`: `var`'s value is the output of `command`
+# Bash
+- `bash [-x] [].sh`: execute shell script
+    - `-x`: output the process of script-execution
 # Others
 - `sort [file]` : Sort the given file
 - `strings [file]` : Prints the printable character sequences that are at least 4 characters long
 - `grep [pattern] [file1/dir1] [file2/dir2]` : Find contents/files that matches the pattern
+    - `grep -q [...]`: If `pattern` is found, exit with code `0`, otherwise `1`
 - `uniq [file]` :  Filter adjacent matching lines 
+- `exit 0`: exit with code `0` 
+    - `echo $?`: Look up the latest exit code 
+

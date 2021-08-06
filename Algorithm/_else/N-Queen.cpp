@@ -2,7 +2,7 @@
 
 using namespace std;
 
-//"k": currnet row¡Fp[i]: at which column the queen at row i is
+//"k": currnet rowï¼›p[i]: at which column the queen at row i is
 int nqr(int n, int k, int p[]) {
     if(k >= n) return 1;
 
@@ -20,7 +20,7 @@ int nqr(int n, int k, int p[]) {
                 Define j = k - i + p[i] = p[i] + m;
                 if j exists, j is on the same diagonal with i.
             II:
-                Define j' = p[i] - (k-i) = p[i] - m¡F
+                Define j' = p[i] - (k-i) = p[i] - mï¼›
                 same as above.
         */
         int j = k - i + p[i];

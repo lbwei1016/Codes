@@ -18,13 +18,13 @@ int seg(int l, int r) {
     st.clear();
     st.insert(v[mid]);
     int cross = 0, j;
-    //¥ı©¹¥k·j´M¨ì©³
+    //å…ˆå¾€å³æœå°‹åˆ°åº•
     for(j=mid+1; j<r; j++) {
         if(st.count(v[j])) break;
         st.insert(v[j]);
     }
     j--;
-    //¦A±q¤¤¶¡©¹¥ªÂX®i
+    //å†å¾ä¸­é–“å¾€å·¦æ“´å±•
     for(int i=mid-1; i>=l; i--) {
         while(j>mid && st.count(v[i])) {
             st.erase(v[j--]);

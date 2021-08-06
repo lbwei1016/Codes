@@ -75,7 +75,7 @@ void DFS(int left, int right)
     {
         v.push_back(')');
         DFS(left, right+1);
-        v.pop_back(); //³o©Î³\¤]¬O¤@ºØbacktracking
+        v.pop_back(); //é€™æˆ–è¨±ä¹Ÿæ˜¯ä¸€ç¨®backtracking
     }
         
 }

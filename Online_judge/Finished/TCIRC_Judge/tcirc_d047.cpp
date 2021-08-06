@@ -7,7 +7,7 @@
 using namespace std;
 
 struct cost { int w, f; };
-//w / f  ¶V¤pÂ\¶V«e­± => ¥Î¥æ¤e¬Û­¼Á×§K float
+//w / f  è¶Šå°æ“ºè¶Šå‰é¢ => ç”¨äº¤å‰ç›¸ä¹˜é¿å… float
 bool cmp(const cost a, const cost b) {
     return a.w*b.f < b.w*a.f;
 }

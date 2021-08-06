@@ -7,8 +7,8 @@ using namespace std;
 
 typedef long long ll;
 const int MAX_N = 100000+5;
-int bit[2 * MAX_N]; //bit[i]: ­Y¬° 1¡A¥Nªí¥X²{¹L¡F¤Ï¤§«h«D
-int L[MAX_N], R[MAX_N]; //L[i], R[i]: ¼Æ¦r i ²Ä¤@¦¸©M²Ä¤G¦¸¥X²{ªº¦ì¸m
+int bit[2 * MAX_N]; //bit[i]: è‹¥ç‚º 1ï¼Œä»£è¡¨å‡ºç¾éï¼›åä¹‹å‰‡é
+int L[MAX_N], R[MAX_N]; //L[i], R[i]: æ•¸å­— i ç¬¬ä¸€æ¬¡å’Œç¬¬äºŒæ¬¡å‡ºç¾çš„ä½ç½®
 int n;
 //1-indexed
 void bit_add(int i, int x) {
@@ -39,11 +39,11 @@ int main() {
     }
 
     ll res = 0;
-    //¥Ñ¤p¨ì¤j
+    //ç”±å°åˆ°å¤§
     for(int i=1; i<=n; i++) {
-        //«eºó©M¡A1 ¥Nªí¥X²{¹L
+        //å‰ç¶´å’Œï¼Œ1 ä»£è¡¨å‡ºç¾é
         res += bit_sum(R[i]) - bit_sum(L[i]);
-        //¥Nªí¼Æ¦r i ¤w¥X²{¹L
+        //ä»£è¡¨æ•¸å­— i å·²å‡ºç¾é
         bit_add(L[i], 1);
         bit_add(R[i], 1);
     }

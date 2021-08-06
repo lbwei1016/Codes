@@ -27,7 +27,7 @@ int main() {
     printf("%d\n", res);
     return 0;
 }
-/* ª¦¦æªk (Crawling Method) NO!!!!!!
+/* çˆ¬è¡Œæ³• (Crawling Method) NO!!!!!!
 Reason: elements in arr[] may be negative!!! 
         so the sum of the sequence is not increasing.
 int s = 0, t = 0;

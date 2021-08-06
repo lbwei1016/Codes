@@ -2,7 +2,7 @@
 ***Tree-Traversal***
 
     Solution: 
-        ¥Î Linked List ªº·§©À¡A¤À§O¼Ğ°O¸`ÂIªº¤÷¥H¤Î©Ò¦³¤l¸`ÂI¡A¦A¥Ñ¤U(¸­)¦Ó¤W¨«³X¡A¨Ã°O¿ı°ª«×
+        ç”¨ Linked List çš„æ¦‚å¿µï¼Œåˆ†åˆ¥æ¨™è¨˜ç¯€é»çš„çˆ¶ä»¥åŠæ‰€æœ‰å­ç¯€é»ï¼Œå†ç”±ä¸‹(è‘‰)è€Œä¸Šèµ°è¨ªï¼Œä¸¦è¨˜éŒ„é«˜åº¦
     O(Rank * Leaf_number)
 */
 #include <bits/stdc++.h>
@@ -57,7 +57,7 @@ int main()
     }
     for(int i=1; i<=n; i++)
     {
-        //·í¸Ó¸`ÂI¬O¡u¸­¡vªº®É­Ô¡A¦V¤W¨«³X
+        //ç•¶è©²ç¯€é»æ˜¯ã€Œè‘‰ã€çš„æ™‚å€™ï¼Œå‘ä¸Šèµ°è¨ª
         if(nodes[i].child.size() == 0)
             trav(&nodes[i], 0);
     }

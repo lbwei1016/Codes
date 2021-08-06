@@ -15,15 +15,15 @@ int main()
     while(t--)
     {
         cin >> n;
-        int sum, cnt = 2; //���F�o��̤j�ȡA�̤j�M�̤p���w���@�w�|�Q�ϥ�
+        int sum, cnt = 2; //為了得到最大值，最大和最小的硬幣一定會被使用
         for(int i=0; i<n; i++)
             cin >> coin[i];
         sum = coin[0];
-        for(int i=1; i<n-1; i++) //���F�o��̤j�ȡA�̤j�M�̤p���w���@�w�|�Q�ϥ�
+        for(int i=1; i<n-1; i++) //為了得到最大值，最大和最小的硬幣一定會被使用
         {
-            //��h:�v�@�˵��U���ȡA�Ѥp��j(�u�ݭ�n�֦��U���Ȫ����B�A�]���h�l�����O�L�N�q��)�A
-            //���ۭY�ثe���B >= �U�@�ӹ��ȡA�h�����Q�N�����Ӹ��j���w��(����cnt������֡A�]����
-            //���j�w���u���N��L�y�p�����ӵw���A�]��cnt����)
+            //原則:逐一檢視各幣值，由小到大(只需剛好擁有各幣值的面額，因為多餘的錢是無意義的)，
+            //接著若目前金額 >= 下一個幣值，則必須被代換為該較大的硬幣(此時cnt不必減少，因為該
+            //較大硬幣只取代比他稍小的那個硬幣，因此cnt不變)
             if(sum + coin[i] < coin[i+1])
             {
                 sum += coin[i];

@@ -20,7 +20,7 @@ int main() {
         scanf("%d", &p[i]);
     }
     memset(memo, -1, sizeof(memo));
-    //Ãä¬É³B²z
+    //é‚Šç•Œè™•ç†
     p[0] = 0, p[n+1] = L;
     for(int i=0; i<n+1; i++) 
         memo[i][i+1] = 0;

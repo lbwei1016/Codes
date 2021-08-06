@@ -22,11 +22,11 @@ int d[MAX_N][MAX_N];
     dp[S][v]: 
         The minimum cost to go from current vertex(v) to the rest unvisited
         vertices, and finally go back to where we start.
-    (S: a union of visited vertices¡Fv: current vertix)
+    (S: a union of visited verticesï¼›v: current vertix)
 
     Solution:
         dp[S][0] = 0
-        dp[S][v] = min(dp[S][v], dp[S ¡å {u}][u] + d(v, u))
+        dp[S][v] = min(dp[S][v], dp[S âˆª {u}][u] + d(v, u))
 
     note: 
         If the size of S is bigger, dp[S][v] can be smaller, for there

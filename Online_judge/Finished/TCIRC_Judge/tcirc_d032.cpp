@@ -9,9 +9,9 @@ int arr[200005];
 deque<int> max_q, min_q; //index
 
 void put_max(int i) {
-    //±q«áºİ¥[¤J¡A¬Û·í©ó°Ï¶¡¦V¥k²¾
-    //­Y¦b i ¤§«e¡A¦³¤p©ó arr[i] ªº­È¡A¨º»ò¥L­Ì¦b arr[i] Â÷¶}¤§«e¤£¥i¯à¬O
-    //³Ì¤j­È¡A¦]¦¹ª½±µ±Ë±ó
+    //å¾å¾Œç«¯åŠ å…¥ï¼Œç›¸ç•¶æ–¼å€é–“å‘å³ç§»
+    //è‹¥åœ¨ i ä¹‹å‰ï¼Œæœ‰å°æ–¼ arr[i] çš„å€¼ï¼Œé‚£éº¼ä»–å€‘åœ¨ arr[i] é›¢é–‹ä¹‹å‰ä¸å¯èƒ½æ˜¯
+    //æœ€å¤§å€¼ï¼Œå› æ­¤ç›´æ¥æ¨æ£„
     while(!max_q.empty() && arr[max_q.back()] <= arr[i])
         max_q.pop_back();
     max_q.push_back(i);

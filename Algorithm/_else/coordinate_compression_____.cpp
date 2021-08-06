@@ -1,4 +1,4 @@
-//¡u°ö¾i¡v p.169
+//ã€ŒåŸ¹é¤Šã€ p.169
 #include <iostream>
 #include <cstring>
 #include <vector>

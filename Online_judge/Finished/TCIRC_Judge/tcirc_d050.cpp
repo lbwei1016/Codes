@@ -22,11 +22,11 @@ int main() {
     int res = 0;
     for(int i=1; i<n; i++) {
         if(seg[i].l > last.r) {
-            //µ²ºâ¥Ø«e½u¬qªø
+            //çµç®—ç›®å‰ç·šæ®µé•·
             res += last.r - last.l;
-            //§ó·s¥½ºİ
+            //æ›´æ–°æœ«ç«¯
             last = seg[i];
-        //©µªø¥½ºİ
+        //å»¶é•·æœ«ç«¯
         } else last.r = max(last.r, seg[i].r);
     }
     res += last.r - last.l;

@@ -8,12 +8,12 @@ typedef long long ll;
 const int MAX_N = 1e5;
 int N, L;
 ll p[MAX_N];
-//¥H¤Á³ÎÂI½s¸¹¶i¦æ»¼°j (¦]¬°¬O¥H¤Á³ÎÂI¨M©w»¼°j¬O§_µ²§ô)
+//ä»¥åˆ‡å‰²é»ç·¨è™Ÿé€²è¡Œéè¿´ (å› ç‚ºæ˜¯ä»¥åˆ‡å‰²é»æ±ºå®šéè¿´æ˜¯å¦çµæŸ)
 ll cut(int l, int r) {
-    if(r-1 <= l) return 0; //¨S¦³¤Á³ÎÂI¤F
-    ll mid = (p[l] + p[r]) / 2; //§ä¤¤ÂI
+    if(r-1 <= l) return 0; //æ²’æœ‰åˆ‡å‰²é»äº†
+    ll mid = (p[l] + p[r]) / 2; //æ‰¾ä¸­é»
     int m = lower_bound(p+l, p+r, mid) - p;
-    //§ä¶ZÂ÷²×ÂIªñ¥B½s¸¹¤pªº
+    //æ‰¾è·é›¢çµ‚é»è¿‘ä¸”ç·¨è™Ÿå°çš„
     if(p[m-1] - p[l] >= p[r] - p[m]) m--;
     return p[r] - p[l] + cut(l, m) + cut(m, r);
 }

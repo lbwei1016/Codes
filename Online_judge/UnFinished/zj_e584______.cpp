@@ -1,4 +1,4 @@
-//¬ÝUVA­ì¤å!!!!!
+//çœ‹UVAåŽŸæ–‡!!!!!
 //unidentified error
 #include <iostream>
 #include <cmath>

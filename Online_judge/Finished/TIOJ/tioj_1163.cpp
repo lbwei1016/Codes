@@ -1,8 +1,8 @@
 /*
 ***Graph*** -- MST / LCA
     Solution:  
-        1.  ­n§ä³Ì§Ö©è¹Fªº¤èªk -> MST
-        2.  ¬O§_¨ì¹F­n¬İ¸ô®|¤¤ªº³Ì¤j­È -> LCA (log V ¬d¸ß)
+        1.  è¦æ‰¾æœ€å¿«æŠµé”çš„æ–¹æ³• -> MST
+        2.  æ˜¯å¦åˆ°é”è¦çœ‹è·¯å¾‘ä¸­çš„æœ€å¤§å€¼ -> LCA (log V æŸ¥è©¢)
     O(E*logV + QlogV) (MST + LCA query)
 */  
 #include <bits/stdc++.h>
@@ -14,7 +14,7 @@ struct P { int u, w; };
 int V, E, Q, par[MAX_V], tin[MAX_V], tout[MAX_V], t_cnt=0;
 vector<Edge> es;
 vector<P> G[MAX_V];
-P anc[MAX_V][logV]; // anc[][].u: ¸Ó¥N¯ª¥ı¬O½Ö¡Fanc[][].w: ¨ì¸Ó¯ª¥ıªº³Ì¤jÅv­«
+P anc[MAX_V][logV]; // anc[][].u: è©²ä»£ç¥–å…ˆæ˜¯èª°ï¼›anc[][].w: åˆ°è©²ç¥–å…ˆçš„æœ€å¤§æ¬Šé‡
 bitset<MAX_V> vis;
 
 bool cmp(Edge e1, Edge e2) { return e1.w < e2.w; }
@@ -49,7 +49,7 @@ void dfs(int v, int p) {
     anc[v][0].u = p;
     for(int i=1; i<logV; ++i) {
         anc[v][i].u = anc[anc[v][i-1].u][i-1].u;
-        // ¬ö¿ı³Ì¤jÅv­«
+        // ç´€éŒ„æœ€å¤§æ¬Šé‡
         anc[v][i].w = max(anc[v][i-1].w, anc[anc[v][i-1].u][i-1].w);
     }
     for(auto e : G[v]) {
@@ -63,7 +63,7 @@ void dfs(int v, int p) {
 int LCA(int x, int y) {
     if(is_anc(x, y)) return x;
     if(is_anc(y, x)) return y;
-    // x ª¦¤W¨Ó
+    // x çˆ¬ä¸Šä¾†
     for(int i=logV-1; i>=0; --i) {
         if(!is_anc(anc[x][i].u, y)) {
             x = anc[x][i].u;
@@ -73,7 +73,7 @@ int LCA(int x, int y) {
 }
 int getMax(int x, int y) {
     if(x == y) return 0;
-    if(is_anc(x, y)) swap(x, y); // Åı x ª¦¤W¨Ó
+    if(is_anc(x, y)) swap(x, y); // è®“ x çˆ¬ä¸Šä¾†
     int mx = 0;
     for(int i=logV-1; i>=0; --i) {
         if(!is_anc(anc[x][i].u, y)) {
@@ -84,7 +84,7 @@ int getMax(int x, int y) {
     return max(mx, anc[x][0].w);
 }
 int main() {
-    // 0 ¬O¥ô¦ó¤Hªº¯ª¥ı¡I¡I¡I¡I
+    // 0 æ˜¯ä»»ä½•äººçš„ç¥–å…ˆï¼ï¼ï¼ï¼
     tin[0] = -1, tout[0] = 1e9;
 
     scanf("%d%d", &V, &E);
@@ -95,7 +95,7 @@ int main() {
     }
     kruskal();
     vis.reset();
-    // ¹M¾ú´ËªL
+    // éæ­·æ£®æ—
     for(int i=1; i<=V; ++i) {
         if(vis[i]) continue;
         t_cnt = 0;
@@ -115,12 +115,12 @@ int main() {
     }
     return 0;
 }
-/* ¤]¥i¥H§â LCA ©M getMax ¼g¦b¤@°_
+/* ä¹Ÿå¯ä»¥æŠŠ LCA å’Œ getMax å¯«åœ¨ä¸€èµ·
 int LCA(int x, int y) {
     int mx = 0;
     if(is_anc(y, x)) swap(x, y);
     else if(!is_anc(x, y)){
-        // x ª¦¤W¨Ó
+        // x çˆ¬ä¸Šä¾†
         for(int i=logV-1; i>=0; --i) {
             if(!is_anc(anc[x][i].u, y)) {
                 mx = max(mx, anc[x][i].w);
@@ -130,7 +130,7 @@ int LCA(int x, int y) {
         mx = max(mx, anc[x][0].w);
         x = anc[x][0].u;
     }
-    // y ª¦¤W¨Ó
+    // y çˆ¬ä¸Šä¾†
     for(int i=logV-1; i>=0; --i) {
         if(!is_anc(anc[y][i].u, x)) {
             mx = max(mx, anc[y][i].w);

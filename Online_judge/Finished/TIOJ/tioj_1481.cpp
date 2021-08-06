@@ -1,7 +1,7 @@
 /*
-***DFS*** (*)¯è½u³W¹º°ÝÃD
+***DFS*** (*)èˆªç·šè¦åŠƒå•é¡Œ
     Solution:
-        ­«ÂI: gcd(x, x+1) = 1¡C¦]¦¹¡ADFS ¹M¾úªº¶¶§Ç¤@©w¥i¥Hºc¦¨ÃD¥Ø­n¨D: ½s¸¹ªº³Ì¤j¤½¦]¼Æ¬O 1
+        é‡é»ž: gcd(x, x+1) = 1ã€‚å› æ­¤ï¼ŒDFS éæ­·çš„é †åºä¸€å®šå¯ä»¥æ§‹æˆé¡Œç›®è¦æ±‚: ç·¨è™Ÿçš„æœ€å¤§å…¬å› æ•¸æ˜¯ 1
 */
 #include <bits/stdc++.h>
 #include "lib1481.h"
@@ -13,7 +13,7 @@ int n, k, ans[N], cnt;
 vector<P> G[N];
 vector<bool> visit(N);
 
-// ¥HÃä¬°¥DÅé
+// ä»¥é‚Šç‚ºä¸»é«”
 void dfs(int v) {
     for(auto e : G[v]) {
         int u = e.to, id = e.id;
@@ -24,7 +24,7 @@ void dfs(int v) {
     }
 }
 int main() {
-    Init(); // interactive ¥²¥ý Init()
+    Init(); // interactive å¿…å…ˆ Init()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cin >> n >> k;

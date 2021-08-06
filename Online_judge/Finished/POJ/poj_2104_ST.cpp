@@ -32,7 +32,7 @@ int I[MAX_M], J[MAX_M], K[MAX_M];
 int nums[MAX_N]; //sorted A[]
 vector<int> dat[ST_SIZE];
 
-//[l, r), node v¡F0-indexed
+//[l, r), node vï¼›0-indexed
 void init(int v, int l, int r) {
     if(r-1 == l)
         dat[v].push_back(A[l]);
@@ -76,7 +76,7 @@ void solve() {
 
         /*
             Why ub = n - 1 ?
-            Because the final answer is nums[ub]¡Finitializing ub = n - 1,
+            Because the final answer is nums[ub]ï¼›initializing ub = n - 1,
             can prevent seg fault.
         */
         int lb = -1, ub = n - 1;

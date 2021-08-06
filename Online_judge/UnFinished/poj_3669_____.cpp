@@ -22,7 +22,7 @@ int M;
 int last;
 int vx[] = {0, 1, 0, -1},
     vy[] = {1, 0, -1, 0};
-int G[MAX_COOR+1][MAX_COOR+1]; //value: when to be hit -> 0 means safe¡F1, 2... isn't
+int G[MAX_COOR+1][MAX_COOR+1]; //value: when to be hit -> 0 means safeï¼›1, 2... isn't
 bool visited[MAX_COOR+1][MAX_COOR+1];
 
 int solve()

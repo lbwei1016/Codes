@@ -1,7 +1,7 @@
 /*
     Carmichael Numbers:
-        Find any integer x in (1, n) that complies with x^n °› x(mod n).
-        (Also defined as: x^(n-1) °› 1(mod n), i.e. x^(n-1) mod n = 1)
+        Find any integer x in (1, n) that complies with x^n ‚â° x(mod n).
+        (Also defined as: x^(n-1) ‚â° 1(mod n), i.e. x^(n-1) mod n = 1)
         If x is found, then n is a "Carmichael Number"(primes are excluded)
 
         Note: The found x and n are relatively prime, i.e., gcd(x, n) = 1
@@ -70,7 +70,7 @@ void sieve()
     }
 }
 
-//"+"°B"-"°B"*" can be applied to the calculation of "mod"(%) 
+//"+"„ÄÅ"-"„ÄÅ"*" can be applied to the calculation of "mod"(%) 
 ll mod_power(ll x, ll n, ll mod)
 {
     ll res = 1;

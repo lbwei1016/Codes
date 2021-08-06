@@ -1,7 +1,7 @@
 /*
-    Binary-Indexed-Tree(BTS)--¤SºÙ¾ğª¬¼Æ²Õ (°Ñ¦ÒBIT_1)
+    Binary-Indexed-Tree(BTS)--åˆç¨±æ¨¹ç‹€æ•¸çµ„ (åƒè€ƒBIT_1)
 
-    §Q¥Î¨âÁû BIT ¨Ó¹F¨ì¥H O(log n) ªº½ÆÂø«×­×§ï°Ï¶¡­È
+    åˆ©ç”¨å…©é¡† BIT ä¾†é”åˆ°ä»¥ O(log n) çš„è¤‡é›œåº¦ä¿®æ”¹å€é–“å€¼
 */
 #include <iostream>
 
@@ -9,8 +9,8 @@ using namespace std;
 
 //[1, n]
 int arr[101];
-int bit0[101]; //­ì¥»ªºBIT
-int bit1[101]; //¥u°O¿ı­×§ï­ÈªºBIT
+int bit0[101]; //åŸæœ¬çš„BIT
+int bit1[101]; //åªè¨˜éŒ„ä¿®æ”¹å€¼çš„BIT
 int n;
 
 void add(int *bit, int i, int x)

@@ -3,7 +3,7 @@
     Solution:
         For each position, record their "x, y coordinate, distance, facing status".
         Using four number to represent four directions: 
-            0: up¡F1: right¡F2: down¡F3: left (clockwise)
+            0: upï¼›1: rightï¼›2: downï¼›3: left (clockwise)
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -12,7 +12,7 @@ const int N = 1005;
 struct P { int x, y, d, status; }; // status: 0 ^, 1 >, 2 V, 3 < (face which direction)
 int n, m;
 /* 
-    G[x][y][d]: door of "d" direction exists¡F
+    G[x][y][d]: door of "d" direction existsï¼›
     visit[x][y][s]: on (x, y), facing "s" direction is visited
 */
 bool G[N][N][4], visit[N][N][4]; // ^, >, V, <

@@ -76,6 +76,10 @@
             # in range [i, j)¡F (de)increase by "interval"
         a = range(10) # by default: [0, 10), increase by 1
         b = list(range(1, 10, -3)) # convert to a list
+
+        # get ASCII or Unicode
+        a_ascii = ord('a') # 97
+        a_char = (chr)a_ascii # a
         ```
 - ## if statement & Loops
     ```py

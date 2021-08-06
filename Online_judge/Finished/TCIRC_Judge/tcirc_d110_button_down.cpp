@@ -8,11 +8,11 @@
     =>  for all u is the child of v
         d1[v] = sum(min(d00[u], d1[u])) (since d00[u] <= d01[u], no comparison is needed)
         d00[v] = sum(min(d01[u], d1[u]))
-        d01[v] = sum(min(d01[u], d1[u])) + min_diff¡Fmin_diff = max(0, min(d1[u] - d01[u]))
+        d01[v] = sum(min(d01[u], d1[u])) + min_diffï¼›min_diff = max(0, min(d1[u] - d01[u]))
             d01[v] must be dominated by at least one of its children, but "sum(...)"
             alone does not guarantee that (it's why d00[v] is equal to that value).
             Hence, "min_diff" represents "replace a d01[u] with d1[0] that increase the 
-            least cost"¡Fif "d1[u] - d01[u] < 0", it means that d1[u] < d01[u] and that 
+            least cost"ï¼›if "d1[u] - d01[u] < 0", it means that d1[u] < d01[u] and that 
             d1[u] has already been chosen, and thus no addition("0") is needed.
 */
 #include <bits/stdc++.h>

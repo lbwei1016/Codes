@@ -8,8 +8,8 @@ using namespace std;
 const int N = 1e6+5;
 int n, res;
 int h[N], v[N];
-int dp0[N], dp1[N]; //ºI¦Ü¦Û¤v (¥H¦Û¤v¬°°ªÂI) ªº¥ª¤è²Ö¿n­È¡F¦Û¤v¥[¤W«e¤è²Ö¿n­È
-int lh[N]; //¦b¦Û¤v¥ª¤è¡A³Ì±µªñ¦Û¤v¥B¤ñ¦Û¤v°ªªºÂI
+int dp0[N], dp1[N]; //æˆªè‡³è‡ªå·± (ä»¥è‡ªå·±ç‚ºé«˜é») çš„å·¦æ–¹ç´¯ç©å€¼ï¼›è‡ªå·±åŠ ä¸Šå‰æ–¹ç´¯ç©å€¼
+int lh[N]; //åœ¨è‡ªå·±å·¦æ–¹ï¼Œæœ€æ¥è¿‘è‡ªå·±ä¸”æ¯”è‡ªå·±é«˜çš„é»
 stack<int> S; //decreasing height
 
 int main() {
@@ -23,7 +23,7 @@ int main() {
 
     S.push(0); 
     h[0] = 2e9;
-    //¥ı§ä¦Û¤vªº°ªÂI
+    //å…ˆæ‰¾è‡ªå·±çš„é«˜é»
     for(int i=1; i<=n; i++) {
         while(h[S.top()] <= h[i]) 
             S.pop();
@@ -35,14 +35,14 @@ int main() {
         dp1[i] = dp0[lh[i]] + v[i];
         dp0[i] = dp0[S.top()];
         while(h[S.top()] < h[i]) {
-            //§ó·s¥ª¤è²Ö¿n­È
+            //æ›´æ–°å·¦æ–¹ç´¯ç©å€¼
             dp0[i] = max(dp0[i], dp1[S.top()]);
             S.pop();
         }
         if(h[S.top()] == h[i]) {
             dp0[i] = max(dp0[i], dp0[S.top()]);
-            //¦]¬°¥Ø«e¥u§ó·s¥ª¤è²Ö¿n­È¡A¦³¥i¯à dp1[S.top] > dp1[i]
-            //¦]¦¹ÁÙ¤£¯à pop
+            //å› ç‚ºç›®å‰åªæ›´æ–°å·¦æ–¹ç´¯ç©å€¼ï¼Œæœ‰å¯èƒ½ dp1[S.top] > dp1[i]
+            //å› æ­¤é‚„ä¸èƒ½ pop
             //S.pop();
         }
         S.push(i);

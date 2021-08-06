@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    //¥Î¨Ó¹ï»ô¿é¥X
+    //ç”¨ä¾†å°é½Šè¼¸å‡º
     cout << setw(8) << "Hi\n"; 
     cout << setw(8) << "Wiwi\n";
     

@@ -10,7 +10,7 @@ int m, n;
 int G[N][N];
 int dp[N][N][N][N]; //height, width, top, left
 
-//¥H¤U¨â¨ç¦¡¬°§R°£Ãä¬Éªº¦¨¥»
+//ä»¥ä¸‹å…©å‡½å¼ç‚ºåˆªé™¤é‚Šç•Œçš„æˆæœ¬
 int row_cost(int row, int left, int right) {
     int sum = 0, i;
     for(i=left; i<=right; i++) {
@@ -37,7 +37,7 @@ int main() {
             scanf("%d", &G[i][j]);
         }
     }
-    //°ª¡B¼e¥Ñ¤p¨ì¤j¡F¤W¬É¡B¥ª¬É»¼¼W
+    //é«˜ã€å¯¬ç”±å°åˆ°å¤§ï¼›ä¸Šç•Œã€å·¦ç•Œéå¢
     for(int h=1; h<=m; h++) for(int w=1; w<=n; w++) {
         for(int t=0; t+h<=m; t++) for(int l=0; l+w<=n; l++) {
             if(h == 1 || w == 1) {

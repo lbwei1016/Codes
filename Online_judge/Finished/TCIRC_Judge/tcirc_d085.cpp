@@ -1,21 +1,21 @@
 /*
 ***DP***
     Description:
-        �O p(i,j) = �b [1,j] �϶����������W�L i ���R�檺�̤j��Q�A�h
+        令 p(i,j) = 在 [1,j] 區間內完成不超過 i 次買賣的最大獲利，則
         p(i,j) = max{ c[j]-c[t]+p(i-1,t-1): for all t<j }
     Solution:
-        �Q�k�@�G�C�|�Ҧ����ΡA��X�ϥ��N j �̤j�� t�AO(k*n^2)�A����C
-        �Q�k�G�G�� j �P�ɧ�X�̤p�� c[t] �H�γ̤j�� p(i-1,t-1)�A���L�k�P�ɺ��@��̡C
-        �Q�k�T�G
-            ���s�˵����j��: c[j] + {p(i-1,t-1) - c[t]}�A��� t ���ɧY��h c[t]�C
-        �]���A�u�ݭn���@�u�̤j�i�諸 p(i-1,t-1) - c[t]�v�Y�i�A�ӿ�ܷ|�] j ��
-        �W�ӧ��ܡ]�i�H��ܧ��u�ժ��^�C
-            �ϥ� deque ���x�s�up(i-1,t-1) - c[t] �����W�ǦC�v�A�z�ѡG�H�� j ���W�A
-        �i��ܪ��e�m���A�W�[�A�]���A�Y�e�������A�����s�[�J�����A�t�A�O�i�H�˱󪺡F
-        ���G�N�O�Adeque ���׬O val �٬O r �Ҭ����W���C
-            �t�~�A�]���p��覡���N�R�榸�Ʋֿn�p�� (1~k)�Adp �}�C���ӬO�G���}�C�A
-        ���ڭ̥u�ݭn�ϥΨ�e�@���R�� (�e�@�C) ����T�A�åB�e�@�C����T�w�g�̻��W������
-        �s�� deque �����A�]���@���}�C�N���F�C
+        想法一：列舉所有情形，找出使任意 j 最大的 t，O(k*n^2)，不行。
+        想法二：對 j 同時找出最小的 c[t] 以及最大的 p(i-1,t-1)，但無法同時維護兩者。
+        想法三：
+            重新檢視遞迴式: c[j] + {p(i-1,t-1) - c[t]}，選擇 t 之時即減去 c[t]。
+        因此，只需要維護「最大可選的 p(i-1,t-1) - c[t]」即可，而選擇會因 j 遞
+        增而改變（可以選擇更有優勢的）。
+            使用 deque 來儲存「p(i-1,t-1) - c[t] 的遞增序列」，理由：隨著 j 遞增，
+        可選擇的前置狀態增加，因此，若前面的狀態較後方新加入的狀態差，是可以捨棄的；
+        結果就是，deque 不論是 val 還是 r 皆為遞增的。
+            另外，因為計算方式為將買賣次數累積計算 (1~k)，dp 陣列本該是二維陣列，
+        但我們只需要使用到前一次買賣 (前一列) 的資訊，並且前一列的資訊已經依遞增的順序
+        存於 deque 之中，因此一維陣列就夠了。
     
     O(k * n)
 */

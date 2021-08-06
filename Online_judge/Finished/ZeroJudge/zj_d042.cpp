@@ -1,7 +1,7 @@
 /*
 ***DP***
     Solution:
-        �ѳ��ݳv���|�W��P�G�H���ݪ���P���W��ΫD���O���̾ڡA�A�P�_���p
+        由頂端逐漸疊上抽屜：以頂端的抽屜為上鎖或非為記錄依據，再判斷狀況
     
     O(n ^ 2)
 */
@@ -11,9 +11,9 @@ using namespace std;
 
 /*
     dp[i][j][k]:
-        i: ��P�ƶq
-        j: �T�O�w�����ƶq
-        k: �̳��ݬO�_�W�� (lock: 1, unlock: 0)
+        i: 抽屜數量
+        j: 確保安全的數量
+        k: 最頂端是否上鎖 (lock: 1, unlock: 0)
 */
 long long dp[67][67][2];
 
@@ -28,17 +28,17 @@ int main() {
         for(int j=0; j<=i; j++) {
             /*
                 dp[i-1][j+1][1]:
-                    ���ӳ��ݦw���A�A��W�@�ӥ��ꪺ��P�A���ܱo���w��
+                    本來頂端安全，再放上一個未鎖的抽屜，而變得不安全
                 dp[i-1][j][0]:
-                    ���ӳ��ݴN���w���A�A��@���ꪺ��P���v�T
+                    本來頂端就不安全，再放一未鎖的抽屜不影響
             */
             dp[i][j][0] += dp[i-1][j+1][1] + dp[i-1][j][0];
             if(j > 0) 
             /*
                 dp[i-1][j-1][1]:
-                    �b�w�������ݦA��@�W�ꪺ��P
+                    在安全的頂端再放一上鎖的抽屜
                 dp[i-1][j-1][0]:
-                    �b���w�������ݩ�@�W�ꪺ��P
+                    在不安全的頂端放一上鎖的抽屜
             */
                 dp[i][j][1] += dp[i-1][j-1][1] + dp[i-1][j-1][0];
         }

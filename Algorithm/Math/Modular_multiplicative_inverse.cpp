@@ -3,9 +3,9 @@
     Description:
         Find x such that (a * x) mod P = 1, and "a and P are relatively prime".
     Solution I: 
-        Fermat's Little Theorem: "when P is a prime", a^(P-1) ¡Ý 1(mod P)
-        => a^(P-2) ¡Ý a^(-1)(mod P)
-        => a * a^(P-2) ¡Ý a * a^(-1) ¡Ý a^(P-1) ¡Ý 1(mod P)
+        Fermat's Little Theorem: "when P is a prime", a^(P-1) â‰¡ 1(mod P)
+        => a^(P-2) â‰¡ a^(-1)(mod P)
+        => a * a^(P-2) â‰¡ a * a^(-1) â‰¡ a^(P-1) â‰¡ 1(mod P)
         Hence, a^(P-2) is a "Modular multiplicative inverse" of "a".
             O(log n)
     Solution II:

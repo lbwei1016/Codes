@@ -1,95 +1,96 @@
-(°O±o°Ñ¦Òµ{¦¡½X)
-(* ¬°­«ÂI¼Ğ°O)
+(è¨˜å¾—åƒè€ƒç¨‹å¼ç¢¼)
+(* ç‚ºé‡é»æ¨™è¨˜)
 
 Backtracking:
-    zj_a160: N-¬Ó¦Z°İÃD
-    zj_b510: M-¬Ó¦Z N-«°³ù
-    zj_b511: ´«»ÉªO
+    zj_a160: N-çš‡åå•é¡Œ
+    zj_b510: M-çš‡å N-åŸå ¡
+    zj_b511: æ›éŠ…æ¿
 
 Binary Search:
     poj_1064: Cable master
-    poj_2785: 4 Values whose Sum is 0 (§é¥bªTÁ|)
-    zj_f581: 3. ¶êÀô¥X¤f (apcs / tcirc_d024 / Prefix Sum)
-    zj_c575: APCS 2017-0304-4°ò¦a¥x (apcs / tcirc_d049)
-    tcirc_d018: P-2-9. ¤l¶°¦X­¼¿n (§é¥bªTÁ|)
-    tcirc_d019: Q-2-10. ¤l¶°¦Xªº©M (§é¥bªTÁ|)
-    tcirc_d020: P-2-11. ³Ì±µªñªº°Ï¶¡©M (Prefix Sum)
-    tcirc_d021: Q-2-12. ³Ì±µªñªº¤l¯x°}©M (108 °ª¤¤¥ş°êÁÉ / tcirc_d073)
-    tcirc_d054: Q-4-10. «ì´_¯à¶qªº¥Õ¶³ºµÁx¤Y
+    poj_2785: 4 Values whose Sum is 0 (æŠ˜åŠæšèˆ‰)
+    zj_f581: 3. åœ“ç’°å‡ºå£ (apcs / tcirc_d024 / Prefix Sum)
+    zj_c575: APCS 2017-0304-4åŸºåœ°å° (apcs / tcirc_d049)
+    tcirc_d018: P-2-9. å­é›†åˆä¹˜ç© (æŠ˜åŠæšèˆ‰)
+    tcirc_d019: Q-2-10. å­é›†åˆçš„å’Œ (æŠ˜åŠæšèˆ‰)
+    tcirc_d020: P-2-11. æœ€æ¥è¿‘çš„å€é–“å’Œ (Prefix Sum)
+    tcirc_d021: Q-2-12. æœ€æ¥è¿‘çš„å­çŸ©é™£å’Œ (108 é«˜ä¸­å…¨åœ‹è³½ / tcirc_d073)
+    tcirc_d054: Q-4-10. æ¢å¾©èƒ½é‡çš„ç™½é›²ç†Šè†½ä¸¸
     tioj_1341: Aliens (IOI 2007) (*)
-    tioj_1815: Robots (Greedy / ¨âª«¤ÀÃş±Æ§Ç) (IOI 2013) (*)
+    tioj_1815: Robots (Greedy / å…©ç‰©åˆ†é¡æ’åº) (IOI 2013) (*)
 
 Bitmask:
-    zj_e288: ¤¬¸ÉCP (apcs)
+    zj_e288: äº’è£œCP (apcs)
 
 Data Structure:
-    zj_d371: Huffman ½s½X¤¤ªº½s½X®Ä¯à°İÃD (heap / priority_queue)
-    zj_f315: 4. §C¦a¶ZÂ÷ (apcs / BIT)
-    zj_c463: apcs ¾ğª¬¹Ï¤ÀªR (¾ğªº«Øºc»P¨«³X / tcirc_d025)
-    zj_d539: °Ï¶¡ MAX (½u¬q¾ğ)
-    zj_d799: °Ï¶¡¨D©M (°Ï¶¡©M + °Ï¶¡­×§ï)(½u¬q¾ğ + ¼Ğ°O¡ş¨â´ÊBIT)
-    zj_f163: ³fª«¤À°t (apcs / ½u¬q¾ğ) (tcirc_d105: DFS)
-    poj_2104: K-th Number (½d³ò¾ğ¡şBucket + Sqrt)
+    zj_d371: Huffman ç·¨ç¢¼ä¸­çš„ç·¨ç¢¼æ•ˆèƒ½å•é¡Œ (heap / priority_queue)
+    zj_f315: 4. ä½åœ°è·é›¢ (apcs / BIT)
+    zj_c463: apcs æ¨¹ç‹€åœ–åˆ†æ (æ¨¹çš„å»ºæ§‹èˆ‡èµ°è¨ª / tcirc_d025)
+    zj_d539: å€é–“ MAX (ç·šæ®µæ¨¹)
+    zj_d799: å€é–“æ±‚å’Œ (å€é–“å’Œ + å€é–“ä¿®æ”¹)(ç·šæ®µæ¨¹ + æ¨™è¨˜ï¼å…©æ£µBIT)
+    zj_f163: è²¨ç‰©åˆ†é… (apcs / ç·šæ®µæ¨¹) (tcirc_d105: DFS)
+    poj_2104: K-th Number (ç¯„åœæ¨¹ï¼Bucket + Sqrt)
     poj_3723: Conscription (MST)
-    tcirc_d026: P-3-2. ¬A©·°t¹ï (stack)
-    tcirc_d027: Q-3-3. ¥[´î­¼°£ (stack)
-    tcirc_d029: ±aµÛªO¹¹±ÆÂû±Æªº°ª¤H (apcs / map / stack)
-    tcirc_d030: P-3-6. ¬å¾ğ (apcs / stack)
-    tcirc_d102: P-8-1. ¾ğ¤Wªº±À¾P­û
+    tcirc_d026: P-3-2. æ‹¬å¼§é…å° (stack)
+    tcirc_d027: Q-3-3. åŠ æ¸›ä¹˜é™¤ (stack)
+    tcirc_d029: å¸¶è‘—æ¿å‡³æ’é›æ’çš„é«˜äºº (apcs / map / stack)
+    tcirc_d030: P-3-6. ç æ¨¹ (apcs / stack)
+    tcirc_d102: P-8-1. æ¨¹ä¸Šçš„æ¨éŠ·å“¡
 
 Divide and Conquer:
-    tcirc_d036: Q-3-12. §¹¬ü±m±a (Sliding Window)
-    tcirc_d038: Q-3-14. ½u©Ê¨ç¼Æ (Sliding Window)(*)
-    tcirc_d056: P-4-15. ³Ì¾aªñªº¤@¹ï(closest pair) (Sweep Line) (*)
-    tcirc_d064: P-5-4. ¤Ï§Ç¼Æ¶q
-    tcirc_d065: P-5-7. ¤j¼Ó¥~Àğ¼s§i (Sweep Line)(*)
+    tcirc_d036: Q-3-12. å®Œç¾å½©å¸¶ (Sliding Window)
+    tcirc_d038: Q-3-14. ç·šæ€§å‡½æ•¸ (Sliding Window)(*)
+    tcirc_d056: P-4-15. æœ€é è¿‘çš„ä¸€å°(closest pair) (Sweep Line) (*)
+    tcirc_d064: P-5-4. ååºæ•¸é‡
+    tcirc_d065: P-5-7. å¤§æ¨“å¤–ç‰†å»£å‘Š (Sweep Line)(*)
 
 DP:
-    zj_a252: Another LCS(¤T¦r¦êLCS)
-    zj_a364: 2. ¯«¯µªº¶i¦ì°İÃD (factorial)
+    zj_a252: Another LCS(ä¸‰å­—ä¸²LCS)
+    zj_a364: 2. ç¥ç§˜çš„é€²ä½å•é¡Œ (factorial)
     zj_a522: Bars(Subset)
-    zj_a532: ©_¯Sªº¼Æ¦C (¦r¦ê¡ş¼Æ¦C)
+    zj_a532: å¥‡ç‰¹çš„æ•¸åˆ— (å­—ä¸²ï¼æ•¸åˆ—)
     zj_a591: Bees' ancestors(Fibonacci)
-    zj_a697: [NOIP 2012 ´¶¤Î²Õ] 3.
-    zj_b123: ³Ì¤j¯x§Î
-    zj_b184: ¸Ë³fÂd°İÃD (0/1_knapsack)
-    zj_c296: APCS-2016-1029-3©w®ÉK¼u (Josephus problem)
+    zj_a697: [NOIP 2012 æ™®åŠçµ„] 3.
+    zj_b123: æœ€å¤§çŸ©å½¢
+    zj_b184: è£è²¨æ«ƒå•é¡Œ (0/1_knapsack)
+    zj_c296: APCS-2016-1029-3å®šæ™‚Kå½ˆ (Josephus problem)
     zj_d042: 11420 - Chest of Drawers (UVa)
     zj_d052: Trainsorting(LIS)
-    zj_d231: °ò¦]§Ç¦C±K½X°İÃD (LCS: ¦L¥X¦r¦ê)
+    zj_d231: åŸºå› åºåˆ—å¯†ç¢¼å•é¡Œ (LCS: å°å‡ºå­—ä¸²)
     zj_d253: Coin Change
-    zj_d273: 11584 - Partitioning by Palindromes (³Ì¤j°j¤å¤l¦r¦ê) (UVa)
-    zj_d784: ³sÄò¤¸¯Àªº©M(Maximum Subarray Problem)
-    zj_f314: 3. «iªÌ­×·Ò (apcs) 
-    zj_a365: 3. ·s¤«¦r¹CÀ¸ (¦ì¤¸ DP)
+    zj_d273: 11584 - Partitioning by Palindromes (æœ€å¤§è¿´æ–‡å­å­—ä¸²) (UVa)
+    zj_d784: é€£çºŒå…ƒç´ çš„å’Œ(Maximum Subarray Problem)
+    zj_f314: 3. å‹‡è€…ä¿®ç…‰ (apcs) 
+    zj_a365: 3. æ–°äº•å­—éŠæˆ² (ä½å…ƒ DP)
     zj_b587: 10918 - Tri Tiling (UVa)
     zj_d389: 11069 - A Graph Problem (UVa)
     zj_d224: 11296 - Counting Solutions to an Integral Equation (UVa)
     zj_d054: 11310 - DELIVERY DEBACLE (UVa)
-    zj_d645: ½ü¤U¤`»î (Bounded_knapsack)
+    zj_d645: è¼ªä¸‹äº¡é­‚ (Bounded_knapsack)
+    zj_b229: TOI2009 ç¬¬ä¸€é¡Œï¼šè·¯å¾‘å•é¡Œ (TOI)
     code_jam: 2009_1C_C
-    poj_2686: Traveling by Stagecoach (¦ì¤¸ DP / Shortest Path)
+    poj_2686: Traveling by Stagecoach (ä½å…ƒ DP / Shortest Path)
     poj_1769: Minimizing maximizer (Seg Tree)
-    tcirc_d066: P-6-1. ¤pªB¤Í¤W¼Ó±è³Ì¤p¦¨¥»
-    tcirc_d067: P-6-2. ¤£³sÄòªºªíºt¹S³Ò
-    tcirc_d068: P-6-3. ³Ì¤pºÊ±±¾F©~ªº¦¨¥»
-    tcirc_d069: P-6-6. ¤è®æ´Ñ½L¸ô½u
-    tcirc_d071: P-6-9. ¤j½æ³õ§K¶O¤j·h®a (0/1_knapsack)
-    tcirc_d072: Q-6-4. ÂôÃö¤G¿ï¤@
-    tcirc_d073: Q-6-5. ¤Gºû³Ì¤j¤l¯x°} (tcirc_d021)
+    tcirc_d066: P-6-1. å°æœ‹å‹ä¸Šæ¨“æ¢¯æœ€å°æˆæœ¬
+    tcirc_d067: P-6-2. ä¸é€£çºŒçš„è¡¨æ¼”é…¬å‹
+    tcirc_d068: P-6-3. æœ€å°ç›£æ§é„°å±…çš„æˆæœ¬
+    tcirc_d069: P-6-6. æ–¹æ ¼æ£‹ç›¤è·¯ç·š
+    tcirc_d071: P-6-9. å¤§è³£å ´å…è²»å¤§æ¬å®¶ (0/1_knapsack)
+    tcirc_d072: Q-6-4. é—–é—œäºŒé¸ä¸€
+    tcirc_d073: Q-6-5. äºŒç¶­æœ€å¤§å­çŸ©é™£ (tcirc_d021)
     tcirc_d074: Q-6-8. Local alignment
-    tcirc_d075: Q-6-10. ¸mª«Âd¥X¯² (apcs / 0/1_knapsack)
-    tcirc_d077: P-6-13. ©P§B³qªº°ò¦a¥x (deque)
-    tcirc_d079: P-6-17. ¤Á´Ò¤l (*)
-    tcirc_d080: P-6-19. ¶¥±è¼Æ¦r (apcs)
+    tcirc_d075: Q-6-10. ç½®ç‰©æ«ƒå‡ºç§Ÿ (apcs / 0/1_knapsack)
+    tcirc_d077: P-6-13. å‘¨ä¼¯é€šçš„åŸºåœ°å° (deque)
+    tcirc_d079: P-6-17. åˆ‡æ£å­ (*)
+    tcirc_d080: P-6-19. éšæ¢¯æ•¸å­— (apcs)
     tcirc_d081: P-6-20. Hyper-cube path (Bit operation)
-    tcirc_d083: P-6-22. ¤åµL²Ä¤@ªZµL²Ä¤G (weighted LIS) (*)
-    tcirc_d084: Q-6-12. ·¨ÅK¤ß°µ 1 ¥ğ K
-    tcirc_d085: Q-6-14. K ¦¸¶R½æ (*)
-    tcirc_d086: Q-6-18. ¯x°}­¼ªkÃì (zj_d652) (*)
-    tcirc_d087: Q-6-23. ª½¤É¾÷§ìÄ_ (LIS) (*)
-    tcirc_d088: Q-6-24. ¹jÂ÷±ÄÄq (*)
-    tcirc_d089: Q-6-25. ³f­¦°İÃD (TSP) (*)
+    tcirc_d083: P-6-22. æ–‡ç„¡ç¬¬ä¸€æ­¦ç„¡ç¬¬äºŒ (weighted LIS) (*)
+    tcirc_d084: Q-6-12. æ¥Šéµå¿ƒåš 1 ä¼‘ K
+    tcirc_d085: Q-6-14. K æ¬¡è²·è³£ (*)
+    tcirc_d086: Q-6-18. çŸ©é™£ä¹˜æ³•éˆ (zj_d652) (*)
+    tcirc_d087: Q-6-23. ç›´å‡æ©ŸæŠ“å¯¶ (LIS) (*)
+    tcirc_d088: Q-6-24. éš”é›¢æ¡ç¤¦ (*)
+    tcirc_d089: Q-6-25. è²¨éƒå•é¡Œ (TSP) (*)
     
 Geometry:
     poj_1127: Jack Straws (Lines / intersection)
@@ -98,15 +99,16 @@ Graph:
     BFS:
         poj_1979: Red and Black
         poj_2456: Aggressive cows
-        zj_e287: ¾÷¾¹¤Hªº¸ô®| (apcs)
+        zj_e287: æ©Ÿå™¨äººçš„è·¯å¾‘ (apcs)
         cf_676D: Theseus and labyrinth (Simulation) (*)
     DFS:
-        zj_a017: ¤­«h¹Bºâ
-        zj_a229: ¬A¸¹¤Ç°t
+        zj_a017: äº”å‰‡é‹ç®—
+        zj_a229: æ‹¬è™ŸåŒ¹é…
+        zj_a562: ITSA201112 P2 å°ç™½é¼ èµ°æ–¹æ ¼ (path / Hash) (ITSA)
         poj_3009: Curling 2.0
         NCPC_2015_B: Toll problem
-        tcirc_d106: P-8-7. Ä_¥ÛªºÃC¦â
-        tioj_1211: ¯è½u³W¹º°İÃD (gcd) (*)
+        tcirc_d106: P-8-7. å¯¶çŸ³çš„é¡è‰²
+        tioj_1211: èˆªç·šè¦åŠƒå•é¡Œ (gcd) (*)
     Flow:
         poj_3281: Dining (Maximum s-t Flow)
         poj_3469: Dual Core (Maximum s-t Flow)
@@ -116,99 +118,114 @@ Graph:
         poj_3041: Asteroids (bipartite matching)
         poj_3057: Evacuation (bipartite matching / BFS / DFS)
     MST:
-        tioj_1163: ¬I¤u¤¤ªº¹D¸ô (LCA) (*)
-        tioj_1795: ©BÂP©BÂP©K°Õ©K°Õ (³Ì¤j¡B³Ì¤p MST)
+        tioj_1163: æ–½å·¥ä¸­çš„é“è·¯ (LCA) (*)
+        tioj_1795: å’•åš•å’•åš•å‘±å•¦å‘±å•¦ (æœ€å¤§ã€æœ€å° MST)
+    Shortest Path:
+        poj_3225: Roadblocks (second shortest path / Dijkstra)
+        poj_3169: Layouts (Bellman-Ford)
+        poj_2686: Traveling by Stagecoach (DP)
+        cf_543B: Destroying Roads (*)
+        tioj_1028: æ—…éŠè¦ç•«å•é¡Œ (DP) (*)
+        tioj_1096: E.æ¼¢ç±³é “çš„éº»ç…© (Minimum Weight Cycle / Floyd_Warshall)
+        tioj_1641: è²¨ç‰©é‹é€è¨ˆåŠƒ (logarithm)
     Topology:
-        tcirc_d095: P-7-6. DAG ªº³Ìªø»P³Ìµu¸ô®|
-        tcirc_d099: Q-7-7. AOV ³Ì¦­§¹¤u®É¶¡ (*)
+        tcirc_d095: P-7-6. DAG çš„æœ€é•·èˆ‡æœ€çŸ­è·¯å¾‘
+        tcirc_d099: Q-7-7. AOV æœ€æ—©å®Œå·¥æ™‚é–“ (*)
+        cf_510C: Fox And Names
+    Union and Find:
+        zj_f292: Almost Union-Find (Disjoint Set Union--DSU)
+        zj_f310: 10158 - War (UVa) (*)
+        tcirc_d097: P-7-10. æŒ–å‘è·³ (*)
+        tcirc_d101: Q-7-11. ç´…ç™½å½©å¸¶
+        poj_1182: é£Ÿç‰©éˆ (Union_and_Find) (*)
     Else:
-        zj_f292: Almost Union-Find (Disjoint Set Union--DSU / Union_and_Find)
-        zj_f310: 10158 - War (UVa) (Union_and_Find) (*)
-        tcirc_d097: P-7-10. «õ§|¸õ (Union_and_Find) (*)
-        tcirc_d101: Q-7-11. ¬õ¥Õ±m±a (Union_and_Find)
-        tcirc_d104: P-8-3. ÁÊª«¤¤¤ß¿ï¦ì¸m (tree_median)(*)
-        tcirc_d107: P-8-8. ¾ğªº³Ì¤j¿W¥ß¶° (Maximum Independent Set)
-        tcirc_d108: Q-8-6. ¾ğª¬¹Ïªº¶ZÂ÷Á`©M (*)
-        tcirc_d109: P-8-11. ¤½¥q¬£¹ï (Max Weight Independent Set / NCPC)
-        tcirc_d110: P-8-13. ¤£¦P¦¨¥»ªºÁÊª«¤¤¤ß (DP) (*)
-        tcirc_d111: P-8-14. ¦å½tÃö«Y (tree_diameter / apcs) (zj_b967) (*)
-        tcirc_d112: Q-8-9. ªA°È¤¤¤ß¿ï¦ì¸m (Minimal Dominating Set) (*)
-        tcirc_d113: Q-8-10. ÅÑÅ¥¶¡¿Òºô (Minimum Vertex Cover) (*)
-        tcirc_d114: Q-8-12. ¦û»â³sÄòªº«°Âí (DP)
-        tcirc_d115: Q-8-15. ¾ğ¤W¤@¦ì¤£¦^®aªº±À¾P­û (TSP / tree_diameter) (*)
-        tcirc_d116: Q-8-16. ¯f¬rºt¤Æ (DP / apcs) (zj_f582) (*)
-        poj_1182: ­¹ª«Ãì (Union_and_Find) (*)
-        tioj_1838: §@¹Ú¤¤ Dreaming (IOI 2013) (tree_diameter / tree_center) (*)
+        tcirc_d104: P-8-3. è³¼ç‰©ä¸­å¿ƒé¸ä½ç½® (tree_median)(*)
+        tcirc_d107: P-8-8. æ¨¹çš„æœ€å¤§ç¨ç«‹é›† (Maximum Independent Set)
+        tcirc_d108: Q-8-6. æ¨¹ç‹€åœ–çš„è·é›¢ç¸½å’Œ (*)
+        tcirc_d109: P-8-11. å…¬å¸æ´¾å° (Max Weight Independent Set / NCPC)
+        tcirc_d110: P-8-13. ä¸åŒæˆæœ¬çš„è³¼ç‰©ä¸­å¿ƒ (DP) (*)
+        tcirc_d111: P-8-14. è¡€ç·£é—œä¿‚ (tree_diameter / apcs) (zj_b967) (*)
+        tcirc_d112: Q-8-9. æœå‹™ä¸­å¿ƒé¸ä½ç½® (Minimal Dominating Set) (*)
+        tcirc_d113: Q-8-10. ç«Šè½é–“è«œç¶² (Minimum Vertex Cover) (*)
+        tcirc_d114: Q-8-12. ä½”é ˜é€£çºŒçš„åŸé® (DP)
+        tcirc_d115: Q-8-15. æ¨¹ä¸Šä¸€ä½ä¸å›å®¶çš„æ¨éŠ·å“¡ (TSP / tree_diameter) (*)
+        tcirc_d116: Q-8-16. ç—…æ¯’æ¼”åŒ– (DP / apcs) (zj_f582) (*)
+        tioj_1838: ä½œå¤¢ä¸­ Dreaming (IOI 2013) (tree_diameter / tree_center) (*)
+        tioj_1092: A.è·³æ ¼å­éŠæˆ² (DP / Game / Topology)
 
 Greedy:
     zj_e576: Minimal Coverage
     zj_e591: Coin Collector
     zj_e693: Grid of Lamps
-    zj_b231: TOI2009 ²Ä¤TÃD¡G®Ñ (toi)
-    tcirc_d047: Q-4-6. ¤ÖªL¦xªº¦Û°Ê±Hª«Âd (apcs) (zj_c471)
-    tcirc_d052: P-4-13. ³Ì¤j³sÄò¤l°}¦C (DP / Dac)
-    tcirc_d053: Q-4-8. ¥ı¨ì¥ıªA°È (priority_queue / queue)
-    tcirc_d058: Q-4-17. ¦º½u°ª¤â
-    tcirc_d059: Q-4-18. ¤ÖªL¦xªºÂd©j (Binary Search) (tcirc_d053) (*)
+    zj_b231: TOI2009 ç¬¬ä¸‰é¡Œï¼šæ›¸ (TOI)
+    tcirc_d047: Q-4-6. å°‘æ—å¯ºçš„è‡ªå‹•å¯„ç‰©æ«ƒ (apcs) (zj_c471)
+    tcirc_d052: P-4-13. æœ€å¤§é€£çºŒå­é™£åˆ— (DP / Dac)
+    tcirc_d053: Q-4-8. å…ˆåˆ°å…ˆæœå‹™ (priority_queue / queue)
+    tcirc_d058: Q-4-17. æ­»ç·šé«˜æ‰‹
+    tcirc_d059: Q-4-18. å°‘æ—å¯ºçš„æ«ƒå§ (Binary Search) (tcirc_d053) (*)
     cf_665C: Simple Strings
     cf_701A: Cards
 
 Math:
-    zj_a121: ½è¼Æ¤S¨ÓÅo (range prime)
-    zj_b528: ªO±ø½s¦~¥v (¤G)¡GªøÀV³À»P©g¥i©g¥i©gªº°fÅ§ (¤Ï¤T¨¤¨ç¼Æ¡şM_PI)
+    zj_a121: è³ªæ•¸åˆä¾†å›‰ (range prime)
+    zj_b528: æ¿æ¢ç·¨å¹´å² (äºŒ)ï¼šé•·é ¸é¹¿èˆ‡å¦®å¯å¦®å¯å¦®çš„é€†è¥² (åä¸‰è§’å‡½æ•¸ï¼M_PI)
     zj_c204: 13194 - DPA Numbers II (prime / Prime factorization)
     zj_d613: prime
-    zj_a451: ¯x°}§Ö³t¾­ (¶O¤ó¼Æ¦C)
-    poj_3233: ¾­¦¸©M (¯x°}¤¤ªº¯x°})
-    tcirc_d013: §Ö³t¾­--200 ¦ì¾ã¼Æ (¤j¼Æ / §Ö³t¾­)
-    tcirc_d017: Q-2-8. ¼Ò°f¤¸
-    tcirc_d022: Q-2-13. µL²z¼Æªº§Ö³t¾­ (µL²z¼Æ / §Ö³t¾­)
+    zj_a451: çŸ©é™£å¿«é€Ÿå†ª (è²»æ°æ•¸åˆ—)
+    poj_3233: å†ªæ¬¡å’Œ (çŸ©é™£ä¸­çš„çŸ©é™£)
+    tcirc_d013: å¿«é€Ÿå†ª--200 ä½æ•´æ•¸ (å¤§æ•¸ / å¿«é€Ÿå†ª)
+    tcirc_d017: Q-2-8. æ¨¡é€†å…ƒ
+    tcirc_d022: Q-2-13. ç„¡ç†æ•¸çš„å¿«é€Ÿå†ª (ç„¡ç†æ•¸ / å¿«é€Ÿå†ª)
 
 Prefix (Suffix) Sum:
-    zj_e339: «eºó¦X½m²ß(¥u¬OÂ²³æ½d¨Ò)
-    zj_f638: ¤äÂI¤Á³Î (apcs / Recursion)
+    zj_e339: å‰ç¶´åˆç·´ç¿’(åªæ˜¯ç°¡å–®ç¯„ä¾‹)
+    zj_f638: æ”¯é»åˆ‡å‰² (apcs / Recursion)
 
 Recursion:
-    zj_f640: ¨ç¼Æ¹Bºâ¦¡¨D­È (apcs)
+    zj_f640: å‡½æ•¸é‹ç®—å¼æ±‚å€¼ (apcs)
     zj_f637: DF-expression (apcs / tcirc_d005)
-    tcirc_d003: P-1-3. ´Ò¤l¤¤ÂI¤Á³Î 
+    tcirc_d003: P-1-3. æ£å­ä¸­é»åˆ‡å‰² 
     tcirc_d006 ~ d009
-    tcirc_d023: Q-2-14. ¤ô¼Ñ (*)
-
-Shortest Path:
-    poj_3225: Roadblocks (second shortest path --Dijkstra)
-    poj_3169: Layouts (Bellman-Ford)
-    poj_2686: Traveling by Stagecoach (DP)
+    tcirc_d023: Q-2-14. æ°´æ§½ (*)
 
 Simulation:
-    zj_f340: «XÃ¹´µ¤è¶ô 
-    zj_c292: APCS2017-0304-3¼Æ¦rÀs±²­· (apcs)
-    zj_c297: APCS-2016-1029-4´Î²y¹CÀ¸ (bitwise operation)
+    zj_f340: ä¿„ç¾…æ–¯æ–¹å¡Š 
+    zj_c292: APCS2017-0304-3æ•¸å­—é¾æ²é¢¨ (apcs)
+    zj_c297: APCS-2016-1029-4æ£’çƒéŠæˆ² (bitwise operation)
 
-ª¦¦æªk (Sliding Window):
+çˆ¬è¡Œæ³• (Sliding Window):
     poj_3061: Subsequence (tcirc_d031)
     poj_3320: Jessica's Reading Problem
     poj_3276: Face The Right Way
-    tcirc_d032: P-3-8. ©T©wªø«×°Ï¶¡ªº³Ì¤j°Ï¬q®t (deque)(*)
-    tcirc_d037: Q-3-13. X®t­È½d³ò¤ºªº³Ì¤jY®t­È (deque)(*)
+    tcirc_d032: P-3-8. å›ºå®šé•·åº¦å€é–“çš„æœ€å¤§å€æ®µå·® (deque)(*)
+    tcirc_d037: Q-3-13. Xå·®å€¼ç¯„åœå…§çš„æœ€å¤§Yå·®å€¼ (deque)(*)
+
+String:
+    cf_559B: Equivalent Strings (Divide and Conquer) (*)
+    poj_1743: Musical Theme (Suffix_Array / Longest Repeated Substring) (*)
+    poj_2217: Secretary (Suffix_Array / Longest Common Substring)
+    tioj_1306: å­—ä¸²ä¸­çš„å­—ä¸² (KMP / Matching)
+    tioj_1497: å–é†‰çš„å®¿ä¸» The drunk host (Suffix_Array)
+    tioj_1515: Problem E. ä¼¼æ›¾ç›¸è­˜ (Longest Common Prefix)
+    tioj_1725: Massacre at Camp Happy (Z algorithm / Matching)
 
 Sweeping Line:
-    zj_b966: ²Ä 3 ÃD ½u¬qÂĞ»\ªø«× (Greedy / apcs / tcirc_d050)
-    tcirc_d055: P-4-14. ±±¨îÂI(2D-max)
-    tcirc_d060: Q-4-19. ¤­À®·ù¥Dªº·|Ä³³õ©Ò (*)
-    tcirc_d061: Q-4-20. ºÊ¬İµØ¤s½m¥\³õ (*)
+    zj_b966: ç¬¬ 3 é¡Œ ç·šæ®µè¦†è“‹é•·åº¦ (Greedy / apcs / tcirc_d050)
+    tcirc_d055: P-4-14. æ§åˆ¶é»(2D-max)
+    tcirc_d060: Q-4-19. äº”å¶½ç›Ÿä¸»çš„æœƒè­°å ´æ‰€ (*)
+    tcirc_d061: Q-4-20. ç›£çœ‹è¯å±±ç·´åŠŸå ´ (*)
 
 Else:
-    poj_3279: Fliptile(bitwise operation / ¶°¦X½aÁ|)
+    poj_3279: Fliptile(bitwise operation / é›†åˆçª®èˆ‰)
     poj_3684: Physics Experiment(Ants)
-    zj_a480: ¾É¼uÄdºI¨t²Î (½aÁ|)
-    zj_c462: ¥æ¿ù¦r¦ê (string / apcs)
+    zj_a480: å°å½ˆæ””æˆªç³»çµ± (çª®èˆ‰)
+    zj_c462: äº¤éŒ¯å­—ä¸² (string / apcs)
     NCPC_2015_A: Sum of Largest Indices (stringstream)
-    zj_e289: ¬üÄRªº±m±a (apcs)
-    zj_e294: APCS Ãş¦üÃD - ¤p´Qªº·sµo²{ (apcs)
+    zj_e289: ç¾éº—çš„å½©å¸¶ (apcs)
+    zj_e294: APCS é¡ä¼¼é¡Œ - å°å´´çš„æ–°ç™¼ç¾ (apcs)
 
 Unfinished:
-    zj_a268, zj_d882: ªe¤º¶ğÅÜ§Î
+    zj_a268, zj_d882: æ²³å…§å¡”è®Šå½¢
     poj_2175: Evacuation Plan (Minimum Cost s-t Flow)
-    tioj_1220: ¿ì¤½«Ç³]¸m (Union_and_Find)
+    tioj_1220: è¾¦å…¬å®¤è¨­ç½® (Union_and_Find)
     tioj_1192: (Union_and_Find / 2-SAT)

@@ -26,7 +26,7 @@ int main()
         {
             for(int j=n; j>=l[i]; j--)
             {
-                if(dp[j-l[i]]) //·ídp[j-l[i]] = 1¡A¥Nªíªø«×j-l[i]¦s¦b¡A¤Sl[i]¤]¦s¦b¡A¦]¦¹j¦s¦b
+                if(dp[j-l[i]]) //ç•¶dp[j-l[i]] = 1ï¼Œä»£è¡¨é•·åº¦j-l[i]å­˜åœ¨ï¼Œåˆl[i]ä¹Ÿå­˜åœ¨ï¼Œå› æ­¤jå­˜åœ¨
                     dp[j] = 1;
             }
         }

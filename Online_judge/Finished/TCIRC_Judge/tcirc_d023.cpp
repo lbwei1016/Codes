@@ -6,27 +6,27 @@ using namespace std;
 
 typedef long long ll;
 struct S { ll h, pos; }; //height, pos
-vector<S> B; //¾×ªOªºªº¶°¦X
-ll ans[100005]; //³Ì²×¤ô¶q
+vector<S> B; //æ“‹æ¿çš„çš„é›†åˆ
+ll ans[100005]; //æœ€çµ‚æ°´é‡
 
 bool comp(const S &s1, const S &s2) {
     return s1.h < s2.h;
 }
 /*
-    ¦b°Ï¶¡ [left, right) ¥H¤º¬Ò¬°ªÅ¤ô¼Ñ¡A¥H¥~¬°¤w¸g¶ñ¹L©ÎµLªk¶ñªº¤ô¼Ñ
+    åœ¨å€é–“ [left, right) ä»¥å…§çš†ç‚ºç©ºæ°´æ§½ï¼Œä»¥å¤–ç‚ºå·²ç¶“å¡«éæˆ–ç„¡æ³•å¡«çš„æ°´æ§½
 */
 void rec(int left, int right, ll w, int in) {
-    //¶È³Ñ¤@¤ô¼Ñ¡Aª½±µ¶ñº¡¡Aµ²§ô
+    //åƒ…å‰©ä¸€æ°´æ§½ï¼Œç›´æ¥å¡«æ»¿ï¼ŒçµæŸ
     if(left+1 == right) {
         ans[left] = w;
         return;
     }
-    //§ä¥X³Ì°ªªºªO¤l
+    //æ‰¾å‡ºæœ€é«˜çš„æ¿å­
     while(true) {
         S b = B.back();
         /*
-            ­Y¸ÓªO¤l¤£¦b°Ï¶¡¤º¡A±N¤§²¾°£¡A¦]¬°°Ï¶¡¬O³vº¥ÁY¤p¡A
-            ©Ò¥H¦b°Ï¶¡¥~ªº¤ô¼Ñ(ªO¤l)¤w¸g¤£·|¦A³Q§Q¥Î¡C
+            è‹¥è©²æ¿å­ä¸åœ¨å€é–“å…§ï¼Œå°‡ä¹‹ç§»é™¤ï¼Œå› ç‚ºå€é–“æ˜¯é€æ¼¸ç¸®å°ï¼Œ
+            æ‰€ä»¥åœ¨å€é–“å¤–çš„æ°´æ§½(æ¿å­)å·²ç¶“ä¸æœƒå†è¢«åˆ©ç”¨ã€‚
         */
         if(b.pos >= right || b.pos <= left) {
             B.pop_back();
@@ -34,7 +34,7 @@ void rec(int left, int right, ll w, int in) {
     }
     S highest = B.back();
     ll H = highest.h, P = highest.pos;
-    //­Y·í«eªº¤ô¶q¨¬¥H¶ñº¡©Ò¦³°Ï¶¡¤ºªº¤ô¼Ñ¡A±N¤§¥­§¡¤À°t
+    //è‹¥ç•¶å‰çš„æ°´é‡è¶³ä»¥å¡«æ»¿æ‰€æœ‰å€é–“å…§çš„æ°´æ§½ï¼Œå°‡ä¹‹å¹³å‡åˆ†é…
     if(w >= (right-left)*H) {
         ll avg = w / (right-left);
         for(int i=left; i<right; i++) {
@@ -42,24 +42,24 @@ void rec(int left, int right, ll w, int in) {
         }
         return;
     }
-    //·íª`¤JÂI¦b¥Ø«e³Ì°ªªºªO¤lªº¥ªÃä
+    //ç•¶æ³¨å…¥é»åœ¨ç›®å‰æœ€é«˜çš„æ¿å­çš„å·¦é‚Š
     if(P > in) {
-        //·¸¥X
+        //æº¢å‡º
         if(w > (P-left)*H) {
             for(int i=left; i<P; i++) {
                 ans[i] = H;
             }
-            //ÁY¤p°Ï¶¡¡A´î¥h¤ô¶q
+            //ç¸®å°å€é–“ï¼Œæ¸›å»æ°´é‡
             rec(P, right, w-(P-left)*H, in);
             return;
         } else {
-            //¤£·¸¥X¡AÁY¤p°Ï¶¡¡A¤ô¶q¤£ÅÜ
+            //ä¸æº¢å‡ºï¼Œç¸®å°å€é–“ï¼Œæ°´é‡ä¸è®Š
             rec(left, P, w, in);
             return;
         }
     } else {
-        //·íª`¤JÂI¦b¥Ø«e³Ì°ªªºªO¤lªº¥ªÃä
-        //·¸¥X
+        //ç•¶æ³¨å…¥é»åœ¨ç›®å‰æœ€é«˜çš„æ¿å­çš„å·¦é‚Š
+        //æº¢å‡º
         if(w > (right-P)*H) {
             for(int i=P; i<right; i++) {
                 ans[i] = H;
@@ -83,7 +83,7 @@ int main() {
         scanf("%lld", &h);
         B.push_back((S){h, i});
     }
-    //¨Ì°ª«×¥Ñ¤p¨ì¤j±Æ§Ç
+    //ä¾é«˜åº¦ç”±å°åˆ°å¤§æ’åº
     sort(B.begin(), B.end(), comp);
     rec(0, N-1, W, I);
     for(int i=0; i<N-1; i++) {

@@ -1,7 +1,7 @@
 /*
 ***DP*** -- UVa11584
     Description:
-        ³Ìªø°j¤å¤l¦r¦ê
+        æœ€é•·è¿´æ–‡å­å­—ä¸²
 
     O(size(str) ^ 2)
 */
@@ -10,10 +10,10 @@
 using namespace std;
 
 const int MAX_N = 1000+5;
-int dp[MAX_N]; //str[1] ~ str[i] ªº³Ì¤pªº°j¤å¤l¦r¦ê¼Æ¶q
+int dp[MAX_N]; //str[1] ~ str[i] çš„æœ€å°çš„è¿´æ–‡å­å­—ä¸²æ•¸é‡
 char str[MAX_N];
 int n;
-//ÀË¬d¬O§_°j¤å
+//æª¢æŸ¥æ˜¯å¦è¿´æ–‡
 bool pal(int L, int R) {
     while(L < R) {
         if(str[L++] != str[R--]) return 0;
@@ -27,16 +27,16 @@ int main() {
         int i;
         fill(dp, dp+MAX_N, 0x7fffffff);
         dp[0] = 0;
-        scanf("%s", str+1); //±q¤@¶}©l
-        //±q¥ª¨ì¥k
+        scanf("%s", str+1); //å¾ä¸€é–‹å§‹
+        //å¾å·¦åˆ°å³
         for(i=1; str[i]; i++) { 
             for(int j=1; j<=i; j++) {
-                //ÀË¬d str[j] ~ str[i] ¬O§_°j¤å
+                //æª¢æŸ¥ str[j] ~ str[i] æ˜¯å¦è¿´æ–‡
                 if(pal(j, i)) {
                     /*
                         dp[j-1] + 1: 
-                            ¤wª¾ str[i] ~ str[j] ¬°°j¤å¡A«h¦¹¦¡¥Nªí±Ä¯Ç str[i] ~ str[j] 
-                            ³o¬q§@¬°°j¤å¤l¦r¦ê
+                            å·²çŸ¥ str[i] ~ str[j] ç‚ºè¿´æ–‡ï¼Œå‰‡æ­¤å¼ä»£è¡¨æ¡ç´ str[i] ~ str[j] 
+                            é€™æ®µä½œç‚ºè¿´æ–‡å­å­—ä¸²
                     */
                     dp[i] = min(dp[i], dp[j-1]+1);
                 }

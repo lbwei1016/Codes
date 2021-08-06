@@ -47,7 +47,7 @@ int main() {
     in.open("test1.txt", ios::in | ios::binary | ios::ate); 
     size = in.tellg(); //Getting the current read position, returning type "streampos"
     str = new char[size];
-    in.seekg(0, ios::beg); //Changing the current read position¡Fios::beg: beginning
+    in.seekg(0, ios::beg); //Changing the current read positionï¼›ios::beg: beginning
     in.read(str, size); //file.read(buffer, characters)
     in.close();
 

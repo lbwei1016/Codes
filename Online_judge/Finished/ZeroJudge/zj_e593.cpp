@@ -18,24 +18,24 @@ int main()
             cin >> col[i];
         for(int i=0; i<n; i++)
             cin >> row[i];
-        //­°¾­±Æ¦C¡A¬°¤FÀu¥ıÅı¿Oªw¦hªº¥h©è¾P
+        //é™å†ªæ’åˆ—ï¼Œç‚ºäº†å„ªå…ˆè®“ç‡ˆæ³¡å¤šçš„å»æŠµéŠ·
         sort(col, col+m, greater<int>());
         sort(row, row+n, greater<int>());
 
-        for(int i=0; i<n; i++) //©T©w--¦C
+        for(int i=0; i<n; i++) //å›ºå®š--åˆ—
         {
-            for(int j=0; j<m && col[j] && row[i]; j++) //¦æ¡B¦C¤¬¬Û©è®ø
+            for(int j=0; j<m && col[j] && row[i]; j++) //è¡Œã€åˆ—äº’ç›¸æŠµæ¶ˆ
             {
                 col[j]--;
                 row[i]--;
                 sum++;
             }
-            sum += row[i]; //¦C--¨S³Q©è¾Pªº
-            sort(col, col+m, greater<int>()); //­°¾­±Æ¦C¡A¬°¤FÀu¥ıÅı¿Oªw¦hªº¥h©è¾P¡A§_«h´N·|¨S©è¾P¦Óª½±µ°õ¦æ"sum += row[i]"¡A¦]¦Ó°ª¦ôµª®×
+            sum += row[i]; //åˆ—--æ²’è¢«æŠµéŠ·çš„
+            sort(col, col+m, greater<int>()); //é™å†ªæ’åˆ—ï¼Œç‚ºäº†å„ªå…ˆè®“ç‡ˆæ³¡å¤šçš„å»æŠµéŠ·ï¼Œå¦å‰‡å°±æœƒæ²’æŠµéŠ·è€Œç›´æ¥åŸ·è¡Œ"sum += row[i]"ï¼Œå› è€Œé«˜ä¼°ç­”æ¡ˆ
         }
         for(int i=0; i<m; i++)
         {
-            sum += col[i]; //¦æ--¨S³Q©è¾Pªº
+            sum += col[i]; //è¡Œ--æ²’è¢«æŠµéŠ·çš„
         }
         cout << sum << '\n';
     }

@@ -20,8 +20,8 @@ int main()
     for(int i=0; i<N; i++)
     {
         /*
-            find the first element in "dp" that is ">= s[i]"¡Fif that is "INF", 
-            it means that LIS increases by 1¡Fif not, the replacement of ele-
+            find the first element in "dp" that is ">= s[i]"ï¼›if that is "INF", 
+            it means that LIS increases by 1ï¼›if not, the replacement of ele-
             ment can produce the potential for a longer LIS without affecting
             the length of current LIS.
 

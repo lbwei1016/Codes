@@ -39,10 +39,10 @@ bool check(int row, int col)
         int q_col = queens[r];
         if(col == q_col) return false;
         else if(r+q_col == row+col) return false; 
-        //¬Ó¦Z¨«±×½u(©¹¥ª¤U)¸ô®|¡A¦¹®Érow+1¡Acol-1¡A©Ò¥H­Y¦b¸Ó¬Ó¦Z±×½u¸ô®|¤W¡A«hrow+col¬°©w­È
+        //çš‡åèµ°æ–œç·š(å¾€å·¦ä¸‹)è·¯å¾‘ï¼Œæ­¤æ™‚row+1ï¼Œcol-1ï¼Œæ‰€ä»¥è‹¥åœ¨è©²çš‡åæ–œç·šè·¯å¾‘ä¸Šï¼Œå‰‡row+colç‚ºå®šå€¼
         else if(r-q_col == row-col) return false;
-        //¬Ó¦Z¨«±×½u(©¹¥k¤U)¸ô®|¡A¦¹®Érow+1¡Acol+1¡A©Ò¥H­Y¦b¸Ó¬Ó¦Z±×½u¸ô®|¤W¡A«hrow-col¬°©w­È
-        // ¥u»İ¦Ò¼{©¹¤U¡A¦]¬°»¼°j¥Ñ¤W¦Ó¤U
+        //çš‡åèµ°æ–œç·š(å¾€å³ä¸‹)è·¯å¾‘ï¼Œæ­¤æ™‚row+1ï¼Œcol+1ï¼Œæ‰€ä»¥è‹¥åœ¨è©²çš‡åæ–œç·šè·¯å¾‘ä¸Šï¼Œå‰‡row-colç‚ºå®šå€¼
+        // åªéœ€è€ƒæ…®å¾€ä¸‹ï¼Œå› ç‚ºéè¿´ç”±ä¸Šè€Œä¸‹
     }
     return true;
 }

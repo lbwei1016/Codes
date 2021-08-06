@@ -25,9 +25,9 @@ int main() {
     printf("%d\n", dp[W]);
     return 0;
 }
-/* �u�ơG�N���~�ƶq > 1 �������H 2 �������ƭӤl���~ (1, 2, 4, 8....)�A
-        �ӳo�Ǥl���~��i�H�զX�����N�p�󵥩��ƶq�������覡�A�A�H 0/1 �I�]
-        �D�ѡC���~�����W�h�� N * log T�C
+/* 優化：將物品數量 > 1 的種類以 2 的次方拆成數個子物品 (1, 2, 4, 8....)，
+        而這些子物品恰可以組合成任意小於等於原數量的拿取方式，再以 0/1 背包
+        求解。物品種類增多至 N * log T。
     O(N * log T * W)
 #include <iostream>
 using namespace std;

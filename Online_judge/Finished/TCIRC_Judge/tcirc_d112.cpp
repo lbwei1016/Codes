@@ -6,12 +6,12 @@ using namespace std;
 
 const int N = 1e5+5;
 int n;
-//ch[]: ¬O§_¦³¤p«Ä³Q¿ï¤W (­Y¦³¡A«h¦Û¤v¥¼³Q¿ï¤W¤]¥i¥H)
+//ch[]: æ˜¯å¦æœ‰å°å­©è¢«é¸ä¸Š (è‹¥æœ‰ï¼Œå‰‡è‡ªå·±æœªè¢«é¸ä¸Šä¹Ÿå¯ä»¥)
 bool visit[N], ch[N];
-//vac[]: ªì©l­È = deg[]¡F¥Nªí¤´¥¼¦³¥i©è¹FªºªA°È¤¤¤ßªº¤p«Ä¼Æ¶q
+//vac[]: åˆå§‹å€¼ = deg[]ï¼›ä»£è¡¨ä»æœªæœ‰å¯æŠµé”çš„æœå‹™ä¸­å¿ƒçš„å°å­©æ•¸é‡
 int p[N], deg[N], vac[N];
 vector<int> G[N];
-//Âà¤Æ¬°¦³®Ú¾ğ
+//è½‰åŒ–ç‚ºæœ‰æ ¹æ¨¹
 void dfs(int v) {
     visit[v] = true;
     for(int u : G[v]) {
@@ -31,7 +31,7 @@ int main() {
         G[u].push_back(v);
         G[v].push_back(u);
     }
-    //¥H 1 ¬°®Ú
+    //ä»¥ 1 ç‚ºæ ¹
     dfs(1);
     queue<int> que;
     for(int i=2; i<=n; i++) {
@@ -41,12 +41,12 @@ int main() {
     int res = 0; p[1] = 0;
     while(!que.empty()) {
         int v = que.front(); que.pop();
-        //­Y¦³¤p«Ä¤´¥¼¦³¥i©è¹FªºªA°È¤¤¤ß
+        //è‹¥æœ‰å°å­©ä»æœªæœ‰å¯æŠµé”çš„æœå‹™ä¸­å¿ƒ
         if(vac[v]) {
-            res++; //¦Û¤v¦¨¬°ªA°È¤¤¤ß
+            res++; //è‡ªå·±æˆç‚ºæœå‹™ä¸­å¿ƒ
             vac[p[v]]--;
             ch[p[v]] = true;
-        } else if(ch[v]) vac[p[v]]--; //­Y¦³¤p«Ä¬OªA°È¤¤¤ß
+        } else if(ch[v]) vac[p[v]]--; //è‹¥æœ‰å°å­©æ˜¯æœå‹™ä¸­å¿ƒ
         if(--deg[p[v]] == 0)
             que.push(p[v]);
     }

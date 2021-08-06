@@ -23,10 +23,10 @@ int main() {
     }
     for(int i=k+1; i<n; i++) {
         if(i-mn.front()-1 > 2*k) mn.pop_front();
-        c[i] += c[mn.front()]; //²Ö¥[¦¨¥»
+        c[i] += c[mn.front()]; //ç´¯åŠ æˆæœ¬
         put_min(i);
     }
-    //µLªk²[»\¨ì³Ì«á¤@­ÓÂI
+    //ç„¡æ³•æ¶µè“‹åˆ°æœ€å¾Œä¸€å€‹é»
     while(mn.front()+k < n-1) mn.pop_front();
     printf("%d\n", c[mn.front()]);
     return 0;

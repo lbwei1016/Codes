@@ -17,7 +17,7 @@ int main()
     cin.tie(NULL);
     
     cin >> m >> n;
-    ch = m+n; //´Ñ½L¤j¤p: m+n
+    ch = m+n; //æ£‹ç›¤å¤§å°: m+n
     cnt = 0;
     DFS(0);
     cout << cnt << '\n';
@@ -40,15 +40,15 @@ bool check(int row, int col, char sym)
         int cas_c = p.second;
         if(col == cas_c) return false;
     }
-    if(sym == 'q') //­Y·í«e©ñ¤Uªº¬O¬Ó¦Z¡A»İ½T»{¬O§_¸ô®|¤W¤wÂ\©ñ¤F«°³ù
+    if(sym == 'q') //è‹¥ç•¶å‰æ”¾ä¸‹çš„æ˜¯çš‡åï¼Œéœ€ç¢ºèªæ˜¯å¦è·¯å¾‘ä¸Šå·²æ“ºæ”¾äº†åŸå ¡
     {
         for(int i=0; i<cas.size(); i++)
         {
             pii p = cas[i];
             int cas_r = p.first,
                 cas_c = p.second;
-            if(cas_r+cas_c == row+col) return false; //row-1, col+1 (¥k¤W)
-            else if(cas_r-cas_c == row-col) return false; //row-1, col-1 (¥ª¤W)
+            if(cas_r+cas_c == row+col) return false; //row-1, col+1 (å³ä¸Š)
+            else if(cas_r-cas_c == row-col) return false; //row-1, col-1 (å·¦ä¸Š)
         }
     }
     return true;

@@ -12,7 +12,7 @@ struct L { ll a, b; };
 int n, m;
 ll c[MAX_M];
 vector<L> line;
-vector<L> dq; //¦s©ñ¥i¥Îªºª½½u (¥Y¥])
+vector<L> dq; //å­˜æ”¾å¯ç”¨çš„ç›´ç·š (å‡¸åŒ…)
 
 bool comp(L &l1, L &l2) {
     return (l1.a == l2.a ? l1.b > l2.b : l1.a < l2.a);
@@ -36,18 +36,18 @@ int main() {
     dq.push_back(line[0]);
     for(int i=1; i<n; i++) {
         L l = line[i];
-        //¤£Â_¦V«eÀË¬d¡A¬O§_¥i¥H§ó·sª½½u
+        //ä¸æ–·å‘å‰æª¢æŸ¥ï¼Œæ˜¯å¦å¯ä»¥æ›´æ–°ç›´ç·š
         while(dq.size() > 1) {
             ll a1 = dq[dq.size()-2].a, b1 = dq[dq.size()-2].b;
             ll a2 = dq[dq.size()-1].a, b2 = dq[dq.size()-1].b;
             /*
-                §PÂ_ l1, l ¥H¤Î l2, l ªº¥æÂI x ®y¼Ð (µe¹Ï¬Ý¬Ý)
-                ¤p§Þ¥©:
-                    ±N­ì¥»¨âªÌªº x ­È¥æ¤e¬Û­¼¡A¥HÁ×§K¯BÂI¼Æ¡F
-                    ¦]¬°±×²v a »¼¼W¡A¦]¦¹¤À¥À«í¥¿¡A¤£µ¥¦¡¤£ÅÜ
+                åˆ¤æ–· l1, l ä»¥åŠ l2, l çš„äº¤é»ž x åº§æ¨™ (ç•«åœ–çœ‹çœ‹)
+                å°æŠ€å·§:
+                    å°‡åŽŸæœ¬å…©è€…çš„ x å€¼äº¤å‰ç›¸ä¹˜ï¼Œä»¥é¿å…æµ®é»žæ•¸ï¼›
+                    å› ç‚ºæ–œçŽ‡ a éžå¢žï¼Œå› æ­¤åˆ†æ¯æ†æ­£ï¼Œä¸ç­‰å¼ä¸è®Š
             */
             if((b1 - l.b) * (l.a - a2) >= (b2 - l.b) * (l.a - a1)) {
-                dq.pop_back(); //¥á±ó l2
+                dq.pop_back(); //ä¸Ÿæ£„ l2
             } else break;
         }
         dq.push_back(l);
@@ -55,7 +55,7 @@ int main() {
     ll res = 0;
     int p = 0, len = dq.size();
     for(int i=0; i<m; i++) {
-        //³æ½Õ¶¶§Ç
+        //å–®èª¿é †åº
         while(p < len-1 && f(dq[p], c[i]) <= f(dq[p+1], c[i])) {
             p++;
         }

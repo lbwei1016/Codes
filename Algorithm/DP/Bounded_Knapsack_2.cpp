@@ -1,11 +1,11 @@
 /*
 ***DP*** -- Bounded knapsack
     Solution:
-        �N���~�ƶq > 1 �������H 2 �������ƭӤl���~ (1, 2, 4, 8....)�A
-        �ӳo�Ǥl���~��i�H�զX�����N�p�󵥩��ƶq�������覡�A�A�H 0/1 �I�]
-        �D�ѡC���~�����W�h�� N * log T�C
+        將物品數量 > 1 的種類以 2 的次方拆成數個子物品 (1, 2, 4, 8....)，
+        而這些子物品恰可以組合成任意小於等於原數量的拿取方式，再以 0/1 背包
+        求解。物品種類增多至 N * log T。
     O(N * log T * W)
-    N: ���~�����FT: ���~�ƶq�F�i�e�ǭ�
+    N: 物品種類；T: 物品數量；可容納重
 */
 #include <iostream>
 using namespace std;
@@ -20,13 +20,13 @@ int main() {
     for(int i=0; i<n; i++) {
         int a, b, t, j;
         scanf("%d%d%d", &a, &b, &t);
-        if(t < 0) t = W / b; // �ƶq�L���h��
-        // ���
+        if(t < 0) t = W / b; // 數量無限多時
+        // 拆解
         for(j=1; j<t; j<<=1) {
             v[cnt] = a * j;
             w[cnt++] = b * j;
         }
-        // �� t �ꬰ�G����Ʀ���
+        // 當 t 恰為二的整數次方
         if(t == j) {
             v[cnt] = a;
             w[cnt++] = b;

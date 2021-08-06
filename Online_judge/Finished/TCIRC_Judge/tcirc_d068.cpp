@@ -1,10 +1,10 @@
 /*
 ***DP***
     Solution I:
-        dp[i]: ��ܲ� i �Ӻʵ������p�U���̧C�����C
+        dp[i]: 選擇第 i 個監視器情況下的最低成本。
     Solution II :
-        dp0[i]: �u���v��ܲ� i �Ӻʵ������p�U���̧C�����F
-        dp1[i]:  ��ܲ� i �Ӻʵ������p�U���̧C�����C
+        dp0[i]: 「不」選擇第 i 個監視器情況下的最低成本；
+        dp1[i]:  選擇第 i 個監視器情況下的最低成本。
     
     O(N)
 */

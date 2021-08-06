@@ -21,13 +21,13 @@ int main() {
         scanf("%d", &p[i]);
     }
     ll res = 0;
-    //±q«á¤è¨Ó¡A¬İ½ÖÁÙ¨S¹J¨ì°ª¤H
+    //å¾å¾Œæ–¹ä¾†ï¼Œçœ‹èª°é‚„æ²’é‡åˆ°é«˜äºº
     for(int i=n; i>=0; i--) {
         auto it = M.begin();
         while(it!=M.end() && it->first<h[i]) {
             int dis = it->second - i - 1;
             res += dis;
-            //¹J¨ì¤F
+            //é‡åˆ°äº†
             it = M.erase(it);
         }
         M.insert({h[i]+p[i], i});

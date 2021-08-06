@@ -12,7 +12,7 @@ int main() {
     for(int i=1; i<=n; i++) {
         scanf("%d", &x);
         if(i < K+1) dp[i] = max(x, dp[i-1]);
-        //¥u»ÝÀË¬d dp[i-1]¡A¦]¬°«e­±¤w¸g±N³Ì¤j­È±À¦Ü dp[i-1]
+        //åªéœ€æª¢æŸ¥ dp[i-1]ï¼Œå› ç‚ºå‰é¢å·²ç¶“å°‡æœ€å¤§å€¼æŽ¨è‡³ dp[i-1]
         else dp[i] = max(dp[i-K-1] + x, dp[i-1]);
     }
     printf("%d\n", dp[n]);

@@ -2,12 +2,12 @@
 ***Josephus problem***
 
     Description:
-        ¬ù·æ¤Ò°ÝÃDªº±À¼s¡A¨D²Ä K ¦ì³Q±þ¦ºªº¤Hªº¦w¥þªº¤U¤@¦ì¡A§Y¡u©¯¹B¤§¤H¡v
+        ç´„ç‘Ÿå¤«å•é¡Œçš„æŽ¨å»£ï¼Œæ±‚ç¬¬ K ä½è¢«æ®ºæ­»çš„äººçš„å®‰å…¨çš„ä¸‹ä¸€ä½ï¼Œå³ã€Œå¹¸é‹ä¹‹äººã€
     
-    Solution:¡]0-indexed ¸û¤è«K¡^
-        ­Y¨Ï¥Î¦î¦C¼ÒÀÀ¡A½ÆÂø«×°ª¡]µ{¦¡½X¦b¤U¤è¡^¡C¥t¤@¸Ñªk¦p¤U¡G
-            ·í N ¤H³ò¦¨¤@°é¡A¨C M ¤H¤@¼Æ¡A¨C¦¸³Q±þªº¤H½s¸¹¬°¡G(M-1) mod N¡C
-            °²³]³Ì«á¦s¬¡ªÌªº½s¸¹¬° f(N)¡C·í½s¸¹ M-1 ªº¤H³Q±þ«á¡AÅý³Ñ¾lªº N-1 ¤H­«·s½s¸¹¦p¤U¡G
+    Solution:ï¼ˆ0-indexed è¼ƒæ–¹ä¾¿ï¼‰
+        è‹¥ä½¿ç”¨ä½‡åˆ—æ¨¡æ“¬ï¼Œè¤‡é›œåº¦é«˜ï¼ˆç¨‹å¼ç¢¼åœ¨ä¸‹æ–¹ï¼‰ã€‚å¦ä¸€è§£æ³•å¦‚ä¸‹ï¼š
+            ç•¶ N äººåœæˆä¸€åœˆï¼Œæ¯ M äººä¸€æ•¸ï¼Œæ¯æ¬¡è¢«æ®ºçš„äººç·¨è™Ÿç‚ºï¼š(M-1) mod Nã€‚
+            å‡è¨­æœ€å¾Œå­˜æ´»è€…çš„ç·¨è™Ÿç‚º f(N)ã€‚ç•¶ç·¨è™Ÿ M-1 çš„äººè¢«æ®ºå¾Œï¼Œè®“å‰©é¤˜çš„ N-1 äººé‡æ–°ç·¨è™Ÿå¦‚ä¸‹ï¼š
                 M -> 0
                 M+1 -> 1
                 ...
@@ -15,15 +15,15 @@
                 ...
                 M-3 -> N-3
                 M-2 -> N-2
-            «h­ì¥ý N-Àôªº¦s¬¡ªÌ f(N) = (f(N-1) + M) mod N¡A¥H¦¹Ãþ±À¡A¦Ó f(1) = 0¡C
-            ¡]¸ÕµÛµe¹Ï¬Ý¬Ý¡^¡]»¼°j¦¡¥Ñ¤W­z½bÀY¥k¤è©¹¥ª¤è°f¹Bºâ§Y¥i±o¥X¡^
+            å‰‡åŽŸå…ˆ N-ç’°çš„å­˜æ´»è€… f(N) = (f(N-1) + M) mod Nï¼Œä»¥æ­¤é¡žæŽ¨ï¼Œè€Œ f(1) = 0ã€‚
+            ï¼ˆè©¦è‘—ç•«åœ–çœ‹çœ‹ï¼‰ï¼ˆéžè¿´å¼ç”±ä¸Šè¿°ç®­é ­å³æ–¹å¾€å·¦æ–¹é€†é‹ç®—å³å¯å¾—å‡ºï¼‰
 
-            ¦Ó¡u²Ä K ¦ì³Q±þªº¤H¡v§Y¬°¡GN-(K-1) ¤H³ò¦¨¤@°é®É¡A
-            ²Ä¤@¦ì³Q±þªº¤H¡A¨ä½s¸¹¡G(M-1) mod N-(K-1)¡A¦A¥Ñ¤W­z±À¾É¤§»¼°j¦¡§Y¥iºâ¥X
-            ²Ä K ¦ì³Q±þªº¤H¦b N ¤H³ò¦¨¤@°é®Éªº½s¸¹¡C
+            è€Œã€Œç¬¬ K ä½è¢«æ®ºçš„äººã€å³ç‚ºï¼šN-(K-1) äººåœæˆä¸€åœˆæ™‚ï¼Œ
+            ç¬¬ä¸€ä½è¢«æ®ºçš„äººï¼Œå…¶ç·¨è™Ÿï¼š(M-1) mod N-(K-1)ï¼Œå†ç”±ä¸Šè¿°æŽ¨å°Žä¹‹éžè¿´å¼å³å¯ç®—å‡º
+            ç¬¬ K ä½è¢«æ®ºçš„äººåœ¨ N äººåœæˆä¸€åœˆæ™‚çš„ç·¨è™Ÿã€‚
 
-            ¥»ÃD©Ò¨Dªº©¯¹BªÌ¡A¨ä¹ê´N¬O·í¶ê°é¤j¤p¬°¡@N-(K-1) ¤H®É¡A²Ä¤@¦ì³Q±þªº¤Hªº¤U¤@¦ì¡A
-            ¨ä·í¤U½s¸¹§Y¬° (M-1 + 1) mod N-(K-1) = M mod N-K+1¡A¦A¨Ì¤W­z¤èªk¦^·¹§Y¥i¨D¸Ñ¡C
+            æœ¬é¡Œæ‰€æ±‚çš„å¹¸é‹è€…ï¼Œå…¶å¯¦å°±æ˜¯ç•¶åœ“åœˆå¤§å°ç‚ºã€€N-(K-1) äººæ™‚ï¼Œç¬¬ä¸€ä½è¢«æ®ºçš„äººçš„ä¸‹ä¸€ä½ï¼Œ
+            å…¶ç•¶ä¸‹ç·¨è™Ÿå³ç‚º (M-1 + 1) mod N-(K-1) = M mod N-K+1ï¼Œå†ä¾ä¸Šè¿°æ–¹æ³•å›žæº¯å³å¯æ±‚è§£ã€‚
     
     O(K)
 */

@@ -42,7 +42,7 @@ int main() {
             G[v].push_back({u, w});
         }
         int res = 0; 
-        int mx[5] = {0}; // ¤ÀÄİ¤£¦P´Ê¾ğªº«e¤T¤j¥b®| (¦h¤À°tªÅ¶¡¨Ó¦s«D«e¤T¤j­È)
+        int mx[5] = {0}; // åˆ†å±¬ä¸åŒæ£µæ¨¹çš„å‰ä¸‰å¤§åŠå¾‘ (å¤šåˆ†é…ç©ºé–“ä¾†å­˜éå‰ä¸‰å¤§å€¼)
         for(int i=0; i<n; ++i) {
             if(!vis[i]) {
                 dfs(i, n);
@@ -66,7 +66,7 @@ int main() {
                 mx[st] = dx;
             }
         }
-        // ¦³¤TÁû¥H¤Wªº¾ğ / ¥u¦³¨â´Ê¾ğ
+        // æœ‰ä¸‰é¡†ä»¥ä¸Šçš„æ¨¹ / åªæœ‰å…©æ£µæ¨¹
         if(n-m > 2) res = max(res, max(mx[0]+mx[1]+l, mx[1]+mx[2]+2*l));
         else if(n-m > 1) res = max(res, mx[0]+mx[1]+l); 
         printf("%d\n", res);

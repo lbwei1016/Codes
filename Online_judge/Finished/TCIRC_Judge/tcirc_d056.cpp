@@ -8,8 +8,8 @@ using namespace std;
 
 struct P { int x, y; };
 int n;
-multimap<int, int> pre; //(y, x)¡F¥ª¤èªºÂI
-vector<P> ps; //ÂI¶°¦X
+multimap<int, int> pre; //(y, x)ï¼›å·¦æ–¹çš„é»
+vector<P> ps; //é»é›†åˆ
 
 bool cmp(P p1, P p2) {
     return p1.x < p2.x;
@@ -22,14 +22,14 @@ int main() {
     }
     sort(ps.begin(), ps.end(), cmp);
     int min_d = 1e9; 
-    //¥Ñ¥ª¦Ó¥k±½´y
+    //ç”±å·¦è€Œå³æƒæ
     for(int i=0; i<n; i++) {
         int x = ps[i].x, y = ps[i].y;
-        //³Ìµu¶ZÂ÷¤ºªº³Ì¤p y ®y¼Ğ
+        //æœ€çŸ­è·é›¢å…§çš„æœ€å° y åº§æ¨™
         auto it = pre.lower_bound(y - min_d);
-        //³Ìµu¶ZÂ÷¤ºªº³Ì¤j y ®y¼Ğ (while ³Ì¦h°õ¦æ 8 ¦¸)
+        //æœ€çŸ­è·é›¢å…§çš„æœ€å¤§ y åº§æ¨™ (while æœ€å¤šåŸ·è¡Œ 8 æ¬¡)
         while(it!=pre.end() && it->first <= y+min_d) {
-            //x ®y¼Ğ¶W¥X³Ì¤p¶ZÂ÷¡A¤£·|¦A¥Î¨ì
+            //x åº§æ¨™è¶…å‡ºæœ€å°è·é›¢ï¼Œä¸æœƒå†ç”¨åˆ°
             if(it->second < x - min_d) {
                 it = pre.erase(it);
                 continue;

@@ -2,7 +2,7 @@
 ***Sliding Window*** -- deque
     Solution:
         Whenever there is a negative number, it is more likely 
-        to go to the "mq" min deque¡Fon the other hand, positive
+        to go to the "mq" min dequeï¼›on the other hand, positive
         numbers go to "Mq" max deque. That's why we don't need
         to worry about negqtive numbers, since the final result 
         is taken with abs(), eliminating the need to evaluate 

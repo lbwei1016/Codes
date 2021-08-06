@@ -2,7 +2,7 @@
 ***DP*** -- Local alignment
     Description:
         Given two sequences, determine the "similarity" of them by comparing
-        the consecutive characters¡Fhowever, we can arbituarily put "spaces"
+        the consecutive charactersï¼›however, we can arbituarily put "spaces"
         in the sequences to make a "gap".The "similarity" is determined by
         the "weight" three conditions:
             s[i] = t[j]: +8

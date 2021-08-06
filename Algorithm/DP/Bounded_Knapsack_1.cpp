@@ -1,7 +1,7 @@
 /*
 ***DP*** -- Bounded knapsack
     O(N * W * T)
-    N: ª««~ºØÃş¡FT: ª««~¼Æ¶q¡F¥i®e¯Ç­«
+    N: ç‰©å“ç¨®é¡ï¼›T: ç‰©å“æ•¸é‡ï¼›å¯å®¹ç´é‡
 */
 #include <iostream>
 using namespace std;

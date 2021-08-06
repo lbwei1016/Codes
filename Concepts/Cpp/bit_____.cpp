@@ -8,7 +8,7 @@ void bit(int n, int k)
     int comb = (1 << k) - 1;
     while(comb < 1 << n)
     {
-        int x = comb & -comb, //¨ú¥X³Ì§C¦ì¤¸ªº 1
+        int x = comb & -comb, //å–å‡ºæœ€ä½ä½å…ƒçš„ 1
             y = comb + x;
         comb = ((comb & ~y)/x >> 1) | y;
         if(comb > 1 << n)

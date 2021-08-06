@@ -1,10 +1,10 @@
 /*
-***"Fake" Segment Tree*** (¨£ºtºâªkµ§°O: http://web.ntnu.edu.tw/~algo/Sequence2.html#3)
+***"Fake" Segment Tree*** (è¦‹æ¼”ç®—æ³•ç­†è¨˜: http://web.ntnu.edu.tw/~algo/Sequence2.html#3)
     Solution:
-        ¦]¬°ÃD¥Ø©Òµ¹ªº N ¨Ã¤£«OÃÒ¬° 2 ªº¾­¦¸¡A¥ç§YµLªk«OÃÒ½u¬q¾ð¬°
-        §¹¥þ¤G¤¸¾ð¡A¦]¦¹¥ý§ä¨ì n = 2^p >= N¡A¨Ó«Ø¸m§¹¥þ¤G¤¸¾ð
+        å› ç‚ºé¡Œç›®æ‰€çµ¦çš„ N ä¸¦ä¸ä¿è­‰ç‚º 2 çš„å†ªæ¬¡ï¼Œäº¦å³ç„¡æ³•ä¿è­‰ç·šæ®µæ¨¹ç‚º
+        å®Œå…¨äºŒå…ƒæ¨¹ï¼Œå› æ­¤å…ˆæ‰¾åˆ° n = 2^p >= Nï¼Œä¾†å»ºç½®å®Œå…¨äºŒå…ƒæ¨¹
 
-        ¦A¨Ó¡A¦]¬°©Ò¨D¬°³Ì¤j­È¡A©Ò¥H±N¦U¸`ÂI³Ì¤j­Èªì©l¤Æ¬°[-INF]
+        å†ä¾†ï¼Œå› ç‚ºæ‰€æ±‚ç‚ºæœ€å¤§å€¼ï¼Œæ‰€ä»¥å°‡å„ç¯€é»žæœ€å¤§å€¼åˆå§‹åŒ–ç‚º[-INF]
         
     O(M * log n)
 */
@@ -39,7 +39,7 @@ void build(int k, int l, int r) { //O(log n)
 
     node[k] = max(node[2*k], node[2*k+1]);
 }
-//k: no. of node¡Fl, r: range of the node
+//k: no. of nodeï¼›l, r: range of the node
 int query(int a, int b, int k, int l, int r) { //O(log n)
     if (a > r || b < l) return -INF;
     if (a <= l && r <= b) return node[k];

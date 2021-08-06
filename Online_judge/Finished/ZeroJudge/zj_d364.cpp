@@ -3,8 +3,8 @@
 */
 
 //if gcd(a, b) = 1 --> COPRIME!!!
-//­ì¥»¥´ºâ¥Îset¨Ó³B²z¦]¼Æ°İÃD¡A¦ı¨ä¹ê¥u­n¨Dgcd§Y¥i½T»{¨â¼Æ¬O§_¤¬½è
-//gcd¥ı»s§@ªí®æ¡A¥B§Q¥Î¡u__gcd()¡v
+//åŸæœ¬æ‰“ç®—ç”¨setä¾†è™•ç†å› æ•¸å•é¡Œï¼Œä½†å…¶å¯¦åªè¦æ±‚gcdå³å¯ç¢ºèªå…©æ•¸æ˜¯å¦äº’è³ª
+//gcdå…ˆè£½ä½œè¡¨æ ¼ï¼Œä¸”åˆ©ç”¨ã€Œ__gcd()ã€
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -47,7 +47,7 @@ void dfs(int s, int t, int k)
                 // } 
                 int m = coprime[a],
                     n = coprime[b];
-                if(GCD[m][n] != 1) //if a, b ¨Ã¤£¤¬½è
+                if(GCD[m][n] != 1) //if a, b ä¸¦ä¸äº’è³ª
                 {
                     flag = true;
                     break;
@@ -106,7 +106,7 @@ int main()
         for(int j=1; j<N; j++)
             GCD[i][j] = __gcd(i, j); // <algorithm>: __gcd()
     int n;
-    while(cin >> n) //¦hµ§´ú¸ê~~
+    while(cin >> n) //å¤šç­†æ¸¬è³‡~~
     {
         for(int i=1; i<=n; i++)
         {

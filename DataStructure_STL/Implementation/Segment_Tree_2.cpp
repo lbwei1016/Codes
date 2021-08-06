@@ -1,6 +1,6 @@
 /*
-    ½u¬q¾ğ¡G¡]°Ñ¦Ò Segment_Tree_1¡^(0-indexed)
-        ³o¸ÌªºÀu¤Æ¦b©ó¥i¥H¦b O(log n) ªº®É¶¡­×§ïµ¹©w°Ï¶¡ªº­È¡]­ì¥»¬O O(n)¡^
+    ç·šæ®µæ¨¹ï¼šï¼ˆåƒè€ƒ Segment_Tree_1ï¼‰(0-indexed)
+        é€™è£¡çš„å„ªåŒ–åœ¨æ–¼å¯ä»¥åœ¨ O(log n) çš„æ™‚é–“ä¿®æ”¹çµ¦å®šå€é–“çš„å€¼ï¼ˆåŸæœ¬æ˜¯ O(n)ï¼‰
 */
 #include <cstdio>
 #include <algorithm>
@@ -11,39 +11,39 @@ typedef long long ll;
 const int MAX_N = 50;
 
 int N, Q;
-int arr[MAX_N+1]; //Àx¦s­ì¼Æ¾Ú
+int arr[MAX_N+1]; //å„²å­˜åŸæ•¸æ“š
 
 //[0, N)
 struct Node
 {
-    ll add = 0; //¸Ó¸`ÂIªº°Ï¶¡ªº©Ò¦³¤¸¯À¬Ò¥[¤Wªº­È (ºâ¦b¦Û¤vÀY¤Wªº¡F¤w¸gµ¹¤÷¡A¤p«Ä¦b¬d¸ß®É¤~µ¹)
-    ll sum = 0; //¸Ó¸`ÂIªº°Ï¶¡©M¡A¥h°£¤W­z"add"ªº­È (¤l¸`ÂI©Ò²Ö¥[ªº¡F¤p«Äµ¹ªº)
+    ll add = 0; //è©²ç¯€é»çš„å€é–“çš„æ‰€æœ‰å…ƒç´ çš†åŠ ä¸Šçš„å€¼ (ç®—åœ¨è‡ªå·±é ­ä¸Šçš„ï¼›å·²ç¶“çµ¦çˆ¶ï¼Œå°å­©åœ¨æŸ¥è©¢æ™‚æ‰çµ¦)
+    ll sum = 0; //è©²ç¯€é»çš„å€é–“å’Œï¼Œå»é™¤ä¸Šè¿°"add"çš„å€¼ (å­ç¯€é»æ‰€ç´¯åŠ çš„ï¼›å°å­©çµ¦çš„)
 }node[1 << 6];
 
-//¤@¦¸­×§ïµ¹©w°Ï¶¡ªº­È
+//ä¸€æ¬¡ä¿®æ”¹çµ¦å®šå€é–“çš„å€¼
 void add(int x, int y, int k, int v, int L, int R) //O(log n)
 {
     if (x <= L && R <= y)
         node[v].add += k;
-    else if (L < y && x < R) //¦³¥æ¶°
+    else if (L < y && x < R) //æœ‰äº¤é›†
     {
-        node[v].sum += (min(y, R) - max(x, L)) * k; //¥u¦³¥æ¶°¤§¤ºªº°Ï¶¡¤~¥[¤W­naddªº­È
+        node[v].sum += (min(y, R) - max(x, L)) * k; //åªæœ‰äº¤é›†ä¹‹å…§çš„å€é–“æ‰åŠ ä¸Šè¦addçš„å€¼
 
         int M = (L+R) / 2;
         add(x, y, k, 2*v+1, L, M);
         add(x, y, k, 2*v+2, M, R);
     }
 }
-//¨D°Ï¶¡©M
+//æ±‚å€é–“å’Œ
 ll sum(int x, int y, int v, int L, int R)
 {
     if (y <= L || R <= x)
         return 0;
     else if (x <= L && R <= y)
-        return node[v].add*(R-L) + node[v].sum; //¾ã¦X
+        return node[v].add*(R-L) + node[v].sum; //æ•´åˆ
     else 
     {
-        ll res = (min(y, R)-max(x, L)) * node[v].add; //Åı¤l¸`ÂI¤]¥[¤Waddªº­È(¥u¥[¥æ¶°ªº°Ï¶¡)
+        ll res = (min(y, R)-max(x, L)) * node[v].add; //è®“å­ç¯€é»ä¹ŸåŠ ä¸Šaddçš„å€¼(åªåŠ äº¤é›†çš„å€é–“)
 
         int M = (L+R) / 2;
         res += sum(x, y, 2*v+1, L, M);
@@ -59,7 +59,7 @@ int main()
     for (int i=0; i<N; i++)
         scanf("%d", &arr[i]);
 
-    //¾ğªº«Øºc¤]¥i¥H¥Î add()
+    //æ¨¹çš„å»ºæ§‹ä¹Ÿå¯ä»¥ç”¨ add()
     for (int i=0; i<N; i++)
         add(i, i+1, arr[i], 0, 0, N);
 

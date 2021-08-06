@@ -9,10 +9,10 @@
 using namespace std;
 
 const int MAX_N = 1000+5;
-int dp[MAX_N]; //str[1] ~ str[i] ªº³Ì¤j°j¤å¤l¦r¦êªø«×
+int dp[MAX_N]; //str[1] ~ str[i] çš„æœ€å¤§è¿´æ–‡å­å­—ä¸²é•·åº¦
 char str[MAX_N];
 int n;
-//ÀË¬d¬O§_°j¤å(palindrome)
+//æª¢æŸ¥æ˜¯å¦è¿´æ–‡(palindrome)
 int pal(int L, int R) {
     int l = L, r = R;
     while(l < r) {
@@ -27,11 +27,11 @@ int main() {
         int i, mx = 0;
         char res[MAX_N]; 
         memset(dp, 0, sizeof(dp));
-        scanf("%s", str+1); //±q¤@¶}©l
-        //±q¥ª¨ì¥k
+        scanf("%s", str+1); //å¾ä¸€é–‹å§‹
+        //å¾å·¦åˆ°å³
         for(i=1; str[i]; i++) { 
             for(int j=1; j<=i; j++) {
-                //ÀË¬d str[j] ~ str[i] ¬O§_°j¤å
+                //æª¢æŸ¥ str[j] ~ str[i] æ˜¯å¦è¿´æ–‡
                 int len = pal(j, i);
                 if(dp[i] < len) {
                     dp[i] = len;

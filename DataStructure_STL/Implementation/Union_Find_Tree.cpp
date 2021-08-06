@@ -111,7 +111,7 @@ void print(int p)
 }
 /* Another way to implement it:
 
-int parent[1000]; //¦pªG¬O®Ú¡Aparent[root] = -rank¡A§_«h parent[x] = root
+int parent[1000]; //å¦‚æœæ˜¯æ ¹ï¼Œparent[root] = -rankï¼Œå¦å‰‡ parent[x] = root
 void init(int n) {
     for(int i=0; i<n; i++) {
         parent[i] = -1; 
@@ -125,8 +125,8 @@ void unite(int x, int y) {
     int r1 = find(x);
     int r2 = find(y);
     if(r1 == r2) return;
-    int sum = parent[x] + parent[y]; //(-1)*·sªº rank
-    //¦]¬° rank ¬°­t¡A¦]¦¹¤j¤pÃö«Y¬Û¤Ï
+    int sum = parent[x] + parent[y]; //(-1)*æ–°çš„ rank
+    //å› ç‚º rank ç‚ºè² ï¼Œå› æ­¤å¤§å°é—œä¿‚ç›¸å
     if(parent[r1] < parent[r2]) {
         parent[r2] = r1; //append r2 to r1
         parent[r1] = sum;

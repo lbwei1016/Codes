@@ -1,8 +1,8 @@
 /*
-***DP*** -- 01knapsack �ܧ� + �u�ʰ}�C
+***DP*** -- 01knapsack 變形 + 滾動陣列
     Solution:
-        �b�Ҧ��m���d����ܤ����A���̤j���u���h���i��v�A�A�H�Ҧ������۴�A
-        �Y���D�حn�D���̤p�ȡC
+        在所有置物櫃的選擇之中，找到最大的「不退租可能」，再以所有租金相減，
+        即為題目要求之最小值。
 
     O(N * M)
 */

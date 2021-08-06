@@ -13,13 +13,13 @@ int main()
     while(t--)
     {
         int n, sum = 0;
-        int max = -10000000; //±Nmax¥H·¥¤p¼Æªì©l¤Æ
+        int max = -10000000; //å°‡maxä»¥æ¥µå°æ•¸åˆå§‹åŒ–
         cin >> n;
         for(int i=0; i<n; i++)
             cin >> arr[i];
         for(int i=0; i<n; i++)
         {
-            if(sum < 0) //·í«e­±ªº©M<0¡A´NÂk¹s¡A§Y±q¦Û¤v¶}©lºâ
+            if(sum < 0) //ç•¶å‰é¢çš„å’Œ<0ï¼Œå°±æ­¸é›¶ï¼Œå³å¾žè‡ªå·±é–‹å§‹ç®—
                 sum = 0;
             sum += arr[i];
             if(sum > max)

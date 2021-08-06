@@ -11,7 +11,7 @@ map<int, int> rec;
 vector<int> chl[N];
 
 void dfs(int v) {
-    mx = max(mx, ++rec[C[v]]); //¨C·í¾ß¨ú¤@·sÄ_¥Û®É¡AÀË¬d¬O§_¶W¹L³Ì¤j­È
+    mx = max(mx, ++rec[C[v]]); //æ¯ç•¶æ’¿å–ä¸€æ–°å¯¶çŸ³æ™‚ï¼Œæª¢æŸ¥æ˜¯å¦è¶…éæœ€å¤§å€¼
     for(int u : chl[v]) {
         dfs(u);
     }

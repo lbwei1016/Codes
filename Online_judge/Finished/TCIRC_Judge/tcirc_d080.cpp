@@ -4,7 +4,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//¨ä¹ê i, j ¶¶§Ç¥æ´«¤ñ¸û¦n¼g
+//å…¶å¯¦ i, j é †åºäº¤æ›æ¯”è¼ƒå¥½å¯«
 long long dp[10][20]; //0~9 / 18 digits
 int main() {
     char s[20];

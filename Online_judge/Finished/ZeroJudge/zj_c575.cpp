@@ -17,11 +17,11 @@ int solve(int mid) {
     int s = 0;
     int k = K;
     while(true) {
-        if(k <= 0) return -1; //·í°ò¦a¥x¼Æ¤w¥ÎºÉ
-        int pos = upper_bound(Ns, Ns+N, Ns[s]+mid) - Ns; //§äÂĞ»\¤£¨ìªº³Ìªñ¤@ÂI  
-        if(pos >= N) return 1; //·í¥ş¼ÆÂĞ»\§¹²¦
-        k--; //¥Î¥h¤@®y°ò¦a¥x
-        s = pos; //§ó·s¦ì¸m
+        if(k <= 0) return -1; //ç•¶åŸºåœ°å°æ•¸å·²ç”¨ç›¡
+        int pos = upper_bound(Ns, Ns+N, Ns[s]+mid) - Ns; //æ‰¾è¦†è“‹ä¸åˆ°çš„æœ€è¿‘ä¸€é»  
+        if(pos >= N) return 1; //ç•¶å…¨æ•¸è¦†è“‹å®Œç•¢
+        k--; //ç”¨å»ä¸€åº§åŸºåœ°å°
+        s = pos; //æ›´æ–°ä½ç½®
     }
     return -1; 
 }

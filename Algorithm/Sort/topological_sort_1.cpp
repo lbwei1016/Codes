@@ -1,5 +1,5 @@
 /*
-***Topology***
+***Topology / Sort***
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -9,7 +9,7 @@ int main() {
     int n, m;
     scanf("%d%d", &n, &m);
     vector<int> G[n]; //adjacent list
-    int indegree[n] = {0}; //¤J¤À¤ä«×
+    int indegree[n] = {0}; //å…¥åˆ†æ”¯åº¦
     for(int i=0; i<m; i++) {
         int u, v;
         scanf("%d%d", &u, &v);
@@ -18,22 +18,22 @@ int main() {
     }
     int topo[N], head = 0, tail = 0; //queue
     for(int i=0; i<n; i++) {
-        //¨S¦³¤H¦b¦Û¤v«e­±¤F
+        //æ²’æœ‰äººåœ¨è‡ªå·±å‰é¢äº†
         if(indegree[i] == 0) {
             topo[tail++] = i; //push
         }
     }
-    //¦³¤Hªº indegree ¬O 0 
+    //æœ‰äººçš„ indegree æ˜¯ 0 
     while(head < tail) {
         int u = topo[head++]; //pop
         for(int v : G[u]) {
             if(--indegree[v] == 0) {
-                topo[tail++] = v;
+                topo[tail++] = v; // push
             }
         }
     }
 
-    //¦³Àô¡A©Ò¥H¨ÃµLªk¥þ³¡ªºÂI¬Ò¹F¨ì indgree = 0
+    //æœ‰ç’°ï¼Œæ‰€ä»¥ä¸¦ç„¡æ³•å…¨éƒ¨çš„é»žçš†é”åˆ° indgree = 0
     if(tail < n) 
         printf("Not a DAG"); 
     else {

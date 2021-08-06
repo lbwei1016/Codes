@@ -8,7 +8,7 @@ const int N = 1e5+5;
 int n, k;
 int mx = 0, mn = 1e9;
 int a[N], p[N]; //parent
-multiset<int> ms; //¬ö¿ı¥Ø«e©Ò¦³ªø«×²Õ¦X
+multiset<int> ms; //ç´€éŒ„ç›®å‰æ‰€æœ‰é•·åº¦çµ„åˆ
 
 int find(int x) {
     if(p[x] < 0) return x;

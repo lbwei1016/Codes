@@ -1,5 +1,5 @@
 /*
-***Shortest Path (with limitations) / ¶Ï§∏ DP****
+***Shortest Path (with limitations) / ‰ΩçÂÖÉ DP****
 
     O(2^n * n^2 * m)
 */
@@ -14,12 +14,12 @@ const int INF = 1e9;
 
 int n, m, p, a, b;
 int t[MAX_N]; //horses of tickets
-int d[MAX_M][MAX_M]; //adjacent matrix for graph°F1-indexed
+int d[MAX_M][MAX_M]; //adjacent matrix for graphÔºõ1-indexed
 
 /*
     dp[S][v]: 
         minimum cost of time
-    (S: remaining tickets°Fv: current position)
+    (S: remaining ticketsÔºõv: current position)
 */
 double dp[1 << MAX_N][MAX_M];
 

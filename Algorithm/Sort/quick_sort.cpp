@@ -1,14 +1,17 @@
+/*
+***Divide and Conquer / Sort***
+*/
 #include <iostream>
 #include <algorithm>
 using namespace std;
 
 void quick_sort(int arr[], int l, int r) {
     if(l >= r-1) return;
-    int pivot = l; // ¥H¥ª¬°°ò·ÇÂI
+    int pivot = l; // ä»¥å·¦ç‚ºåŸºæº–é»
     int i = l+1, j = r-1, val = arr[pivot];
     while(i <= j) {
-        while(i < j && arr[j] > val) j--; // ¥Ñ¥k©¹¥ª·j´M
-        while(i < j && arr[i] < val) i++; // ¥Ñ¥ª©¹¥k·j´M
+        while(i < j && arr[j] > val) j--; // ç”±å³å¾€å·¦æœå°‹
+        while(i < j && arr[i] < val) i++; // ç”±å·¦å¾€å³æœå°‹
         if(i == j) {
             swap(arr[i], arr[pivot]);
             pivot = i;

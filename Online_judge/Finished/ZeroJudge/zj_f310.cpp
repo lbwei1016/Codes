@@ -1,7 +1,7 @@
 /*
 ***Union and Find*** 
     Solution:
-        To make two people friends, unite(x, y)¡F
+        To make two people friends, unite(x, y)ï¼›
         to make them enemies, unite(x, y+n), unite(y, x+n), since "enemy's enemy is friend"
         Note: x, y are the roots
 */
@@ -10,7 +10,7 @@ using namespace std;
 
 const int N = 1005;
 int n, c, x, y;
-int p[2*N]; // 0~n-1: friend id¡Fn~2n-1: enemy id
+int p[2*N]; // 0~n-1: friend idï¼›n~2n-1: enemy id
 
 int find(int x) {
     return p[x] < 0 ? x : p[x]=find(p[x]);

@@ -1,13 +1,13 @@
 /*
 ***Graph / DP***
     Solution:
-        ±N @ ¤À¥|ºØ±¡ªp»¼°j¡F¤÷¸`ÂI¥ı¨M©w¦n¤~»¼°j¡AÅı¥¼ª¾¥u¦b¤l¸`ÂI
+        å°‡ @ åˆ†å››ç¨®æƒ…æ³éè¿´ï¼›çˆ¶ç¯€é»å…ˆæ±ºå®šå¥½æ‰éè¿´ï¼Œè®“æœªçŸ¥åªåœ¨å­ç¯€é»
 */
 #include <bits/stdc++.h>
 using namespace std;
 
 const int N = 1005;
-//cost[u][i]: ·í u ªº parent ¬O²Ä i ¦r¥À®É(0~3)¡A¥H u ¬°®Úªº¤l¾ğªº³Ì¤p®t²§«×
+//cost[u][i]: ç•¶ u çš„ parent æ˜¯ç¬¬ i å­—æ¯æ™‚(0~3)ï¼Œä»¥ u ç‚ºæ ¹çš„å­æ¨¹çš„æœ€å°å·®ç•°åº¦
 int n, m, root, cost[N][4]; 
 vector<int> chl[N];
 unordered_map<char, int> mp = {{'A', 0}, {'U', 1}, {'C', 2}, {'G', 3}};
@@ -31,13 +31,13 @@ int dfs(int k, int v) {
                 mn = min(mn, cnt);
             }
             cost[u][p] = mn;
-            s[u][k] = '@'; //¦^´_¡A¨Ñ¤U¦¸»¼°j
+            s[u][k] = '@'; //å›å¾©ï¼Œä¾›ä¸‹æ¬¡éè¿´
         } else {
             if(s[u][k] != s[v][k]) cost[u][p] = 1;
             else cost[u][p] = 0;
             cost[u][p] += dfs(k, u);
         }
-        sum += cost[u][p]; //²Ö¥[¤l¸`ÂI
+        sum += cost[u][p]; //ç´¯åŠ å­ç¯€é»
     }
     return sum;
 }
@@ -52,7 +52,7 @@ int main() {
  
     int res = 0;
     for(int k=0; k<m; k++) {
-        memset(cost, -1, sizeof(cost)); //°O±oªì©l¤Æ
+        memset(cost, -1, sizeof(cost)); //è¨˜å¾—åˆå§‹åŒ–
         if(s[root][k] == '@') {
             int mn = 1e9;
             for(auto temp : mp) {

@@ -1,7 +1,7 @@
 /*
 ***Greedy***
     Solution: 
-        �p comp �ҥܡA������Y�i�A�����Q�αƧǹF��ت�
+        如 comp 所示，兩兩比較即可，直接利用排序達到目的
     O(nlogn) : for sorting
 */
 #include <bits/stdc++.h>

@@ -1,10 +1,9 @@
 /*
 ***Sweep Line***
     Solution:
-        ±N¤j¼Ó¨Ì»¼¼W°ª«×©ñ¸m©ó stack ¤º¡F¨C·í¹J¨£¤@´É¤ñ°ïÅ|³»§Cªº¡A
-        §Y³sÄò¨ú¥X¨Ï°ïÅ|«ì´_»¼¼W¶¶§Ç¡A¨Ã¦b³o¹Lµ{¤¤­pºâ¨ì¥Ø«e¬°¤î¤ñ
-        ¦Û¤v°ªªº¤j¼Ó©Ò³ò¥Xªº­±¿n
-
+        å°‡å¤§æ¨“ä¾éå¢é«˜åº¦æ”¾ç½®æ–¼ stack å…§ï¼›æ¯ç•¶é‡è¦‹ä¸€æ£Ÿæ¯”å †ç–Šé ‚ä½çš„ï¼Œ
+        å³é€£çºŒå–å‡ºä½¿å †ç–Šæ¢å¾©éå¢é †åºï¼Œä¸¦åœ¨é€™éç¨‹ä¸­è¨ˆç®—åˆ°ç›®å‰ç‚ºæ­¢æ¯”
+        è‡ªå·±é«˜çš„å¤§æ¨“æ‰€åœå‡ºçš„é¢ç©
     O(n)
 */
 #include <bits/stdc++.h>
@@ -18,10 +17,10 @@ int main() {
     for(int i=1; i<=n; i++) {
         scanf("%lld", &h[i]);
     }
-    //Ãä¬É³B²z
+    //é‚Šç•Œè™•ç†
     h[0] = -1; 
     h[n+1] = 0;
-    stack<int> inc; //increasing subsequence¡Findex
+    stack<int> inc; //increasing subsequenceï¼›index
     inc.push(0);
     ll res = 0;
     for(int i=1; i<=n+1; i++) {
@@ -29,7 +28,7 @@ int main() {
         if(h[i] >= h[inc.top()]) continue;
         while(h[inc.top()] >= h[i]) {
             ll height = h[inc.top()]; inc.pop();
-            //­pºâ (inc.top(), i) ¤§¶¡°Ï°ìªº­±¿n
+            //è¨ˆç®— (inc.top(), i) ä¹‹é–“å€åŸŸçš„é¢ç©
             res = max(res, (i-inc.top()-1)*height);
         }
         inc.push(i);

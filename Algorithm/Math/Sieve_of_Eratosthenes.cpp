@@ -68,7 +68,7 @@ void segmented_sieve(ll a, ll b)
                 2. Why a + "i" ?
                     -> To ensure the calculation outcome is no less than a.
                 3. Why a + i "-1" ?
-                    -> Take an example: set a = 33, i = 3¡Fif there isn't "-1",
+                    -> Take an example: set a = 33, i = 3ï¼›if there isn't "-1",
                        then (a+i)/i * i = (33+3)/3 * 3 = 36. As we can see, "33"
                        is skipped! That's why we need "-1" to involve "a" when 
                        i | a ("a" is a multiple of i).

@@ -8,15 +8,15 @@
     Statement:
         For any node u in G, the farthest node of it is an end point of D(diameter)
     Proof:
-        1.  Let u be one of the end popints of D¡Fproved
+        1.  Let u be one of the end popints of Dï¼›proved
         2.  Let u be on D but is not either end points.
                 Suppose d1 + d2 = D and d1 > d2, and d3 > d1.
                 If the end point of d3 isn't that of D's, then D can be 
-                lengthened to "d3 + d2 > d1 + d2 = D"¡Fproved
+                lengthened to "d3 + d2 > d1 + d2 = D"ï¼›proved
         3.  Let u be neither of the above situations.
-                Åã¦Ó©ö¨£ªº¡Av ¥²µM°¾¦V D ªº¨âºÝÂI a, b ¨ä¤¤¤@¤è¡F­Y v °¾¦V a¡A
-                «h dvb >= dva¡C°²³]¤@ÂI c¡Advc > dvb¡A«h dcvb = dvc + dvb > dvb + dva = D¡A
-                ¦]¦¹ c ¤£¬°ª½®|ªººÝÂI¤£¦X¡C
+                é¡¯è€Œæ˜“è¦‹çš„ï¼Œv å¿…ç„¶åå‘ D çš„å…©ç«¯é»ž a, b å…¶ä¸­ä¸€æ–¹ï¼›è‹¥ v åå‘ aï¼Œ
+                å‰‡ dvb >= dvaã€‚å‡è¨­ä¸€é»ž cï¼Œdvc > dvbï¼Œå‰‡ dcvb = dvc + dvb > dvb + dva = Dï¼Œ
+                å› æ­¤ c ä¸ç‚ºç›´å¾‘çš„ç«¯é»žä¸åˆã€‚
     O(n)
 */
 #include <bits/stdc++.h>

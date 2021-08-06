@@ -2,13 +2,13 @@
 ***Josephus problem***
 
     Description:
-        ¨D³Ì«áªº¦s¬¡ªÌ¡C
+        æ±‚æœ€å¾Œçš„å­˜æ´»è€…ã€‚
 
-        ¶i¶¥¡G¨D²Ä k ¦ì³Q±þªº¤H
+        é€²éšŽï¼šæ±‚ç¬¬ k ä½è¢«æ®ºçš„äºº
 
     Solution: (0-indexed)
-        ·í N ¤H³ò¦¨¤@°é¡A¨C M ¤H¤@¼Æ¡A¨C¦¸³Q±þªº¤H½s¸¹¬°¡G(M-1) mod N¡C
-        °²³]³Ì«á¦s¬¡ªÌªº½s¸¹¬° f(N)¡C·í½s¸¹ M-1 ªº¤H³Q±þ«á¡AÅý³Ñ¾lªº N-1 ¤H­«·s½s¸¹¦p¤U¡G
+        ç•¶ N äººåœæˆä¸€åœˆï¼Œæ¯ M äººä¸€æ•¸ï¼Œæ¯æ¬¡è¢«æ®ºçš„äººç·¨è™Ÿç‚ºï¼š(M-1) mod Nã€‚
+        å‡è¨­æœ€å¾Œå­˜æ´»è€…çš„ç·¨è™Ÿç‚º f(N)ã€‚ç•¶ç·¨è™Ÿ M-1 çš„äººè¢«æ®ºå¾Œï¼Œè®“å‰©é¤˜çš„ N-1 äººé‡æ–°ç·¨è™Ÿå¦‚ä¸‹ï¼š
             M -> 0
             M+1 -> 1
             ...
@@ -16,13 +16,13 @@
             ...
             M-3 -> N-3
             M-2 -> N-2
-        «h­ì¥ý N-Àôªº¦s¬¡ªÌ f(N) = (f(N-1) + M) mod N¡A¥H¦¹Ãþ±À¡A¦Ó f(1) = 0¡C
-        ¡]¸ÕµÛµe¹Ï¬Ý¬Ý¡^¡]»¼°j¦¡¥Ñ¤W­z½bÀY¥k¤è©¹¥ª¤è°f¹Bºâ§Y¥i±o¥X¡^
+        å‰‡åŽŸå…ˆ N-ç’°çš„å­˜æ´»è€… f(N) = (f(N-1) + M) mod Nï¼Œä»¥æ­¤é¡žæŽ¨ï¼Œè€Œ f(1) = 0ã€‚
+        ï¼ˆè©¦è‘—ç•«åœ–çœ‹çœ‹ï¼‰ï¼ˆéžè¿´å¼ç”±ä¸Šè¿°ç®­é ­å³æ–¹å¾€å·¦æ–¹é€†é‹ç®—å³å¯å¾—å‡ºï¼‰
 
-    ¶i¶¥¡G
-        ·í N ¤H³ò¦¨¤@°é¡A¨C M ¤H¤@¼Æ¡A²Ä k ¦ì³Q±þªº¤H§Y¬°¡GN-(k-1) ¤H³ò¦¨¤@°é®É¡A
-        ²Ä¤@¦ì³Q±þªº¤H¡A¨ä½s¸¹¡G(M-1) mod N-(k-1)¡A¦A¥Ñ¤W­z±À¾É¤§»¼°j¦¡§Y¥iºâ¥X
-        ²Ä k ¦ì³Q±þªº¤H¦b N ¤H³ò¦¨¤@°é®Éªº½s¸¹¡C
+    é€²éšŽï¼š
+        ç•¶ N äººåœæˆä¸€åœˆï¼Œæ¯ M äººä¸€æ•¸ï¼Œç¬¬ k ä½è¢«æ®ºçš„äººå³ç‚ºï¼šN-(k-1) äººåœæˆä¸€åœˆæ™‚ï¼Œ
+        ç¬¬ä¸€ä½è¢«æ®ºçš„äººï¼Œå…¶ç·¨è™Ÿï¼š(M-1) mod N-(k-1)ï¼Œå†ç”±ä¸Šè¿°æŽ¨å°Žä¹‹éžè¿´å¼å³å¯ç®—å‡º
+        ç¬¬ k ä½è¢«æ®ºçš„äººåœ¨ N äººåœæˆä¸€åœˆæ™‚çš„ç·¨è™Ÿã€‚
 
     O(N) / O(K)
 */

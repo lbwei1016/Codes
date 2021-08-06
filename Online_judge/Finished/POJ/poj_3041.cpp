@@ -15,7 +15,7 @@ const int MAX_K = 10000+5;
 
 int N, K, V;
 int R[MAX_K], C[MAX_K];
-vector<int> G[2 * MAX_N]; //0 ~ N-1: R¡FN ~ 2*N-1: C
+vector<int> G[2 * MAX_N]; //0 ~ N-1: Rï¼›N ~ 2*N-1: C
 int match[2* MAX_N];
 bool used[2 * MAX_N];
 

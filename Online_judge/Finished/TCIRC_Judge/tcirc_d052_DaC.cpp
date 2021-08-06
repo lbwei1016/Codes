@@ -45,7 +45,7 @@ using namespace std;
 typedef long long LL;
 LL psum[N]; // prefix-sum
 struct Rdata {
-    //¾ã­Ó°Ï¶¡ªº max-sum, max prefix-sum, max suffix-sum
+    //æ•´å€‹å€é–“çš„ max-sum, max prefix-sum, max suffix-sum
     LL msum, lmax, rmax;
 };
 
@@ -59,13 +59,13 @@ Rdata subarr(LL a[], int le, int ri) {
     // recursively solve left and right parts
     Rdata left=subarr(a, le, mid), right=subarr(a, mid, ri);
     Rdata my;
-    //max( ¥u°O¥ª¤èªº³Ì¤j«eºó©M, ¥]§t¾ã­Ó¥ª¤è¥H¤Î¥k¤è³Ì¤j«áºó©Mªº·s«eºó©M )
+    //max( åªè¨˜å·¦æ–¹çš„æœ€å¤§å‰ç¶´å’Œ, åŒ…å«æ•´å€‹å·¦æ–¹ä»¥åŠå³æ–¹æœ€å¤§å¾Œç¶´å’Œçš„æ–°å‰ç¶´å’Œ )
     my.lmax=max(left.lmax, psum[mid-1]-psum[le-1]+right.lmax);
     my.rmax=max(right.rmax, psum[ri-1]-psum[mid-1]+left.rmax);
-    //³æÃäªº©M
+    //å–®é‚Šçš„å’Œ
     my.msum=max(left.msum, right.msum);
     // find largest sum cross middle
-    //¥ª«áºó©M¥[¥k«eºó©M¡A¤~¬O¤@³sÄò°Ï¬q
+    //å·¦å¾Œç¶´å’ŒåŠ å³å‰ç¶´å’Œï¼Œæ‰æ˜¯ä¸€é€£çºŒå€æ®µ
     my.msum=max(my.msum, left.rmax+right.lmax);
     return my;
 }

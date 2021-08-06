@@ -1,24 +1,24 @@
-# **¶}©l¾Ş§@«e°O±o pull !!! µ²§ô«e°O±o push !!!**
+# **é–‹å§‹æ“ä½œå‰è¨˜å¾— pull !!! çµæŸå‰è¨˜å¾— push !!!**
 
-## ¤@¯ë«ü¥O
-* **git config alias.** ***[an alias]* *[command]*** : ³]©w«ü¥OÁY¼g
-* **git init** : ªì©l¤Æ·í«e¥Ø¿ı¡AÅı Git ¹ï³o­Ó¥Ø¿ı¶}©l¶i¦æª©±±¡]²£¥Í *.git* ¥Ø¿ı¡^
-* **git status** : ¬d¸ß¥Ø¿ıª¬ºA
-* **git add *(--all)* *[filename]*** : ¥[¤JÀÉ®×¨ì Index¡]¼È¦s°Ï¡F¤S¥s°µ Stage¡^
+## ä¸€èˆ¬æŒ‡ä»¤
+* **git config alias.** ***[an alias]* *[command]*** : è¨­å®šæŒ‡ä»¤ç¸®å¯«
+* **git init** : åˆå§‹åŒ–ç•¶å‰ç›®éŒ„ï¼Œè®“ Git å°é€™å€‹ç›®éŒ„é–‹å§‹é€²è¡Œç‰ˆæ§ï¼ˆç”¢ç”Ÿ *.git* ç›®éŒ„ï¼‰
+* **git status** : æŸ¥è©¢ç›®éŒ„ç‹€æ…‹
+* **git add *(--all)* *[filename]*** : åŠ å…¥æª”æ¡ˆåˆ° Indexï¼ˆæš«å­˜å€ï¼›åˆå«åš Stageï¼‰
 * **git commit -m *"[some message]"*** : commit
-* **git log *[filename][--oneline][--graph][--author=""][--grep=""][--S][--since][--until][--after]*** : <br>¬d¸ß commit ¬ö¿ı¡]grep: §ä **commit °T®§**¥]§t...ªºÀÉ®×¡FS: §äÀÉ®×**¤º®e**¥]§t...ªºÀÉ®×¡^</br>
-* **git rm [filename]** : §R°£ÀÉ®×¨Ã©ñ¤J Index
-* **git mv [filename][new filename]** : §ó§ïÀÉ®×¦WºÙ¨Ã©ñ¤J Index
-* **git commit *[--amend][-m "message"][--no-edit]*** : --amend¥i¥H**­×§ï³Ìªñ¤@¦¸ commit message** ©Î±NÀÉ®×**¨Ö¤J³Ìªñ¤@¦¸ commit**
-* **git rm --cached *[filename][-f]*** : ±NÀÉ®×¦Û¼È¦s°Ï²¾°£
-* **git reset HEAD *[filename]*** : §R°£¤wµù¥U¨ì¯Á¤Ş(Index)ªºÀÉ®×
-* **git reset HEAD(or hash code / master)**`** : §R°£ commit
+* **git log *[filename][--oneline][--graph][--author=""][--grep=""][--S][--since][--until][--after]*** : <br>æŸ¥è©¢ commit ç´€éŒ„ï¼ˆgrep: æ‰¾ **commit è¨Šæ¯**åŒ…å«...çš„æª”æ¡ˆï¼›S: æ‰¾æª”æ¡ˆ**å…§å®¹**åŒ…å«...çš„æª”æ¡ˆï¼‰</br>
+* **git rm [filename]** : åˆªé™¤æª”æ¡ˆä¸¦æ”¾å…¥ Index
+* **git mv [filename][new filename]** : æ›´æ”¹æª”æ¡ˆåç¨±ä¸¦æ”¾å…¥ Index
+* **git commit *[--amend][-m "message"][--no-edit]*** : --amendå¯ä»¥**ä¿®æ”¹æœ€è¿‘ä¸€æ¬¡ commit message** æˆ–å°‡æª”æ¡ˆ**ä½µå…¥æœ€è¿‘ä¸€æ¬¡ commit**
+* **git rm --cached *[filename][-f]*** : å°‡æª”æ¡ˆè‡ªæš«å­˜å€ç§»é™¤
+* **git reset HEAD *[filename]*** : åˆªé™¤å·²è¨»å†Šåˆ°ç´¢å¼•(Index)çš„æª”æ¡ˆ
+* **git reset HEAD(or hash code / master)**`** : åˆªé™¤ commit
 ---
 ## Github
 - `git remote add [URL]`
-- `git push -u origin master` --­º¦¸
+- `git push -u origin master` --é¦–æ¬¡
 - `git pull` = `git fetch` + `git merge`
 ---
 ## Files
-* **.gitconfig** : ³o¬O³]©wÀÉ
-* **.gitignore** : «ü¦W­n git ¦b commit ®É©¿²¤­ş¨ÇÀÉ®×
+* **.gitconfig** : é€™æ˜¯è¨­å®šæª”
+* **.gitignore** : æŒ‡åè¦ git åœ¨ commit æ™‚å¿½ç•¥å“ªäº›æª”æ¡ˆ

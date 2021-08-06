@@ -1,8 +1,8 @@
 /*
 ***Sweep Line***
     Solution:
-        �ۥk�ӥ��A�]�q�k��ӡA�ҥH x �y�Фw������A�A�ӴN�u�ݭn�ˬd
-        y �y�ЬO�_�j��ثe�̤j��(���Q����)
+        自右而左，因從右方來，所以 x 座標已知遞減，再來就只需要檢查
+        y 座標是否大於目前最大值(不被控制)
 
     O(N * log N)
 */
@@ -23,7 +23,7 @@ int main() {
     for(int i=0; i<n; i++) {
         scanf("%d", &p[i].y);
     }
-    //x ����
+    //x 遞減
     sort(p.begin(), p.end(), cmp);
     int res = 0, max_y = -1;
     for(auto i : p) {

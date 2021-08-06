@@ -1,24 +1,14 @@
 import random as rand
 
-file = "out4.out"
+file = "in.in"
 ff = open(file, "w")
 N = 10
+L = 10000-1
 
-V = rand.randint(N, 2*N)
-E = rand.randint(N, 3*N)
-ff.write(str(V)+' '), ff.write(str(E)+'\n')
-for i in range(E):
-    u = rand.randint(1, V)
-    v = rand.randint(1, V)
-    w = rand.randint(1, 5)
-    cont = [str(u)+' ', str(v)+' ', str(w)+'\n']
-    ff.writelines(cont)
-Q = rand.randint(N/10, N/5)
-ff.write(str(Q)+'\n')
-for i in range(Q):
-    u = rand.randint(1, V)
-    v = rand.randint(1, V)
-    cont = [str(u)+' ', str(v)+'\n']
-    ff.writelines(cont)
+ff.write(str(N)+"\n")
+for i in range(N):
+    for j in range(L):
+        ff.write(chr(ord('a')+rand.randint(0, 25)))
+    ff.write('\n')
 ff.close()
 

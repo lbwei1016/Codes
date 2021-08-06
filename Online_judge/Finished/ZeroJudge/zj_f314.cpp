@@ -1,7 +1,7 @@
 /*
 ***DP***
     Solution:
-        ¨Ï¥Î¥t¥~ªº°}¦C(«D dp[][])¨Ó°O¿ı²Ö¥[±¡§Î -- ¦]¬°ÃD¥Ø­­¨î¥u¯à¨«³sÄòªº®æ¤l
+        ä½¿ç”¨å¦å¤–çš„é™£åˆ—(é dp[][])ä¾†è¨˜éŒ„ç´¯åŠ æƒ…å½¢ -- å› ç‚ºé¡Œç›®é™åˆ¶åªèƒ½èµ°é€£çºŒçš„æ ¼å­
     
     O(M * N)
 */
@@ -14,9 +14,9 @@ const int MAX_M = 50+5;
 const int MAX_N = 10000+5;
 
 int M, N;
-ll a[MAX_N]; //¬ö¿ı·í«eªº¦C
+ll a[MAX_N]; //ç´€éŒ„ç•¶å‰çš„åˆ—
 ll dp[MAX_M][MAX_N];
-ll l[MAX_N], r[MAX_N]; //¬ö¿ı¬Y¦Cªº±q¥ª©Î±q¥k²Ö¥[
+ll l[MAX_N], r[MAX_N]; //ç´€éŒ„æŸåˆ—çš„å¾å·¦æˆ–å¾å³ç´¯åŠ 
 
 int main() {
     ios_base::sync_with_stdio(false);
@@ -26,12 +26,12 @@ int main() {
     for(int i=1; i<=M; i++) {
         for(int j=1; j<=N; j++) {
             cin >> a[j]; 
-            if(j == 1) l[j] = dp[i-1][j] + a[j]; //±q«e¤@¦æªº²Ä¤@¦C¨«¤U¨Ó
-            else l[j] = max(dp[i-1][j], l[j-1]) + a[j]; //±q¥ª©Î¤W
+            if(j == 1) l[j] = dp[i-1][j] + a[j]; //å¾å‰ä¸€è¡Œçš„ç¬¬ä¸€åˆ—èµ°ä¸‹ä¾†
+            else l[j] = max(dp[i-1][j], l[j-1]) + a[j]; //å¾å·¦æˆ–ä¸Š
         }
         for(int j=N; j>=1; j--) {
-            if(j == N) r[j] = dp[i-1][j] + a[j]; //±q«e¤@¦æªº³Ì«á¤@¦C¨«¤U¨Ó
-            else r[j] = max(dp[i-1][j], r[j+1]) + a[j]; //±q¥k©Î¤W
+            if(j == N) r[j] = dp[i-1][j] + a[j]; //å¾å‰ä¸€è¡Œçš„æœ€å¾Œä¸€åˆ—èµ°ä¸‹ä¾†
+            else r[j] = max(dp[i-1][j], r[j+1]) + a[j]; //å¾å³æˆ–ä¸Š
             dp[i][j] = max(l[j], r[j]);
         }
     }

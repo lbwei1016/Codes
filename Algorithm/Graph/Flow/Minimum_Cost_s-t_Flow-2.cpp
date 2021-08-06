@@ -4,7 +4,7 @@
     Prerequisite:
         First, define: h(v) is the shortest path from "s" to "v". ("h" is called "potential")
         As is known, h(v) <= h(u) + d(e) (s -> u -> v), where d(e) is the cost of e(v, u).
-        Then, define: d'(e) = d(e) + h(u) - h(v) >= 0¡FSince new cost "d'(v)" is never 
+        Then, define: d'(e) = d(e) + h(u) - h(v) >= 0ï¼›Since new cost "d'(v)" is never 
         negative, Dijkstra become feasible in this problem.
 
         Moreover, since d'(e) = d(e) + h(u) - h(v), and h(u) - h(v) is a constant, 
@@ -19,15 +19,15 @@
 
 using namespace std;
 
-typedef pair<int, int> P; //first: shortest path¡Fsecond: No. of vertices
+typedef pair<int, int> P; //first: shortest pathï¼›second: No. of vertices
 struct edge { int to, cap, cost, rev; };
 const int MAX_V = 10;
 const int INF = 0x7fffffff;
 
 int V;
 vector<edge> G[MAX_V]; //adjacent list
-int h[MAX_V]; //potential¡Fh[v] is the shortest path from "s" to "v"
-int dist[MAX_V]; // modified shortest path¡Fdist[e.to] = dist[v] + e.cost + h[v] - h[e.to]
+int h[MAX_V]; //potentialï¼›h[v] is the shortest path from "s" to "v"
+int dist[MAX_V]; // modified shortest pathï¼›dist[e.to] = dist[v] + e.cost + h[v] - h[e.to]
 int prevv[MAX_V], preve[MAX_V]; //previous vertex and edge
 
 void add_edge(int from, int to, int cap, int cost) {
@@ -64,8 +64,8 @@ int min_cost_flow(int s, int t, int f) {
         }
 
         /*
-            update: dist[v] = £Ue_cost - h[v]
-            => new_h[v] = h[v] + dist[v] = h[v] + (£Ue_cost - h[v]) = £Ue_cost = shortest distance
+            update: dist[v] = Î£e_cost - h[v]
+            => new_h[v] = h[v] + dist[v] = h[v] + (Î£e_cost - h[v]) = Î£e_cost = shortest distance
         */
         for(int v=0; v<V; v++) {
             h[v] += dist[v];

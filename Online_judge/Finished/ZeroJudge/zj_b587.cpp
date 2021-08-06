@@ -1,7 +1,7 @@
 /*
 ***DP***
     Solution:
-        n = 2�A�� 3 �رƪk�Fn > 2�A�u���W�U��٨�� (�Ѥ�����m��������F��L�k���ά���p�x�Ϊ��ت�)
+        n = 2，有 3 種排法；n > 2，只有上下對稱兩種 (由水平放置的方塊橫跨達到無法切割為更小矩形的目的)
 */
 #include <bits/stdc++.h>
 using namespace std;

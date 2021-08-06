@@ -1,22 +1,23 @@
 #include <iostream>
-
+#include <vector>
 using namespace std;
 
-int main() {
-    
-    return 0;
-}
 /*
-    ¹Bºâ¤l¨ç¦¡¦³¨âºØ¹ê§@¤è¦¡
-        1. ¦¨­û¨ç¦¡(Member functions)
-        ? ¨Ï¥Îthis¨Ó¨ú±o¥D­n¹Bºâ¤¸
-        ? ¨ä¾l¹Bºâ¤¸¦ì©ó°Ñ¼Æ¦C¤W
-        ? ³Ì¥ªÃäªºª«¥ó«¬ºA¥²¶·¸ò¹Bºâ¤lªºÃþ§O¬Û¦P
-        ? ¦p:Date1+Date2, «hDate1ªºoperator+(Date2)¨ç¦¡³Q©I¥s
+    é‹ç®—å­å‡½å¼æœ‰å…©ç¨®å¯¦ä½œæ–¹å¼:
+        1. æˆå“¡å‡½å¼(Member functions)
+        ? ä½¿ç”¨thisä¾†å–å¾—ä¸»è¦é‹ç®—å…ƒ
+        ? å…¶é¤˜é‹ç®—å…ƒä½æ–¼åƒæ•¸åˆ—ä¸Š
+        ? æœ€å·¦é‚Šçš„ç‰©ä»¶åž‹æ…‹å¿…é ˆè·Ÿé‹ç®—å­çš„é¡žåˆ¥ç›¸åŒ
+        ? å¦‚:Date1+Date2, å‰‡Date1çš„operator+(Date2)å‡½å¼è¢«å‘¼å«
 
-        2. «D¦¨­û¨ç¦¡(Non member functions)
-        ? ¨C­Ó¹Bºâ¤¸¬Ò¦ì©ó°Ñ¼Æ¦C¤W
-        ? ³Ì¥ªÃäªºª«¥ó«¬ºA¥i¥H¸ò¹Bºâ¤¸ªºÃþ§O¤£¦P
-        ? ¦p­n¦s¨úprivate©Îprotected¸ê®Æ¦¨­û,«h¥²¶·¬Ofriend
-        ? ¦p:Date1+Date2, «hoperator+(Date1, Date2)¨ç¦¡³Q©I¥s
+        2. éžæˆå“¡å‡½å¼(Non member functions)
+        ? æ¯å€‹é‹ç®—å…ƒçš†ä½æ–¼åƒæ•¸åˆ—ä¸Š
+        ? æœ€å·¦é‚Šçš„ç‰©ä»¶åž‹æ…‹å¯ä»¥è·Ÿé‹ç®—å…ƒçš„é¡žåˆ¥ä¸åŒ
+        ? å¦‚è¦å­˜å–privateæˆ–protectedè³‡æ–™æˆå“¡,å‰‡å¿…é ˆæ˜¯friend
+        ? å¦‚:Date1+Date2, å‰‡operator+(Date1, Date2)å‡½å¼è¢«å‘¼å«
+    Note:
+        const-subscript: æœ‰æ™‚å€™è¶…è¼‰ï¼Œ const-subscript æ˜¯å¿…é ˆçš„ï¼Œä¾‹å¦‚ priority_queue
+            => bool operator < (const P &p1) "const" {
+                // return 
+            }
 */

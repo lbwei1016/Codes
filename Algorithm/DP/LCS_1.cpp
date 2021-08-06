@@ -1,3 +1,8 @@
+/*
+***DP*** -- Longest Common Subsequence
+    O(L1 * L2)
+        Li: length of string i
+*/
 #include <bits/stdc++.h>
 
 using namespace std;

@@ -8,38 +8,38 @@ typedef long long ll;
 const int MAX_N = 500000;
 
 int N, Q;
-int arr[MAX_N+1]; //Àx¦s­ì¼Æ¾Ú
+int arr[MAX_N+1]; //å„²å­˜åŸæ•¸æ“š
 
 struct Node
 {
-    ll add = 0; //¸Ó¸`ÂIªº°Ï¶¡ªº©Ò¦³¤¸¯À¬Ò¥[¤Wªº­È
-    ll sum = 0; //¸Ó¸`ÂIªº°Ï¶¡©M¡A¥h°£¤W­z"add"ªº­È
+    ll add = 0; //è©²ç¯€é»çš„å€é–“çš„æ‰€æœ‰å…ƒç´ çš†åŠ ä¸Šçš„å€¼
+    ll sum = 0; //è©²ç¯€é»çš„å€é–“å’Œï¼Œå»é™¤ä¸Šè¿°"add"çš„å€¼
 }node[(1 << 20)+1];
 
-//¤@¦¸­×§ïµ¹©w°Ï¶¡ªº­È
+//ä¸€æ¬¡ä¿®æ”¹çµ¦å®šå€é–“çš„å€¼
 void add(int x, int y, int k, int v, int L, int R) //O(log n)
 {
     if (x <= L && R <= y)
         node[v].add += k;
-    else if (L < y && x < R) //¦³¥æ¶°
+    else if (L < y && x < R) //æœ‰äº¤é›†
     {
-        node[v].sum += (min(y, R) - max(x, L)) * k; //¥u¦³¥æ¶°¤§¤ºªº°Ï¶¡¤~¥[¤W­naddªº­È
+        node[v].sum += (min(y, R) - max(x, L)) * k; //åªæœ‰äº¤é›†ä¹‹å…§çš„å€é–“æ‰åŠ ä¸Šè¦addçš„å€¼
 
         int M = (L+R) / 2;
         add(x, y, k, 2*v+1, L, M);
         add(x, y, k, 2*v+2, M, R);
     }
 }
-//¨D°Ï¶¡©M
+//æ±‚å€é–“å’Œ
 ll sum(int x, int y, int v, int L, int R)
 {
     if (y <= L || R <= x)
         return 0;
     else if (x <= L && R <= y)
-        return node[v].add*(R-L) + node[v].sum; //¾ã¦X
+        return node[v].add*(R-L) + node[v].sum; //æ•´åˆ
     else 
     {
-        ll res = (min(y, R)-max(x, L)) * node[v].add; //Åı¤l¸`ÂI¤]¥[¤Waddªº­È(¥u¥[¥æ¶°ªº°Ï¶¡)
+        ll res = (min(y, R)-max(x, L)) * node[v].add; //è®“å­ç¯€é»ä¹ŸåŠ ä¸Šaddçš„å€¼(åªåŠ äº¤é›†çš„å€é–“)
 
         int M = (L+R) / 2;
         res += sum(x, y, 2*v+1, L, M);
@@ -55,7 +55,7 @@ int main()
     int Q;
     scanf("%d", &Q);
 
-    //¾ğªº«Øºc¤]¥i¥H¥Î add()
+    //æ¨¹çš„å»ºæ§‹ä¹Ÿå¯ä»¥ç”¨ add()
     for (int i=0; i<N; i++)
         add(i, i+1, arr[i], 0, 0, N);
 
@@ -63,7 +63,7 @@ int main()
     {
         int op;
         scanf("%d", &op);
-        if (op == 1) //[x, y]©Ò¦³­È¬Ò¼W¥[k
+        if (op == 1) //[x, y]æ‰€æœ‰å€¼çš†å¢åŠ k
         {
             int x, y, k;
             scanf("%d%d%d", &x, &y, &k);

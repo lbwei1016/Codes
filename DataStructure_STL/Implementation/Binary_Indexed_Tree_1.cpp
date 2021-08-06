@@ -1,10 +1,10 @@
 /*
-    Binary-Indexed-Tree(BTS)--�S�پ𪬼Ʋ�
+    Binary-Indexed-Tree(BTS)--又稱樹狀數組
 
-    ��u�q�Ƨ�²�K���D���϶��M����Ƶ��c�]�ǥѫe��M�۴�^�F�ү�i�檺�ާ@�G
-        1. �غc O(n logn) �� O(n)
-        2. (���I)�W�[���ק�ƭ� O(log n) (�϶��ק﨣BIT_2)
-        3. �p��e��M O(log n)
+    比線段數更簡便的求取區間和的資料結構（藉由前綴和相減）；所能進行的操作：
+        1. 建構 O(n logn) 或 O(n)
+        2. (單點)增加／修改數值 O(log n) (區間修改見BIT_2)
+        3. 計算前綴和 O(log n)
 */
 #include <iostream>
 #include <cstring>
@@ -14,7 +14,7 @@ using namespace std;
 int bit[1000+1], n;
 int arr[1000+1];
 
-//(���I)�W�[���ק�ƭ�(O(log n))�A�P�ɥΨӫغc(O(n logn))BIT
+//(單點)增加／修改數值(O(log n))，同時用來建構(O(n logn))BIT
 void add(int i, int x)
 {
     while (i <= n)
@@ -23,7 +23,7 @@ void add(int i, int x)
         i += i & -i;
     }
 }
-//�p��[1, i]���e��M(O(log n))
+//計算[1, i]的前綴和(O(log n))
 int sum(int i)
 {
     int s = 0;
@@ -34,14 +34,14 @@ int sum(int i)
     }
     return s;
 }
-//�t�@�Ӹ��֪��غc��k(O(n))
+//另一個較快的建構方法(O(n))
 void build()
 {
     memcpy(bit+1, arr, n*sizeof(int));
 
     for(int i=1; i<=n; i++)
     {
-        //j �O i(��i���`�I)���k�S�̸`�I
+        //j 是 i(或i父節點)的右兄弟節點
         int j = i + (i & -i); 
         bit[j] += bit[i];
     }

@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cstdlib>
 using namespace std;
 
 int main() {
@@ -32,5 +32,17 @@ int main() {
 
     for(int i=0; i<3; i++)
         delete[] arr_arr[i];
+
+    /*----------------------Below is C---------------------------*/
+
+    // "malloc" returns "void*", so a cast of "int*" is mandatory
+    int *p1 = (int*)malloc(sizeof(int)); // a single int, uninitialized
+    int *arr = (int*)malloc(sizeof(int)*10); // an array of int
+    int *p1 = (int*)calloc(1, sizeof(int)); // initialized with zero of its type
+    free(p1); // delete
+
+    // returns a pointer, consistency to its original pointer(arr) is not guaranteed
+    int *arr2 = (int*)realloc(arr, sizeof(int)*10*2); 
+
     return 0;
 }

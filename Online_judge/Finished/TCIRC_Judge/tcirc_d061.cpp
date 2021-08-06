@@ -19,13 +19,13 @@ int solve() {
     P last = v[0], next = v[0];
     int cnt = 2;
     for(int i=1; i<n && next.t<Y; i++) {
-        //´À´«¬°¸û±ßµ²§ôªº¨Ó©µªø
+        //æ›¿æ›ç‚ºè¼ƒæ™šçµæŸçš„ä¾†å»¶é•·
         if(v[i].s <= last.t) {
             if(v[i].t > next.t) {
                 next = v[i];
             }
         } else {
-        //·s¼W
+        //æ–°å¢ž
             if(v[i].s <= next.t) {
                 last = next;
                 next = v[i];
@@ -40,7 +40,7 @@ int main() {
     v.resize(n);
     for(int i=0; i<n; i++) {
         scanf("%d%d", &v[i].s, &v[i].t);
-        //¶}©l®É¶¡¤£»Ý¦­©ó©Ò¨D°Ï¬q
+        //é–‹å§‹æ™‚é–“ä¸éœ€æ—©æ–¼æ‰€æ±‚å€æ®µ
         v[i].s = v[i].s < X ? X : v[i].s;
     }
     sort(v.begin(), v.end(), cmp);

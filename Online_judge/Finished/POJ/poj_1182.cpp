@@ -30,7 +30,7 @@ void unite(int x, int y) {
 bool set_same(int x, int y) {
     int xa = find(get_a(x)), xb = find(get_b(x)), xc = find(get_c(x));
     int ya = find(get_a(y)), yb = find(get_b(y)), yc = find(get_c(y));
-    // ·í x ¦Y y ©Î y ¦Y x¡A¤£¦X (¥u»İÀËÅç a, b, c ¨ä¤¤¤@ºØ¡A¦]¬°¥L­Ì¬O³s±a¦¨¥ßªº)
+    // ç•¶ x åƒ y æˆ– y åƒ xï¼Œä¸åˆ (åªéœ€æª¢é©— a, b, c å…¶ä¸­ä¸€ç¨®ï¼Œå› ç‚ºä»–å€‘æ˜¯é€£å¸¶æˆç«‹çš„)
     if(xa == yb || xa == yc) return false;
 
     unite(xa, ya);
@@ -42,7 +42,7 @@ bool set_eat(int x, int y) {
     if(x == y) return false;
     int xa = find(get_a(x)), xb = find(get_b(x)), xc = find(get_c(x));
     int ya = find(get_a(y)), yb = find(get_b(y)), yc = find(get_c(y));
-    // ·í x, y ¬O¦PÃş©Î y ¦Y x¡A¤£¦X (¥u»İÀËÅç a, b, c ¨ä¤¤¤@ºØ¡A¦]¬°¥L­Ì¬O³s±a¦¨¥ßªº)
+    // ç•¶ x, y æ˜¯åŒé¡æˆ– y åƒ xï¼Œä¸åˆ (åªéœ€æª¢é©— a, b, c å…¶ä¸­ä¸€ç¨®ï¼Œå› ç‚ºä»–å€‘æ˜¯é€£å¸¶æˆç«‹çš„)
     if(xa == ya || xa == yc) return false;
 
     unite(xa, yb);

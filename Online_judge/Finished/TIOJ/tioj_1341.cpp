@@ -8,9 +8,9 @@
 using namespace std;
 
 typedef long long ll;
-// l: distance to the left border of current red square¡Fr, u: right, up
+// l: distance to the left border of current red squareï¼›r, u: right, up
 ll N, X, Y, M, l, r, u;
-// lu: left-up diagonal¡Fld, ru, rd: left-down, right-up, right-down
+// lu: left-up diagonalï¼›ld, ru, rd: left-down, right-up, right-down
 ll lu, ld, ru, rd;
 
 ll search_m() {
@@ -81,7 +81,7 @@ int main() {
     X = X + r - M/2, Y = Y + u - M/2;
     //printf("X: %d Y: %d\n", X, Y);
 
-    //±q¹ï¨¤½u±¡§Î¨Ó§PÂ_¦Û¨­©Ò³B¦ì¸m
+    //å¾å°è§’ç·šæƒ…å½¢ä¾†åˆ¤æ–·è‡ªèº«æ‰€è™•ä½ç½®
     if(lu == rd && ru == ld) Solution((int)X, (int)Y);
     else if(lu == rd && ru > ld) {
         X += ru/2 * M;

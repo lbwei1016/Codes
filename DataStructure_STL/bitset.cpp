@@ -1,6 +1,6 @@
 /*
-�q�`�Ө��A�p�G�n���p�`�ƪ��ܡA�۸��󪽱��ϥΰ}�C�A�Ŷ��O 1/8�Bcount ���O 1/6�B
-�줸�B����O 1/30�C���M�o�ǳ����O���諸�C
+通常而言，如果要估計常數的話，相較於直接使用陣列，空間是 1/8、count 約是 1/6、
+位元運算約是 1/30。當然這些都不是絕對的。
 */
 #include <iostream>
 #include <bitset>

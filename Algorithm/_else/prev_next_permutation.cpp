@@ -1,5 +1,5 @@
-//next_permutation: ¨Ì¦r¨å¶¶§Ç (¤p¨ì¤j)¦CÁ|©Ò¦³ª¬ºA(¦@n!­Óª¬ºA)
-//§Q¥Î­ì°}¦C¶i¦æ¾Ş§@
+//next_permutation: ä¾å­—å…¸é †åº (å°åˆ°å¤§)åˆ—èˆ‰æ‰€æœ‰ç‹€æ…‹(å…±n!å€‹ç‹€æ…‹)
+//åˆ©ç”¨åŸé™£åˆ—é€²è¡Œæ“ä½œ
 #include <iostream>
 #include <algorithm>
 #include <vector>

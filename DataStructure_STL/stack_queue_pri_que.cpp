@@ -8,9 +8,9 @@ int main()
 {
 	stack<int> s;
 	queue<int> q;
-	priority_queue<int> pq1; //???æ¸?
+	priority_queue<int> pq1; //???çšœ?
 	priority_queue<int, vector<int>, greater<int> > pq2; //store by increasing value 
-	priority_queue<int> pq3; //ä¹?ä»?-1ä¾??????????å¢?
+	priority_queue<int> pq3; //éŠ‹?éš?-1é˜??????????æ†“?
 
 	int val[10] = {10, 30, 58, 45, 71, 100, 25, 6, 999, 50};
 
@@ -27,7 +27,7 @@ int main()
 	{
 		cout << "stack: " << s.top() << '\n';
 		s.pop();
-		cout << "queue: " << q.front() << '\n'; //??¦æ??back()
+		cout << "queue: " << q.front() << '\n'; //??è¡Œ??back()
 		q.pop();
 		cout << "priority_queue: " << pq1.top() << '\n';
 		pq1.pop();

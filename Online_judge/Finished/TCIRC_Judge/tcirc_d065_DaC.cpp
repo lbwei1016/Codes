@@ -7,14 +7,14 @@
 using namespace std;
 
 typedef long long ll;
-//¤Àªv¡A¨C¦¸¤À¦¨¨â¥b»¼°j¡A±q¤¤¶¡¦V¥ª¥k§ó·sª¬ºA
+//åˆ†æ²»ï¼Œæ¯æ¬¡åˆ†æˆå…©åŠéžè¿´ï¼Œå¾žä¸­é–“å‘å·¦å³æ›´æ–°ç‹€æ…‹
 ll area(ll h[], int s, int t) {
     if(s >= t) return 0;
     if(s+1 == t) return h[s];
     int m = (s+t) / 2;
     ll largest = max(area(h, s, m), area(h, m+1, t));
     ll i = m, j = m, cross = 0, height = h[m];
-    //¤¤¶¡¦V¥ª¥k§ó·sª¬ºA (½u©Ê®É¶¡)
+    //ä¸­é–“å‘å·¦å³æ›´æ–°ç‹€æ…‹ (ç·šæ€§æ™‚é–“)
     while(i>=s || j<t) {
         if(i < s) height = h[j];
         else if(j >= t) height = h[i];

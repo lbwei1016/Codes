@@ -1,5 +1,6 @@
 /*
 ***DP-LCS***
+    O(L1 * L2 * L3)
 */
 #include <iostream>
 #include <cstring>
@@ -7,7 +8,7 @@
 
 using namespace std;
 #define N 100
-int lcs[N+1][N+1][N+1]; //lcs[i][j][k]¥Nªíªº¬Os1ªø«×¬°i¡Bs2ªø«×¬°j¡Bs3ªø«×¬°kªº³Ìªø¤l¦r¦êªø«×
+int lcs[N+1][N+1][N+1]; //lcs[i][j][k]ä»£è¡¨çš„æ˜¯s1é•·åº¦ç‚ºiã€s2é•·åº¦ç‚ºjã€s3é•·åº¦ç‚ºkçš„æœ€é•·å­å­—ä¸²é•·åº¦
 
 int main()
 {

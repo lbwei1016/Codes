@@ -1,7 +1,7 @@
 /*
     Huffman Coding:
         Using binary heap, and the length of a single coding(e.g 001 is three)
-        is identical to its depth in the binary tree¡Fthus, the total length 
+        is identical to its depth in the binary treeï¼›thus, the total length 
         of a single char is "freq * depth", and that's why priority_queue can 
         perfectly fits the job of counting. (Just like "Fence Repair")
 */

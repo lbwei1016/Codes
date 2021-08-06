@@ -16,15 +16,15 @@ const int MAX_N = 15+3;
 const int MAX_M = 15+3;
 
 int dp[2][1 << MAX_M];
-bool color[MAX_N][MAX_M]; //1: black(cannot place)¡F0: white(can)
+bool color[MAX_N][MAX_M]; //1: black(cannot place)ï¼›0: white(can)
 int n, m, Mod;
 
 void solve() {
     for(int i=0; i<2; i++)
         memset(dp[i], 0, sizeof(dp[i]));
 
-    int *cur = dp[0]; //cur[used]: possible results under the circumstance of "used" ·í«e¦Cªº¥i¯à¼Æ
-    int *next = dp[1]; //to record things forwardly ¬ö¿ý¤U¤@¦Cªº¥i¯à¼Æ
+    int *cur = dp[0]; //cur[used]: possible results under the circumstance of "used" ç•¶å‰åˆ—çš„å¯èƒ½æ•¸
+    int *next = dp[1]; //to record things forwardly ç´€éŒ„ä¸‹ä¸€åˆ—çš„å¯èƒ½æ•¸
     cur[0] = 1; //initialize
 
     for(int i=n-1; i>=0; i--) {

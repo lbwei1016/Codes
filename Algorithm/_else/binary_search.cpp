@@ -8,22 +8,22 @@ int n = 5;
 
 void binary_search(int x)
 {
-    int lb = -1, ub = n; //(lb, ub] : ­Y x ¤j©ó³Ì¤j¤¸¯À¡A«hµª®×¬° n¡A¦]¦¹½d³ò¬O«e¶}«á³¬
+    int lb = -1, ub = n; //(lb, ub] : è‹¥ x å¤§æ–¼æœ€å¤§å…ƒç´ ï¼Œå‰‡ç­”æ¡ˆç‚º nï¼Œå› æ­¤ç¯„åœæ˜¯å‰é–‹å¾Œé–‰
 
-    //¦b¸Ñµª½d³ò¤j©ó 1 ªº´Á¶¡¤ÏÂĞ°õ¦æ
+    //åœ¨è§£ç­”ç¯„åœå¤§æ–¼ 1 çš„æœŸé–“åè¦†åŸ·è¡Œ
     while((ub-lb) > 1)
     {
         int mid = (ub+lb) / 2;
 
         //lower_bound
-        //­Y¬° "arr[k] > x" «h¬° "upper_bound"(¦]¬°¤£¥]§t¬Ûµ¥)
+        //è‹¥ç‚º "arr[k] > x" å‰‡ç‚º "upper_bound"(å› ç‚ºä¸åŒ…å«ç›¸ç­‰)
         if(arr[mid] >= x)
             ub = mid;
         else 
             lb = mid;
     }
-    //¦¹®É lb+1 = ub
-    //¦]¬°­n§äªº¬O arr[k] >= x¡A©Ò¥H¿ïub
+    //æ­¤æ™‚ lb+1 = ub
+    //å› ç‚ºè¦æ‰¾çš„æ˜¯ arr[k] >= xï¼Œæ‰€ä»¥é¸ub
     cout << ub << '\n';
 }
 
@@ -32,7 +32,7 @@ int arr[100]; //sorted array
 
 //search for "x"
 int jump_search(int x) {
-    //¦] arr[0] ¦b¤§«á¤£³QÀË¬d¡A©Ò¥H¥ıÀË¬d
+    //å›  arr[0] åœ¨ä¹‹å¾Œä¸è¢«æª¢æŸ¥ï¼Œæ‰€ä»¥å…ˆæª¢æŸ¥
     if(arr[0] >= x) return 0;
     int p0 = 0;
     for(int jump=n/2; jump>0; jump/=2) {

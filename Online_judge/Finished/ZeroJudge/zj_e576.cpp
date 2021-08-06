@@ -30,16 +30,16 @@ int main()
             coor[i].second = r;
             num++;
         }
-        sort(coor.begin(), coor.begin()+num); //¥Ñ¤p¨ì¤j±Æ(¥H¥ª­È¬°·Ç)
+        sort(coor.begin(), coor.begin()+num); //ç”±å°åˆ°å¤§æ’(ä»¥å·¦å€¼ç‚ºæº–)
 
-        int left = 0, right = 0; //©Ò­n¥]§tªº¥ª¡B¥k¬É
-        int flag = -1; //°O¿ı¥ı«e¤@ÂI
-        int cnt = 0; //¦@»İ´XÂI
-        bool found = false; //¬O§_¦³¸Ñ
+        int left = 0, right = 0; //æ‰€è¦åŒ…å«çš„å·¦ã€å³ç•Œ
+        int flag = -1; //è¨˜éŒ„å…ˆå‰ä¸€é»
+        int cnt = 0; //å…±éœ€å¹¾é»
+        bool found = false; //æ˜¯å¦æœ‰è§£
         while(right < M) 
         {   
             int j;
-            //¦Û³Ì¥ª¶}©l¡A«ùÄò·j¯Á¥ª­È¤p(µ¥)©ó¥ª¬É¡A¥B¦³³Ì¤j¥k­ÈªºÂI
+            //è‡ªæœ€å·¦é–‹å§‹ï¼ŒæŒçºŒæœç´¢å·¦å€¼å°(ç­‰)æ–¼å·¦ç•Œï¼Œä¸”æœ‰æœ€å¤§å³å€¼çš„é»
             for(j=flag+1, flag=-1; coor[j].first <= left && j<num; j++)
             {
                 if(coor[j].second > right)
@@ -48,7 +48,7 @@ int main()
                     right = coor[j].second;
                 }   
             }
-            left = right; //­ì¥»ªº¥k¬ÉÅÜ¦¨¤U¤@ÂIªº¥ª¬É
+            left = right; //åŸæœ¬çš„å³ç•Œè®Šæˆä¸‹ä¸€é»çš„å·¦ç•Œ
             ans[cnt].first = coor[flag].first,
             ans[cnt].second = coor[flag].second;
             cnt++;

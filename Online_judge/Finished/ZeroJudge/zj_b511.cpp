@@ -24,7 +24,7 @@ void solve(int sum, int index)
     }
     else
     {
-        for(int j=0; v[index].first*j <= sum; j++) //¤@¦¸¿ï¤@ºØ¹ô­È¨Ó»¼°j
+        for(int j=0; v[index].first*j <= sum; j++) //ä¸€æ¬¡é¸ä¸€ç¨®å¹£å€¼ä¾†éžè¿´
         {
             sum -= v[index].first*j;
             v[index].second = j;

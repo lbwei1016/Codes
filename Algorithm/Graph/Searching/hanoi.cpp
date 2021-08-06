@@ -11,9 +11,9 @@ void hanoi(int n, char A, char B, char C)
     }
     else
     {
-        hanoi(n-1, A, C, B); //«en-1­Ó¸û¤pªº½L¤l
-        hanoi(1, A, B, C); //²Än­Ó³Ì¤jªº½L¤l
-        hanoi(n-1, B, A, C); //«en-1­Ó¸û¤pªº½L¤l
+        hanoi(n-1, A, C, B); //å‰n-1å€‹è¼ƒå°çš„ç›¤å­
+        hanoi(1, A, B, C); //ç¬¬nå€‹æœ€å¤§çš„ç›¤å­
+        hanoi(n-1, B, A, C); //å‰n-1å€‹è¼ƒå°çš„ç›¤å­
     }
     
 }
@@ -23,7 +23,7 @@ int main()
     // cin.tie(NULL);
 
     int n;
-    printf("½Ğ¿é¤J½L¼Æ: ");
+    printf("è«‹è¼¸å…¥ç›¤æ•¸: ");
     scanf("%d", &n);
     hanoi(n, 'A', 'B', 'C');
     

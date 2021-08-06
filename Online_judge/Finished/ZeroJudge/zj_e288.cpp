@@ -3,7 +3,7 @@
     
     Solution:
         There are 38 conditions to operate, so use "long long" instead of "int".
-        Then, use "Difference(-)" to access the counterpart of our target¡Factually
+        Then, use "Difference(-)" to access the counterpart of our targetï¼›actually
         "XOR(~)" is okay as well.
     
     O(N * log N)

@@ -10,9 +10,9 @@ int main()
 	vector<int> v = {10, 15, 20, 21, 20, 45}; 
 	//before calling upper or lower_bound, an array should be sorted
 	sort(v.begin(), v.end());
-	auto up_it = upper_bound(v.begin(), v.end(), 20); //find i for a[i]> 20(here is 21¡Fi=3)
+	auto up_it = upper_bound(v.begin(), v.end(), 20); //find i for a[i]> 20(here is 21ï¼›i=3)
 	cout << "The element > 20 is at pos: " << (up_it - v.begin()) << '\n';
-	auto low_it = lower_bound(v.begin(), v.end(), 20); //find i for a[i]>= 20(here is 20¡Fi=2)
+	auto low_it = lower_bound(v.begin(), v.end(), 20); //find i for a[i]>= 20(here is 20ï¼›i=2)
 	cout << "The element >= 20 is at pos: " << (low_it - v.begin()) << '\n';
 	cout << "The number of asked element(here 20) is: " << (up_it-low_it) << '\n';
 

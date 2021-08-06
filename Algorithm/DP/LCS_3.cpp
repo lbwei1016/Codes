@@ -1,3 +1,6 @@
+/*
+***LCS*** -- reduce momory
+*/
 #include <bits/stdc++.h>
 using namespace std;
 

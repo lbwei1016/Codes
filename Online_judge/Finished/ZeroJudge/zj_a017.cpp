@@ -1,18 +1,18 @@
 /*
-    ¬°¦ó­n¥Ñ¥k©¹¥ª¹M¾ú?¦p¤U:
-        ³]´ú¸ê: -1-9
-        ­Y¥Ñ¥ª©¹¥k¹M¾ú¡A¹Lµ{: 
+    ç‚ºä½•è¦ç”±å³å¾€å·¦éæ­·?å¦‚ä¸‹:
+        è¨­æ¸¬è³‡: -1-9
+        è‹¥ç”±å·¦å¾€å³éæ­·ï¼Œéç¨‹: 
             1. 0 - right
             2. 1 - 9 = -8 = right
             3. 0 - (-8) = 8 #
-        ¦¹µª®×¬O¿ùªº!!!(¦]¬°­t¸¹ªº°İÃD)¡F
-        ­Y¥Ñ¥k©¹¥ª¡A¹Lµ{:
+        æ­¤ç­”æ¡ˆæ˜¯éŒ¯çš„!!!(å› ç‚ºè² è™Ÿçš„å•é¡Œ)ï¼›
+        è‹¥ç”±å³å¾€å·¦ï¼Œéç¨‹:
             1. left - 9
             2. 0 - 1 = -1 = left
             3. -1 - 9 = -10 #
-        ¥¿½T!!!Á×§K¤F­t¸¹°İÃD
+        æ­£ç¢º!!!é¿å…äº†è² è™Ÿå•é¡Œ
 
-    µ²½×: ¥Ñ¡u¥k¡v©¹¡u¥ª¡v¡A¤~¥¿½T!!!
+    çµè«–: ç”±ã€Œå³ã€å¾€ã€Œå·¦ã€ï¼Œæ‰æ­£ç¢º!!!
 */
 #include <iostream>
 #include <cctype>
@@ -32,14 +32,14 @@ int main()
     } 
     return 0;
 }
-int DFS(int left, int right) //¥Ñ¥k©¹¥ª»¼°j!!!!!­«­n!!!!!!
+int DFS(int left, int right) //ç”±å³å¾€å·¦éè¿´!!!!!é‡è¦!!!!!!
 {
-    int par = 0; //¥Nªí¬O§_¦b¬A¸¹¤º(0¥Nªí¤£¦b)
-    //»¼°j·í¤¤¥ı©I¥s¥[´î¡A¦A©I¥s­¼°£¡A¦]¦¹­¼°£·|Àu¥ı³Q°õ¦æ(Stack: FILO)
+    int par = 0; //ä»£è¡¨æ˜¯å¦åœ¨æ‹¬è™Ÿå…§(0ä»£è¡¨ä¸åœ¨)
+    //éè¿´ç•¶ä¸­å…ˆå‘¼å«åŠ æ¸›ï¼Œå†å‘¼å«ä¹˜é™¤ï¼Œå› æ­¤ä¹˜é™¤æœƒå„ªå…ˆè¢«åŸ·è¡Œ(Stack: FILO)
     for(int i=right; i>=left; i--)
     {
-        if(s[i] == ')') par++; //¦]¬°¥Ñ¥k©¹¥ª»¼°j¡A©Ò¥H¥ı¹J¨ì¥k¬A¸¹¡Fpar++¥Nªí¥¿¦b¬A¸¹¤º
-        if(s[i] == '(') par--; // par--¨Ïpar=0¡A¥Nªí¬A¸¹³¡¤Àµ²§ô
+        if(s[i] == ')') par++; //å› ç‚ºç”±å³å¾€å·¦éè¿´ï¼Œæ‰€ä»¥å…ˆé‡åˆ°å³æ‹¬è™Ÿï¼›par++ä»£è¡¨æ­£åœ¨æ‹¬è™Ÿå…§
+        if(s[i] == '(') par--; // par--ä½¿par=0ï¼Œä»£è¡¨æ‹¬è™Ÿéƒ¨åˆ†çµæŸ
         if(s[i] == '+' && par == 0)
             return DFS(left, i-1) + DFS(i+1, right); 
         if(s[i] == '-' && par == 0)
@@ -47,8 +47,8 @@ int DFS(int left, int right) //¥Ñ¥k©¹¥ª»¼°j!!!!!­«­n!!!!!!
     }
     for(int i=right; i>=left; i--)
     {
-        if(s[i] == ')') par++; //¦]¬°¥Ñ¥k©¹¥ª»¼°j¡A©Ò¥H¥ı¹J¨ì¥k¬A¸¹¡Fpar++¥Nªí¥¿¦b¬A¸¹¤º
-        if(s[i] == '(') par--; // par--¨Ïpar=0¡A¥Nªí¬A¸¹³¡¤Àµ²§ô
+        if(s[i] == ')') par++; //å› ç‚ºç”±å³å¾€å·¦éè¿´ï¼Œæ‰€ä»¥å…ˆé‡åˆ°å³æ‹¬è™Ÿï¼›par++ä»£è¡¨æ­£åœ¨æ‹¬è™Ÿå…§
+        if(s[i] == '(') par--; // par--ä½¿par=0ï¼Œä»£è¡¨æ‹¬è™Ÿéƒ¨åˆ†çµæŸ
         if(s[i] == '*' && par == 0)
             return DFS(left, i-1) * DFS(i+1, right);
         if(s[i] == '/' && par == 0)
@@ -57,13 +57,13 @@ int DFS(int left, int right) //¥Ñ¥k©¹¥ª»¼°j!!!!!­«­n!!!!!!
             return DFS(left, i-1) % DFS(i+1, right);
     }
 
-    if(s[left] == '(' && s[right] == ')') return DFS(left+1, right-1); //¥h°£¬A¸¹
-    if(s[left] == ' ' && s[right] == ' ') return DFS(left+1, right); //¥h°£¥ª¥kªÅ®æ
-    if(s[left] == ' ') return DFS(left+1, right); //¥h°£¥ªªÅ®æ
-    if(s[right] == ' ') return DFS(left, right-1); //¥h°£¥kªÅ®æ
+    if(s[left] == '(' && s[right] == ')') return DFS(left+1, right-1); //å»é™¤æ‹¬è™Ÿ
+    if(s[left] == ' ' && s[right] == ' ') return DFS(left+1, right); //å»é™¤å·¦å³ç©ºæ ¼
+    if(s[left] == ' ') return DFS(left+1, right); //å»é™¤å·¦ç©ºæ ¼
+    if(s[right] == ' ') return DFS(left, right-1); //å»é™¤å³ç©ºæ ¼
 
     int num = 0;
-    if(isdigit(s[left]) && isdigit(s[right])) //¦r¤¸Âà¼Æ¦r
+    if(isdigit(s[left]) && isdigit(s[right])) //å­—å…ƒè½‰æ•¸å­—
     {
         for(int i=left; i<=right; i++)
             num  = num*10 + s[i]-'0';

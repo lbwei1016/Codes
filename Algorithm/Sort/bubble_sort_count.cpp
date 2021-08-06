@@ -1,6 +1,6 @@
 /*
-    �Q��BIT�p��G�N�@�ƦC(1 ~ n)�HBubble Sort�ɾ��ƦC�ɩһݪ��洫����
-    (�Y��¨ϥμ����h��O(n * n))
+    利用BIT計算：將一數列(1 ~ n)以Bubble Sort升冪排列時所需的交換次數
+    (若單純使用模擬則需O(n * n))
 
     O(n * log n)
 */
@@ -36,13 +36,13 @@ void solve()
     for (int j=0; j<n; j++)
     {
         /*
-            �O�_�n�洫�ѫ᭱���Ʀr�M�w�F
-            sum(arr[j])�N���barr[j]���e�w�g���h�֤�arr[j]�p���Ʀr�X�{�L�A
-            �ӳo�ǬO���ݭn�洫���A�ҥHans += j - sum(arr[j])
+            是否要交換由後面的數字決定；
+            sum(arr[j])代表在arr[j]之前已經有多少比arr[j]小的數字出現過，
+            而這些是不需要交換的，所以ans += j - sum(arr[j])
         */
         ans += j - sum(arr[j]);
 
-        //�N��arr[j]�o�ӼƦr�w�g�Q�ιL
+        //代表arr[j]這個數字已經被用過
         
         add(arr[j], 1);
     }

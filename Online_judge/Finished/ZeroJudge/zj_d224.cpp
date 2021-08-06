@@ -2,7 +2,7 @@
 ***DP***
     Solution:
         x+2y+2z=n => x+2(y+z)=n
-        ¥ıºâ x + y'= n ªº¤èªk¼Æ¡A¦A¨D y + z = y'
+        å…ˆç®— x + y'= n çš„æ–¹æ³•æ•¸ï¼Œå†æ±‚ y + z = y'
 */
 #include <bits/stdc++.h>
 using namespace std;

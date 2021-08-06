@@ -4,11 +4,11 @@
 using namespace std;
 
 //input
-int n = 3; //´£¥Ü¼Æ
+int n = 3; //æç¤ºæ•¸
 int hint[] = {1, 1, 1};
 
 int com_num;
-int hint_sum[13+5]; //hint_sum[i] ¥Nªí²Ä i ­Ó´£¥Üªº¥kÃä¦³¦h¤Ö­Ó 1
+int hint_sum[13+5]; //hint_sum[i] ä»£è¡¨ç¬¬ i å€‹æç¤ºçš„å³é‚Šæœ‰å¤šå°‘å€‹ 1
 int arr[][13+5] =  
 {
     {0, 0, 1, 1},
@@ -21,10 +21,10 @@ int arr[][13+5] =
     {0, 2, 0, 0},
     {0, 0, 2, 0},
     {0, 0, 0, 2}
-}; //¥i¯à²Õ¦X
+}; //å¯èƒ½çµ„åˆ
 int com[50388*25];
 
-int bit() //ºâ¥X°ò¥»«¬ºA
+int bit() //ç®—å‡ºåŸºæœ¬å‹æ…‹
 {
     int res = 0;
     for(int i=0; i<n; i++)
@@ -39,9 +39,9 @@ int bit() //ºâ¥X°ò¥»«¬ºA
     res >>= 2;
     return res;
 }
-void comb(int b) //¦CÁ|
+void comb(int b) //åˆ—èˆ‰
 {
-    for(int i=0; i<com_num; i++) //i<¤èªk¼Æ
+    for(int i=0; i<com_num; i++) //i<æ–¹æ³•æ•¸
     {
         int res = b;
         for(int j=0; j<n+1; j++)
@@ -69,7 +69,7 @@ void comb(int b) //¦CÁ|
         com[i] = res;
     }
 }
-void trans() //±N¼Æ¦rªº¦ì¤¸ªí¥Ü¥X¨Ó
+void trans() //å°‡æ•¸å­—çš„ä½å…ƒè¡¨ç¤ºå‡ºä¾†
 {
     for(int i=0; i<com_num; i++)
     {
@@ -108,7 +108,7 @@ int main()
 
     int b = bit();
 
-    com_num = H(n, SIZE-n-(n-1)); //H(¨C¦C¦³´X­Ó´£¥Ü, ¥i¦Û¥Ñ¶ñªÅ­Ó¼Æ)
+    com_num = H(n, SIZE-n-(n-1)); //H(æ¯åˆ—æœ‰å¹¾å€‹æç¤º, å¯è‡ªç”±å¡«ç©ºå€‹æ•¸)
 
     cout << "b is: " << b << '\n';
     comb(b);

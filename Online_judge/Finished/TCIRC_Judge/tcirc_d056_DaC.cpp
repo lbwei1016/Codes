@@ -11,11 +11,11 @@
             points have already decided).
         4.  Combine 2. & 3., we can rearrange the "P[]" array 
             to meet the need of "sort by y" to find out feasible
-            points¡Fthis can be carried out with "Merge Sort" when 
+            pointsï¼›this can be carried out with "Merge Sort" when 
             implementing current "DaC" itself!!!
         5.  Traverse [l, r), sieve the points qualified.
         6.  Adopt a "Sweep Line" to sweep the picked points from 
-            which with least "y" and go upwards¡FO(n).
+            which with least "y" and go upwardsï¼›O(n).
 
     O(n * log n)
 */

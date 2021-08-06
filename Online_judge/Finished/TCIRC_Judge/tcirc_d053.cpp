@@ -9,13 +9,13 @@ using namespace std;
 typedef long long ll;
 int main() {
     int n, m;
-    priority_queue<ll> coun; //Âd¥x
-    queue<ll> wait; //¥ı¨Ó¥ıªA°È¡Aµ¥­Ô¦C
+    priority_queue<ll> coun; //æ«ƒå°
+    queue<ll> wait; //å…ˆä¾†å…ˆæœå‹™ï¼Œç­‰å€™åˆ—
     scanf("%d%d", &n, &m);
     for(int i=0; i<n; i++) {
         int t;
         scanf("%d", &t);
-        wait.push(-t); //¥Ñ¤p¨ì¤j
+        wait.push(-t); //ç”±å°åˆ°å¤§
     }
     for(int i=0; i<m; i++) {
         ll t = wait.front(); wait.pop();
@@ -29,7 +29,7 @@ int main() {
     for(int i=coun.size(); i>1; i--) {
         coun.pop();
     }
-    //§ä³Ì¤j®É¶¡
+    //æ‰¾æœ€å¤§æ™‚é–“
     printf("%lld\n", -coun.top());
     return 0;
 }

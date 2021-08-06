@@ -1,11 +1,11 @@
 /*
 ***Prime*** --UVa13194
     Description:
-        §ä¥X¦]¼Æ©M(¤£¥]§t¦Û¤v)µ¥©ó¦Û¤vªº¼Æ(perfect)
+        æ‰¾å‡ºå› æ•¸å’Œ(ä¸åŒ…å«è‡ªå·±)ç­‰æ–¼è‡ªå·±çš„æ•¸(perfect)
     Solution:
-        1. «Ø½è¼Æªí
-        2. sqrt(N) ½è¦]¼Æ¤À¸Ñ
-        3. µ¥¤ñ¯Å¼Æ (Á×§K owerflow)
+        1. å»ºè³ªæ•¸è¡¨
+        2. sqrt(N) è³ªå› æ•¸åˆ†è§£
+        3. ç­‰æ¯”ç´šæ•¸ (é¿å… owerflow)
 
     O(sqrt(N))
 */
@@ -42,7 +42,7 @@ void sieve() {
 
 void solve() {
     ll n = N;
-    //±N N ½è¦]¼Æ¤À¸Ñ¡A¥u»Ý¨ì sqrt(N)
+    //å°‡ N è³ªå› æ•¸åˆ†è§£ï¼Œåªéœ€åˆ° sqrt(N)
     for(int i=0; n>1 && primes[i]<sqrt(N); i++) {
         if(n % primes[i] == 0) {
             int cnt = 0;
@@ -51,16 +51,16 @@ void solve() {
             v.push_back((factor){primes[i], cnt});
         }
     }
-    //­Y N ÁÙ¨S³Q§¹¥þ¤À¸Ñ¡A¨º³Ñ¤Uªº¦]¼Æ¤@©w¬O½è¼Æ¡A¨Ã¥B­n±Æ°£ N ¬°½è¼Æªº±¡§Î
+    //è‹¥ N é‚„æ²’è¢«å®Œå…¨åˆ†è§£ï¼Œé‚£å‰©ä¸‹çš„å› æ•¸ä¸€å®šæ˜¯è³ªæ•¸ï¼Œä¸¦ä¸”è¦æŽ’é™¤ N ç‚ºè³ªæ•¸çš„æƒ…å½¢
     if(n != 1 && v.size() != 0)
         v.push_back((factor){n, 1});
 
     ll res = 1;
     for(int i=0; i<v.size(); i++) {
-        if(v[i].cnt == 1) //Á×§K owerflow
+        if(v[i].cnt == 1) //é¿å… owerflow
             res *= (v[i].p + 1);
         else 
-            res *= (pow(v[i].p, v[i].cnt+1) - 1) / (v[i].p - 1); //µ¥¤ñ¯Å¼Æ
+            res *= (pow(v[i].p, v[i].cnt+1) - 1) / (v[i].p - 1); //ç­‰æ¯”ç´šæ•¸
     }
     res -= N;
     if(res == N) {

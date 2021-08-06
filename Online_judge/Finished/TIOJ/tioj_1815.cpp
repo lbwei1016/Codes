@@ -1,7 +1,7 @@
 /*
 ***Binary Search / Greedy***
     Solution:
-        §ä³Ì¤p¥i¯à¸Ñ (¤G¤À©Ê½è)
+        æ‰¾æœ€å°å¯èƒ½è§£ (äºŒåˆ†æ€§è³ª)
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -60,7 +60,7 @@ int main() {
     cout << ans << '\n';
     return 0;
 }
-/* Another Solution, ¥H´X²@¬í¤§®t TLE  
+/* Another Solution, ä»¥å¹¾æ¯«ç§’ä¹‹å·® TLE  
 #include <bits/stdc++.h>
 #pragma GCC optimize("Ofast,unroll-loops,no-stack-protector,fast-math")
 #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
@@ -78,18 +78,18 @@ inline bool cmp(P &p1, P &p2) {
 inline bool putaway(int time) {
     W = 0;
     multimap<int, int> tmp(S);
-    for(auto &x : tmp) x.second = time; //¦³ time ¬í¥Nªí¦P¤@¤§¾÷¾¹¤H³Ì¦h¥i¥H¥Î time ¦¸
+    for(auto &x : tmp) x.second = time; //æœ‰ time ç§’ä»£è¡¨åŒä¸€ä¹‹æ©Ÿå™¨äººæœ€å¤šå¯ä»¥ç”¨ time æ¬¡
     P x;
-    // x ¥i¯à¬O ¾÷¾¹¤H ©Î¬O ª««~
+    // x å¯èƒ½æ˜¯ æ©Ÿå™¨äºº æˆ–æ˜¯ ç‰©å“
     for(auto x : toys) {
-        //­Y¬O¾÷¾¹¤H¡A¯dµÛ³Æ¥Î
+        //è‹¥æ˜¯æ©Ÿå™¨äººï¼Œç•™è‘—å‚™ç”¨
         if(x.s < 0) W += time;
         else {
             auto it = tmp.upper_bound(x.s);
             if(it != tmp.end()) {
                if(--(it->second) == 0) tmp.erase(it);
             }
-            else if(--W < 0) return false; //¨S¦³¾÷¾¹¤H¥i·h
+            else if(--W < 0) return false; //æ²’æœ‰æ©Ÿå™¨äººå¯æ¬
         }
     }
     return true;
@@ -103,7 +103,7 @@ int main() {
     for(int i=0; i<A; ++i) {
         int t;
         cin >> t;
-        toys[i] = {t, -1}; //§â®zÂû«¬(W)©M­n·hªºª««~©ñ¦b¤@°_
+        toys[i] = {t, -1}; //æŠŠå¼±é›å‹(W)å’Œè¦æ¬çš„ç‰©å“æ”¾åœ¨ä¸€èµ·
     }    
     for(int i=0; i<B; ++i) {
         int t; 
@@ -114,9 +114,9 @@ int main() {
         cin >> toys[i+A].w >> toys[i+A].s;
     }
 
-    sort(toys.begin(), toys.end(), cmp); //¨Ì­«¶q±Æ§Ç (¤j¨ì¤p)
+    sort(toys.begin(), toys.end(), cmp); //ä¾é‡é‡æ’åº (å¤§åˆ°å°)
     int lb = 0, ub = T+1, ans = -1;
-    //§ä³Ì¤p¥i¯à¸Ñ (¤G¤À©Ê½è)
+    //æ‰¾æœ€å°å¯èƒ½è§£ (äºŒåˆ†æ€§è³ª)
     while(ub - lb > 1) {
         int mid = (lb+ub) >> 1;
         if(putaway(mid)) {

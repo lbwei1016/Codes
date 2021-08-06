@@ -5,7 +5,7 @@
         visited all the vertices of a weighed-directed graph, and then 
         go back to where we starts.
     
-    O(n^3)
+    O(2^n*n^2)
 */
 #include <iostream>
 #include <algorithm>
@@ -22,11 +22,11 @@ int d[MAX_N][MAX_N];
     dp[S][v]: 
         The minimum cost to go from current vertex(v) to the rest unvisited
         vertices, and finally go back to where we start.
-    (S: a union of visited vertices¡Fv: current vertix)
+    (S: a union of visited verticesï¼›v: current vertix)
 
     Solution:
         dp[S][0] = 0
-        dp[S][v] = min(dp[S][v], dp[S ¡å {u}][u], d(v, u))
+        dp[S][v] = min(dp[S][v], dp[S âˆª {u}][u] + d(v, u))
 
     note: 
         If the size of S is bigger, dp[S][v] can be smaller, for there
@@ -38,7 +38,7 @@ void solve() {
 
     for(int S=0; S < 1<<n; S++)
         fill(dp[S], dp[S]+n, INF);
-    dp[(1 << n) - 1][0] = 0; //back to start
+    dp[(1 << n) - 1][0] = 0; //where we start
 
     for(int S=(1<<n)-2; S>=0; S--) {
         for(int v=0; v<n; v++) {

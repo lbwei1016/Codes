@@ -3,11 +3,11 @@
 ***Reference to DP_LIS_2***
 Problem:
     Given a set of numbers(train cars) coming in a order, and the numbers(cars) can 
-    be put either at the front or the buttom of the previous sequence(cars)¡Fto find
+    be put either at the front or the buttom of the previous sequence(cars)ï¼›to find
     out the Longest Decreasing Sequence(identical to LIS) is the problem.
 Solution:
     Since the coming numbers can be put both ways, we can directly make the sequence's
-    both way added by the coming number¡Fthat is:
+    both way added by the coming numberï¼›that is:
         given: [3, 1, 4, 2]
         convert to: [2, 4, 1, 3, 3, 1, 4, 2]
     Then what we need to do is find out the LIS of the converted sequence

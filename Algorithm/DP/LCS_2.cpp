@@ -1,10 +1,10 @@
 /*
 ***LCS*** -- reduce momory
     Description:
-        �Ѻ��i���i�H�ݥX�A�p��L�{���u�ݭn���e�C�H�ΤW�@�C����T�C
-            "from": �N���e�@�C (�H�ΥN�����Ʀ�)
-            "to": �N�����e�� i �C (�_�Ʀ�)
-        ���ƧQ�ΰ}�C�A�C�⧹�@�C�A�洫 from �M to�C
+        由漸進式可以看出，計算過程中只需要當前列以及上一列的資訊。
+            "from": 代表前一列 (以及代表偶數行)
+            "to": 代表當前第 i 列 (奇數行)
+        重複利用陣列，每算完一列再交換 from 和 to。
 */
 #include <cstdio>
 #include <cstring>
