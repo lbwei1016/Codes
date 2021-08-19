@@ -1,29 +1,30 @@
 /*
-***Graph***
-    Solution I¡BII:
-        ¨â¦¸ DFS !!!
+***Tree***
+    Solution Iã€II:
+        å…©æ¬¡ DFS !!!
     O(V)
 */
 #include <bits/stdc++.h>
 using namespace std;
 
 const int N = 15;
-// d[]: ²`«×¡Fds[]: ¬ö¿ıª½®|ªº½s¸¹
+// d[]: æ·±åº¦
+// ds[]: ç´€éŒ„ç›´å¾‘çš„ç·¨è™Ÿ (descendant)ï¼›è‹¥ v åœ¨ç›´å¾‘ä¸Šï¼Œds[v] = [v çš„å­©å­ (ä¸‹ä¸€å€‹ node)] 
 int n, d[N], ds[N]; 
-// mid[]: ¥i¯àªº¶ê¤ß®y¼Ğ (­Yª½®|¬°°¸¼Æ«h¦³¨â­Ó)¡FD: ª½®|
+// mid[]: å¯èƒ½çš„åœ“å¿ƒåº§æ¨™ (è‹¥ç›´å¾‘ç‚ºå¶æ•¸å‰‡æœ‰å…©å€‹)ï¼›D: ç›´å¾‘
 int mid[2], D;
 vector<int> G[N];
 int dfs1(int, int);
 int dfs2(int, int);
 
 int main() {
-    // ¤èªk¤@:
+    // æ–¹æ³•ä¸€:
     d[0] = -1; // dummy
     scanf("%d", &n);
     for(int i=0; i<n-1; ++i) {
         int u, v;
         scanf("%d%d", &u, &v);
-        ++u; ++v; // ¬°¤è«K°_¨£¡A±q 1 ¶}©l½s¸¹
+        ++u; ++v; // ç‚ºæ–¹ä¾¿èµ·è¦‹ï¼Œå¾ 1 é–‹å§‹ç·¨è™Ÿ
         G[u].push_back(v);
         G[v].push_back(u);
     }
@@ -33,17 +34,17 @@ int main() {
     printf("D: %d\nmid0: %d\nmid1: %d\n", D, mid[0], mid[1]);
     printf("d[mid[0]]: %d\nd[mid[1]]: %d\n", d[mid[0]], d[mid[1]]);
 
-    /*--------------------------¥H¤U¬°¤èªk¤G-------------------------------------*/
+    /*--------------------------ä»¥ä¸‹ç‚ºæ–¹æ³•äºŒ-------------------------------------*/
 
-    memset(ds, -1, sizeof(ds)); // -1 ¥Nªí¸­
-    dfs2(1, 0); // 1 ¥i¥N´«¬°¥ô·N°_©lÂI
+    memset(ds, -1, sizeof(ds)); // -1 ä»£è¡¨è‘‰
+    dfs2(1, 0); // 1 å¯ä»£æ›ç‚ºä»»æ„èµ·å§‹é»
     int v, rad = 0, mid;
-    for(v=1; ds[v]>0; v=ds[v]); // v = °_©lÂI¡A³Ì²× v = ª½®|ºİÂI
+    for(v=1; ds[v]>0; v=ds[v]); // v = èµ·å§‹é»ï¼Œæœ€çµ‚ v = ç›´å¾‘ç«¯é»
     D = dfs2(v, 0);
     while(rad + 1 <= D/2) {
         rad++; v = ds[v];
     }
-    mid = v; // ¶ê¤ß§Y¬°³Ì«áªº v
+    mid = v; // åœ“å¿ƒå³ç‚ºæœ€å¾Œçš„ v
     printf("D: %d\nrad: %d\nmid: %d\n", D, rad, mid);
     return 0;
 }
@@ -52,15 +53,15 @@ int dfs1(int v, int p) {
     d[v] = d[p] + 1;
     if(G[v].size()==1 && G[v][0]==p) return v; // leaf
 
-    // id: ¤l¾ğ¤¤²`«×³Ì²`ªÌ¡A§Y®Ú©Ò¨ì³Ì»·ªº¸`ÂI (ª½®|ªº¥t¤@ºİÂI)
-    // »¼°j¦Ü³Ì²`³B«á§Y¥i±oª¾ª½®|ªø¡A¦A¦^·¹©w¦ì¶ê¤ß (ª½®|¤¤ÂI)
+    // id: å­æ¨¹ä¸­æ·±åº¦æœ€æ·±è€…ï¼Œå³æ ¹æ‰€åˆ°æœ€é çš„ç¯€é» (ç›´å¾‘çš„å¦ä¸€ç«¯é»)
+    // ç¬¬äºŒæ¬¡éè¿´è‡³æœ€æ·±è™•å¾Œå³å¯å¾—çŸ¥ç›´å¾‘é•·ï¼Œå†å›æº¯å®šä½åœ“å¿ƒ (ç›´å¾‘ä¸­é»)
     int id = 0, temp;
     for(auto u : G[v]) {
         if(u == p) continue;
         temp = dfs1(u, v);
         if(d[temp] > d[id]) id = temp;
     }
-    // §ó·sª½®|»P¶ê¤ß
+    // æ›´æ–°ç›´å¾‘èˆ‡åœ“å¿ƒ
     if(d[id] > D && d[v] == d[id]/2+1) {
         D = d[id];
         if(D & 1) {
@@ -79,7 +80,7 @@ int dfs2(int v, int p) {
     for(auto u : G[v]) {
         if(u == p) continue;
         d = 1 + dfs2(u, v); 
-        // ¬ö¿ı³Ì²`ªº¤l¾ğ
+        // ç´€éŒ„æœ€æ·±çš„å­æ¨¹
         if(d > id) {
             id = d; 
             ds[v] = u;

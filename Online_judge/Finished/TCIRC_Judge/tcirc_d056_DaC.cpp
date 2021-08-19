@@ -33,6 +33,7 @@ bool cmp(Point p1, Point p2) {
 int rec(int l, int r) {
     if(l+1 >= r) return 1e9;
     int m = (l+r) >> 1;
+    int mid_x = P[m].x; // 要在遞迴前先取中點 x 值，因為遞迴後就變成依照 y 排序 !!!
     int dis = min(rec(l, m), rec(m, r));
 
     int j = m;
@@ -57,13 +58,13 @@ int rec(int l, int r) {
     int k = 0;
     //go over every element (sorted by "y") and check their "x"
     for(int i=l; i<r; i++) {
-        if(abs(P[i].x-P[m].x) <= dis)
+        if(abs(P[i].x-mid_x) < dis)
             t[k++] = P[i];
     }
     //sweep from the point with least "y"
     for(int i=0; i<k; i++) {
         //O(1): the loop will maximally execute 8 times
-        for(j=i+1; j<k && t[j].y-t[i].y<=dis; j++) {
+        for(j=i+1; j<k && t[j].y-t[i].y<dis; j++) {
             dis = min(dis, abs(t[i].x-t[j].x)+abs(t[j].y-t[i].y));
         }
     }

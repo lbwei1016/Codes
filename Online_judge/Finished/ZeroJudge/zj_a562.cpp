@@ -1,7 +1,7 @@
 /*
 ***Graph / Hash*** (*)
     Solution:
-        原先使用 unordered_set<int> 來儲存路徑上的數字，但 SE，因此
+        原先使用 std::unordered_set 來儲存路徑上的數字，但 SE，因此
         放棄容器，自己做 hash table
 */
 #include <bits/stdc++.h>

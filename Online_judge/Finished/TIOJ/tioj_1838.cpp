@@ -1,5 +1,13 @@
 /*
-***Graph*** -- diameter, radius, center of tree
+***Graph*** -- diameter, radius, center of tree (*)
+    Description:
+        將森林中的各樹連通，並使得最後合併出的樹具有最小的直徑。
+    Solution:
+        找出各樹的重心，再將所有樹的重心與半徑最大的樹的重心連接起來 (最小化直徑)，
+        並考慮兩種可能為合併後的樹直徑的情況:
+            1.  最大 + 次大半徑 + L (題目給的連接長度)
+            2.  次大 + 第三大半徑 + 2L (先走到最大半徑樹再走向次大半徑樹)
+    O(n)
 */
 #include <bits/stdc++.h>
 using namespace std;

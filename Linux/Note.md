@@ -43,9 +43,11 @@
     - `x` : 1
     >*e.g. `chmod -R 720 myfile`*
 - ***Setuid, Setgid, Sticky BIT***
-    - ***setuid*** : `chmod "4"751`；cancel : `chmod [0]751`
-    - ***setgid*** : `chmod "2"751`；cancel : `chmod [0]751`
-    - ***sticky bit*** : `chmod "+t" [file]`
+    > 檔案加入 setuid 權限後, 其他用戶可以用檔案持有者身份執行檔案
+
+- ***setuid*** : `chmod "4"751`；cancel : `chmod [0]751`
+- ***setgid*** : `chmod "2"751`；cancel : `chmod [0]751`
+- ***sticky bit*** : `chmod "+t" [file]`
 
 ## Read File Content
 - `cat` : read the whole file
@@ -78,6 +80,7 @@
 - `>>` : Append output to a file.
 - `<` : Read input from a file.
 - `2>` : Redirect error messages.
+- `&>` : Redirect `STDOUT` and `STDERR` to the same place
     - `2>&1` : redirect `STDERR[2]` to `STDOUT[1]`
     > If there isn't `&`, `2>1` will be identified as redirecting to a file naming '1'
 
@@ -95,25 +98,28 @@
 - `iconv -f [source format] -t [convert to] -o [output file] [input file]`: change file's encoding
     > *e.g.* `iconv -f BIG-5 -t utf8 -o test.txt test.txt`
 
-    > Note: DON'T repeat converting the same file or bad thing may occur.
-# nc (netcat)
+    > Note: DON'T repeat converting the same file or *awful* thing may occur.
+# Network
+## nc (netcat)
 - `nc [-vul] [host] [port]` : using the `TCP` or `UDP` protocols to read or write data 
-    - `-v` : verbose message displayed
-    - `-u` : use `UDP` instead of `TCP`
-    - `-l` : listen for an incoming connection rather than initiating a connection to a remote host
-    > *e.g. `echo "Hi" | nc -u localhost 8000`* : transmit a `UDP` packet
+- `-v` : verbose message displayed
+- `-u` : use `UDP` instead of `TCP`
+- `-l` : listen for an incoming connection rather than initiating a connection to a remote host
+> *e.g. `echo "Hi" | nc -u localhost 8000`* : transmit a `UDP` packet
 
-    > *e.g. `nc -lu localhost 8000`* : accept a packet under `UDP`
-# SSH (Secure Shell)
+> *e.g. `nc -lu localhost 8000`* : accept a packet under `UDP`
+## SSH (Secure Shell)
 - `ssh [-i [file] ]<user>@<host> [-p [port] ]` : login `host` 
-    - `-i` : use `file` (containing private key) to connect
+- `-i` : use `file` (containing private key) to connect
 - `ssh-keygen -t rsa` : generate `RSA` key under `.ssh/`
-# SSL / TLS 
+## SSL / TLS 
 > *Secure Socket Layer / Transport Layer Security*
 - `openssl s_client -quiet -connect localhost[:port]` 
-    - `s_client` : connect to a remote host using `SSL/TLS`
-        - `-quiet` : inhibit printing of session and certificate information
-        - `-connect [host:port]` : connect to host
+- `s_client` : connect to a remote host using `SSL/TLS`
+    - `-quiet` : inhibit printing of session and certificate information
+    - `-connect [host:port]` : connect to host
+## nmap
+- `nmap [host]`: scan `host` for information like `ports` and its operating system, etc.
 # Variable
 - `declare [-ia] [var name]`: declare a variable *(a string in default)*
     - `-i`: number 
@@ -124,6 +130,19 @@
 # Bash
 - `bash [-x] [].sh`: execute shell script
     - `-x`: output the process of script-execution
+# Shell Session
+- `screen`
+- `tmux`: *teminal multiplexer*
+    > press `Ctrl-b` before input commands
+    - `pane`: every `pane` is a independent `shell session`
+    - `window`
+# Scheduling
+- `cron`: 
+    > *every user* has their own `crontab` (including *system* itself)
+- `crontab [-erl]`
+    - `-e`: edit
+    - `-r`: remove
+    - `-l`: list current crontable
 # Others
 - `sort [file]` : Sort the given file
 - `strings [file]` : Prints the printable character sequences that are at least 4 characters long

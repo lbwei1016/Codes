@@ -1,5 +1,5 @@
-animals = ["dog", "cat", "turtle"]
-for ani in animals:
-    print(ani + " cute!\n")
-for i in range(10):
-    print(i)
+s = input()
+s2 = s.split()
+n = int(s2[0])
+m = int(s2[1])
+print(2**m - 2**(m-n) + 1)

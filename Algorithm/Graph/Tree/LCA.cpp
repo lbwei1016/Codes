@@ -1,5 +1,5 @@
 /*
-***LCA*** -- Lowest Common Ancestor
+***Tree*** -- Lowest Common Ancestor
 */
 #include <iostream>
 #include <vector>

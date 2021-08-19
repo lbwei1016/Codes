@@ -24,7 +24,7 @@
         第一位被殺的人，其編號：(M-1) mod N-(k-1)，再由上述推導之遞迴式即可算出
         第 k 位被殺的人在 N 人圍成一圈時的編號。
 
-    O(N) / O(K)
+    O(N)；O(K)
 */
 #include <iostream>
 
@@ -55,7 +55,7 @@ void josephus_k_th() {
         k_th = (k_th + M) % i;
     }
     /* 
-        For more concise:
+        Be more concise:
             int k_th = -1;
             for(int i=N-K+1; i<=N; i++) {
                 k_th = (k_th + M) % i;
