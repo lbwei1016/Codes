@@ -3,12 +3,13 @@
 
 using namespace std;
 
-//input
-int n = 3; //提示數
+// input
+int n = 3; // 提示數
 int hint[] = {1, 1, 1};
 
 int com_num;
-int hint_sum[13+5]; //hint_sum[i] 代表第 i 個提示的右邊有多少個 1
+int hint_sum[13+5]; // hint_sum[i] 代表第 i 個提示的右邊有多少個 1
+// 可能組合 (要放幾個空白)
 int arr[][13+5] =  
 {
     {0, 0, 1, 1},
@@ -21,65 +22,55 @@ int arr[][13+5] =
     {0, 2, 0, 0},
     {0, 0, 2, 0},
     {0, 0, 0, 2}
-}; //可能組合
+}; 
 int com[50388*25];
 
-int bit() //算出基本型態
+int bit() // 算出基本型態；i.e. 010101....: 1 和 1 中間只放一個 0
 {
     int res = 0;
     for(int i=0; i<n; i++)
     {
+        res <<= 1;
         for(int j=0; j<hint[i]; j++)
         {
-            res += 1;
-            res <<= 1;  
+            res <<= 1; 
+            res |= 1;
         }
-        res <<= 1;
     }
-    res >>= 2;
     return res;
 }
-void comb(int b) //列舉
+void comb(int b) // 列舉
 {
-    for(int i=0; i<com_num; i++) //i<方法數
+    for(int i=0; i<com_num; i++) // 方法數
     {
-        int res = b;
-        for(int j=0; j<n+1; j++)
+        int res = b, temp, k;
+        for(int j=1; j<n; j++)
         {
             if(arr[i][j])
             {
-                if(j == 0)
-                {
-                    // front += arr[i][j];
-                    continue;
-                }
-                else if(j == n)
-                    res <<= arr[i][j];
-                else
-                {
-                    int temp = res;
-                    temp >>= (hint_sum[j-1] + n-j);
-                    temp <<= (hint_sum[j-1] + n-j);
-                    int k = res - temp;
-                    res = (temp << arr[i][j]) + k;
-                }
+                temp = res;
+                temp >>= (hint_sum[j-1] + n-j);
+                temp <<= (hint_sum[j-1] + n-j);
+                k = res - temp;
+                res = (temp << arr[i][j]) + k;
             }
         }
+        res <<= arr[i][n]; // 最後一處，不可以再放空白在後
         cout << res << '\n';
         com[i] = res;
     }
 }
-void trans() //將數字的位元表示出來
+void trans() // 將數字的位元表示出來
 {
+    int cnt = 0;
     for(int i=0; i<com_num; i++)
     {
+        cout << ++cnt << ": "; 
         for(int j=SIZE-1; j>=0; j--)
         {
             int temp = com[i];
-            if(temp & (1 << j))
-                cout << "1 ";
-            else   
-                cout << "0 ";
+            if(temp & (1 << j)) cout << "1 ";
+            else cout << "0 ";
         }
         cout << '\n';
     }
@@ -108,7 +99,7 @@ int main()
 
     int b = bit();
 
-    com_num = H(n, SIZE-n-(n-1)); //H(每列有幾個提示, 可自由填空個數)
+    com_num = H(n, SIZE-n-(n-1)); // H(每列有幾個提示, 可自由填空個數)
 
     cout << "b is: " << b << '\n';
     comb(b);

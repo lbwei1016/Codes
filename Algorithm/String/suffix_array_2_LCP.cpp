@@ -17,9 +17,9 @@
     Description II: (求出高度陣列)
         LCP: Longset Common Prefix
         首先定義:
-            Suffix[i] = s[i...n]
+            Suffix[i] = s[i...n-1] (0-indexed)
             LCP(i, j) = lcp(Suffix[i], Suffix[j])
-            後綴陣列: sa[i]: 順序第 i 的是第幾個後綴
+            後綴陣列: sa[i]: 排名第 i 的是第幾個後綴
             排名陣列: ra[i]: 第 i 個後綴的比較值 (排名，從 0 開始)
         從後綴陣列來看，具有以下性質:
             1. LCP(i, j) = LCP(j, i)
@@ -54,12 +54,13 @@ void counting_sort(vector<int> &sa, vector<int> &ra) {
     for(int i=n-1; i>=0; --i) tm[--count[ra[sa[i]]]] = sa[i];
     for(int i=0; i<n; ++i) sa[i] = tm[i];
 }
-void get_suffix(string &s, vector<int> &sa) {
+void get_suffix(string &s, vector<int> &sa, vector<int> &ra) {
     int n = s.size();
-    // 後綴陣列: sa[i]: 順序第 i 的是第幾個後綴
+    // 後綴陣列: sa[i]: 排名第 i 的是第幾個後綴
     // 排名陣列: ra[i]: 第 i 個後綴的比較值 (排名，從 0 開始)
     // 第 i 個後綴的首字元是 s[i]
-    vector<int> ra(n);
+
+    // vector<int> ra(n);
     vector<pair<char, int> > tmp(n);
 
     // 先對首個字元進行 ra 排序
@@ -135,11 +136,17 @@ void get_suffix(string &s, vector<int> &sa) {
 }
 void LCP(string &s, vector<int> &ra, vector<int> &sa, vector<int> &height) {
     int n = s.size();
-    //for(int i=0; i<n; ++i) ra[sa[i]] = i;
+    // for(int i=0; i<n; ++i) ra[sa[i]] = i;
     int h = 0; // 相當於 h[i-1] (h[i] = height[ra[i]])
     height[0] = 0;
+    /*
+        因為 height[] 是依照 "h[i] = height[ra[i]] = LCP(ra[i]-1, ra[i])"
+        來計算，因此 height[] 的結果將是儲存 h[i] 的資訊，也就是說，height[5]
+        儲存的是 ra[i] = 5 時 LCP(4, 5)。
+        結論: 計算完畢後，height[] 實際上代表的就是 h[]
+    */
     for(int i=0; i<n; ++i) {
-        // 第 i-1 小的後綴
+        // 排名是 i-1 的後綴
         int j = sa[ra[i]-1];
         // h[i] >= h[i-1]-1 >= 0
         if(h > 0) --h;
@@ -156,14 +163,21 @@ int main() {
     s += '\0'; // 必要 !!! ('\0' 的字典序小於任一字元)
     int n = s.size();
     vector<int> sa(n), ra(n), height(n);
-    get_suffix(s, sa);
+    get_suffix(s, sa, ra);
     
     // 計算 height[]
     LCP(s, ra, sa, height); 
 
+    // 排序好的 suffix array
     for(auto v : sa) cout << setw(2) << v << ": " << s.substr(v)+'\n';
     cout << "----------------------\n";
-    for(int i=0; i<n; ++i)
-        cout << setw(2) << i << ": " << height[i] << '\n';
+    /*
+        因為 height[] 是依照 "h[i] = height[ra[i]] = LCP(ra[i]-1, ra[i])"
+        來計算，因此 height[] 的結果將是儲存 h[i] 的資訊，也就是說，height[5]
+        儲存的是 ra[i] = 5 時 LCP(4, 5)。
+        結論: 計算完畢後，height[] 實際上代表的就是 h[]
+    */
+    for(int r=1; r<n; ++r)
+        cout << setw(2) << r << ": " << height[r] << '\n';
     return 0;
 }

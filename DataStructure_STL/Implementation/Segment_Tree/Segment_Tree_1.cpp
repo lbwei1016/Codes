@@ -1,5 +1,6 @@
 /*
-    線段樹： (1-indexed)
+***Segment Tree*** -- array
+    (偽)線段樹： (1-indexed)
         來由詳見演算法筆記（http://web.ntnu.edu.tw/~algo/Sequence2.html#3）
 
         作為二元樹結構，線段樹的每一節點儲存不斷被二分的區間：
@@ -38,10 +39,8 @@ void build(int v, int L, int R) //建構線段樹 O(n)
 {
     if (L == R) //[L, R]
     {
-        node[v] = dat[L];
-        return;
+        node[v] = dat[L]; return;
     }
-
     int M = (L+R) / 2;
     build(LC(v), L, M);
     build(RC(v), M+1, R);
@@ -50,9 +49,10 @@ void build(int v, int L, int R) //建構線段樹 O(n)
 }
 void update(int v, int val) //更新 dat[v] 的值為 val (單點更新) O(log n)
 {
-    v += n - 1; //從葉開始更新
+    // 從葉開始更新 (n = 2^p >= N -> v += 2^p-1) 
+    // 因為從根到第一個葉共 2^p-1 個節點 (完全二元樹)，所以這麼寫是正確的
+    v += n - 1; 
     dat[v] = val;
-
     while (v > 0)
     {
         v /= 2; //溯回父節點
@@ -66,6 +66,7 @@ int query(int l, int r, int v, int L, int R) //查詢[l, r]的最小值 O(log n)
     else 
     {
         int M = (L+R) / 2;
+        // 其實這裡不檢查也可以，因為遞迴後也有邊界檢查
         if (r < L)
             return query(l, r, LC(v), L, M);
         else if (l > M)

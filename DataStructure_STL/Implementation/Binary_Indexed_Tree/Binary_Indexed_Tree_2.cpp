@@ -1,7 +1,7 @@
 /*
-    Binary-Indexed-Tree(BTS)--又稱樹狀數組 (參考BIT_1)
-
-    利用兩顆 BIT 來達到以 O(log n) 的複雜度修改區間值
+***BIT***
+    Description:
+        利用兩顆 BIT 來達到以 O(log n) 的複雜度修改區間值
 */
 #include <iostream>
 

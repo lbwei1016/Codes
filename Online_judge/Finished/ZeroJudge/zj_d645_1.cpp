@@ -1,9 +1,8 @@
 /*
 ***DP*** -- Bounded knapsack
     O(N * W * T)
-    N: 物品種類；T: 物品數量；W: 可容納重
 */
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 const int N = 1005;
