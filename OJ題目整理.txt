@@ -46,6 +46,7 @@ Data Structure:
     tioj_1483: 電腦檢查 (BIT / DP) (*)
     tioj_1869: 堆石子遊戲 (2D-BIT) (2D-Segment Tree)
     ytp_7_Peak: Peak (BIT / hash) (even-odd) (*)
+    atcoder_abc_221_E: LEQ (Modular multiplicative inverse / hashing) (*)
 
 Divide and Conquer:
     tcirc_d036: Q-3-12. 完美彩帶 (Sliding Window)
@@ -56,6 +57,7 @@ Divide and Conquer:
     UVa_11129: An antiarithmetic permutation (*)
     zj_e928: pB. 多項式相乘 (Karatsuba algorithm / Math)
     tioj_1208: 第K大連續和 (Sliding Window) (*)
+    leetcode_1996: The Number of Weak Characters in the Game 
 
 DP:
     zj_a252: Another LCS(三字串LCS)
@@ -83,7 +85,7 @@ DP:
     zj_b229: TOI2009 第一題：路徑問題 (TOI)
     code_jam: 2009_1C_C
     poj_2686: Traveling by Stagecoach (位元 DP / Shortest Path)
-    poj_1769: Minimizing maximizer (Seg Tree)
+    poj_1769: Minimizing maximizer (Segment Tree)
     tcirc_d066: P-6-1. 小朋友上樓梯最小成本
     tcirc_d067: P-6-2. 不連續的表演酬勞
     tcirc_d068: P-6-3. 最小監控鄰居的成本
@@ -110,6 +112,7 @@ DP:
     tioj_1907: 俄羅斯娃娃 (DP / Binary Search) (DP / BIT) (two-key LIS) (*)
     atcoder_abc_215_E: Chain Contestant (位元 DP / bit) (*)
     cf_1083E: E. The Fair Nut and Rectangles (Covex Hull Optimization) (*)
+    leetcode_1981: Minimize the Difference Between Target and Chosen Elements (Memoization)
 
     Optimization:
         zj_d645: 輪下亡魂 (Bounded_knapsack) (二進制拆分優化) (單調隊列優化) (*)
@@ -175,6 +178,8 @@ Graph:
         poj_1741: Tree (Divide and Conquer) (*)
         UVa_10077: The Stern-Brocot Number System (BST)
         UVa_10859: Placing Lampposts (Minimum Vertex Cover) 
+        atcoder_abc_221_F: Diameter set (tree_diameter / tree_center) (*)
+        gpe_v1_10038: Disk Tree (Dynamic tree)
     Union and Find: (Disjoint Set Union -- DSU)
         zj_f292: Almost Union-Find 
         zj_f310: 10158 - War (UVa) (*)
@@ -206,13 +211,17 @@ Math:
     zj_c204: 13194 - DPA Numbers II (prime / prime factorization)
     zj_d613: prime
     zj_a451: 矩陣快速冪 (費氏數列)
+    zj_c641: 滿滿的糖果屋 #2 (Chinese Remainder Theorem)
     poj_3233: 冪次和 (矩陣中的矩陣)
     tcirc_d013: 快速冪--200 位整數 (大數 / 快速冪)
     tcirc_d017: Q-2-8. 模逆元
     tcirc_d022: Q-2-13. 無理數的快速冪 (無理數 / 快速冪)
     tioj_1005: 圓周率問題 (prime)
     tioj_1021: G.Counting Page Numbers (*)
+    tioj_1425: 吐鈔機 (數論分塊: Fubini's theorem / prime) (*)
     atcoder_abc_215_D: Coprime 2 (coprime)
+    atcoder_arc_128_B: Balls of Three Colors (找規律)
+    cf_547A: Mike and Frog (找規律) (*)
 
 Prefix (Suffix) Sum:
     zj_e339: 前綴合練習
@@ -224,6 +233,7 @@ Recursion:
     tcirc_d003: P-1-3. 棍子中點切割 
     tcirc_d006 ~ d009
     tcirc_d023: Q-2-14. 水槽 (*)
+    gpe_v5_10414: Bangla Numbers
 
 Simulation:
     zj_f340: 俄羅斯方塊 
@@ -253,6 +263,7 @@ Sweeping Line:
     tcirc_d060: Q-4-19. 五嶽盟主的會議場所 (*)
     tcirc_d061: Q-4-20. 監看華山練功場 (*)
     tioj_1017: C.Node of Sequence (stack)
+    atcoder_abc_221_D: Online games
 
 Else:
     poj_3279: Fliptile(bitwise operation / 集合窮舉)

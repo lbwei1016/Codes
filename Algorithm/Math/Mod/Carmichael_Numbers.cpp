@@ -1,13 +1,10 @@
 /*
-    Carmichael Numbers:
-        Find any integer x in (1, n) that complies with x^n ≡ x(mod n).
-        (Also defined as: x^(n-1) ≡ 1(mod n), i.e. x^(n-1) mod n = 1)
-        If x is found, then n is a "Carmichael Number"(primes are excluded)
-
-        Note: The found x and n are relatively prime, i.e., gcd(x, n) = 1
-        (This can be proved easily)
-
-        Note: a.k.a "Fermat's Little Theorem"
+***Math*** -- Carmichael Numbers
+    Description:
+        Fermat's Little Theorem claims that:
+            a^p ≡ a (mod p), for p is a prime.
+        However, some "composite numbers (合數)" also comply with the
+        above theorem, and those composite numbers are called "Carmichael numbers".
     O(log n)
 */
 #include <iostream>

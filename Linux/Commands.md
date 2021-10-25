@@ -1,3 +1,6 @@
+# Help
+- `man`: man page
+    - `/ [search item]`: to search
 # Directory and File
 ## Go To
 - `cd` ~ : 回到家目錄
@@ -98,13 +101,13 @@
 - `iconv -f [source format] -t [convert to] -o [output file] [input file]`: change file's encoding
     > *e.g.* `iconv -f BIG-5 -t utf8 -o test.txt test.txt`
 
-    > Note: DON'T repeat converting the same file or *awful* thing may occur.
+    > Note: DON'T repeat converting the same file or *awful* things may occur.
 # Network
 ## nc (netcat)
 - `nc [-vul] [host] [port]` : using the `TCP` or `UDP` protocols to read or write data 
 - `-v` : verbose message displayed
 - `-u` : use `UDP` instead of `TCP`
-- `-l` : listen for an incoming connection rather than initiating a connection to a remote host
+- `-l` : listen for an incoming connection **rather than** initiating a connection to a remote host
 > *e.g. `echo "Hi" | nc -u localhost 8000`* : transmit a `UDP` packet
 
 > *e.g. `nc -lu localhost 8000`* : accept a packet under `UDP`
@@ -112,6 +115,7 @@
 - `ssh [-i [file] ]<user>@<host> [-p [port] ]` : login `host` 
 - `-i` : use `file` (containing private key) to connect
 - `ssh-keygen -t rsa` : generate `RSA` key under `.ssh/`
+> To leave SSH, either `exit` or `Ctrl-d` is fine.
 ## SSL / TLS 
 > *Secure Socket Layer / Transport Layer Security*
 - `openssl s_client -quiet -connect localhost[:port]` 
@@ -130,6 +134,11 @@
 # Bash
 - `bash [-x] [].sh`: execute shell script
     - `-x`: output the process of script-execution
+> *Note*: `sh file.sh` may sometimes be not equivalent to `bash file.sh`
+
+> *see difference between `dash` and `bash`*
+- `echo $0`: Look up what current shell is.
+    - `$0` expands to the name of the shell or shell script. 
 # Shell Session
 - `screen`
 - `tmux`: *teminal multiplexer*
@@ -143,6 +152,26 @@
     - `-e`: edit
     - `-r`: remove
     - `-l`: list current crontable
+# Hash (here to check ***data integrity***)
+- `md5sum`: MD5 (*Message Digest algorithm 5*)
+- `sha256sum`: SHA-256
+# Condition and Loop
+```sh
+#!/bin/bash
+
+# prints 0000, 0001..., 9999 (pads 0)
+# the usage {0000..9999} is valid only under bash
+for i in {0000..9999}
+do
+    echo $i
+done
+# prints 0, 1..., 9999 (no padding)
+# for more detailed infor. about "seq", see "Others" sec.
+for i in $(seq 0000 9999)
+do
+    echo $i
+done
+```
 # Others
 - `sort [file]` : Sort the given file
 - `strings [file]` : Prints the printable character sequences that are at least 4 characters long
@@ -151,4 +180,8 @@
 - `uniq [file]` :  Filter adjacent matching lines 
 - `exit 0`: exit with code `0` 
     - `echo $?`: Look up the latest exit code 
+- `timeout`: to limit file executing time
+- `seq [-s "STRING"][-w] [FIRST][INCREMENT][LAST]`: Print numbers from FIRST to LAST, in steps of INCREMENT.
+    - `-s "STRING"`: use `STRING` to separate numbers *(default: \n)*
+    - `-w`: equalize width by *padding* with leading zeroes
 

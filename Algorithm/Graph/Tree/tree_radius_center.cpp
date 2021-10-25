@@ -11,7 +11,7 @@ const int N = 15;
 // d[]: 深度
 // ds[]: 紀錄直徑的編號 (descendant)；若 v 在直徑上，ds[v] = [v 的孩子 (下一個 node)] 
 int n, d[N], ds[N]; 
-// mid[]: 可能的圓心座標 (若直徑為偶數則有兩個)；D: 直徑
+// mid[]: 可能的圓心座標 (若直徑為奇數則有兩個)；D: 直徑
 int mid[2], D;
 vector<int> G[N];
 int dfs1(int, int);
@@ -46,6 +46,7 @@ int main() {
     }
     mid = v; // 圓心即為最後的 v
     printf("D: %d\nrad: %d\nmid: %d\n", D, rad, mid);
+    // printf("%d", ds[mid]); 另一個可能的中心(直徑為奇時)
     return 0;
 }
 

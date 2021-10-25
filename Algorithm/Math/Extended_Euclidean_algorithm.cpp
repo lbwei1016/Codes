@@ -1,8 +1,11 @@
 /*
 ***Extended Euclidean algorithm***
-    The algorithm can be used to find (x, y) that fulfills
-    Bezout's identity: ax + by = 1 = gcd(a, b)
-
+    Description:
+        The algorithm can be used to find a solution pair: 
+            {(x, y): x, y belong to Z} 
+        that fulfills Bezout's identity: ax + by = 1 = gcd(a, b).
+        gcd(a, b) must equal to 1；if not, no integer solution can
+        be found.
     O(log(max(a, b)))
 */
 #include <iostream>
@@ -15,10 +18,11 @@ int a, b, x, y;
 int extgcd(int a, int b, int &x, int &y)
 {
     int d = a; //gcd(a, b)
+    // 當輾轉相除法尚未結束
     if(b != 0)
     {
         d = extgcd(b, a%b, y, x);
-        y -= (a/b) * x;
+        y -= (a/b) * x; // 這裡的 x, y 已經互換，所以: y = y(x2) - (a/b) * x(y2)
         /*
             The above code is equivalent to:
                 int r = extgcd(b, a%b, x, y);
@@ -30,7 +34,7 @@ int extgcd(int a, int b, int &x, int &y)
     else
     {
         x = 1;
-        y = 0;
+        y = 0; // 此時 y 為任意整數，可以設為 0 
     }
     return d;
 }

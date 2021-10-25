@@ -22,16 +22,17 @@ void segmented_sieve(ll, ll); //sieve prime in range of [a, b)
 
 int sieve() 
 {
-    for(int i=0; i<=N; i++)
-        is_prime[i] = true;
-    is_prime[0] = is_prime[1] = false;
-
+    for(int i=2; i<=N; i++) is_prime[i] = true;
     int p = 0;
     for(int i=2; i<=N; i++)
     {
         if(is_prime[i])
         {
             prime[p++] = i;
+            /*
+                其實這裡可以把初始條件改成: j=i*i，因為 < i*i 的合數 k
+                早在前面的質數就被篩掉了。O(n log(logn)) 否則 O(n logn)
+            */
             for(int j=2*i; j<=N; j+=i)
             {
                 is_prime[j] = false;
