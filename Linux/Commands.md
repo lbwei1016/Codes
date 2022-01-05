@@ -21,22 +21,31 @@
 - `dirname [/.../...]` : 顯示「目錄名」
 
 - `cp [-a][-r][-i] [from] [to]` : 複製檔案(目錄)；`-a` : 基本上代表複製原檔案的一切(包括權限) ；`-r` : 遞迴複製(用於目錄)；`-i` : 出現警告訊息
-- `touch [file]` : 建立空檔案
+- `touch [file]` : 修改檔案時間 (建立新檔案)
 - `rm [-i][-r]` : 刪除檔案(參數意義同 `cp`)
 - `mv [-i] [from(name A)] [to (name B)]` : 移動、重新命名檔案
 - 檔名為 "`-`" 的檔案要用絕對路徑來開啟：`./-`
 - 檔名有空白鍵：`vi "a file with spaces"`
 - `file [filename]`: 顯示檔案類型 (*dat, ASCII, etc*)
-- `find [-specifics]` : 找尋當前和子目錄中符合條件的檔案(目錄)
-    - `find -size 1033c`: 大小為`1033 byte`的檔案
-    - `find -user [owner] -group [group name]` : 檔案擁有者及群組
-    - `find [-...] 2>/dev/null` : 排除因權限無法存取的檔案
 - `wc [file1] [file2]` : 輸出檔案的換行數、字數與位元組數
     - `wc -l` : 換行數
     - `wc -w` : 字數
     - `wc -c` : 位元組數
     - `wc -m` : 字元數
 - `diff [option] [file1 file2...]` : output the difference between files
+## Searching
+- `which [-a] [command]`: 根據 PATH 找出執行檔的完整檔名
+    - `a`: 列出所有結果 (不只第一項) 
+- `whereis [file or dir name]`: 在**特定目錄**下搜尋
+    - `whereis -l`: 列出**特定目錄** (**特定目錄**是系統設定值)
+- `locate [-i] [num] [keyword]`: 在資料庫 `/var/lib/mlocate/` 之中搜尋
+    - `-i`: 忽略大小寫
+    - `[num]`: 僅輸出 `num` 行
+> `updatedb`: 更新資料庫 (可能要數分鐘)
+- `find [-specifics]` : 找尋當前和子目錄中符合條件的檔案(目錄)
+    - `find -size 1033c`: 大小為`1033 byte`的檔案
+    - `find -user [owner] -group [group name]` : 檔案擁有者及群組
+    - `find [-...] 2>/dev/null` : 排除因權限無法存取的檔案
 ## Permission
 - `chgrp [-R] [group] [file/dir]` : 更改群組 (root)
 - `chown [-R] [user:group] [file/dir]` : 更改擁有者 (群組也可以 : `user:group`) (root)
@@ -46,11 +55,18 @@
     - `x` : 1
     >*e.g. `chmod -R 720 myfile`*
 - ***Setuid, Setgid, Sticky BIT***
-    > 檔案加入 setuid 權限後, 其他用戶可以用檔案持有者身份執行檔案
-
 - ***setuid*** : `chmod "4"751`；cancel : `chmod [0]751`
+    > 檔案加入 `setuid` 權限後, 其他用戶可以用檔案**持有者**身份**執行**檔案  
+    e.g. `-rws-r-x---`: the ***s***
+
+
 - ***setgid*** : `chmod "2"751`；cancel : `chmod [0]751`
+    > 檔案加入 `setgid` 權限後, 其他用戶可以用該檔案**群組**身份**執行**檔案  
+    e.g. `-rwx--sr-x`: the ***s***
+
 - ***sticky bit*** : `chmod "+t" [file]`
+    > If a directory has `sticky bit` and user *A* has authority `w` and `x`, then the files created by *A* can only be deleted by *A* herself or *root*.  
+    e.g. `drwxrwxrwt`: the ***t*** 
 
 ## Read File Content
 - `cat` : read the whole file

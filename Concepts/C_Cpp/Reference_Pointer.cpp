@@ -7,7 +7,14 @@ int& fun()
 	static int x = 10;
 	return x;
 }
-
+// int (*a)[2]: 長度為2的陣列的指標；int *a[2]: 長度為2的指標陣列(兩個指標)
+void power(long long (*res)[2], long long (*m)[2], int n) {
+    while(n > 0) {
+        // if(n & 1) mul(res, m);
+        // mul(m, m);
+        n >>= 1;
+    }
+}
 int main()
 {
 	int a = 10;

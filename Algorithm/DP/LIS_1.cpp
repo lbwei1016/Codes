@@ -7,7 +7,7 @@ using namespace std;
 
 #define N 5
 int s[] = {4, 2, 3, 1 ,5};
-int dp[N]; //the length of LIS
+int dp[N]; //the length of the sequence
 int main()
 {
     ios_base::sync_with_stdio(false);

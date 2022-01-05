@@ -83,6 +83,7 @@ DP:
     zj_d054: 11310 - DELIVERY DEBACLE (UVa)
     zj_d645: 輪下亡魂 (Bounded_knapsack) (二進制拆分優化) (單調隊列優化) (*)
     zj_b229: TOI2009 第一題：路徑問題 (TOI)
+    zj_d879: 10911 - Forming Quiz teams (UVa) (位元 DP)
     code_jam: 2009_1C_C
     poj_2686: Traveling by Stagecoach (位元 DP / Shortest Path)
     poj_1769: Minimizing maximizer (Segment Tree)
@@ -101,7 +102,7 @@ DP:
     tcirc_d081: P-6-20. Hyper-cube path (Bit operation)
     tcirc_d083: P-6-22. 文無第一武無第二 (weighted LIS) (*)
     tcirc_d084: Q-6-12. 楊鐵心做 1 休 K
-    tcirc_d085: Q-6-14. K 次買賣 (*)
+    tcirc_d085: Q-6-14. K 次買賣 (*) (a more concise solution is in ./Algorithm/DP)
     tcirc_d086: Q-6-18. 矩陣乘法鏈 (zj_d652) (*)
     tcirc_d087: Q-6-23. 直升機抓寶 (LIS) (*)
     tcirc_d088: Q-6-24. 隔離採礦 (*)
@@ -129,6 +130,7 @@ Graph:
         zj_e287: 機器人的路徑 (apcs)
         cf_676D: Theseus and labyrinth (Simulation) (*)
         tioj_1013: Fire in the forest
+        PCCA_Cracking_The_Safe: (狀態壓縮 / 隱式圖)
     DFS:
         zj_a017: 五則運算
         zj_a229: 括號匹配
@@ -222,6 +224,7 @@ Math:
     atcoder_abc_215_D: Coprime 2 (coprime)
     atcoder_arc_128_B: Balls of Three Colors (找規律)
     cf_547A: Mike and Frog (找規律) (*)
+    atcoder_abc_230_E: Fraction Floor Sum (floor) (*)
 
 Prefix (Suffix) Sum:
     zj_e339: 前綴合練習
@@ -241,12 +244,13 @@ Simulation:
     zj_c297: APCS-2016-1029-4棒球遊戲 (bitwise operation)
 
 Sliding Window (爬行法):
-    poj_3061: Subsequence (tcirc_d031)
+    poj_3061: Subsequence (tcirc_d031) 
     poj_3320: Jessica's Reading Problem
     poj_3276: Face The Right Way
     tcirc_d032: P-3-8. 固定長度區間的最大區段差 (deque)(*)
     tcirc_d037: Q-3-13. X差值範圍內的最大Y差值 (deque)(*)
     atcoder_abc_215_F: Dist Max 2 (Binary Search) (poj_2187) (*)
+    HW_Midterm: Minimum size subarray sum
 
 String:
     cf_559B: Equivalent Strings (Divide and Conquer) (*)

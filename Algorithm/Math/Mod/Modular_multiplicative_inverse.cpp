@@ -11,7 +11,7 @@
             O(log n)
     Solution II:
         Extended Euclidean algorithm: (a * x) mod P = 1
-        => ax - Py = 1 = gcd(a, P)
+        => ax - Py = 1 = gcd(a, P) (互質!!!!!!!!!!)
             O(log n)
     Note:
         若 n | (a-b)，則可以說「在模 n 下，a 同餘 b」，即 a ≡ b(mod n)。
@@ -44,14 +44,21 @@ ll exp(ll x, int n) {
     return res;
 }
 int main() {
-    scanf("%d%d", &n, &p);
+    printf("How many inverses to find?\n");
+    scanf("%d", &n);
+    printf("To mod what?\n");
+    scanf("%d", &p);
     for(int i=0; i<n; i++) {
-        int a, res, x = 0, y = 0;
+        int a, x = 0, y = 0;
+        ll res;
+        printf("Whose inverse?\n");
         scanf("%d", &a);
         res = exp(a, p-2);
         extgcd(a, p, x, y);
         // cout << x << '\n';
-        printf("%lld %d\n", res, (x+p)%p);
+        // printf("%lld %d\n", res, (x+p)%p);
+        // printf("x: %d y: %d\n", x, y);
+        printf("Your inverse is here: %d\n", (x+p)%p);
     }
     return 0;
 }

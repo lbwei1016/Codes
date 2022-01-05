@@ -1,5 +1,0 @@
-s = input()
-s2 = s.split()
-n = int(s2[0])
-m = int(s2[1])
-print(2**m - 2**(m-n) + 1)

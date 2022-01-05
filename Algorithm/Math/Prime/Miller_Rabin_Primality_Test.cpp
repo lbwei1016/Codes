@@ -50,14 +50,14 @@ bool miller_rabin(ll n, ll a) {
     return false;
 }
 int main() {
-    // int n;
-    // cin >> n;
-    // if(miller_rabin(n, 2) && miller_rabin(n, 7) && miller_rabin(n, 61))
-    //     cout << "n: " << n << " is a prime\n";
-    // else cout << "n: " << n << " is \"not\" a prime\n";
-    for(int i=0; i<1e5; ++i) {
-        if(miller_rabin(i, 2) && miller_rabin(i, 7) && miller_rabin(i, 61))
-            printf("%d\n", i);
-    }
+    int n;
+    cin >> n;
+    if(miller_rabin(n, 2) && miller_rabin(n, 7) && miller_rabin(n, 61))
+        cout << "n: " << n << " is a prime\n";
+    else cout << "n: " << n << " is \"not\" a prime\n";
+    // for(int i=0; i<1e5; ++i) {
+    //     if(miller_rabin(i, 2) && miller_rabin(i, 7) && miller_rabin(i, 61))
+    //         printf("%d\n", i);
+    // }
     return 0;
 }

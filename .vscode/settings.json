@@ -72,7 +72,10 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "rope": "cpp",
-        "slist": "cpp"
+        "slist": "cpp",
+        "string.h": "c",
+        "stdio.h": "c",
+        "stdbool.h": "c"
     },
     "C_Cpp.errorSquiggles": "Enabled",
     "python.pythonPath": "C:\\Users\\williamlin\\anaconda3\\python.exe"

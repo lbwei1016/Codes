@@ -1,4 +1,5 @@
 #include <iostream>
+// #include <bitset>
 using namespace std;
 
 void print(int comb, int n) {
@@ -29,8 +30,12 @@ void bit(int n, int k)
 void bit_2(int sup)
 {
     int sub = sup;
+    // bitset<5> B;
     do
     {
+        // B = sub;
+        // for(int i=0; i<5; ++i) cout << B[i];
+        // cout << '\n';
         cout << sub << '\n';
         sub = (sub - 1) & sup;
     } while (sub != sup);
@@ -44,9 +49,9 @@ int main()
     // int sup;
     // cin >> sup;
     // bit_2(sup);
-    // for(int i=0; i < 1<<5; i++)
-    // {
-    //     cout << i << '\n';
-    // }
+    // // for(int i=0; i < 1<<5; i++)
+    // // {
+    // //     cout << i << '\n';
+    // // }
     return 0;
 }
