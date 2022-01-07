@@ -47,6 +47,12 @@
     - `find -user [owner] -group [group name]` : 檔案擁有者及群組
     - `find [-...] 2>/dev/null` : 排除因權限無法存取的檔案
 ## Permission
+- `umask [SOGO]`: 設定新建檔案的預設權限
+    - `S`: 特殊權限
+    - `O`: 持有者
+    - `G`: 群組
+    - `O`: 其他人
+    > 注意: `umask` 的設定值表示使用者所**失去**的權限！！
 - `chgrp [-R] [group] [file/dir]` : 更改群組 (root)
 - `chown [-R] [user:group] [file/dir]` : 更改擁有者 (群組也可以 : `user:group`) (root)
 - `chmod [-R] [xyz] [file/dir]` : 檔案權限更改 

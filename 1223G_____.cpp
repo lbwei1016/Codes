@@ -35,6 +35,11 @@ int main() {
             ++atts;
         }
     }
+    // puts("seq");
+    // for(auto x : seq) {
+    //     cout << x << ' ';
+    // }
+    // puts("");
     cin >> m;
     vector<vector<string> > all(m, vector<string>(atts));
     for(int i=0; i<m; ++i) {
@@ -42,12 +47,18 @@ int main() {
             cin >> all[i][j];
         }
     }
+    // puts("atts");
     // 依 attribute 擺放
     for(int at=0; at<atts; ++at) {
+        // printf("at: %d\n", at);
         for(int i=0; i<m; ++i) {
             mp[seq[at]].push_back(P{i, all[i][at]});
+            // cout << "seq[at]: " << seq[at] << " P: {" <<  i << ' ' << all[i][at] << "}\n";
         }
+        // puts("\n");
     }
+
+    
 
     cin >> n;
     string query, pre = "";

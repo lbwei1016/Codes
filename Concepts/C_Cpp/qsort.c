@@ -16,7 +16,7 @@ int cmp(const void *p, const void *q) {
 }
 int main() {
     struct S some[100];
-    // input "some"
+    // input "some", sort first 50 elements
     qsort(some, 50, sizeof(struct S), cmp);
     return 0;
 }
