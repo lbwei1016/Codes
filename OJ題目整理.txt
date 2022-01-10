@@ -279,6 +279,7 @@ Else:
     zj_e294: APCS 類似題 - 小崴的新發現 (apcs)
     UVa_403: Postscript (patience)
     UVa_405: Radar Scopes (floating_point)
+    leetcode_202: Happy Number (fast_and_slow_pointer)
 
 Unfinished:
     zj_a268, zj_d882: 河內塔變形
