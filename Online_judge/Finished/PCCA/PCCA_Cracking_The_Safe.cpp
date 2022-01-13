@@ -7,7 +7,7 @@
         first time when a status is met doesn't guarantee that its "best" outcome (which
         means "safe" might not be the smallest for it now) will be produced. If I 
         am to use memoization, I have to "return" whenever there is a result for some
-        status, despite the fact that it may not be the best one. Hecne, I would be able to 
+        status, despite the fact that it may not be the best one. Hecne, I would  
         produce an "answer" which is not the optimized situation.
 
         And BFS comes!!!
