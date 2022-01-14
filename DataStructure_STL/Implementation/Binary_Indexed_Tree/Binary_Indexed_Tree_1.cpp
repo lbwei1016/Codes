@@ -5,6 +5,7 @@
             1. 建構 O(n logn) 或 O(n)
             2. (單點)增加／修改數值 O(log n) (區間修改見BIT_2)
             3. 計算前綴和 O(log n)
+        空間複雜度: O(n)
 */
 #include <iostream>
 #include <cstring>
