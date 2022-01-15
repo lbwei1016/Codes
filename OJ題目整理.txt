@@ -226,6 +226,9 @@ Math:
     cf_547A: Mike and Frog (找規律) (*)
     atcoder_abc_230_E: Fraction Floor Sum (floor) (*)
 
+Monotone:
+    Kattis: Bungee Builder
+
 Prefix (Suffix) Sum:
     zj_e339: 前綴合練習
     zj_f638: 支點切割 (apcs / Recursion)
