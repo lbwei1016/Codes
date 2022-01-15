@@ -7,6 +7,7 @@
 * Codeforces
 * TIOJ
 * UVa
+* Kattis
 * Formosa OJ
 * GPE
 * Else...
