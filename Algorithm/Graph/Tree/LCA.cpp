@@ -43,6 +43,6 @@ int LCA(int x, int y) {
     return ancestor[x][0];
 }
 int main() {
-    
+    // tin[0] = -1, tout[0] = INF
     return 0;
 }
