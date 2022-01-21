@@ -3,12 +3,11 @@
     - `/ [search item]`: to search
 # Directory and File
 ## Go To
-- `cd` ~ : 回到家目錄
+- `cd ~` : 回到家目錄
 - `cd ~[account]` : 到[account]的家目錄
-- `cd`  : 回到家目錄
+- `cd`: 回到家目錄
 - `cd` .. : 前往上層目錄
-- `cd` - : 回到上一個目錄
-
+- `cd` - : 回到上一個工作目錄
 - `.` : 代表當前目錄
 - `..` : 代表上一層目錄
 
@@ -46,6 +45,18 @@
     - `find -size 1033c`: 大小為`1033 byte`的檔案
     - `find -user [owner] -group [group name]` : 檔案擁有者及群組
     - `find [-...] 2>/dev/null` : 排除因權限無法存取的檔案
+
+- `grep [pattern] [file1/dir1] [file2/dir2]` : Find ***contents/files*** that matches the pattern
+
+    > `grep`represents for `g/RE/p` 
+    >
+    > 可以用一般關鍵字或正規表示法
+
+    - `grep -q [...]`: If `pattern` is found, exit with code `0`, otherwise `1`
+    - `grep -i [...]`: 忽略大小寫
+    - `-n`: 標示行號
+    - `-v`: 反向匹配 (排除 `pattern`)
+    - `-r`: recursively
 ## Permission
 - `umask [SOGO]`: 設定新建檔案的預設權限
     - `S`: 特殊權限
@@ -98,6 +109,7 @@
 - `STDIN [0]`
 - `STDOUT [1]`
 - `STDERR [2]`
+  
     > Note: `cat -` means reading STDIN(user input) for `cat`
 
 ## Redirection
@@ -169,6 +181,7 @@
     - `window`
 # Scheduling
 - `cron`: 
+  
     > *every user* has their own `crontab` (including *system* itself)
 - `crontab [-erl]`
     - `-e`: edit
@@ -178,7 +191,7 @@
 - `md5sum`: MD5 (*Message Digest algorithm 5*)
 - `sha256sum`: SHA-256
 # Condition and Loop
-```sh
+```bash
 #!/bin/bash
 
 # prints 0000, 0001..., 9999 (pads 0)
@@ -194,16 +207,68 @@ do
     echo $i
 done
 ```
+# Variables
+
+```bash
+myname=William # tcsh: set myname=William
+sayhi="I am ${myname}" # I am William
+notsay='I am ${myname}' # I am ${myname}
+withBlank=I\ am\ ${myname}
+withquote=It\'s\ my\ pleasure
+
+version=$(uname -r) or version=`uname -r` 
+echo ${version} # 13.0 RELEASE
+
+myname="$myname Lin" # append
+export myname # environment variable: 僅子程序會繼承父程序的環境變數
+# tcsh: setenv name Ruby; unsetenv name
+
+unset myname
+
+env or export # 列出環境變數 
+set or declare # 列出所有變數
+
+declare -i sum=100+5 # -i: 將變數定義成為整數類型
+# echo ${sum}=> 105
+declare -r name=William # -r: readonly
+```
+* `read -p "Please enter your name: " -t 30 name` 
+
+  * `-p`: 顯示提示字元
+  * `-t <seconds>`: 等待使用者多久 
+
+  > `tcsh`: `set name=$<` 
+
+
 # Others
+
 - `sort [file]` : Sort the given file
+
 - `strings [file]` : Prints the printable character sequences that are at least 4 characters long
-- `grep [pattern] [file1/dir1] [file2/dir2]` : Find contents/files that matches the pattern
-    - `grep -q [...]`: If `pattern` is found, exit with code `0`, otherwise `1`
+
 - `uniq [file]` :  Filter adjacent matching lines 
+
 - `exit 0`: exit with code `0` 
     - `echo $?`: Look up the latest exit code 
+
 - `timeout`: to limit file executing time
+
 - `seq [-s "STRING"][-w] [FIRST][INCREMENT][LAST]`: Print numbers from FIRST to LAST, in steps of INCREMENT.
     - `-s "STRING"`: use `STRING` to separate numbers *(default: \n)*
     - `-w`: equalize width by *padding* with leading zeroes
+
+- `cut {-c|-b} <number of character or byte> [file]`: 擷取資料
+
+    - `-c`: character
+
+    - `-b`: byte
+
+        > e.g. `ls -al | cut -c 1-9,40-`: 擷取`ls -al`中第 1 到 9 個字元及第 40 個字元 (含) 以後的資料
+
+- `xargs [-dnp] <command>`: 將 STDIN 的輸入作為 \<command> 的參數使用 (預設為 `/bin/echo`)
+
+    - `-d\n`: 指定 delimiter 為 `＼n` (預設忽略所有空白、換行、tab)
+    - `-n <number>`: 指定每一次執行指令所使用的參數個數上限值
+    - `-p`: 顯示執行前確認
+    - `-t`: 顯示執行的指令 (執行後)
 
