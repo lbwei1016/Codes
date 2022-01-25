@@ -17,6 +17,8 @@
 - `git clone [SSH / HTTPS] [new file name]`: 複製 Repository 到本地 (`new file name` is optional)
 ## Branch
 - `git branch [new branch name]`: 在目前位置 (`HEAD` 所指處) 建立一新的 `branch`，但仍指向原先的 `branch` (最初的 `branch` 為 `master`)
+- `git branch -d <branch name>`: delete local branch
+- `git push <remote name> --delete <branch name>`: delete remote branch
 > 若無參數則顯示所有 `branch`
 -  `git branch -a`: 顯示 *local* + *remote* 的 `branch`
 - `git checkout [-b][branch name]`: 將 `HEAD` 移至 `[branch name]`
@@ -30,6 +32,12 @@
     - `-m`: 不開啟編輯器，直接輸入 *annotated tag* 的內容 (類似 `commit -m`)
 - `git show <object>`: 顯示 `<object>` 的資訊 (詳情待查)
     - `git show <tag name>`: 顯示 `tag` 的內容
+## Else
+* `git bisect start`
+    * `git bisect good <commit id>`
+    * `git bisect bad <commit id>`
+    > 設定 "好的" 和 "壞的點"，然後 `git` 利用二分搜的方式找到錯誤的 commit
+    > https://medium.com/%E9%80%B2%E6%93%8A%E7%9A%84-git-git-git/%E5%BF%AB%E9%80%9F%E6%89%BE%E5%87%BA%E9%8C%AF%E8%AA%A4%E9%BB%9E-%E4%BD%BF%E7%94%A8git-bisect-e1c3338e8db1
 ---
 ## Github
 ### **開始操作前記得 pull !!! 結束前記得 push !!!**
