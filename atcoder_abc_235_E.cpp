@@ -1,3 +1,15 @@
+/*
+***MST / LCA***
+    Description:
+        Given a graph first. After that, give an edge once ,and find 
+        the MST after considering that edge, i.e. whether that edge can 
+        be substituted for an existing edge.
+    Solution:
+        Kruskal for MST;
+        LCA for finding the largerst edge in the path along the two 
+        vertices of the given edge. (O(logV))
+    O(ElogE + QlogV)
+*/
 #include <bits/stdc++.h>
 #define max(a, b) ((a)>(b)?(a):(b))
 using namespace std;
@@ -9,7 +21,7 @@ struct E {
         return w < e.w;
     }
 };
-int n, m, q;
+int n, m, q;    
 vector<E> es;
 vector<E> mst[MAX_N];
 int p[MAX_N];

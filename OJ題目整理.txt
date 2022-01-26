@@ -152,6 +152,7 @@ Graph:
         tioj_1795: 咕嚕咕嚕呱啦呱啦 (最大、最小 MST)
         UVa_10600: ACM Contest and Blackout (Second-best Spanning Tree -- SBST)
         zj_c495 次小生成樹 (UVa_10600) (*)
+        atcoder_235_E: MST + 1 (LCA)
     Shortest Path:
         poj_3225: Roadblocks (second shortest path / Dijkstra)
         poj_3169: Layouts (Bellman-Ford)

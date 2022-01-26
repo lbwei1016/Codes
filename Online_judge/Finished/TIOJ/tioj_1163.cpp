@@ -15,7 +15,7 @@ int V, E, Q, par[MAX_V], tin[MAX_V], tout[MAX_V], t_cnt=0;
 vector<Edge> es;
 vector<P> G[MAX_V];
 P anc[MAX_V][logV]; // anc[][].u: 該代祖先是誰；anc[][].w: 到該祖先的最大權重
-bitset<MAX_V> vis;
+bitset<MAX_V> vis; 
 
 bool cmp(Edge e1, Edge e2) { return e1.w < e2.w; }
 int find(int x) { return par[x] < 0 ? x : par[x]=find(par[x]); }
