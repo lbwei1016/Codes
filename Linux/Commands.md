@@ -105,7 +105,9 @@
 ## Compression / Archive File
 - `gzip [-c] [file]` : To compress file to `.gz`
     - `-c` : to decompress and output on STDOUT (equivalent to `zcat [file]`)
+    
 - `bzcat [file]` : decompress `.bzip` 
+
 - `tar [-cxfv] [file]` : 
     >`tar` is a computer software utility for collecting many files into one *archive file*, not for compressing files
     - `-c` : create a new `.tar` file
@@ -257,6 +259,10 @@ declare -r name=William # -r: readonly
 
     - `-n`: numeric sort
 
+    - `-o <output file name>`: output the sorting outcome to a file 
+
+      > e.g. `sort -o file.txt file.txt`: output to the same file (do not use `>`)
+
 - `strings [file]` : Prints the printable character sequences that are at least 4 characters long
 
 - `uniq [file]` :  Filter adjacent matching lines 
@@ -300,4 +306,13 @@ declare -r name=William # -r: readonly
     - `![n]`: execute the command that is numbered `n` (`history`列表左方的編號)
     - `!<the first few words of a command>`: 輸入指令的開頭的數個字，來執行`history`中符合該條件的最近指令
 
-- `awk '/pattern/{<command>}'`: **A very powerful language, used to handle scripts...**  
+- `awk '/pattern/{<command>}' <input file>`: **A very powerful language, used to handle scripts...**  
+
+    - `BEGIN{<actions>}`: `actions` are done before extracting input file
+    - `END{<actions>}`: `actions` are done before `awk` ends
+    - `substr(string, start, end)`: return the substring of `string`from `start` to `end`(if `end` is not specified, then `end`is the end of the file)
+    - `split(string, array, deli)`: split `string`by`deli`and store it in`array` 
+        - *array*: `arr[1]` => access the first element (index is ***1***)
+    - `match()`
+
+- `sed '<pattern and action>' <input file>`:................
