@@ -1,8 +1,10 @@
 #!/bin/bash
 #Program
 #   Convert Big-5(actually is ISO-8859 here) files to UTF-8
+#   Currently, you must press Ctrl^C to end this program.
 #History: (date/author/version)
 #2021/08/03     LBWei   1.0
+echo "Please enter the pathes to the files going to be converted from big5 to UTF-8."
 while read file
 do
     echo ${file}
