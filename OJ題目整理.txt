@@ -177,7 +177,7 @@ Graph:
         tcirc_d114: Q-8-12. 佔領連續的城鎮 (DP)
         tcirc_d115: Q-8-15. 樹上一位不回家的推銷員 (TSP / tree_diameter) (*)
         tcirc_d116: Q-8-16. 病毒演化 (DP / apcs) (zj_f582) (*)
-        tioj_1838: 作夢中 Dreaming (IOI 2013) (tree_diameter / tree_center) (*)
+        tioj_1838: 作夢中 Dreaming (IOI 2013) (tree_diameter / tree_center) (*) 
         poj_1741: Tree (Divide and Conquer) (*)
         UVa_10077: The Stern-Brocot Number System (BST)
         UVa_10859: Placing Lampposts (Minimum Vertex Cover) 

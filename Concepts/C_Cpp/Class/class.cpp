@@ -4,6 +4,8 @@ using namespace std;
 
 class Animal
 {
+    // by default, members are private
+    int private_num;
     private:
         const int id; 
         //private members can only be accessed through "member functions"
