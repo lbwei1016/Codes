@@ -23,6 +23,7 @@ int solve(string::iterator begin, string::iterator end) {
         suf_hash = (suf_hash * Base + int64_t(*(end - i - 1))) % MOD;
         p = p * Base % MOD;
 
+        // 即使 hash 值相同，仍檢查字串是否相同 (避免碰撞但沒偵測到)
         if(pre_hash == suf_hash && pre == suf) {
             r = i + 1;
             break;
