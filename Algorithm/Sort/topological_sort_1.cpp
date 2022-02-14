@@ -1,5 +1,5 @@
 /*
-***Topology / Sort***
+***Topology / Sort*** (Kahn’s Algorithm)
 */
 #include <bits/stdc++.h>
 using namespace std;

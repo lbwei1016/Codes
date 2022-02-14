@@ -1,5 +1,5 @@
 /*
-***Topology / Sort***
+***Topology / Sort*** (Kahn’s Algorithm)
     Note: 
         誠心建議，使用迴圈版 (queue 版) 不要用這個遞迴版 (2021/7/28)
 */
