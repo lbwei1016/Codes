@@ -1,7 +1,8 @@
 *.exe
 test.*
-tmp.*
+# tmp.*
 temp.*
+tmp.*
 _vscode_shortcut.md
 ?.*
 debugcatcapoo2.0

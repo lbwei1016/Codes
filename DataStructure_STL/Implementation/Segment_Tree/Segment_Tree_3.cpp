@@ -28,6 +28,7 @@ node *build(int l, int r) {
     // construct 的同時也會更新 (constructor)
     return new node(build(l, mid), build(mid, r));
 }
+// 單點修改
 void modify(node *a, int l, int r, int pos, int val) {
     if(l+1 == r) {
         a->val = val; return;

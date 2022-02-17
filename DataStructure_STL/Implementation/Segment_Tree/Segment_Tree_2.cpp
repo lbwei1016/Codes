@@ -20,7 +20,7 @@ struct Node
     // 其實 "add" 類似於 "lazy tag"，但 "add" 不往子節點推，只在查詢時乘以區間大小加入答案中
     ll add = 0; //該節點的區間的所有元素皆加上的值 (算在自己頭上的；已經給父，小孩在查詢時才給)
     ll sum = 0; //該節點的區間和，去除上述"add"的值 (子節點所累加的；小孩給的)
-}node[1 << 6];
+} node[1 << 6];
 
 //一次修改給定區間的值
 void add(int x, int y, int k, int v, int L, int R) //O(log n)

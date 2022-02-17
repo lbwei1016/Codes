@@ -114,6 +114,12 @@
     - `-x` : extract a `.tar` file
     - `-f` : designate a file, otherwise STDIN
     - `-v` : more detailed listing (for even more :  `-vv`)
+## Others
+- `mktemp`: Generate a temp file or directory
+    - `-d`: generate a directory
+    - `-p [path]`: generate the tmp file under `[path]` instead of `/tmp`
+    - `/tmp/my_tmp_file_XXXXXX.txt`: 指定檔名格式 (*X* 會被替換成亂數)
+> Usage: **MY_TMP_FILE=\`mktemp -d /home/gaga\`**
 # Streams
 >Every program you may run on the command line has 3 streams, STDIN, STDOUT and STDERR.
 - `STDIN [0]`
@@ -228,6 +234,7 @@ sayhi="I am ${myname}" # I am William
 notsay='I am ${myname}' # I am ${myname}
 withBlank=I\ am\ ${myname}
 withquote=It\'s\ my\ pleasure
+echo `echo William` # William (`` Back quotes, the stdout of the command)
 
 version=$(uname -r) or version=`uname -r` 
 echo ${version} # 13.0 RELEASE
@@ -252,6 +259,12 @@ declare -r name=William # -r: readonly
 
   > `tcsh`: `set name=$<` 
 
+# Superuser
+- `su`: requires *root's* password (僅身分變為 *root* (uid=0, gid=0, etc)，其他環境變數不變)
+    - `su -l [account]`: 取得 *account* 的權限 (輸入 *account* 的密碼)
+    - `su -`: 環境變數跟著變
+- `sudo`: requires *user's* password
+    > edit `/etc/sudoers` or `/usr/local/etc/sudoers` with `visudo`
 
 # Others
 
@@ -316,3 +329,17 @@ declare -r name=William # -r: readonly
     - `match()`
 
 - `sed '<pattern and action>' <input file>`:................
+- `shutdown`: literally
+    - `-r`: reboot
+    - `-h`: halt
+    - `-p`: halt + poweroff
+    - two types of time format
+        - `yymmddhhmm`: *2202152330 = 2022/02/15 23:30* (BSD style)
+        - `hh:mm` (Linux style)
+        - `+[time]` (defualt minute, change by appending `s`, `m`, or `h`)
+> Usage: `sudo shutdown -r {2202152330, +30s} "This is message!"`
+
+> Q: `shutdown` 和 `shutdown -p` 差在哪裡?<br>
+> A: 根據觀察，單純 `shutdown` 會進入 ***single user mode***，`shutdown -p` 才會真正關閉電源
+- `chfn`: change GECOS (General Electric Comprehensive Operating System)
+    - Commonly used to record *personal information*
