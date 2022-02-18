@@ -38,7 +38,7 @@
     - `a`: 列出所有結果 (不只第一項) 
 - `whereis [file or dir name]`: 在**特定目錄**下搜尋
     - `whereis -l`: 列出**特定目錄** (**特定目錄**是系統設定值)
-- `locate [-i] [num] [keyword]`: 在資料庫 `/var/lib/mlocate/` 之中搜尋
+- `locate [-i] [num] [keyword]`: 在資料庫 `/var/lib/mlocate/` 之中搜尋 (not built-in)
     - `-i`: 忽略大小寫
     - `[num]`: 僅輸出 `num` 行
 > `updatedb`: 更新資料庫 (可能要數分鐘)
@@ -114,12 +114,46 @@
     - `-x` : extract a `.tar` file
     - `-f` : designate a file, otherwise STDIN
     - `-v` : more detailed listing (for even more :  `-vv`)
+
 ## Others
 - `mktemp`: Generate a temp file or directory
     - `-d`: generate a directory
     - `-p [path]`: generate the tmp file under `[path]` instead of `/tmp`
     - `/tmp/my_tmp_file_XXXXXX.txt`: 指定檔名格式 (*X* 會被替換成亂數)
 > Usage: **MY_TMP_FILE=\`mktemp -d /home/gaga\`**
+
+# Process
+> A program is dead, a process is alive, an *executable program in action*.<br>
+> The first process in Linux is **init** (PID=1)
+## Four states of processes
+- **running / runnable (R)**
+    - Alreay be **running** or waiting **in the queue** for executioin. (***ready*** to run)
+- **waiting / sleeping (S: interruptible; D: uninterruptible)**
+    - Wait for some events or operations. (***not*** ready to run)
+- **stop (T)**
+- **zombie (Z)**
+    - A process has **completed** its execution, but is waiting to retrieve its exit state. 
+    - If it exits, the process is ***dead***.
+## List
+- `ps`: show processes
+- `pstree`: bring up the entire hierarchy of processes
+- `top`: show the dynamic view of processes
+- `htop`: enhanced `top` (no built-in)
+- `jobs`: list all jobs
+    > ***job***: A job is a concept used by the shell - any program you **interactively start** that doesn't detach (ie, not a daemon) is a job. <br>
+    > ***process***: Any running programs.
+## Foreground / Background
+- `[command] &`: Execute *command* in bg..
+- `fg [no.]`: Bring the job whose number is *no.* to foreground (fg.).
+    - `fg`: Bring the last job sent to the bg. to fg.
+- `bg [no.]`: Resume the background job with job number *no.*. 
+    - `bg`: Resume the default job (with a **+** at its STAT).
+> Background processes don't accept input, but they outputs!!!
+
+### References: 
+- https://www.westfloridacomponents.com/blog/life-cycle-process-linux/
+- https://unix.stackexchange.com/questions/4214/what-is-the-difference-between-a-job-and-a-process
+
 # Streams
 >Every program you may run on the command line has 3 streams, STDIN, STDOUT and STDERR.
 - `STDIN [0]`
