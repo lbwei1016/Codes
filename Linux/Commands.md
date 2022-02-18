@@ -134,25 +134,59 @@
 - **zombie (Z)**
     - A process has **completed** its execution, but is waiting to retrieve its exit state. 
     - If it exits, the process is ***dead***.
-## List
+## Show processes
 - `ps`: show processes
+    ### **STAT** field (shown by `ps T`)
+    - `<`: High-priority task (not nice to other processes).
+    - `N`: Low-priority (nice to other processes).
+    - `L`: process has pages locked into memory (typically used by real-time processes).
+    - `s`: A session leader. A session leader is a process that has launched process groups.
+    - `l`: Multi-thread process.
+    - `+`: A foreground process.
 - `pstree`: bring up the entire hierarchy of processes
 - `top`: show the dynamic view of processes
 - `htop`: enhanced `top` (no built-in)
 - `jobs`: list all jobs
+    ```
+    [1]     job1
+    [2]+    job2
+    [3]-    job3
+
+    *For "+" and "-", see below: fg / bg.*
+    ```
     > ***job***: A job is a concept used by the shell - any program you **interactively start** that doesn't detach (ie, not a daemon) is a job. <br>
     > ***process***: Any running programs.
 ## Foreground / Background
-- `[command] &`: Execute *command* in bg..
-- `fg [no.]`: Bring the job whose number is *no.* to foreground (fg.).
-    - `fg`: Bring the last job sent to the bg. to fg.
-- `bg [no.]`: Resume the background job with job number *no.*. 
-    - `bg`: Resume the default job (with a **+** at its STAT).
-> Background processes don't accept input, but they outputs!!!
+- `[command] &`: Execute *command* in background.
+- `fg %[no.]`: Bring the job whose job number is *no.* to foreground (fg.).
+    - `fg`: Bring the last job sent to the bg. (default job) to fg..
+- `bg %[no.]`: Resume the background job with job number *no.*. 
+    - `bg`: Resume the default job (with a "**+**" at its STAT).
+    > "**-**": Indicates the job prior to default job,which means if the default job exits, it becomes the new default job.
+> Background processes don't accept input, but they outputs!!!<br>
+> Note: Without ***%***, the number will represent **PID**.
+
+## Signals
+
+- `Ctrl-z`: Suspend the currently executing job and bring it to background.
+- `Ctrl-c`: Stop the currently executing job.
+### List of signals
+- `SIGHUP`: Signal 1. Automatically sent to a process  when the terminal it is running in is closed.
+- `SIGINT`: Signal 2. Sent to a process you hit `Ctrl+C`. The process is interrupted and told to terminate.
+- `SIGQUIT`: Signal 3. Sent to a process if the user sends a quit signal `Ctrl+D`.
+- `SIGKILL`: ***Signal 9***. The process is *immediately killed* and will not attempt to close down cleanly. The process does not go down gracefully.
+- `SIGTERM`: ***Signal 15***. This is the *default* signal ***sent by kill***. It is the standard program termination signal.
+- `SIGTSTP`: ***Signal 20***. Sent to a process when you use `Ctrl+Z`. It stops the process and puts it in the background.
+
+## Termination
+
+- `kill [signal] [pid / %job-no.]`: Gracefully terminate a process by sending *signal*. (Default SIGTERM: 15)
+- `killall [process name]`: kill processes by name
 
 ### References: 
-- https://www.westfloridacomponents.com/blog/life-cycle-process-linux/
-- https://unix.stackexchange.com/questions/4214/what-is-the-difference-between-a-job-and-a-process
+- https://www.westfloridacomponents.com/blog/life-cycle-process-linux/ (process)
+- https://unix.stackexchange.com/questions/4214/what-is-the-difference-between-a-job-and-a-process (job)
+- https://www.howtogeek.com/440848/how-to-run-and-control-background-processes-on-linux/ (ps)
 
 # Streams
 >Every program you may run on the command line has 3 streams, STDIN, STDOUT and STDERR.
@@ -298,6 +332,7 @@ declare -r name=William # -r: readonly
     - `su -l [account]`: 取得 *account* 的權限 (輸入 *account* 的密碼)
     - `su -`: 環境變數跟著變
 - `sudo`: requires *user's* password
+    
     > edit `/etc/sudoers` or `/usr/local/etc/sudoers` with `visudo`
 
 # Others
