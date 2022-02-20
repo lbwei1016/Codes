@@ -1,7 +1,24 @@
 # Help
 - `man`: man page
     - `/ [search item]`: to search
-# Directory and File
+# Files
+## File types
+- `-`: Regular file
+- `b`: Block device file
+- `c`: Character device file
+    > The above *device* files are used for device I/O.
+- `d`: Directory
+- `l`: Symbolic link
+    - `ln [-s] [file to be linked] [link file]`: make a link file
+        - `-s`: soft link (hard link by default)
+    > **Soft link** points to *pathname*; **hard link** has the same *inode* with the original file
+- `p`: Named pipe (FIFO)
+    > These type of files act as *pipe* between other files.<br> ***interprocess communication (IPC)***
+
+    > Unidirectional: a *read-only end* and a *write-only end*
+- `s`: UNIX domain socket
+    > Cross-system IPC or IPC on a network.
+
 ## Go To
 - `cd ~` : 回到家目錄
 - `cd ~[account]` : 到[account]的家目錄
@@ -42,8 +59,8 @@
     - `-i`: 忽略大小寫
     - `[num]`: 僅輸出 `num` 行
 > `updatedb`: 更新資料庫 (可能要數分鐘)
-- `find [-specifics]` : 找尋**當前和子目錄中**符合條件的檔案(目錄)
-
+- `find [find where] [-size / -name...] [pattern] [-exec <command>]` : 找尋**當前和子目錄中**符合條件的檔案 (或指定目錄下的檔案)
+    - `find /home/gaga -name "*.cpp"`: search under */home/gaga* for filename *\*.cpp*
     - `find -size 1033c`: 大小為`1033 byte`的檔案
     - `find -user [owner] -group [group name]` : 檔案擁有者及群組
     - `find [-...] 2>/dev/null` : 排除因權限無法存取的檔案
@@ -81,12 +98,12 @@
     >*e.g. `chmod -R 720 myfile`*
 - ***Setuid, Setgid, Sticky BIT***
 - ***setuid*** : `chmod "4"751`；cancel : `chmod [0]751`
-    > 檔案加入 `setuid` 權限後, 其他用戶可以用檔案**持有者**身份**執行**檔案  
+    > 檔案加入 `setuid` 權限後, 其他用戶可以用檔案**持有者**身份**執行**檔案 (effective uid)
     e.g. `-rws-r-x---`: the ***s***
 
 
 - ***setgid*** : `chmod "2"751`；cancel : `chmod [0]751`
-    > 檔案加入 `setgid` 權限後, 其他用戶可以用該檔案**群組**身份**執行**檔案  
+    > 檔案加入 `setgid` 權限後, 其他用戶可以用該檔案**群組**身份**執行**檔案 (effective gid)
     e.g. `-rwx--sr-x`: the ***s***
 
 - ***sticky bit*** : `chmod "+t" [file]`
@@ -121,6 +138,16 @@
     - `-p [path]`: generate the tmp file under `[path]` instead of `/tmp`
     - `/tmp/my_tmp_file_XXXXXX.txt`: 指定檔名格式 (*X* 會被替換成亂數)
 > Usage: **MY_TMP_FILE=\`mktemp -d /home/gaga\`**
+- `du`: estimate file space usage
+
+# File System
+- `mount -t [type] [device] [dir]`: mount *device* on *dir*
+    - `[type]`: file system type
+- `unmount [dir]`: unmount the files mounted on *dir*
+> *File access is available after it is mounted.*
+- `df`: report file system disk space usage 
+- ***/etc/fstab***: Filesystem in this file will be checked and mounted automatically *at 
+boot time*.
 
 # Process
 > A program is dead, a process is alive, an *executable program in action*.<br>
@@ -267,13 +294,21 @@
     - `pane`: every `pane` is a independent `shell session`
     - `window`
 # Scheduling
-- `cron`: 
-  
+- `cron`: execute **commands** in `crontab`
     > *every user* has their own `crontab` (including *system* itself)
 - `crontab [-erl]`
     - `-e`: edit
     - `-r`: remove
     - `-l`: list current crontable
+- ***periodic utility***: called by `cron` and execute **shell scripts** in certain directories
+    - `/etc/periodic/*`
+        - `./daily`
+        - `./weekly`
+        - ...
+    - `/usr/local/etc/periodic*`: custom system programs
+        - ...
+> Note: Execution order depends on *filename*. (number-prefixed filename)
+- `at`: executes commands at a specified time
 # Hash (here to check ***data integrity***)
 - `md5sum`: MD5 (*Message Digest algorithm 5*)
 - `sha256sum`: SHA-256
@@ -371,7 +406,7 @@ declare -r name=William # -r: readonly
 
 - `xargs [-dnp] <command>`: 將 STDIN 的輸入作為 \<command> 的參數使用 (預設為 `/bin/echo`)
 
-    - `-d\n`: 指定 delimiter 為 `＼n` (預設忽略所有空白、換行、tab)
+    - `-d\n`: 指定 delimiter 為 `\n` (預設忽略所有空白、換行、tab)
     - `-n <number>`: 指定每一次執行指令所使用的參數個數上限值
     - `-p`: 顯示執行前確認
     - `-t`: 顯示執行的指令 (執行後)
@@ -412,3 +447,7 @@ declare -r name=William # -r: readonly
 > A: 根據觀察，單純 `shutdown` 會進入 ***single user mode***，`shutdown -p` 才會真正關閉電源
 - `chfn`: change GECOS (General Electric Comprehensive Operating System)
     - Commonly used to record *personal information*
+- `alias`: set alias
+    - In **Free BSD**: `alias ls "ls -l"`
+    - In **Ubuntu Linux**: `alias ls="ls -l"`
+    - Both: `unalias ls`
