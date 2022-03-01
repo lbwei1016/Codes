@@ -83,6 +83,17 @@
 
 - `egrep 'word1|word2' /path/to/file`: 匹配數個單字 
 ## Permission
+### For directory:
+- `r`: `ls`
+- `w`: `touch`, `rm`
+- `x`: `cd`
+### For file:
+- `r`: `cat`
+- `w`: `cat >> file`
+- `x`: [run binary file]
+    - `rx`: [run scripts]
+
+
 - `umask [SOGO]`: 設定新建檔案的預設權限
     - `S`: 特殊權限
     - `O`: 持有者
