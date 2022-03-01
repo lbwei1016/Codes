@@ -9,8 +9,9 @@
     > The above *device* files are used for device I/O.
 - `d`: Directory
 - `l`: Symbolic link
-    - `ln [-s] [file to be linked] [link file]`: make a link file
+    - `ln [-s] [file to be linked] [link file name]`: make a link file
         - `-s`: soft link (hard link by default)
+        - If `link file name` is not specified, a link file with the same name as the file linked is created.
     > **Soft link** points to *pathname*; **hard link** has the same *inode* with the original file
 - `p`: Named pipe (FIFO)
     > These type of files act as *pipe* between other files.<br> ***interprocess communication (IPC)***
@@ -462,3 +463,4 @@ declare -r name=William # -r: readonly
     - In **Free BSD**: `alias ls "ls -l"`
     - In **Ubuntu Linux**: `alias ls="ls -l"`
     - Both: `unalias ls`
+- `dmesg`: 顯示開機時的訊息
