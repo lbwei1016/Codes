@@ -281,6 +281,8 @@ boot time*.
     - `-connect [host:port]` : connect to host
 ## nmap
 - `nmap [host]`: scan `host` for information like `ports` and its operating system, etc.
+## ip
+- `ip addr`: list *IPs* of all interfaces
 # Variable
 - `declare [-ia] [var name]`: declare a variable *(a string in default)*
     - `-i`: number 
