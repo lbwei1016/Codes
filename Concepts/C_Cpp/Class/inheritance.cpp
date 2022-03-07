@@ -8,7 +8,7 @@ class Animal {
         void say_hello() { cout << name + " says hi!\n"; }
 };
 
-// pubilcly inheritance
+// pubilcly inheritance (check "./inheritance_modifier.png")
 class Chicken: public Animal {
     public:
         Chicken(string name_): Animal(name_) {}
@@ -21,5 +21,6 @@ int main() {
     ani.say_hello();
     Chicken ch1("turk");
     ch1.say_hello();
+    
     return 0;
 }
