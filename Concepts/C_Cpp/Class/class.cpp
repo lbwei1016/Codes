@@ -8,8 +8,8 @@ class Animal
     int private_num;
     private:
         const int id; 
-        //private members can only be accessed through "member functions"
-        //const variables must be initialized once declared("id" will be initialized when constructor is called)
+        // private members can only be accessed through "member functions" and "friend functions"
+        // const variables must be initialized once declared("id" will be initialized when constructor is called)
     public:
         Animal() : id(0){}; //defined inside class
         Animal(string, int); //only declared
