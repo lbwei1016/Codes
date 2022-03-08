@@ -1,6 +1,11 @@
 # Help
 - `man`: man page
     - `/ [search item]`: to search
+# System
+## locale
+- `locale`: list locale settings
+- `sudo upadte-locale LC_TIME=en_US.UTF-8`: set locale
+
 # Files
 ## File types
 - `-`: Regular file
@@ -283,6 +288,10 @@ boot time*.
 - `nmap [host]`: scan `host` for information like `ports` and its operating system, etc.
 ## ip
 - `ip addr`: list *IPs* of all interfaces
+    - same as `ip a`
+## ping
+- `ping [IP / domain name]`
+    - `ping -I [interface] [IP / ...]`: designate *interface* 
 # Variable
 - `declare [-ia] [var name]`: declare a variable *(a string in default)*
     - `-i`: number 
