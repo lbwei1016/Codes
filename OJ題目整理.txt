@@ -47,6 +47,7 @@ Data Structure:
     tioj_1869: 堆石子遊戲 (2D-BIT) (2D-Segment Tree)
     ytp_7_Peak: Peak (BIT / hash) (even-odd) (*)
     atcoder_abc_221_E: LEQ (Modular multiplicative inverse / hashing) (*)
+    atcoder_abc_237_G: Range Sort Query (Segment Tree / lazy propagation) (*)
 
 Divide and Conquer:
     tcirc_d036: Q-3-12. 完美彩帶 (Sliding Window)

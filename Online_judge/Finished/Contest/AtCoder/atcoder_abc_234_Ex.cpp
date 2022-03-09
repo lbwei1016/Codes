@@ -1,13 +1,21 @@
+/*
+***Divide and Conquer***
+    Description:
+        找出所有點對其距離小於等於 K。
+    Solution:
+        解法同最近點對。值得注意的是，此處求的是歐幾里德距離，為避免 floating point
+        誤差，於是不開根號而直接以平方比較，惟須開到 unsigned loong long。
+    O(n logn)
+*/
 #include <bits/stdc++.h>
 using namespace std;
 using ll = unsigned long long;
 
 struct Point { ll x, y, id; };
 const int MAX_N = 2e5+5;
-// const double EPS = 1e-7;
 int n;
 ll K;
-Point P[MAX_N]; //points
+Point P[MAX_N]; // points
 
 set<pair<ll, ll> > S;
 
@@ -20,10 +28,6 @@ ll dist(ll x, ll y, ll a, ll b) {
     if (y < b) swap(y, b);
     return (x-a)*(x-a) + (y-b)*(y-b);
 }
-
-// ll abs(ll a) {
-//     return a >= 0ULL ? a : -a; 
-// }
 
 ll rec(int l, int r) {
     if(l+1 >= r) return 0;
@@ -40,7 +44,7 @@ ll rec(int l, int r) {
                [P[m].x - dis, P[m].x + dis]
     */
     Point t[r-l];
-    //merge sort by "y"
+    // merge sort by "y"
     for(int i=l, k=0; i<m; i++) {
         while(j<r && P[j].y < P[i].y) {
             t[k++] = P[j++];
@@ -52,18 +56,17 @@ ll rec(int l, int r) {
     }
 
     int k = 0;
-    //go over every element (sorted by "y") and check their "x"
+    // go over every element (sorted by "y") and check their "x"
     for(int i=l; i<r; i++) {
         int mx = max(P[i].x, mid_x);
         int mn = min(P[i].x, mid_x);
         if(mx-mn <= K)
             t[k++] = P[i];
     }
-    //sweep from the point with least "y"
+    // sweep from the point with least "y"
     for(int i=0; i<k; i++) {
-        //O(1): the loop will maximally execute 8 times
+        // O(1): the loop will maximally execute 8 times
         for(j=i+1; j<k && t[j].y-t[i].y<=K; j++) {
-            // dis = min(dis, abs(t[i].x-t[j].x)+abs(t[j].y-t[i].y));
             ll dis = dist(t[i].x, t[i].y, t[j].x, t[j].y);
             if (dis <= K*K) {
                 int mx = max(t[i].id, t[j].id);
@@ -82,7 +85,7 @@ int main() {
         scanf("%llu %llu", &P[i].x, &P[i].y);
         P[i].id = i+1;
     }
-    //sort first by "x"
+    // sort first by "x"
     sort(P, P+n, cmp);
     printf("%llu\n", rec(0, n));
     for (auto &x: S) {
