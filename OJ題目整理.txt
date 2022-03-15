@@ -47,6 +47,7 @@ Data Structure:
     tioj_1869: 堆石子遊戲 (2D-BIT) (2D-Segment Tree)
     ytp_7_Peak: Peak (BIT / hash) (even-odd) (*)
     atcoder_abc_221_E: LEQ (Modular multiplicative inverse / hashing) (*)
+    atcoder_abc_233_E: Σ[k=0..10^100]floor(X／10^k) (Segment Tree)
     atcoder_abc_237_G: Range Sort Query (Segment Tree / lazy propagation) (*)
 
 Divide and Conquer:
@@ -235,6 +236,7 @@ Monotone:
 Prefix (Suffix) Sum:
     zj_e339: 前綴合練習
     zj_f638: 支點切割 (apcs / Recursion)
+    atcoder_abc_233_D: Count Interval (range sum) (*)
     atcoder_abc_240_F: Sum Sum MAX (prefix sum's prefix sum) (*)
 
 Recursion:

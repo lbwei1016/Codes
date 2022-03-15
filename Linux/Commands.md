@@ -56,6 +56,8 @@
     - `wc -c` : 位元組數
     - `wc -m` : 字元數
 - `diff [option] [file1 file2...]` : output the difference between files
+    - `-i`: ignore case
+    - `-w`: ignore all space
 ## Searching
 - `which [-a] [command]`: 根據 PATH 找出執行檔的完整檔名
     - `a`: 列出所有結果 (不只第一項) 

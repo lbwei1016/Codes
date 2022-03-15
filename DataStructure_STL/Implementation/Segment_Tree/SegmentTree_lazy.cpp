@@ -1,7 +1,7 @@
 /*
 ***Segment Tree*** --lazy propagation
     Description:
-        區間賦值。精隨就是每次「update 或 query 前都要 push」!
+        區間賦值。精隨是「每次update 或 query 前都要 push」!
     Note:
         複雜版可看 atcoder_abc_237_G。
 */
