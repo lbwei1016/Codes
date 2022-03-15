@@ -5,9 +5,10 @@ using namespace std;
 
 int main() {
 
-    //file.open(filiname, mode)
-    fstream file("test1.txt", ios::out); //default: ios::out | ios::in
+    // file.open(filiname, mode)
+    // default: ios::out | ios::in, which means both "in" and "out" are available
     ofstream out;
+    fstream file("test1.txt", ios::out); 
     ifstream in; 
     string line;
 
