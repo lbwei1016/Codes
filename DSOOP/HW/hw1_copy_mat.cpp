@@ -11,13 +11,13 @@ class SparseMatrix {
     public:
         int size;
         Entry *entries;
-        SparseMatrix(const int &sz): size(sz) {
-            entries = new Entry[sz]();
+        SparseMatrix(const int &_sz): size(_sz) {
+            entries = new Entry[_sz]();
         }
-        SparseMatrix(SparseMatrix &M) {
-            entries = new Entry[M.size];
-            for (int i=0; i<M.size; ++i) {
-                entries[i] = M.entries[i];
+        SparseMatrix(SparseMatrix &_M) {
+            entries = new Entry[_M.size];
+            for (int i=0; i<_M.size; ++i) {
+                entries[i] = _M.entries[i];
             }
         }
 };

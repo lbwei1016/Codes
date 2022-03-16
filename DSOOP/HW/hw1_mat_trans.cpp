@@ -1,53 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
+using Mat = vector<vector<int> >;
 
-struct SparseMatrix {
-    int row, col, val;
-};
+const int N = 5, M = 3;
 
-vector<SparseMatrix> transpose(vector<SparseMatrix> &M) {
-    int sz = M.size();
-    vector<int> nonzero(sz+1);
-    for (int i=0; i<sz; ++i) {
-        ++nonzero[M[i].col];
-    }
-    vector<int> presum(sz+1);
-    for (int i=1; i<sz; ++i) {
-        presum[i+1] = presum[i] + nonzero[i];
-    }
-    vector<SparseMatrix> Transposed(sz);
-    for (int i=0; i<sz; ++i) {
-        int &id = presum[M[i].col];
-        Transposed[id] = M[i];
-        swap(Transposed[id].row, Transposed[id].col);
-        ++id;
-    }
-    return Transposed;
-}
+Mat transpose(Mat &m, int Row, int Col) {
+    Mat trans(Col, vector<int>(Row));
+    for (int i=0; i<Row; ++i)
+        for (int j=0; j<Col; ++j)
+            trans[j][i] = m[i][j];
+    return trans;
+} 
 
 int main() {
-    vector<SparseMatrix> M;
-    int num_of_elements;
-    cin >> num_of_elements;
-    for (int i=0; i<num_of_elements; ++i) {
-        int row, col, val;
-        cin >> row >> col >> val;
-        M.push_back(SparseMatrix{row, col, val});
-    }
-    puts("-----------------------------");
-    auto Transposed = transpose(M);
-    for (auto &x: Transposed) {
-        printf("row: %d, col: %d, val: %d\n", x.row, x.col, x.val);
+    Mat m(N, vector<int>(M));
+    for (int i=0; i<N; ++i) 
+        for (int j=0; j<M; ++j)
+            cin >> m[i][j];
+
+    Mat trans = transpose(m, N, M);
+    for (auto &row: trans) {
+        for (auto &x: row)
+            cout << x << ' ';
+        cout << '\n';
     }
     return 0;
 }
-/*
-input:
-6
-1 3 3
-1 5 4
-2 3 5
-2 4 7
-4 2 2
-4 3 6
-*/
