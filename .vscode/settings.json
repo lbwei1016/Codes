@@ -75,7 +75,8 @@
         "slist": "cpp",
         "string.h": "c",
         "stdio.h": "c",
-        "stdbool.h": "c"
+        "stdbool.h": "c",
+        "queue": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled",
     "python.pythonPath": "C:\\Users\\williamlin\\anaconda3\\python.exe",

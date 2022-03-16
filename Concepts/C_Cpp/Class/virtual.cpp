@@ -15,6 +15,7 @@ class Animal {
 class Cat: public Animal {
     public:
         // say() is already a virtual function, but adding "virtual" can increase readability
+        // this overrides Animal::say() (有 virtual 才能 override)
         void say() {
             cout << "Cat say~\n";
         }
@@ -36,7 +37,7 @@ int main() {
     Cat cat;
     ap = &cat;
     ap->say(); // with "virtual", Cat::say() is called (runtime polymorphism)
-    ap->shout(); // no virtual, Animal::say() is called
+    ap->shout(); // no virtual, Animal::shout() is called
 
     Cat *cp;
     Kitty kt;

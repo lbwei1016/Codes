@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string.h>
-#include <DataStructure_STL\queue\queue.h>
+#include "queue.h"
 using namespace my_imp;
 
 void queue::data_transfer(const int & sz) {
