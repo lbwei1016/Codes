@@ -2,12 +2,16 @@
 #include <fstream>
 #include <deque>
 #include <vector>
-#include <string.h>
+#include <cstring>
+#include <algorithm>
 using namespace std;
 
 const int LANDING = 6, RUNWAY = 4; // queue numbers
 struct Landing {
-    int id, fuel, time_stamp; 
+    int id, fuel, time_stamp;
+    bool operator<(Landing &_la) {
+        return fuel < _la.fuel;
+    } 
 };
 struct Takeoff {
     int id, time_stamp;
@@ -31,16 +35,7 @@ void output(ofstream&, deque<Landing>[], deque<Takeoff>[], vector<int>&);
 // push incoming planes into corresponding queues
 void push_into(deque<Landing>&, deque<Landing>[], deque<Takeoff>&, deque<Takeoff>[]);
 // show statistics
-void statistics() {
-    ofstream off("statistics.txt");
-    off << "Tiime unit simulated: " << cur_time-1 << '\n';
-    off << "Average landing waiting time: " << land_sum / (double)land_num << "(s)\n";
-    off << "Average takeoff waiting time: " << takeoff_sum / (double)takeoff_num << "(s)\n";
-    off << "Average fuel saved: " << fuel_saved << '\n';
-    off << "Total plane(s) in emergency: " << emerg_num << '\n';
-    off << "Total plane crashed: " << crash_num << '\n';
-    off.close();
-}
+void statistics();
 
 int main() {
     ifstream iff("input.txt");
@@ -76,6 +71,8 @@ int main() {
         push_into(landing, landing_in_que, takeoff, takeoff_in_que);
         enter_runway(off, landing_in_que, takeoff_in_que, runways);
         output(off, landing_in_que, takeoff_in_que, runways);
+
+        // off << "crash: " << crash_num << '\n';
         off << "\n-----------------------------------\n";
     }
     
@@ -140,8 +137,9 @@ void enter_runway(ofstream &off, deque<Landing> la_in_q[], deque<Takeoff> ta_in_
     }
 
     // put planes onto runways depending on their numbers
+    const int dev = 5; // give landing higher priority
     for (int i=run_cnt; i<RUNWAY; ++i) {
-        if (land_que_size >= takeoff_que_size && i > 0) {
+        if (land_que_size >= takeoff_que_size - dev && i > 0) {
             if (la_in_q[2*(i-1)].empty() && la_in_q[2*i-1].empty())
                 break;
             
@@ -212,6 +210,7 @@ void output(ofstream &off, deque<Landing> la_in_q[], deque<Takeoff> ta_in_q[], v
 
 void push_into(deque<Landing> &la, deque<Landing> la_in_q[], deque<Takeoff> &ta, deque<Takeoff> ta_in_q[]) {
     // averagely distribute incoming planes
+    sort(la.begin(), la.end()); // less fuel first
     int avg_size = 0;
     for (int i=0; i<LANDING; ++i) {
         avg_size += la_in_q[i].size();
@@ -241,4 +240,15 @@ void push_into(deque<Landing> &la, deque<Landing> la_in_q[], deque<Takeoff> &ta,
         }
         ++avg_size;
     }
+}
+
+void statistics() {
+    ofstream off("statistics.txt");
+    off << "Tiime unit simulated: " << --cur_time << '\n';
+    off << "Average landing waiting time: " << land_sum / (double)land_num << "(s)\n";
+    off << "Average takeoff waiting time: " << takeoff_sum / (double)takeoff_num << "(s)\n";
+    off << "Average fuel saved: " << fuel_saved / (double)cur_time << "(unit/s)\n";
+    off << "Total plane(s) in emergency: " << emerg_num << '\n';
+    off << "Total plane crashed: " << crash_num << '\n';
+    off.close();
 }

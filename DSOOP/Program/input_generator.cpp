@@ -9,7 +9,7 @@ int main() {
 
     ofstream ff("input.txt", ios::out);
 
-    int time_unit = rand() % 500 + 1;
+    int time_unit = rand() % 500 + 500;
 
     ff << time_unit << '\n';
     for (int i=0; i<time_unit; ++i) {
@@ -18,8 +18,9 @@ int main() {
         ff << landing <<  ' ' << takeoff << '\n';
         for (int la=0; la<landing; ++la) {
             int fuel = rand() % 10 + 1;
-            ff << fuel << '\n';
+            ff << fuel << ' ';
         }
+        ff << '\n';
     }
     return 0;
 }
