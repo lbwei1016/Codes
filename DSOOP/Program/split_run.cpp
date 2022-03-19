@@ -102,35 +102,25 @@ void enter_runway(ofstream &off, deque<Landing> &la, deque<Landing> la_in_q[], d
     }
 
     for (int i=run_cnt; i<RUNWAY; ++i) {
-        int mx_size = 0, who;
         if (landing_num > takeoff_num && i > 0) {
-            for (int j=0; j<LANDING; j+=2) {
-                if (la_in_q[j].size() > mx_size) {
-                    mx_size = la_in_q[j].size();
-                    who = j;
-                }
-                if (la_in_q[j+1].size() > mx_size) {
-                    mx_size = la_in_q[j].size();
-                    who = j;
-                }
-            }   
-            run[i] = la_in_q[who].front().id;
-            la_in_q[who].pop_front();
+            if (la_in_q[2*(i-1)].empty() && la_in_q[2*i-1].empty())
+                break;
+            if (la_in_q[2*(i-1)].size() > la_in_q[2*i-1].size()) {
+                run[i] = la_in_q[2*(i-1)].front().id;
+                la_in_q[2*(i-1)].pop_front();
+            }
+            else  {
+                run[i] = la_in_q[2*i-1].front().id;
+                la_in_q[2*i-1].pop_front();
+            }
             --landing_num;
         }
         else {
-            for (int j=0; j<RUNWAY; ++j) {
-                if (ta_in_q[j].size() > mx_size) {
-                    mx_size = ta_in_q[j].size();
-                    who = j;
-                }
-            }    
-            run[i] = ta_in_q[who].front();
-            ta_in_q[who].pop_front();
+            if (ta_in_q[i].empty()) break;
+            run[i] = ta_in_q[i].front();
+            ta_in_q[i].pop_front();
             --takeoff_num;
         }
-        if (landing_num == 0 && takeoff_num == 0)
-            break;
     }
     output(off, la_in_q, ta_in_q, run);
 }
