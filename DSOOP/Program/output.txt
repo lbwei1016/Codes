@@ -1,0 +1,437 @@
+Simulation time: 1
+
+Runway1(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway2(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway3(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway4(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+
+Step 1:
+Landing plane(s):
+	(0, 2)
+	(2, 7)
+	(4, 6)
+	(6, 9)
+
+Runway1(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway2(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway3(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway4(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+
+Step 2:
+Takeoff plane(s):
+	1
+	3
+	5
+
+Runway1(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway2(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway3(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway4(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+
+Step 3:
+Emergency plane(s):
+
+Runway1(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+	1
+
+Runway2(-1)
+Landing queue 1:
+	(0, 2)
+Landing queue 2:
+	(2, 7)
+Takeoff queue:
+	3
+
+Runway3(-1)
+Landing queue 1:
+	(4, 6)
+Landing queue 2:
+	(6, 9)
+Takeoff queue:
+	5
+
+Runway4(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+
+Step 4:
+
+Runway1(1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway2(0)
+Landing queue 1:
+Landing queue 2:
+	(2, 7)
+Takeoff queue:
+
+Runway3(4)
+Landing queue 1:
+Landing queue 2:
+	(6, 9)
+Takeoff queue:
+	5
+
+Runway4(3)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+
+-----------------------------------
+Simulation time: 2
+
+Runway1(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway2(-1)
+Landing queue 1:
+Landing queue 2:
+	(2, 7)
+Takeoff queue:
+
+Runway3(-1)
+Landing queue 1:
+Landing queue 2:
+	(6, 9)
+Takeoff queue:
+	5
+
+Runway4(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+
+Step 1:
+Landing plane(s):
+	(8, 4)
+	(2, 7)
+	(10, 5)
+	(12, 6)
+	(6, 9)
+
+Runway1(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway2(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway3(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway4(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+
+Step 2:
+Takeoff plane(s):
+	7
+	9
+	5
+	11
+
+Runway1(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway2(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway3(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway4(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+
+Step 3:
+Emergency plane(s):
+
+Runway1(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+	7
+
+Runway2(-1)
+Landing queue 1:
+	(8, 4)
+Landing queue 2:
+	(2, 7)
+	(10, 5)
+Takeoff queue:
+	9
+
+Runway3(-1)
+Landing queue 1:
+	(12, 6)
+Landing queue 2:
+	(6, 9)
+Takeoff queue:
+	5
+	11
+
+Runway4(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+
+Step 4:
+
+Runway1(5)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway2(8)
+Landing queue 1:
+Landing queue 2:
+	(2, 7)
+	(10, 5)
+Takeoff queue:
+	9
+
+Runway3(12)
+Landing queue 1:
+Landing queue 2:
+	(6, 9)
+Takeoff queue:
+	11
+
+Runway4(7)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+
+-----------------------------------
+Simulation time: 3
+
+Runway1(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway2(-1)
+Landing queue 1:
+Landing queue 2:
+	(2, 7)
+	(10, 5)
+Takeoff queue:
+	9
+
+Runway3(-1)
+Landing queue 1:
+Landing queue 2:
+	(6, 9)
+Takeoff queue:
+	11
+
+Runway4(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+
+Step 1:
+Landing plane(s):
+	(14, 4)
+	(2, 7)
+	(10, 5)
+	(16, 1)
+	(18, 9)
+	(6, 9)
+
+Runway1(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway2(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway3(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway4(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+
+Step 2:
+Takeoff plane(s):
+	13
+	9
+	11
+
+Runway1(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway2(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway3(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway4(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+
+Step 3:
+Emergency plane(s):
+
+Runway1(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+	13
+
+Runway2(-1)
+Landing queue 1:
+	(14, 4)
+Landing queue 2:
+	(2, 7)
+	(10, 5)
+	(16, 1)
+Takeoff queue:
+	9
+
+Runway3(-1)
+Landing queue 1:
+	(18, 9)
+Landing queue 2:
+	(6, 9)
+Takeoff queue:
+	11
+
+Runway4(-1)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+
+Step 4:
+
+Runway1(13)
+Landing queue 1:
+Landing queue 2:
+Takeoff queue:
+
+Runway2(14)
+Landing queue 1:
+Landing queue 2:
+	(2, 7)
+	(10, 5)
+	(16, 1)
+Takeoff queue:
+	9
+
+Runway3(18)
+Landing queue 1:
+	(0, 0)
+	(0, 0)
+	(0, 0)
+	(0, 0)
+	(0, 0)
+	(0, 0)
+	(0, 0)
+	(0, 0)
+	(0, 0)
+	(0, 0)
+	(0, 0)
+	(0, 0)
+	(0, 0)
+	(0, 0)
+	(0, 0)
+	(0, 0)
+	(0, 0)
+	(0, 0)
+	(0, 0)
+	(0, 0)
