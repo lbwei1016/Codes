@@ -12,6 +12,7 @@ struct Landing {
 struct Takeoff {
     int id, time_stamp;
 };
+int even_cnt = 0, odd_cnt = 1;
 int cur_time;
 int land_sum, takeoff_sum;
 int emerg_num, crash_num, land_num, takeoff_num;
@@ -85,18 +86,16 @@ int main() {
 }
 
 void arrive(ifstream &iff, deque<Landing> &la, deque<Takeoff> &ta) {
-    int plane_num, id, fuel;
-    iff >> plane_num;
+    int la_num, ta_num, fuel;
+    iff >> la_num >> ta_num;
     
-    for (int i=0; i<plane_num; ++i) {
-        iff >> id >> fuel;
-        la.push_back(Landing{id, fuel, cur_time});
+    for (int i=0; i < la_num; ++i, even_cnt+=2) {
+        iff >> fuel;
+        la.push_back(Landing{even_cnt, fuel, cur_time});
     }
 
-    iff >> plane_num;
-    for (int i=0; i<plane_num; ++i) {
-        iff >> id;
-        ta.push_back(Takeoff{id, cur_time});
+    for (int i=0; i < ta_num; ++i, odd_cnt+=2) {
+        ta.push_back(Takeoff{odd_cnt, cur_time});
     }
 }
 
