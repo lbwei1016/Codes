@@ -11,10 +11,11 @@ struct Landing {
 };
 
 void arrive(ifstream&, deque<Landing>[], deque<int>[]);
-void enter_runway(ofstream&, deque<Landing>[], deque<int>[], vector<int>&);
+void enter_runway(ofstream&, deque<Landing>[], deque<Landing>[], deque<int>[], deque<int>[], vector<int>&);
 void landing_output(ofstream&, deque<Landing>[], int);
 void takeoff_output(ofstream&, deque<int>[], int);
 void output(ofstream&, deque<Landing>[], deque<int>[], vector<int>&);
+void push_into(deque<Landing>[], deque<Landing>[], deque<int>[], deque<int>[]);
 
 int main() {
     ifstream iff("input.txt");
@@ -28,7 +29,7 @@ int main() {
         vector<int> runways(4, -1);
         // Step 0:
         off << "Simulation time: " << i << "\n\n";
-        output(off, landing, takeoff, runways);
+        output(off, landing_in_que, takeoff_in_que, runways);
 
         // Step 1:
         off << "\nStep 1:\nLanding plane(s):\n";
@@ -47,8 +48,10 @@ int main() {
         off << '\n';
         output(off, landing_in_que, takeoff_in_que, runways);
 
-        enter_runway(off, landing, takeoff, runways);
+        enter_runway(off, landing, landing_in_que, takeoff, takeoff_in_que, runways);
         off << "\n-----------------------------------\n";
+
+        push_into(landing, landing_in_que, takeoff, takeoff_in_que);
     }
     return 0;
 }
@@ -69,7 +72,7 @@ void arrive(ifstream &iff, deque<Landing> la[], deque<int> ta[]) {
     }
 }
 
-void enter_runway(ofstream &off, deque<Landing> la[], deque<int> ta[], vector<int> &run) {
+void enter_runway(ofstream &off, deque<Landing> la[], deque<Landing> la_in_q[], deque<int> ta[], deque<int> ta_in_q[], vector<int> &run) {
     int run_cnt = 0;
     int landing_num = 0, takeoff_num = 0;
     vector<int> emerg;
@@ -88,13 +91,15 @@ void enter_runway(ofstream &off, deque<Landing> la[], deque<int> ta[], vector<in
         takeoff_num += ta[i].size();
     }
 
+    push_into(la, la_in_q, ta, ta_in_q);
+
     // Step 3:
     off << "\nStep 3:\nEmergency plane(s):\n";
     for (auto &x: emerg) {
         off << "\tid: " << x << '\n';
     }
     off << '\n';
-    output(off, la, ta, run);
+    output(off, la_in_q, ta_in_q, run);
 
     // Step 4:
     off << "\nStep 4:\n\n";
@@ -106,34 +111,34 @@ void enter_runway(ofstream &off, deque<Landing> la[], deque<int> ta[], vector<in
         int mx_size = 0, who;
         if (landing_num > takeoff_num && i > 0) {
             for (int j=0; j<LANDING; j+=2) {
-                if (la[j].size() > mx_size) {
-                    mx_size = la[j].size();
+                if (la_in_q[j].size() > mx_size) {
+                    mx_size = la_in_q[j].size();
                     who = j;
                 }
-                if (la[j+1].size() > mx_size) {
-                    mx_size = la[j].size();
+                if (la_in_q[j+1].size() > mx_size) {
+                    mx_size = la_in_q[j].size();
                     who = j;
                 }
             }   
-            run[i] = la[who].front().id;
-            la[who].pop_front();
+            run[i] = la_in_q[who].front().id;
+            la_in_q[who].pop_front();
             --landing_num;
         }
         else {
             for (int j=0; j<RUNWAY; ++j) {
-                if (ta[j].size() > mx_size) {
-                    mx_size = ta[j].size();
+                if (ta_in_q[j].size() > mx_size) {
+                    mx_size = ta_in_q[j].size();
                     who = j;
                 }
-            }   
-            run[i] = ta[who].front();
-            ta[who].pop_front();
+            }    
+            run[i] = ta_in_q[who].front();
+            ta_in_q[who].pop_front();
             --takeoff_num;
         }
         if (landing_num == 0 && takeoff_num == 0)
             break;
     }
-    output(off, la, ta, run);
+    output(off, la_in_q, ta_in_q, run);
 }
 
 void landing_output(ofstream &off, deque<Landing> la[], int at) {
@@ -169,5 +174,20 @@ void output(ofstream &off, deque<Landing> la[], deque<int> ta[], vector<int> &ru
         takeoff_output(off, ta, i);
         off << '\n';
         // off << "\n--------------------------------\n";
+    }
+}
+
+void push_into(deque<Landing> la[], deque<Landing> la_in_q[], deque<int> ta[], deque<int> ta_in_q[]) {
+    for (int i=0; i<LANDING; ++i) {
+        while (la[i].size()) {
+            la_in_q[i].push_back(la[i].front());
+            la[i].pop_front();
+        }
+    }
+    for (int i=0; i<RUNWAY; ++i) {
+        while (ta[i].size()) {
+            ta_in_q[i].push_back(ta[i].front());
+            ta[i].pop_front();
+        }
     }
 }

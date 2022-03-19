@@ -163,10 +163,8 @@ Takeoff queue:
 Step 1:
 Landing plane(s):
 	(8, 4)
-	(2, 7)
 	(10, 5)
 	(12, 6)
-	(6, 9)
 
 Runway1(-1)
 Landing queue 1:
@@ -176,12 +174,15 @@ Takeoff queue:
 Runway2(-1)
 Landing queue 1:
 Landing queue 2:
+	(2, 7)
 Takeoff queue:
 
 Runway3(-1)
 Landing queue 1:
 Landing queue 2:
+	(6, 9)
 Takeoff queue:
+	5
 
 Runway4(-1)
 Landing queue 1:
@@ -193,7 +194,6 @@ Step 2:
 Takeoff plane(s):
 	7
 	9
-	5
 	11
 
 Runway1(-1)
@@ -204,12 +204,15 @@ Takeoff queue:
 Runway2(-1)
 Landing queue 1:
 Landing queue 2:
+	(2, 7)
 Takeoff queue:
 
 Runway3(-1)
 Landing queue 1:
 Landing queue 2:
+	(6, 9)
 Takeoff queue:
+	5
 
 Runway4(-1)
 Landing queue 1:
@@ -265,14 +268,14 @@ Landing queue 2:
 Takeoff queue:
 	9
 
-Runway3(12)
+Runway3(7)
 Landing queue 1:
 Landing queue 2:
 	(6, 9)
 Takeoff queue:
 	11
 
-Runway4(7)
+Runway4(12)
 Landing queue 1:
 Landing queue 2:
 Takeoff queue:
@@ -310,11 +313,8 @@ Takeoff queue:
 Step 1:
 Landing plane(s):
 	(14, 4)
-	(2, 7)
-	(10, 5)
 	(16, 1)
 	(18, 9)
-	(6, 9)
 
 Runway1(-1)
 Landing queue 1:
@@ -324,12 +324,17 @@ Takeoff queue:
 Runway2(-1)
 Landing queue 1:
 Landing queue 2:
+	(2, 7)
+	(10, 5)
 Takeoff queue:
+	9
 
 Runway3(-1)
 Landing queue 1:
 Landing queue 2:
+	(6, 9)
 Takeoff queue:
+	11
 
 Runway4(-1)
 Landing queue 1:
@@ -340,8 +345,6 @@ Takeoff queue:
 Step 2:
 Takeoff plane(s):
 	13
-	9
-	11
 
 Runway1(-1)
 Landing queue 1:
@@ -351,12 +354,17 @@ Takeoff queue:
 Runway2(-1)
 Landing queue 1:
 Landing queue 2:
+	(2, 7)
+	(10, 5)
 Takeoff queue:
+	9
 
 Runway3(-1)
 Landing queue 1:
 Landing queue 2:
+	(6, 9)
 Takeoff queue:
+	11
 
 Runway4(-1)
 Landing queue 1:
@@ -415,12 +423,6 @@ Takeoff queue:
 
 Runway3(18)
 Landing queue 1:
-	(0, 0)
-	(0, 0)
-	(0, 0)
-	(0, 0)
-	(0, 0)
-	(0, 0)
 	(0, 0)
 	(0, 0)
 	(0, 0)
