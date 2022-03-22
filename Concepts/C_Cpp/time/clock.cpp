@@ -7,9 +7,9 @@ int main()
 {
     
     clock_t start, end;
-    start = clock();
+    start = clock(); // clock ticks
     for(int i=0; i<1e7; i++);
     end = clock();
-    cout << "Time spent: " << end-start  << " ms\n";
+    cout << "Time spent: " << double(end-start) / CLOCKS_PER_SEC  << " sec\n";
     return 0;
 }

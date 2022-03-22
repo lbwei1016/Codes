@@ -226,7 +226,7 @@ boot time*.
 
 ## Termination
 
-- `kill [signal] [pid / %job-no.]`: Gracefully terminate a process by sending *signal*. (Default SIGTERM: 15)
+- `kill [-s signal] [pid / %job-no.]`: Gracefully terminate a process by sending *signal*. (Default SIGTERM: 15)
 - `killall [process name]`: kill processes by name
 
 ### References: 
