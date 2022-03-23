@@ -2,7 +2,7 @@
 using namespace std;
 
 struct Node {
-    int id;
+    int id, level;
     Node *lch, *rch;
     void print() {
         cout << id << ' ';
@@ -30,6 +30,17 @@ void postorder(Node *node) {
         postorder(node->lch);
         postorder(node->rch);
         node->print();
+    }
+}
+
+// 其實 button up 比較好，但現在是用 pointer 存
+// 最後: sort(nodes)
+void level_order(Node *node, vector<Node> &nodes, int level) {
+    if (node != nullptr) {
+        node->level = level++;
+        nodes.push_back(*node);
+        level_order(node->lch, nodes, level);
+        level_order(node->rch, nodes, level);
     }
 }
 

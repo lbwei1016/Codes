@@ -4,5 +4,3 @@
 4. noexcpet
 5. binary tree expression (ab+cd-*ef+/)
 6. preorder <-> prefix expression (接續 5.) (post. / in. 類推)
-7. Given two binary tree expression (pre, post, in, level), construct a clone binary tree
-8. bee (discord)

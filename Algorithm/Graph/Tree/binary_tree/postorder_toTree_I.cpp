@@ -1,13 +1,10 @@
 /*
     Description:
         Given a distinct sequence of keys representing the postorder traversal 
-        of a binary search tree, find its "preorder" traversal.
-    Solution:
-        Every time find a root first, and then search for the node that indicates
-        the edge of left and right subtree (in the postorder traversal). Do it 
-        recursively so that left subtree is traversed first.
-    Note:
-        This is an awful method; the only good point is it saves memory.
+        of a binary search tree, construct the corresponding binary search tree.
+    Note: 
+        1. Left subtree is always smaller than root.
+        2. This is an awful method; the only good point is it saves memory.
     O(n^2)
 */
 #include <bits/stdc++.h>
