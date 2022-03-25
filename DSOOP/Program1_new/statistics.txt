@@ -1,6 +1,0 @@
-Time unit simulated: 500
-Average landing waiting time: 1.81828(s)
-Average takeoff waiting time: 8.58529(s)
-Average fuel saved: 6.834(unit/s)
-Total plane(s) in emergency: 270
-Total plane crashed: 3
