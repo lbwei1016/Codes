@@ -18,6 +18,7 @@
 ## Branch
 - `git branch [new branch name]`: 在目前位置 (`HEAD` 所指處) 建立一新的 `branch`，但仍指向原先的 `branch` (最初的 `branch` 為 `master`)
 - `git branch -d <branch name>`: delete local branch
+- `git branch -m master main`: 改 master 為 main (改名)
 - `git push <remote name> --delete <branch name>`: delete remote branch
 > 若無參數則顯示所有 `branch`
 -  `git branch -a`: 顯示 *local* + *remote* 的 `branch`
