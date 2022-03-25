@@ -1,8 +1,9 @@
 *.exe
 test.*
-# tmp.*
 temp.*
 tmp.*
 _vscode_shortcut.md
 ?.*
 debugcatcapoo2.0
+DSOOP
+Online_Judge
