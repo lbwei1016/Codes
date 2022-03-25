@@ -53,6 +53,8 @@ int main() {
         ll res;
         printf("Whose inverse?\n");
         scanf("%d", &a);
+
+        // two methods
         res = exp(a, p-2);
         extgcd(a, p, x, y);
         // cout << x << '\n';
