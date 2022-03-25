@@ -49,7 +49,7 @@ void reduce(int &unknown, mat &A, int times) {
             }
             // else update_c = false;
         }
-    }
+    } 
 }
 
 void rec(int &unknown, ll cost, mat &A, mat &B, int times, vector<int> &cho) {
