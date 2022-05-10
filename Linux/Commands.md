@@ -11,6 +11,7 @@
 - `-`: Regular file
 - `b`: Block device file
 - `c`: Character device file
+    
     > The above *device* files are used for device I/O.
 - `d`: Directory
 - `l`: Symbolic link
@@ -23,6 +24,7 @@
 
     > Unidirectional: a *read-only end* and a *write-only end*
 - `s`: UNIX domain socket
+    
     > Cross-system IPC or IPC on a network.
 
 ## Go To
@@ -197,7 +199,7 @@ boot time*.
     [1]     job1
     [2]+    job2
     [3]-    job3
-
+    
     *For "+" and "-", see below: fg / bg.*
     ```
     > ***job***: A job is a concept used by the shell - any program you **interactively start** that doesn't detach (ie, not a daemon) is a job. <br>
@@ -320,6 +322,7 @@ boot time*.
     - `window`
 # Scheduling
 - `cron`: execute **commands** in `crontab`
+    
     > *every user* has their own `crontab` (including *system* itself)
 - `crontab [-erl]`
     - `-e`: edit
@@ -392,8 +395,24 @@ declare -r name=William # -r: readonly
     - `su -l [account]`: 取得 *account* 的權限 (輸入 *account* 的密碼)
     - `su -`: 環境變數跟著變
 - `sudo`: requires *user's* password
-    
-    > edit `/etc/sudoers` or `/usr/local/etc/sudoers` with `visudo`
+  
+    > edit `/etc/sudoers` or `/usr/local/etc/sudoers` with `visudo` 
+
+# GDB
+
+```shell
+g++ -g main.cpp -o main
+gdb ./main
+b 15 (set a breakpoint at line 15)
+r < input.txt (run with input.txt (STDIN))
+
+n (next)
+c (continue)
+p [var] (print variable)
+<Enter> (execute the last command)
+l (list code)
+q (quit;Ctrl^C)
+```
 
 # Others
 

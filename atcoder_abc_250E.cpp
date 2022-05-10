@@ -1,3 +1,7 @@
+/*
+This can also be solved with "hashing".
+See ./Algorithm/Hash/mt19937_hash.cpp
+*/
 #include <bits/stdc++.h>
 #define io cin.tie(NULL), ios_base::sync_with_stdio(false)
 using namespace std;
