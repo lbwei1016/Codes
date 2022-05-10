@@ -4,7 +4,7 @@
         through the selections of the nearest vertex to the "current tree".
     O(E * logV)
 
-    note: Prim's is similar to Dijkstra's, with the some notable differences:
+    note: Prim's is similar to Dijkstra's, with some notable differences:
         1. Dijkstra's searches for the nearest vertex to the previous "vertex", while
            Prim's searches for the nearest vertex to the "current tree(MST)".
         2. Dijkstra's chooses "a particular" vertex as the beginning of "one" "shortest path tree", while

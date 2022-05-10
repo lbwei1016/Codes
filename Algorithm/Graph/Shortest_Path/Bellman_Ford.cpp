@@ -1,6 +1,9 @@
 /*
     Bellman-Ford's algorithm:
         Find the shortest path from a single point to others.(single source)
+    Note:
+        Bellman-Ford 關注的是"邊"，而以 heap 優化的 Dijkstra 關注的
+        則是"點"。
     O(V * E)
 */
 #include <iostream>
@@ -15,7 +18,7 @@ using namespace std;
 typedef struct 
 {
     int from, to, cost;
-}edge;
+} edge;
 
 edge es[MAX_E];
 int d[MAX_V];

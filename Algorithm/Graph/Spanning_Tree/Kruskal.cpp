@@ -26,7 +26,7 @@ inline bool cmp(const Edge &e1, const Edge &e2) {
     return e1.w < e2.w;
 }
 int find(int x) {
-    return p[x]<0 ? x : p[x]=find(x);
+    return p[x]<0 ? x : p[x]=find(p[x]);
 }
 void unite(int x, int y) {
     int r1 = find(x), r2 = find(y);
@@ -48,7 +48,7 @@ int kruskal() {
             res += e.w;
         }
     }
-    return cnt==E-1 ? res : 1e9;
+    return cnt==V-1 ? res : 1e9;
 }
 int main() {
     cin >> V >> E;

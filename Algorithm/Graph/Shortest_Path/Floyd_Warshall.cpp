@@ -25,6 +25,7 @@ void init(int V) {
             mid[i][j] = -1;
         }
 }
+
 bool floyd_warshall(int V) {
     for(int k=0; k<V; k++) // whether includes the (k-1)th vertex 
         for(int i=0; i<V; i++) {
