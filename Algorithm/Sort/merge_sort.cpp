@@ -22,12 +22,32 @@ void merge_sort(int arr[], int left, int right) {
     for(int i=left; i<j; i++) {
         arr[i] = temp[i-left];
     }
-    return;
 }
+
+void non_rec_merge(int arr[], int arr_sz) {
+    int seg_sz = 1;
+    while (seg_sz < arr_sz) {
+        int i;
+        for (i=0; i+seg_sz<arr_sz; i+=2*seg_sz) {
+            int tmp[2*seg_sz], j = i+seg_sz;
+            for (int k=i, cnt=0; k-i<seg_sz; ++k) {
+                while (j<i+2*seg_sz && arr[j]<arr[k]) {
+                    tmp[cnt++] = arr[j++];
+                }
+                tmp[cnt++] = arr[k];
+            }
+            for (int k=i; k<j; ++k) {
+                arr[k] = tmp[k-i];
+            }
+        }
+        seg_sz *= 2;
+    }
+}
+
 int main() {
-    int n = 10;
-    int arr[] = {8, 5, 1, 4, 10, 9, 2, 3, 6, 7};
-    merge_sort(arr, 0, n);
+    int arr[] = {8, 5, 1, 4, 10, 9, 2, 3, 6, 7, -3, 23, -93, 12, 34};
+    non_rec_merge(arr, sizeof(arr)/sizeof(int));
+    // merge_sort(arr, 0, sizeof(arr)/sizeof(int));
     for(auto i : arr) 
         cout << i << ' ';
     return 0;
