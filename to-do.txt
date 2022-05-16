@@ -2,5 +2,8 @@
 2. cv-qualifier
 3. volatile
 4. noexcpet
-5. binary tree expression (ab+cd-*ef+/)
-6. preorder <-> prefix expression (接續 5.) (post. / in. 類推)
+
+binomial heap
+Fibonacci heap
+pairing heap 
+B-tree
