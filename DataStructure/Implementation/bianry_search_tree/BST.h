@@ -16,7 +16,7 @@ class BST {
             data = node(_k, _v);
         }
         virtual void insert(const int key, const int val);
-        virtual void erase(BST *par, int key);
+        virtual void erase(int key);
 };
 
 void BST::insert(const int key, const int val) {
@@ -36,44 +36,51 @@ void BST::insert(const int key, const int val) {
     }
 }
 
-void BST::erase(BST *par, const int key) {
-    if (key < this->data.key) {
-        if (this->lch == nullptr) return;
-        this->lch->erase(this, key);
-    }
-    else if (key > this->data.key) {
-        if (this->rch == nullptr) return;
-        this->rch->erase(this, key);
-    }
-    else {
-        BST *to_erase = nullptr, *root = this;
-        // case1: 左右子節點皆存在
-        while (root->lch && root->rch) {
-            par = to_erase = root;
-            // 找左子樹中最大的 key，找到之後該 node 即為新的要被 erase 的 node
-            // 所以 while loop 繼續
-            root = root->lch;
-            while (root->rch != nullptr) {
-                par = root;
-                root = root->rch;
-            }
-
-            to_erase->data = root->data;
+// loop 寫法，AVL.h 有更簡潔的遞迴寫法
+void BST::erase(int key) {
+    BST *at = this, *par = this;
+    while (true) {
+        if (key < at->data.key) {
+            if (at->lch == nullptr) return;
+            par = at;
+            at = at->lch;
         }
-        // case2: 左右子節點僅存在其一
-        if (root->lch != nullptr) {
-            if (par->lch == root) par->lch = root->lch;
-            else par->rch = root->lch;
-        }
-        else if (root->rch != nullptr) {
-            if (par->lch == root) par->lch = root->rch;
-            else par->rch = root->rch;
+        else if (key > at->data.key) {
+            if (at->rch == nullptr) return;
+            par = at;
+            at = at->rch;
         }
         else {
-            // case3: leaf
-            if (par->lch == root) par->lch = nullptr;
-            else par->rch = nullptr;
+            BST *to_erase = nullptr, *root = at;
+            // case1: 左右子節點皆存在
+            if (root->lch && root->rch) {
+                par = to_erase = root;
+                // 找左子樹中最大的 key，找到之後該 node 即為新的要被 erase 的 node
+                // 所以 while loop 繼續
+                root = root->lch;
+                while (root->rch != nullptr) {
+                    par = root;
+                    root = root->rch;
+                }
+
+                to_erase->data = root->data;
+            }
+            // case2: 左右子節點僅存在其一
+            if (root->lch != nullptr) {
+                if (par->lch == root) par->lch = root->lch;
+                else par->rch = root->lch;
+            }
+            else if (root->rch != nullptr) {
+                if (par->lch == root) par->lch = root->rch;
+                else par->rch = root->rch;
+            }
+            else {
+                // case3: leaf
+                if (par->lch == root) par->lch = nullptr;
+                else par->rch = nullptr;
+            }
+            delete root;
+            return;
         }
-        delete root;
     }
 }
