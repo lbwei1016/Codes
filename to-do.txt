@@ -5,5 +5,6 @@
 
 binomial heap
 Fibonacci heap
-pairing heap 
-B-tree
+pairing heap (decrease key)
+B-tree / B+-tree
+Cartesian tree / treap

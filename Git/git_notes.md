@@ -42,7 +42,7 @@
 ---
 ## Github
 ### **開始操作前記得 pull !!! 結束前記得 push !!!**
-- `git remote add [URL]`
+- `git remote add [origin] [URL]`
 - `git push -u origin master` --首次
 - `git pull` = `git fetch` + `git merge`
 ---

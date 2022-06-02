@@ -11,7 +11,7 @@
 - `-`: Regular file
 - `b`: Block device file
 - `c`: Character device file
-    
+  
     > The above *device* files are used for device I/O.
 - `d`: Directory
 - `l`: Symbolic link
@@ -24,7 +24,7 @@
 
     > Unidirectional: a *read-only end* and a *write-only end*
 - `s`: UNIX domain socket
-    
+  
     > Cross-system IPC or IPC on a network.
 
 ## Go To
@@ -282,6 +282,10 @@ boot time*.
 - `-i` : use `file` (containing private key) to connect
 - `ssh-keygen -t rsa` : generate `RSA` key under `.ssh/`
 > To leave SSH, either `exit` or `Ctrl-d` is fine.
+* `ssh-copy-ide [remote_username]@[server_ip_address]` 
+  * put my SSH public key to remote server
+  * to enable keyless login
+
 ## SSL / TLS 
 > *Secure Socket Layer / Transport Layer Security*
 - `openssl s_client -quiet -connect localhost[:port]` 
@@ -322,7 +326,7 @@ boot time*.
     - `window`
 # Scheduling
 - `cron`: execute **commands** in `crontab`
-    
+  
     > *every user* has their own `crontab` (including *system* itself)
 - `crontab [-erl]`
     - `-e`: edit
