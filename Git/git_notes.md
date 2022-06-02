@@ -9,12 +9,13 @@
     - `--S`: 找檔案**內容**包含...的檔案
     - `-p`: 比較 commit 間的差異
 * `git rm [filename]` : 刪除檔案並放入 Index
+* `git rm --cached [filename][-f]` : 將檔案自暫存區移除 (!!!!!!!)
 * `git mv [filename][new filename]` : 更改檔案名稱並放入 Index
 * `git commit [--amend][-m "message"][--no-edit]` : --amend可以**修改最近一次 commit message** 或將檔案**併入最近一次 commit**
-* `git rm --cached [filename][-f]` : 將檔案自暫存區移除
 * `git reset HEAD [filename]` : 刪除已註冊到索引(Index)的檔案
 * `git reset HEAD(or hash code / master)` : 刪除 commit
 - `git clone [SSH / HTTPS] [new file name]`: 複製 Repository 到本地 (`new file name` is optional)
+
 ## Branch
 - `git branch [new branch name]`: 在目前位置 (`HEAD` 所指處) 建立一新的 `branch`，但仍指向原先的 `branch` (最初的 `branch` 為 `master`)
 - `git branch -d <branch name>`: delete local branch
