@@ -1,0 +1,6 @@
+# Hash
+
+## Issues
+
+* collision
+* overflow
