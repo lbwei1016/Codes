@@ -18,11 +18,13 @@ void quick_sort(int l, int r) {
     if(r-l <= 1) return;
     // i 指向最後一個小於 pivot 的位置，j 指向當前比較到的位置
     // 以最右為基準點
+    // 為何以最右當基準點? 因為如此在 swap() 的過程中，pivot 才不會被移動。
     int i = l-1, j = l, pivot = arr[r-1];
     /* 
         another way to choose "pivot":
             pivot = median(arr[l], arr[r-1], arr[(l+r)/2])
             swap(arr[r-1], arr[pos_of_pivot]);
+        如此要紀錄 pivot 被換到哪裡
     */
     while(j < r) {
         if(arr[j] < pivot) {

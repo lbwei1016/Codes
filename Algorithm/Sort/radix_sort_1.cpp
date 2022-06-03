@@ -5,10 +5,10 @@
             LSD（Least significant digit）或 MSD（Most significant digit）
         透過將一位數一位數的比較結果暫存在 "buckets" 中，自低而高 (高而低) 的
         位數分層排序。
-    O((n+B) * log(B)m) = O((n+B) * k)
+    O((n+B) * log_B(m)) = O((n+B) * k)
         n: 元素數
         B: 基數，此處為 10，即進位制 (B 為 log... 的底數)
-        m: 元素總堆數，此處為最大數值 => log(B)m = 9
+        m: 元素總堆數，此處為最大數值 => log_B(m) = 9
         k: 最高位數
 */
 #include <iostream>
@@ -28,7 +28,7 @@ int main() {
             bucket[(arr[j]/pow) % 10].push_back(arr[j]);
         }
         int cnt = 0;
-        // update from buckets O(n+B)
+        // update from buckets: O(n+B)
         for(auto &b : bucket) {
             for(auto &v : b) {
                 arr[cnt++] = v;
