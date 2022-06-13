@@ -5,7 +5,7 @@
         有著很好的 amortized time complexity，而且實作較簡單(?)。
         實測效率甚至比 Fibonacci heap 好 (如: Dijkstra, Prim)。
     Time Complexity (amortized):
-        merge: O(log n) (O(1))
+        merge: O(1)
         insert: O(1)
         pop: O(log n)
 
