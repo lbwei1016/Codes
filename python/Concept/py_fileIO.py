@@ -17,7 +17,7 @@ f = open(file, 'a') # append
 f.writelines(text) # once a line
 f.close()
 
-with open(file, 'r') as f: #don't need f.close()
+with open(file, 'r') as f: # don't need f.close()
     print(f.read()) # read everything
 
 

@@ -91,6 +91,6 @@ int main()
 
     int l, r;
     cin >> l >> r;
-    query(l, r, 1, 1, N);
+    cout << query(l, r, 1, 1, N);
     return 0;
 }

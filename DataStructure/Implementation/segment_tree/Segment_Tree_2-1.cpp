@@ -34,6 +34,7 @@ void update(int v, int l, int r, ll val, int ul, int ur) {
     // 子節點則視自身情形 (完全或不完全覆蓋) 來更新
     seg[v].val += (ll)(min(r, ur) - max(l, ul))*val;   
 }
+
 ll query(int v, int l, int r, int ql, int qr) {
     // 記得加上標籤值
     if(ql<=l && r<=qr) return seg[v].val + seg[v].tag*(r-l);
@@ -48,6 +49,7 @@ ll query(int v, int l, int r, int ql, int qr) {
 
     return res + query(lc, l, mid, ql, qr) + query(rc, mid, r, ql, qr);
 }
+
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
