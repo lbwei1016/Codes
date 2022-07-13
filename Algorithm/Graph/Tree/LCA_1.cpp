@@ -9,7 +9,7 @@ const int N = 100;
 int n, t; // time
 int time_in[N], time_out[N]; // start & end of its dfs
 int ancestor[N][log2(N/2)+1]; // ancestor[v][i]: v's "2^i"-th ancestor
-vector<int> G[N]; // adjacent list
+vector<int> G[N]; // adjacency list
 
 constexpr int log2(int x) {
     int i = 0;
