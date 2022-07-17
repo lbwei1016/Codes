@@ -12,8 +12,8 @@
         k: 最高位數
 */
 #include <iostream>
+#include <vector>
 using namespace std;
-
 
 void radix_sort(int arr[], int n) {
     int mx = 0, tmp[n];
@@ -39,6 +39,26 @@ void radix_sort(int arr[], int n) {
     }
     for(int i=0; i<n; ++i) cout << arr[i] << ' ';
 }
+
+// 注意 base (b != n)
+// 上一版沒注意到 (因為 n 剛好等於十)
+void radix_sort2(vector<int> &v) {
+    int n = v.size(), b = 10, mx = 0;
+    vector<int> tmp(n);
+    for (auto &x: v) mx = max(mx, x);
+    
+    for (int i=1; mx/i>0; i*=10) {
+        vector<int> count(b);
+        for (int j=0; j<n; ++j) 
+            ++count[v[j]/i % 10];
+        for (int j=1; j<b; ++j)
+            count[j] += count[j-1];
+        for (int j=n-1; j>=0; --j) 
+            tmp[--count[v[j]/i % 10]] = v[j];
+        for (int j=0; j<n; ++j) v[j] = tmp[j];
+    }
+}
+
 int main() {
     int arr[10] = {58, 888, 11, 98, 0, 2, 65, 45, 7, 15}; 
     radix_sort(arr, 10);   
