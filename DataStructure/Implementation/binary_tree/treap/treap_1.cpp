@@ -1,5 +1,5 @@
 /*
-***Treap*** (similar to Cartesian Tree)
+***Treap*** (Cartesian Tree 變體)
     Description:
         每一節點存兩個值(如同笛卡爾平面的 x, y): a, b。a 為一般 BST 的 key，b 則是
         可以維持 BST 平衡的值(隨機數)。若單看 a，treap 就是一棵 BST；若單看 b，則是一 
@@ -51,6 +51,7 @@ treap* build(vector<int> &v, int n, int off) {
 }
 
 // merge two treap (depends on priority)
+// default: a->key < b->key (or say "a" must be on the left of "b")
 treap* merge(treap *a, treap *b) {
     if (!a) return b;
     if (!b) return a;

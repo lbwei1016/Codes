@@ -91,6 +91,7 @@ treap* merge(treap *a, treap *b) {
     return b;
 }    
 
+// a: 由左算起 k 個節點；b: 剩下的節點
 void split(treap *at, const int k, treap *&a, treap *&b) {
     if (!at) {
         a = b = nullptr;
