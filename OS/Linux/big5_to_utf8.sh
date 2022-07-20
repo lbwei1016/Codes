@@ -15,7 +15,7 @@ do
         file=`echo ${file} | cut -d : -f 1`
         path=${file}/
         #continue
-    # else  
+    # else 
     #  echo "Oops"
     fi
 
