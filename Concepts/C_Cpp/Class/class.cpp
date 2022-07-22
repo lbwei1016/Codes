@@ -11,17 +11,17 @@ class Animal
         // private members can only be accessed through "member functions" and "friend functions"
         // const variables must be initialized once declared("id" will be initialized when constructor is called)
     public:
-        Animal() : id(0){}; //defined inside class
-        Animal(string, int); //only declared
-        ~Animal(); //destructor; automatically called at the end of a function
+        Animal(): id(0) {} // member initializer list
+        Animal(string, int); // only declared
+        Animal(): Animal() {} // call "Animal()" constructor first 
+        ~Animal(); // destructor; automatically called at the end of a function
         string name;
         int age;
         void Talk();
         void set_id(int t);
         void display();
-    
 };
-Animal::Animal(string name, int age) : id(0) //define constructor, initializing const int "id" simultaneously
+Animal::Animal(string name, int age) : id(0) // define constructor, initializing const int "id" simultaneously
 {
     this->name = name;
     this->age = age;
@@ -46,6 +46,5 @@ int main()
     dog.Talk();
     dog.display();
     cat.Talk();
-    
     return 0;
 }

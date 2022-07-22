@@ -1,11 +1,9 @@
-/* functions:
+/* 
+functions:
 	advance(it, offset): no return
 	next(it, offset): return it_1
 	prev(it, offset): return it_2
-
 */
-
-
 #include <iostream>
 #include <vector>
 #include <iterator>
