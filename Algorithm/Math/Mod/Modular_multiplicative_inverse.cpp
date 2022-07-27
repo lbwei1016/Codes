@@ -1,8 +1,8 @@
 /*
 ***Modular multiplicative inverse***
     Description:
-        Find x such that (a * x) mod P = 1, and "a and P are relatively prime".
-    Solution I: 
+        Find x such that (a * x) mod P = 1, when "a and P are relatively prime".
+    Solution I: (only when "P" is prime)
         Fermat's Little Theorem: "when P is a prime", a^P ≡ a(mod P).
         If gcd(a, P) = 1, a^(P-1) ≡ 1(mod P).
         => a^(P-2) ≡ a^(-1)(mod P)
@@ -16,6 +16,13 @@
     Note:
         若 n | (a-b)，則可以說「在模 n 下，a 同餘 b」，即 a ≡ b(mod n)。
         (這個定義比較容易思考和驗證。)
+
+2022/07
+    Warning:
+        盡量使用 extgcd，因為 Fermat's 限制較嚴格(P 必須為 prime)，但 extgcd
+        只需兩者互質就好。例如當 a = 4, P = 9:
+            Fermat's: inv = 4 (X)
+            extgcd: inv = 7 (V)
 */
 #include <iostream>
 using namespace std;
@@ -58,9 +65,9 @@ int main() {
         res = exp(a, p-2);
         extgcd(a, p, x, y);
         // cout << x << '\n';
-        // printf("%lld %d\n", res, (x+p)%p);
+        printf("%lld %d\n", res, (x+p)%p);
         // printf("x: %d y: %d\n", x, y);
-        printf("Your inverse is here: %d\n", (x+p)%p);
+        // printf("Your inverse is here: %d\n", (x+p)%p);
     }
     return 0;
 }
