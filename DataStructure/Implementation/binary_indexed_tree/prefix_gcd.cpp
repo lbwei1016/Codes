@@ -1,3 +1,6 @@
+/*
+排序左界，從後面更新；概念和用 BIT 求區間和相同
+*/
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;

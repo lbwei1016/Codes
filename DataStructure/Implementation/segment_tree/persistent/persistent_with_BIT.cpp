@@ -1,7 +1,7 @@
 /*
 ***Persistent Data Structure (segment tree)*** -- plus BIT
     Description:
-        求區間第 k 小，離線單點修改。
+        求區間第 k 小，離線單點修改。(TIOJ 1840)
     Solution:
         靜態部分:
         首先考慮 "求前綴第 k 小"。建構一棵線段樹，維護每個數出現的次數:
