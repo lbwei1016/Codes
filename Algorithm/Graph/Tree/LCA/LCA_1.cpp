@@ -1,5 +1,10 @@
 /*
 ***Tree*** -- Lowest Common Ancestor
+    Note:
+        另有 Euler tour 的解法。
+    Complexity:
+        預處理: O(nlog(n))
+        查詢: O(log n)
 */
 #include <iostream>
 #include <vector>

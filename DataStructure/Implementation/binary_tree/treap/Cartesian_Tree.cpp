@@ -2,6 +2,7 @@
 ***Cartesian Tree***
     Description:
         此處實作僅 build() 和 treap 有大不同；見 treap*.cpp。
+        若將某序列轉換為 Cartesian Tree，序列的 RMQ 問題可以轉為樹上的 LCA 問題。
     Note:
         Cartesian Tree 可能退化!!!
 */

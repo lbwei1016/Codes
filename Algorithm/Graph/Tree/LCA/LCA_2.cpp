@@ -1,6 +1,6 @@
 /*
 ***Graph*** -- LCA
-    比 LCA_1 省空間
+    比 LCA_1 省空間，想法相同。
 */
 #include <bits/stdc++.h>
 #define io cin.tie(NULL), ios_base::sync_with_stdio(false)
@@ -9,10 +9,10 @@ using ll = long long;
 
 int n, sz;
 vector<vector<int>> sl, up;
-vector<int> d;
+vector<int> dep;
 
 void precalc(int v, int p){
-    d[v] = d[p] + 1;
+    dep[v] = dep[p] + 1;
     up[v][0] = p;
     for(int i = 1; i <= sz; ++i){
         up[v][i] = up[up[v][i - 1]][i - 1];
@@ -24,11 +24,11 @@ void precalc(int v, int p){
 }
 
 int lca(int u, int v){
-    if(d[u] < d[v]){
+    if(dep[u] < dep[v]){
         swap(u, v);
     }
     for(int cur = sz; cur >= 0; --cur){
-        if (d[u] - (1 << cur) >= d[v]) {
+        if (dep[u] - (1 << cur) >= dep[v]) {
             u = up[u][cur];
         }
     }

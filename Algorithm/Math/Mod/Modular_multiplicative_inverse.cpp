@@ -19,7 +19,7 @@
 
 2022/07
     Warning:
-        盡量使用 extgcd，因為 Fermat's 限制較嚴格(P 必須為 prime)，但 extgcd
+        盡量使用 extgcd，因為 Fermat's 限制較嚴格(P 不是 prime 時未必成立)，但 extgcd
         只需兩者互質就好。例如當 a = 4, P = 9:
             Fermat's: inv = 4 (X)
             extgcd: inv = 7 (V)

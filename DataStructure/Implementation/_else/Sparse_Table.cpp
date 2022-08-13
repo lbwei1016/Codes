@@ -29,6 +29,10 @@ void construct(vector<int> &arr) {
     for(int j=0; (1<<j)<n; ++j) {
         for(int i=0; i+(1<<j)<n; ++i) {
             ST[i][j+1] = min(ST[i][j], ST[i+(1<<j)][j]);
+            /*
+                ST[i][j]: ST[i][j+1] 的左半邊
+                ST[i+(1<<j)][j]: 右半邊
+            */
         }
     }
 }
