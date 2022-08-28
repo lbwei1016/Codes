@@ -20,6 +20,11 @@
     Proof:
         見維基百科: 
             https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86
+        存在性證明: (from CMath)
+            The m integers x ∈ [A . . A + m) are different mod m; so their residues
+            (x mod m1, . . . , x mod mr) run through all m1 . . . mr = m possible values,
+            one of which must be equal to (a1 mod m1, . . . , ar mod mr) by the pigeonhole
+            principle.
     O(n logn)
 */
 #include <bits/stdc++.h>
