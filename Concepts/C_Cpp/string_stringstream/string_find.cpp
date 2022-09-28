@@ -6,8 +6,7 @@
 
     Description:
         Find a string(C or Cpp) of size "n"(C-style) or char, from "pos"
-        
-        
+         
     Return:
         The position of the first character of the first match.
         If no matches were found, the function returns string::npos.  

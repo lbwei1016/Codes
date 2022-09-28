@@ -39,5 +39,12 @@ int main()
 	//getchar() extracts a char(including '\n')
     cin >> c;
     cout << a << b << c;
+
+
+	int x; 
+	string s;
+	cin >> x; 
+	cin.ignore(); // ignore endl ('\n')
+	getline(cin, s); // works fine!
 	return 0;
 }
