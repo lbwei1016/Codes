@@ -38,6 +38,7 @@ int extgcd(int a, int b, int &x, int &y)
     }
     return d;
 }
+
 int main()
 {
     cin >> a >> b;

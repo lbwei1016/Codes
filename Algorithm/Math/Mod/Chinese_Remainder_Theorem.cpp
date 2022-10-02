@@ -44,7 +44,8 @@ ll extgcd(ll a, ll b, ll &x, ll &y) {
     }
     return d;
 }
-ll chinese_remainder_theorem(int n, ll M, ll a[], ll m[]) {
+
+ll chinese_remainder_theorem(int n, ll M, vector<ll> &a, vector<ll> &m) {
     // 為了使求出的解最小而 mod M
     ll res = 0, x = 0, y = 0;
     for(int i=0; i<n; ++i) {
@@ -54,15 +55,18 @@ ll chinese_remainder_theorem(int n, ll M, ll a[], ll m[]) {
     }
     return (res+M) % M; // 為了讓結果為正
 }
+
 int main() {
-    int n; // 方程式數量
-    ll a[100], m[100], M = 1;
-    cin >> n;
+    int n;
+    printf("Input the number of equations:\n");
+    scanf("%d", &n);
+    vector<ll> a(n), m(n);
+    ll M = 1;
     for(int i=0; i<n; ++i) {
         cin >> a[i] >> m[i];
         M *= m[i];
     }
-    cout << chinese_remainder_theorem(n, M, a, m) << '\n';
+    printf("Result: %lld (mod %lld)\n", chinese_remainder_theorem(n, M, a, m), M);
     return 0;
 }
 /* 
