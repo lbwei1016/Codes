@@ -25,10 +25,12 @@
             extgcd: inv = 7 (V)
 */
 #include <iostream>
+#include <vector>
 using namespace std;
 
 typedef long long ll;
 int n, p;
+// vector<pair<int, int>> Procedure;
 
 int extgcd(int a, int b, int &x, int &y) {
     int d = a; // gcd(a, b)
@@ -39,6 +41,7 @@ int extgcd(int a, int b, int &x, int &y) {
     else {
         x = 1; y = 0;
     }
+    // Procedure.push_back({x, y});
     return d;
 }
 ll exp(ll x, int n) {
@@ -63,11 +66,17 @@ int main() {
 
         // two methods
         res = exp(a, p-2);
-        extgcd(a, p, x, y);
-        // cout << x << '\n';
-        printf("%lld %d\n", res, (x+p)%p);
-        // printf("x: %d y: %d\n", x, y);
-        // printf("Your inverse is here: %d\n", (x+p)%p);
+        int GCD = extgcd(a, p, x, y);
+        if (GCD != 1) printf("No inverse!\n"); 
+        else {
+            printf("Fermat's: %lld\nEuclidean: %d\n", res, (x+p)%p);
+        }
+        // This is not correct. Fix it later.
+        // puts("procedures:\n");
+        // int id = 0;
+        // for (auto s: Procedure) {
+        //     printf("(%d): %d*%d + %d*%d = 1\n", ++i, s.first, a, s.second, p);
+        // }
     }
     return 0;
 }
