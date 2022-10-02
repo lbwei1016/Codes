@@ -44,6 +44,7 @@ int extgcd(int a, int b, int &x, int &y) {
     // Procedure.push_back({x, y});
     return d;
 }
+
 ll exp(ll x, int n) {
     ll res = 1;
     while(n > 0) {
@@ -53,6 +54,7 @@ ll exp(ll x, int n) {
     }
     return res;
 }
+
 int main() {
     printf("How many inverses to find?\n");
     scanf("%d", &n);
