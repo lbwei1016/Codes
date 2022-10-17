@@ -1,7 +1,14 @@
 /*
     Floyd-Warshall's algorithm: (DP)
         Find the shortest path for each vertex to the others.(multiple source)
-    O(V * V * V)
+    Note:
+        Floyd-Warshall 可以用來找最小環！
+        "求最小環如同求最短路徑；求最大環如同求最長路徑。" -- 演算法筆記
+
+        其他最短路徑演算法無法求最小環的原因在於，他們有 "起點" 的概念，
+        也就是說，一開始起點的距離就被設為 0，無法再被更新。而且更重要的是，
+        他們都單源。
+    O(V^3)
 */
 #include <iostream>
 #include <algorithm>
