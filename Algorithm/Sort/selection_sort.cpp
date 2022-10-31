@@ -14,9 +14,7 @@ int main()
 		{
 			if(a[j] < a[i])
 			{
-				int t = a[i];
-				a[i] = a[j];
-				a[j] = t;
+				swap(a[i], a[j]);
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 /*
-***Sort***
+***Sort*** (not stable: parent affect children's chance of emergence)
     Time Complexity:
         O(n): 建構 heap
         O(n logn): pop 出最大值，完成排序

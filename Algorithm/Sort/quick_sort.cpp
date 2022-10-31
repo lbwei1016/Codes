@@ -1,12 +1,12 @@
 /*
-***Divide and Conquer / Sort***
+***Divide and Conquer / Sort*** (not stable: depends on pivot)
     Solution:
         以 pivot 為基準，將數列依照小於或大於 pivot 分類:
             [小於pivot] [pivot] [大於pivot]
     Time Complexity:
         Best: O(nlogn)
         Average: O(nlogn)
-        Worst: O(nlogn)
+        Worst: O(n^2)
 */
 #include <iostream>
 #include <algorithm>
@@ -71,7 +71,7 @@ void also_quick(int l, int r) {
 }
 
 // 飛快的 quick select (甚至可比 std::nth_element() 快)
-// credit: https://hackmd.io/@XYFC128/HyA0tyxfj (Daniel Liu)
+// credit: Daniel Liu
 // Hoare’s partition scheme
 // note: pivot must not be a reference
 inline std::vector<int>::iterator partition(std::vector<int>::iterator l, std::vector<int>::iterator r, int pivot) {

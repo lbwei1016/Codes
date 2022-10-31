@@ -1,5 +1,5 @@
 /*
-***Divide and Conquer / Sort***
+***Divide and Conquer / Sort*** (stable)
 
     O(N * log N)
 */

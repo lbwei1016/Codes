@@ -1,5 +1,7 @@
 /*
-***Sort***
+***Sort*** (stable)
+	Description:
+		一次插入一個數，逐一和已經 sort 好的前綴比較。
 */
 #include <iostream>
 
