@@ -1,32 +1,27 @@
 /*
 ***Bipartite Matching***
 
-    To find the "Maximun matching" of bipartite matching
+    Find the "maximun matching" in a bipartite matching.
     
     O(V * E)
 */
 #include <iostream>
 #include <vector>
-#include <cstring>
-
+#include <bitset>
 using namespace std;
 
 const int MAX_V = 100;
 
 int V;
-vector<int> G[MAX_V];
-int match[MAX_V];
-bool used[MAX_V];
+vector<int> G[MAX_V];    
+vector<int> match(MAX_V, -1);
+bitset<MAX_V> vis;
 
-void add_edge(int u, int v) {
-    G[u].push_back(v);
-    G[v].push_back(u);
-}
 bool dfs(int v) {
-    used[v] = true;
-    for(int i=0; i<G[v].size(); i++) {
-        int u = G[v][i], w = match[u];
-        if(w < 0 || !used[w] && dfs(w)) {
+    for (auto u: G[v]) {
+        if (vis[u]) continue;
+        vis[u] = true;
+        if (match[u] == -1 || dfs(match[u])) {
             match[u] = v;
             match[v] = u;
             return true;
@@ -34,15 +29,13 @@ bool dfs(int v) {
     }
     return false;
 }
-int bipartite_matching() {
+
+int matching() {
     int res = 0;
-    memset(match, -1, sizeof(match));
-    for(int v=0; v<V; v++) {
-        if(match[v] < 0) {
-            memset(used, 0, sizeof(used));
-            if(dfs(v)) {
-                res++;
-            }
+    for (int i=0; i<V; ++i) {
+        if (match[i] == -1) {
+            vis.reset();
+            if (dfs(i)) ++res;
         }
     }
     return res;

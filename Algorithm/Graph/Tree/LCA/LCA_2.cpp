@@ -8,7 +8,7 @@ using namespace std;
 using ll = long long;
 
 int n, sz;
-vector<vector<int>> sl, up;
+vector<vector<int>> G, up;
 vector<int> dep;
 
 void precalc(int v, int p){
@@ -17,7 +17,7 @@ void precalc(int v, int p){
     for(int i = 1; i <= sz; ++i){
         up[v][i] = up[up[v][i - 1]][i - 1];
     }
-    for(int u: sl[v]){
+    for(int u: G[v]){
         if(u == p) continue;
         precalc(u, v);
     }
@@ -32,6 +32,9 @@ int lca(int u, int v){
             u = up[u][cur];
         }
     }
+
+    // Now dep[u] == dep[v]
+    // jump upward together
     for(int cur = sz; cur >= 0; --cur){
         if (up[u][cur] != up[v][cur]) {
             u = up[u][cur];

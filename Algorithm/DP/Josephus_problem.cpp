@@ -35,32 +35,31 @@ const int MAX_N = 100;
 int N, M, K;
 int dp[MAX_N];
 
-//0-indexed
-//O(N)
+// 0-indexed
+// O(N)
 void josephus() {
     dp[0] = dp[1] = 0;
     for(int i=2; i<=N; i++) {
         dp[i] = (dp[i-1] + M) % i;
     }
-    //1-indexed
+    // +1 for 1-indexed
     for(int i=1; i<=N; i++) {
         printf("Kill %d: %d\n", i-1, dp[i]+1);
     }
 }
 //O(K)
 void josephus_k_th() {
-    int Nk = N - (K-1);
-    int k_th = (M-1) % Nk;
-    for(int i=Nk+1; i<=N; i++) {
-        k_th = (k_th + M) % i;
-    }
-    /* 
-        Be more concise:
+    // int Nk = N - (K-1);
+    // int k_th = (M-1) % Nk;
+    // for(int i=Nk+1; i<=N; i++) {
+    //     k_th = (k_th + M) % i;
+    // }
+
             int k_th = -1;
             for(int i=N-K+1; i<=N; i++) {
                 k_th = (k_th + M) % i;
             }
-    */
+
     cout << k_th+1 << '\n';
 }
 

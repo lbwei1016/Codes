@@ -68,7 +68,7 @@ int query(int v, int l, int r, int qu) {
 }
 
 int main() {
-    int n = 8;
+    int n = 8; // n need not be a power of two
     vector<int> arr = {5, 7, 1, 0, 3, 6, 4};
     build(0, 0, n, arr);
     printf("first query of arr[3](no update yet): %d\n", query(0, 0, 8, 3));

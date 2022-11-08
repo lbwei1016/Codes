@@ -31,6 +31,7 @@ vector<edge> edges[MAX_V]; //MAX_E = MaX_V - 1 (tree's trait)
 int mincost[MAX_V]; //minicost[u]: the minimun cost from current tree to u
 int V;
 
+// 這版本看起來有點問題
 int prim()
 {
     //first: mincost[v]; second: v
@@ -57,7 +58,7 @@ int prim()
             if(mincost[e.to] > e.cost) //e.cost: the cost of e(v, i)
             {
                 mincost[e.to] = e.cost;
-                res += e.cost;
+                // res += e.cost;
                 pq.push(pii(mincost[e.to], e.to));
             }
         }

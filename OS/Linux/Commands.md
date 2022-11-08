@@ -15,13 +15,21 @@
     > The above *device* files are used for device I/O.
 - `d`: Directory
 - `l`: Symbolic link
+    
     - `ln [-s] [file to be linked] [link file name]`: make a link file
         - `-s`: soft link (hard link by default)
         - If `link file name` is not specified, a link file with the same name as the file linked is created.
     > **Soft link** points to *pathname*; **hard link** has the same *inode* with the original file
+    >
+    > **Soft link** 可以不必在同一 partition；**hard link** 則要在同一 partition。  
+    
+    - inode 中有一欄位是 **count**，紀錄有多少 *hard link* associated to it
+    - soft link 的實際內容是所指檔案的 *pathname*
+      - 用 `readlink <soft link name>` 
 - `p`: Named pipe (FIFO)
+    
     > These type of files act as *pipe* between other files.<br> ***interprocess communication (IPC)***
-
+    
     > Unidirectional: a *read-only end* and a *write-only end*
 - `s`: UNIX domain socket
   
