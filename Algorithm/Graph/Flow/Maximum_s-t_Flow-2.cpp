@@ -80,6 +80,7 @@ int max_flow(int s, int t) {
             flow += f;          
         }
     }
+    return flow;
 }
 int main() {
     int s, t;

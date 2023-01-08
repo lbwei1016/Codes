@@ -35,15 +35,15 @@ ll pow(ll x, ll n, ll mod) {
 }
 // n: a number to be tested；a: a random base
 bool miller_rabin(ll n, ll a) {
-    if(n<3 || !(n&1)) return n == 2; // 先去掉偶數
+    if(n < 3 || !(n & 1)) return n == 2; // 先去掉偶數
     if(n == a) return true; // 幫忙測試的底數 a 選的都是質數，要先判斷
 
     int u = n - 1, t = 0;
-    for(; !(u&1); u>>=1, ++t);
+    for(; !(u & 1); u >>= 1, ++t);
     a = pow(a, u, n);
-    if(a==1 || a==n-1) return true;
+    if(a == 1 || a == n-1) return true;
     for(int i=0; i<t; ++i) {
-        a = a*a % n;
+        a = a * a % n;
         if(a == 1) return false; // 注意!!!
         else if(a == n-1) return true;
     }
@@ -52,7 +52,7 @@ bool miller_rabin(ll n, ll a) {
 int main() {
     int n;
     cin >> n;
-    if(miller_rabin(n, 2) && miller_rabin(n, 7) && miller_rabin(n, 61))
+    if (miller_rabin(n, 2) && miller_rabin(n, 7) && miller_rabin(n, 61))
         cout << "n: " << n << " is a prime\n";
     else cout << "n: " << n << " is \"not\" a prime\n";
     // for(int i=0; i<1e5; ++i) {
