@@ -2,11 +2,13 @@
 ***Math*** -- Number Theoretic Transformation (NTT)
     Note:
         這裡的應用是大數乘法。在整數體下的 FFT；見 ./fft.cpp
+        注意 P 的值要夠大!!!
     Time Complexity:
         transformation: O(nlogn)
         multiplication: O(n) (point-wise)
     Reference:
         https://blog.csdn.net/acdreamers/article/details/39005227
+        http://sunmoon-template.blogspot.com/2016/04/number-theoretic-transform-ntt.html
 */
 #include <bits/stdc++.h>
 #define io cin.tie(NULL), ios_base::sync_with_stdio(false)

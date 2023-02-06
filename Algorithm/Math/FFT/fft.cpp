@@ -7,6 +7,7 @@
         multiplication: O(n) (point-wise)
     Reference:
         https://blog.csdn.net/acdreamers/article/details/39005227
+        http://sunmoon-template.blogspot.com/2016/04/number-theoretic-transform-ntt.html
 */
 #include <bits/stdc++.h>
 using namespace std;
