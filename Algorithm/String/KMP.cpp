@@ -18,7 +18,7 @@ using namespace std;
 
 const int MAX_B = 100;
 int match(const string A, const string B) {
-    // Note: 以下編號，F() 是從 1 開始，0是邊界，而字串則是從 0 開始
+    // Note: 以下編號，F() 是從 1 開始，0 是邊界，而字串則是從 0 開始
     int F[MAX_B+1]; // failure function
     F[0] = -1; // 邊界
     F[1] = 0; // B 的第一個字元的「失敗函數」（failure function）
@@ -33,7 +33,7 @@ int match(const string A, const string B) {
         while(j != -1 && A[i] != B[j]) 
             j = F[j];
         if(j == B.size()-1) 
-            return i - j; // 當完成匹配，回傳 A的子字串中等於 B 的起始位置
+            return i - j; // 當完成匹配，回傳 A 的子字串中等於 B 的起始位置
     }
     return -1;
 }
