@@ -1,6 +1,6 @@
 /* 
 ***DP*** -- Bounded Knapsack (單調隊列優化) 
-(https://www.cnblogs.com/GXZC/archive/2013/01/08/2851153.html) (/competitive_programming/背包問題.pdf)
+(https://www.cnblogs.com/GXZC/archive/2013/01/08/2851153.html) (competitive_programming/背包問題.pdf)
     Solution:
         利用 W / w[i] 相同餘數時重複轉移的特性，進行優化，詳見上述資源。
     Note:
