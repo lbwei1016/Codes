@@ -1,5 +1,5 @@
 /*
-***Trie***
+***Trie*** (見 ./Algorithm/String/ac-algorithm.cpp)
     Description:
         每個節點皆儲存一整個字元集，若兩字串有相同的前綴，則他們擁有部分的共同祖先。
         類似於編排字典的方式，減低了檢索單字的困難度。 Trie 可以想作是多層次的索引表。
