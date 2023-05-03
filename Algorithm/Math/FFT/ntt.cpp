@@ -1,7 +1,7 @@
 /*
 ***Math*** -- Number Theoretic Transformation (NTT)
     Note:
-        這裡的應用是大數乘法。在整數體下的 FFT；見 ./fft.cpp
+        這裡的應用是大數乘法。在 Z/p 下的 FFT；見 ./fft.cpp
         注意 P 的值要夠大!!!
     Time Complexity:
         transformation: O(nlogn)
@@ -25,12 +25,8 @@ string s1, s2;
 ll fpow(ll x, ll n) {
     ll res = 1;
     while (n > 0) {
-        if (n & 1) {
-            res *= x;
-            res %= P;
-        }
-        x *= x;
-        x %= P;
+        if (n & 1) (res *= x) %= P;
+        (x *= x) %= P;
         n >>= 1;
     }
     return res;

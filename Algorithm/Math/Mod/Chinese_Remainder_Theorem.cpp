@@ -10,7 +10,7 @@
 
         假定 m1, m2, ...兩兩互質，則任意的 ai 可以使方程組有解。
     Solution:
-        令 M = m1*m2*...mn, Mi = M / mi。
+        令 M = m1*m2*...mn, Mi = M / mi。(Mi 是其他 mj 的公因數)
         已知對於任意 i, j (i != j)，mi 與 mj 互質，因此 gcd(Mi, mi) = 1。
         又令 ti*Mi ≡ 1 (mod mi)，即 ti 為 Mi 模 mi 的乘法反元素。
         則方程組的通解為: 

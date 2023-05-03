@@ -1,11 +1,14 @@
 /*
 ***Math*** -- Fast Fourier Transformation (FFT)
     Note:
-        這裡的應用是大數乘法。
+        這裡的應用是大數乘法 (多項式乘法)。
+
+        使用 FFT 時，我們需要反元素，因此係數必須定義在某 field 上 (像是 \Bbb C)。
     Time Complexity:
         transformation: O(nlogn)
-        multiplication: O(n) (point-wise)
+        multiplication: O(n) (point-wise; Hadamard product)
     Reference:
+        https://ccjou.wordpress.com/2012/05/25/%E5%BF%AB%E9%80%9F%E5%82%85%E7%AB%8B%E8%91%89%E8%BD%89%E6%8F%9B/
         https://blog.csdn.net/acdreamers/article/details/39005227
         http://sunmoon-template.blogspot.com/2016/04/number-theoretic-transform-ntt.html
 */
@@ -80,6 +83,7 @@ void convolution(vector<Complex> &a, vector<Complex> &b) {
 void solve() {
     cin >> s1 >> s2;
     int len = 1, mx = max(s1.size(), s2.size());
+    // "len" is a power of 2!
     while (len < (mx << 1)) len <<= 1;
     vector<Complex> p1(len), p2(len);
 

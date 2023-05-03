@@ -1,5 +1,5 @@
 /*
-***LPS*** --Longest Palindromic Subsequence
+***LPS*** --Longest Palindromic String
 
     O(size(str) ^ 2 * LPS) (實際更佳)
 */

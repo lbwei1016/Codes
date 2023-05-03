@@ -57,6 +57,7 @@ void covex_hull() {
     }
     cov.resize(k-1);
 }
+
 int main() {
     while(scanf("%d", &n) != EOF) {
         ps.clear(); ps.resize(n);
