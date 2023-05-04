@@ -1,5 +1,5 @@
 /*
-***Maximum s-t Flow*** -- Dinic Algorithm
+***Maximum s-t Flow*** -- Dinic's Algorithm
 
     Description:
         A enhanced version of Ford-Fulkerson and Edmond-Karp Algorithm
@@ -10,6 +10,14 @@
         with BFS once again.
 
     O(E * V^2)
+
+    WARNING: 
+        這裡的 G 是有向圖!!! 
+        如果要轉為無向圖，add_edge() 中 G[v] 的 capacity 也要是 "cap"!!!!
+
+    Note:
+        The "capacity scalling" method can be applied to Dinic's algorithm as well, 
+        resulting a O(V * E * log F) time complexity. Check "./Maximum_s-t_Flow-3.cpp".
 */
 #include <iostream>
 #include <vector>
