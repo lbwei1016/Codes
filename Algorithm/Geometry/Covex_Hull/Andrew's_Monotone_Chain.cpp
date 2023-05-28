@@ -40,7 +40,7 @@ struct P {
 int n;
 vector<P> ps, cov;
 
-void covex_hull() {
+void convex_hull() {
     sort(ps.begin(), ps.end()); // x 遞增；ps[0] 和 ps[n-1] 必定在凸包內
     cov.resize(n);  
     int k = 0;
@@ -63,7 +63,7 @@ int main() {
         ps.clear(); ps.resize(n);
         cov.clear();
         for(int i=0; i<n; ++i) scanf("%lld%lld", &ps[i].x, &ps[i].y);
-        covex_hull();
+        convex_hull();
         ll mx = 0;
         int s = cov.size();
         // 兩兩列舉凸包上的點求距離；另可用旋轉卡尺優化
