@@ -44,7 +44,7 @@ class Nice: public Cool<T> {
             cout << "~Nice()\n";
         }
         void pureVir() {
-            cout << "Pure virtual function\n";
+            cout << "Pure virtual function; defined in Nice\n";
         }
 };
 
@@ -54,5 +54,8 @@ int main() {
 
     // both destructors will be called
     delete N; 
+
+    Cool<int> *N_from_C = new Nice<int>();
+    N->pureVir();
     return 0;
 }

@@ -4,30 +4,30 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceRoot}",
-                "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\include",
-                "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0",
-                "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin"
+                "C:\\msys64\\mingw64\\include",
+                "C:\\msys64\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.1.0",
+                "C:\\msys64\\mingw64\\bin"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
-                "__GNUC__=5",
+                "__GNUC__=13",
                 "__cdecl=__attribute__((__cdecl__))"
             ],
-            "intelliSenseMode": "clang-x64",
+            "intelliSenseMode": "gcc-x64",
             "browse": {
                 "path": [
                     "${workspaceRoot}",
-                    "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\include",
-                    "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0",
-                    "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin"
+                    "C:\\msys64\\mingw64\\include",
+                    "C:\\msys64\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.1.0",
+                    "C:\\msys64\\mingw64\\bin"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
             },
-            "compilerPath": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe",
+            "compilerPath": "C:\\msys64\\mingw64\\bin\\gcc.exe",
             "cStandard": "gnu17",
-            "cppStandard": "gnu++17"
+            "cppStandard": "gnu++20"
         }
     ],
     "version": 4
