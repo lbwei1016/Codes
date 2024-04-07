@@ -96,7 +96,8 @@
         "stdfloat": "cpp",
         "stop_token": "cpp",
         "syncstream": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "setjmp.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled",
     // "files.autoGuessEncoding": true,
